@@ -1,0 +1,687 @@
+
+
+<!DOCTYPE html>
+<html lang="cn" color-mode=light>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Python入门操作 - JoooY | Zeng-Jiayu</title>
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="google" content="notranslate" />
+  <meta name="keywords" content=", Python入门操作">
+  <meta name="description" content="Python基本数据结构：Number，String，...">
+  <meta name="author" content="Zeng-Jiayu">
+  <link rel="icon" href="/images/icons/logo-16.png" type="image/png" sizes="16x16">
+  <link rel="icon" href="/images/icons/logo-32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="/images/icons/apple-touch-ico.png" sizes="180x180">
+  <meta rel="mask-icon" href="/images/icons/stun-logo.svg" color="#333333">
+  
+    <meta rel="msapplication-TileImage" content="/images/icons/logo-144.png">
+    <meta rel="msapplication-TileColor" content="#000000">
+  
+
+  
+<link rel="stylesheet" href="/css/style.css">
+
+
+  
+    
+<link rel="stylesheet" href="https://at.alicdn.com/t/font_1445822_p6ry5n7lrr.css">
+
+  
+
+  
+    
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
+
+  
+
+  
+    
+      
+        
+        
+<link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.18.1/styles/xcode.min.css" name="highlight-style" mode="light">
+
+      
+        
+        
+<link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.18.1/styles/solarized-dark.min.css" name="highlight-style" mode="dark">
+
+      
+  
+
+  <script>
+    var CONFIG = window.CONFIG || {};
+    var ZHAOO = window.ZHAOO || {};
+    CONFIG = {
+      isHome: false,
+      fancybox: true,
+      pjax: false,
+      loading: {
+        gif: '/images/theme/loading64.gif',
+        lottie: ''
+      },
+      lazyload: {
+        enable: true,
+        only_post: 'false',
+        loading: {
+          gif: '/images/theme/loading64.gif',
+          lottie: ''
+        }
+      },
+      donate: {
+        enable: false,
+        alipay: 'https://pic.izhaoo.com/alipay.jpg',
+        wechat: 'https://pic.izhaoo.com/wechat.jpg'
+      },
+      galleries: {
+        enable: true
+      },
+      fab: {
+        enable: true,
+        always_show: true
+      },
+      carrier: {
+        enable: false
+      },
+      daovoice: {
+        enable: false
+      },
+      preview: {
+        background: {
+          default: '',
+          api: ''
+        },
+        motto: {
+          default: '身向榆关那畔行 夜深千帐灯',
+          typing: true,
+          api: '',
+          data_contents: '["data","content"]'
+        },
+      },
+      qrcode: {
+        enable: true,
+        type: 'image',
+        image: '/images/wechatQR.JPG',
+      },
+      toc: {
+        enable: true
+      },
+      scrollbar: {
+        type: 'default'
+      },
+      notification: {
+        enable: false,
+        delay: 4500,
+        list: '',
+        page_white_list: '',
+        page_black_list: ''
+      },
+      search: {
+        enable: true,
+        path: '/search.xml'
+      }
+    }
+  </script>
+
+  
+
+  
+
+<meta name="generator" content="Hexo 6.1.0"></head>
+
+<body class="lock-screen">
+  <div class="loading" id="loading"></div>
+  
+    
+
+
+  <nav class="navbar">
+    <div class="left">
+      
+        <i class="iconfont iconhome j-navbar-back-home"></i>
+      
+      
+        <i class="iconfont iconqrcode j-navbar-qrcode"></i>
+      
+      
+        <i class="iconfont iconmoono" id="color-toggle" color-toggle="light"></i>
+      
+      
+        <i class="iconfont iconsearch j-navbar-search"></i>
+      
+    </div>
+    <div class="center">Python入门操作</div>
+    <div class="right">
+      <i class="iconfont iconmenu j-navbar-menu"></i>
+    </div>
+    
+      <div id="qrcode-navbar"></div>
+    
+  </nav>
+
+  
+  
+
+<nav class="menu">
+  <div class="menu-container">
+    <div class="menu-close">
+      <i class="iconfont iconbaseline-close-px"></i>
+    </div>
+    <ul class="menu-content"><li class="menu-item">
+        <a href="/ " class="underline "> 首页</a>
+      </li><li class="menu-item">
+        <a href="/archives/ " class="underline "> 归档</a>
+      </li><li class="menu-item">
+        <a href="/tags/ " class="underline "> 标签</a>
+      </li><li class="menu-item">
+        <a href="/categories/ " class="underline "> 分类</a>
+      </li><li class="menu-item">
+        <a href="/important/ " class="underline "> 谈</a>
+      </li><li class="menu-item">
+        <a href="/book/ " class="underline "> 颜如玉</a>
+      </li><li class="menu-item">
+        <a href="/about/ " class="underline "> 关于</a>
+      </li></ul>
+    
+      <div class="menu-copyright"><p>Powered by <a target="_blank" href="https://hexo.io">Hexo</a>  |  Theme - <a target="_blank" href="https://github.com/izhaoo/hexo-theme-zhaoo">zhaoo</a></p></div>
+    
+  </div>
+</nav>
+  <main id="main">
+  <div class="article-wrap">
+    <div class="row container">
+      <div class="col-xl-3"></div>
+      <div class="col-xl-6"><article class="article">
+  <div class="wrap">
+    <section class="head">
+  <img   class="lazyload" data-original="/images/cover/pexels-sebastiaan-stam-1097456.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  draggable="false">
+  <div class="head-mask">
+    <h1 class="head-title">Python入门操作</h1>
+    <div class="head-info">
+      <span class="post-info-item"><i class="iconfont iconcalendar"></i>March 11, 2022</span>
+      
+        <span class="post-info-item">
+          <i class="iconfont iconeye"></i><span id="/2022/03/11/Python%E5%85%A5%E9%97%A8%E6%93%8D%E4%BD%9C/" class="leancloud-counter" data-flag-title="Python入门操作"></span>
+        </span>
+        <span class="post-info-item">
+          <i class="iconfont iconheart"></i><span id="/2022/03/11/Python%E5%85%A5%E9%97%A8%E6%93%8D%E4%BD%9C/" class="leancloud-like" data-flag-title="Python入门操作"></span>
+        </span>
+      
+      <span class="post-info-item"><i class="iconfont iconfont-size"></i>4693</span>
+    </div>
+  </div>
+</section>
+    <section class="main">
+      <section class="content">
+        
+          <p><p>Python基本数据结构：Number，String，List，元组，字典。以及Numpy和Matplotlib的基本使用</p></p>
+        
+        <h1 id="Python数据结构"><a href="#Python数据结构" class="headerlink" title="Python数据结构"></a>Python数据结构</h1><h2 id="数字-Number"><a href="#数字-Number" class="headerlink" title="数字 Number"></a>数字 Number</h2><p>Python Number 数据类型用于存储数值，包括整型、长整型、浮点型、复数</p>
+<p>Python中数学运算常用的函数基本都在math模块</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> math<br><span class="hljs-built_in">print</span>(math.ceil(<span class="hljs-number">4.1</span>))	<span class="hljs-comment"># 返回数字的上入整数 5</span><br><span class="hljs-built_in">print</span>(math.floor(<span class="hljs-number">4.9</span>))	<span class="hljs-comment"># 返回数字的下舍整数 4</span><br><span class="hljs-built_in">print</span>(math.fabs(-<span class="hljs-number">10</span>))	<span class="hljs-comment"># 返回数字的绝对值 10.0</span><br><span class="hljs-built_in">print</span>(math.sqrt(<span class="hljs-number">9</span>))		<span class="hljs-comment"># 返回数字的平方根 3.0</span><br><span class="hljs-built_in">print</span>(math.exp(<span class="hljs-number">1</span>))		<span class="hljs-comment"># 返回e的x次幂 2.718281</span><br></code></pre></td></tr></table></figure>
+
+<h2 id="字符串-String"><a href="#字符串-String" class="headerlink" title="字符串 String"></a>字符串 String</h2><p>单引号、双引号、三引号（三个单引号或三个双引号）</p>
+<p>使用反斜杠 \ 转义特殊字符</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;Hello World!&#x27;</span>)<br><span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Hello World!&quot;</span>)<br>html = <span class="hljs-string">&#x27;&#x27;&#x27;</span><br><span class="hljs-string">&lt;HTML&gt;&lt;HEAD&gt;</span><br><span class="hljs-string">&lt;TITLE&gt;Friends CGI Demo&lt;/TITLE&gt;</span><br><span class="hljs-string">&lt;/HEAD&gt;&lt;/HTML&gt;</span><br><span class="hljs-string">&#x27;&#x27;&#x27;</span><br><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;I\&#x27;m goint to the movies&#x27;</span>)<br></code></pre></td></tr></table></figure>
+
+<p>字符串连接</p>
+<ul>
+<li>使用+运算符</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs python">str1 = <span class="hljs-string">&quot;Hello&quot;</span><br>str2 = <span class="hljs-string">&quot;World!&quot;</span><br><span class="hljs-built_in">print</span>(str1+str2)		<span class="hljs-comment"># Hello World!</span><br></code></pre></td></tr></table></figure>
+
+<ul>
+<li>使用join运算符</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs python">new_str = <span class="hljs-string">&#x27;-&#x27;</span>.join(<span class="hljs-string">&#x27;Hello&#x27;</span>)<br><span class="hljs-built_in">print</span>(new_str)			<span class="hljs-comment"># H-e-l-l-o</span><br></code></pre></td></tr></table></figure>
+
+<h2 id="列表-List"><a href="#列表-List" class="headerlink" title="列表 List"></a>列表 List</h2><ul>
+<li>声明列表</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python">names = [<span class="hljs-string">&#x27;jack&#x27;</span>,<span class="hljs-string">&#x27;tom&#x27;</span>,<span class="hljs-string">&#x27;tonney&#x27;</span>,<span class="hljs-string">&#x27;superman&#x27;</span>,<span class="hljs-string">&#x27;jay&#x27;</span>]<br></code></pre></td></tr></table></figure>
+
+<ul>
+<li>通过下标或索引获取元素</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-built_in">print</span>(names[<span class="hljs-number">0</span>])<br><span class="hljs-built_in">print</span>(names[<span class="hljs-number">1</span>])<br></code></pre></td></tr></table></figure>
+
+<ul>
+<li>访问最后一个元素</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-built_in">print</span>(names[-<span class="hljs-number">1</span>])<br><span class="hljs-built_in">print</span>(names[<span class="hljs-built_in">len</span>(names)-<span class="hljs-number">1</span>])<br></code></pre></td></tr></table></figure>
+
+<ul>
+<li>访问第一个元素</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-built_in">print</span>(names[-<span class="hljs-number">5</span>])<br><span class="hljs-built_in">print</span>(names[<span class="hljs-number">0</span>])<br></code></pre></td></tr></table></figure>
+
+<ul>
+<li>列表查询</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs python">flag = <span class="hljs-number">0</span><br><span class="hljs-keyword">for</span> name <span class="hljs-keyword">in</span> names:<br>	<span class="hljs-keyword">if</span> name == <span class="hljs-string">&quot;superman&quot;</span>:<br>        <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;有超人&quot;</span>)<br>        flag = <span class="hljs-number">1</span><br>        <span class="hljs-keyword">break</span><br><span class="hljs-keyword">if</span> flag==<span class="hljs-number">0</span>:<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;无超人&quot;</span>)<br></code></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">if</span> <span class="hljs-string">&quot;superman&quot;</span> <span class="hljs-keyword">in</span> names:<br>	<span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;有超人&quot;</span>)<br><span class="hljs-keyword">else</span>:<br>	<span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;无超人&quot;</span>)<br></code></pre></td></tr></table></figure>
+
+<ul>
+<li>列表添加</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># 声明一个空列表</span><br>girls = []<br><br><span class="hljs-comment"># append(),末尾追加</span><br>girls.append(<span class="hljs-string">&#x27;a&#x27;</span>)<br><span class="hljs-built_in">print</span>(girls)				<span class="hljs-comment"># [&#x27;a&#x27;]</span><br><br><span class="hljs-comment"># extend(),合并列表</span><br>models = [<span class="hljs-string">&#x27;刘雯&#x27;</span>,<span class="hljs-string">&#x27;奚梦瑶&#x27;</span>]<br>girls.extend(models)<br><span class="hljs-built_in">print</span>(girls)				<span class="hljs-comment"># [&#x27;a&#x27;, &#x27;刘雯&#x27;, &#x27;奚梦瑶&#x27;]</span><br><br><span class="hljs-comment"># insert():在指定位置添加</span><br>girls.insert(<span class="hljs-number">1</span>,<span class="hljs-string">&quot;b&quot;</span>)<br><span class="hljs-built_in">print</span>(girls)				<span class="hljs-comment"># [&#x27;a&#x27;, &#x27;b&#x27;, &#x27;刘雯&#x27;, &#x27;奚梦瑶&#x27;]</span><br></code></pre></td></tr></table></figure>
+
+<h2 id="元组"><a href="#元组" class="headerlink" title="元组"></a>元组</h2><p>与列表类似，区别是元组中内容不可修改</p>
+<p>定义一个元组，<strong>注意：当元组中只有一个元素时，需要在后面加逗号</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs python">tuple1 = ()<br><span class="hljs-built_in">print</span>(<span class="hljs-built_in">type</span>(tuple1))	<span class="hljs-comment"># &lt;class &#x27;tuple&#x27;&gt;</span><br><br>tuple2 = (<span class="hljs-string">&#x27;hello&#x27;</span>)<br><span class="hljs-built_in">print</span>(<span class="hljs-built_in">type</span>(tuple2))	<span class="hljs-comment"># &lt;class &#x27;str&#x27;&gt;</span><br><br>tuple2 = (<span class="hljs-string">&#x27;hello&#x27;</span>,)<br><span class="hljs-built_in">print</span>(<span class="hljs-built_in">type</span>(tuple3))	<span class="hljs-comment"># &lt;class &#x27;tuple&#x27;&gt;</span><br></code></pre></td></tr></table></figure>
+
+<h2 id="字典"><a href="#字典" class="headerlink" title="字典"></a>字典</h2><p>键、值、对</p>
+<ul>
+<li>定义一个空字典</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python">dict1 = &#123;&#125;<br></code></pre></td></tr></table></figure>
+
+<ul>
+<li>定义一个字典的同时，进行初始化</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs python">dict2 = &#123;<span class="hljs-string">&#x27;name&#x27;</span>:<span class="hljs-string">&#x27;abc&#x27;</span>,<span class="hljs-string">&#x27;weight&#x27;</span>:<span class="hljs-string">&#x27;44&#x27;</span>,<span class="hljs-string">&#x27;age&#x27;</span>:<span class="hljs-number">25</span>&#125;<br><span class="hljs-built_in">print</span>(dict2[<span class="hljs-string">&#x27;name&#x27;</span>])<br></code></pre></td></tr></table></figure>
+
+<ul>
+<li>定义一个字典，之后添加元素</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs python">dict4 = &#123;&#125;<br>dict4[<span class="hljs-string">&#x27;name&#x27;</span>] = <span class="hljs-string">&#x27;abc&#x27;</span><br>dict4[<span class="hljs-string">&#x27;weight&#x27;</span>] = <span class="hljs-number">43</span><br><span class="hljs-built_in">print</span>(dict4)<br></code></pre></td></tr></table></figure>
+
+<ul>
+<li>修改字典元素</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs python">dict4[<span class="hljs-string">&#x27;weight&#x27;</span>] = <span class="hljs-number">44</span><br><span class="hljs-built_in">print</span>(dict4)<br></code></pre></td></tr></table></figure>
+
+<ul>
+<li>相关函数</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># items()</span><br>dict5 = &#123;<span class="hljs-string">&#x27;aaa&#x27;</span>:<span class="hljs-number">165</span>,<span class="hljs-string">&#x27;abc&#x27;</span>:<span class="hljs-number">166</span>,<span class="hljs-string">&#x27;ddd&#x27;</span>:<span class="hljs-number">164</span>&#125;<br><span class="hljs-built_in">print</span>(dict5.items())<br><span class="hljs-keyword">for</span> key,value <span class="hljs-keyword">in</span> dict5.items():<br>    <span class="hljs-keyword">if</span> value &gt; <span class="hljs-number">165</span>:<br>        <span class="hljs-built_in">print</span>(key)<br>        <br><span class="hljs-comment"># keys()</span><br>names = dict5.keys()<br><span class="hljs-built_in">print</span>(names)<br><br><span class="hljs-comment"># values()</span><br>heights = dict5.values()<br><span class="hljs-built_in">print</span>(heights)<br>total = <span class="hljs-built_in">sum</span>(heights)<br>avg = total/<span class="hljs-built_in">len</span>(heights)<br><span class="hljs-built_in">print</span>(avg)<br></code></pre></td></tr></table></figure>
+
+<h1 id="Numpy-库"><a href="#Numpy-库" class="headerlink" title="Numpy 库"></a>Numpy 库</h1><p>Numpy是<strong>高性能科学计算和数据分析的基础包</strong>，其部分功能如下：</p>
+<ul>
+<li>ndarray，一个具有矢量算术运算和复杂广播能力的快速且节省空间的<strong>多维数组</strong></li>
+<li>用于对整组数据进行快速运算的<strong>标准数学函数</strong>（无需编写循环）。</li>
+<li>用于读写磁盘数据的工具以及用于操作内存映射文件的工具。</li>
+<li>线性代数、随机数生成以及傅里叶变换功能。</li>
+</ul>
+<p>Numpy中文网：<a target="_blank" rel="noopener" href="https://numpy.org.cn/">https://numpy.org.cn/</a></p>
+<h2 id="创建ndarray"><a href="#创建ndarray" class="headerlink" title="创建ndarray"></a>创建ndarray</h2><p>创建数组最简单的方法就是使用array函数，它接受一切序列型的对象（包括其他数组），然后产生一个新的含有传入数据的Numpy数组。其中，嵌套序列（比如由一组等长列表组成的列表）将会被转换为一个多维数组。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> numpy <span class="hljs-keyword">as</span> no<br>a = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>]	<span class="hljs-comment"># 创建简单的列表</span><br>b = np.array(a)<br></code></pre></td></tr></table></figure>
+
+<ul>
+<li>除了np.array 之外，还有一些函数也可以新建数组</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># 创建10行10列的数值为浮点0的矩阵</span><br>array_zero = np.zeros([<span class="hljs-number">10</span>,<span class="hljs-number">10</span>])<br><br><span class="hljs-comment"># 创建10行10列的数值为浮点1的矩阵</span><br>array_one = np.ones([<span class="hljs-number">10</span>,<span class="hljs-number">10</span>])<br><br><span class="hljs-comment"># empty 可以创建一个没有任何具体值的数组</span><br>array_empty = np.empty([<span class="hljs-number">10</span>,<span class="hljs-number">10</span>])<br></code></pre></td></tr></table></figure>
+
+<ul>
+<li>创建随机数组</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># 均匀分布</span><br>np.random.rand(<span class="hljs-number">10</span>,<span class="hljs-number">10</span>)	<span class="hljs-comment"># 创建指定形状的数组（范围在0至1之间）</span><br>np.random.uniform(<span class="hljs-number">0</span>, <span class="hljs-number">100</span>) <span class="hljs-comment"># 创建指定范围内的一个数</span><br>np.random.randint(<span class="hljs-number">0</span>, <span class="hljs-number">100</span>) <span class="hljs-comment"># 创建指定范围内的一个整数</span><br><br><span class="hljs-comment"># 正态分布</span><br>np.random.normal(<span class="hljs-number">1.75</span>, <span class="hljs-number">0.1</span>, (<span class="hljs-number">2</span>,<span class="hljs-number">3</span>))	<span class="hljs-comment"># 给定均值/标准差/维度的正太分布</span><br></code></pre></td></tr></table></figure>
+
+<h2 id="查看数据属性"><a href="#查看数据属性" class="headerlink" title="查看数据属性"></a>查看数据属性</h2><table>
+<thead>
+<tr>
+<th>用法</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>b.size</td>
+<td>数组元素个数</td>
+</tr>
+<tr>
+<td>b.shape</td>
+<td>数组形状</td>
+</tr>
+<tr>
+<td>b.ndim</td>
+<td>数组维度</td>
+</tr>
+<tr>
+<td>b.dtype</td>
+<td>数组元素类型</td>
+</tr>
+</tbody></table>
+<h2 id="基本数组统计方法"><a href="#基本数组统计方法" class="headerlink" title="基本数组统计方法"></a>基本数组统计方法</h2><table>
+<thead>
+<tr>
+<th>方法</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>sum</td>
+<td>对数组中全部或某轴向的元素求和。零长度的数组的sum&#x3D;0</td>
+</tr>
+<tr>
+<td>mean</td>
+<td>算术平均数。零长度的数组的mean为NaN</td>
+</tr>
+<tr>
+<td>std, var</td>
+<td>分别为标准差和方差，自由度可调（默认为n）</td>
+</tr>
+<tr>
+<td>min, max</td>
+<td>最大值和最小值</td>
+</tr>
+<tr>
+<td>argmin, argmax</td>
+<td>分别为最大和最小元素的索引</td>
+</tr>
+<tr>
+<td>cumsum</td>
+<td>所有元素的累加</td>
+</tr>
+<tr>
+<td>cumprod</td>
+<td>所有元素的累积</td>
+</tr>
+</tbody></table>
+<h1 id="Matplotlib"><a href="#Matplotlib" class="headerlink" title="Matplotlib"></a>Matplotlib</h1><ul>
+<li>由各种可视化类构成，内部结构复杂</li>
+<li>受Matlab启发，matplotlib.pylot是绘制各类可视化图形的命令字库，相当于快捷方式。</li>
+</ul>
+<p>Matplotlib中文网：<a target="_blank" rel="noopener" href="https://matplotlib.org.cn/">https://matplotlib.org.cn/</a></p>
+<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><ul>
+<li><code>plt.plot()</code>只有一个输入列表或数组时，参数被当作y轴，x轴以索引自动生成</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> matplotlib.pyplot <span class="hljs-keyword">as</span> plt<br>plt.plot([<span class="hljs-number">3</span>, <span class="hljs-number">1</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">2</span>])<br>plt.ylabel(<span class="hljs-string">&quot;Grace&quot;</span>)<br></code></pre></td></tr></table></figure>
+
+<p><img   class="lazyload" data-original="/images/Python%E5%85%A5%E9%97%A8%E6%93%8D%E4%BD%9C/image-20220311201401851.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  alt="只有一个输入列表或数组时，参数被当作y轴，x轴以索引自动生成"></p>
+<ul>
+<li><code>plt.savefig</code>将输出图片存储为文件，默认PNG格式，可以通过dpi修改输出质量</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs python">plt.savefig(<span class="hljs-string">&quot;test&quot;</span>, dpi=<span class="hljs-number">600</span>)	<span class="hljs-comment">#PNG文件</span><br>plt.show()<br></code></pre></td></tr></table></figure>
+
+<ul>
+<li>直方图的绘制</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> matplotlib.pyplot <span class="hljs-keyword">as</span> plt<br><span class="hljs-keyword">import</span> numpy <span class="hljs-keyword">as</span> np<br>np.random.seed(<span class="hljs-number">0</span>)<br>mu,sigma = <span class="hljs-number">100</span>,<span class="hljs-number">20</span>	<span class="hljs-comment"># 均值和标准值</span><br>a = np.random.normal(mu, sigma, size=<span class="hljs-number">100</span>)<br>plt.hist(a,<span class="hljs-number">20</span>,histtype=<span class="hljs-string">&#x27;stepfilled&#x27;</span>,facecolor=<span class="hljs-string">&#x27;b&#x27;</span>,alpha=<span class="hljs-number">0.75</span>)<br>plt.title(<span class="hljs-string">&#x27;Histogram&#x27;</span>)<br>plt.show<br></code></pre></td></tr></table></figure>
+
+<p><img   class="lazyload" data-original="/images/Python%E5%85%A5%E9%97%A8%E6%93%8D%E4%BD%9C/image-20220311201902859-16470011442173.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  alt="直方图绘制"></p>
+<ul>
+<li>散点图的绘制</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> numpy <span class="hljs-keyword">as</span> np<br><span class="hljs-keyword">import</span> matplotlib.pyplot <span class="hljs-keyword">as</span> plt<br>fig, ax = plt.subplots()<br>ax.plot(<span class="hljs-number">10</span>*np.random.randn(<span class="hljs-number">100</span>),<span class="hljs-number">10</span>*np.random.randn(<span class="hljs-number">100</span>),<span class="hljs-string">&#x27;o&#x27;</span>)<br>ax.set_title(<span class="hljs-string">&#x27;Simple Scatter&#x27;</span>)<br>plt.show()<br></code></pre></td></tr></table></figure>
+      </section>
+      <section class="extra">
+        
+          <ul class="copyright">
+  
+    <li><strong>本文作者：</strong>Zeng-Jiayu</li>
+    <li><strong>本文链接：</strong><a href="https://zeng-jiayu.github.io/2022/03/11/Python%E5%85%A5%E9%97%A8%E6%93%8D%E4%BD%9C/index.html" title="https:&#x2F;&#x2F;zeng-jiayu.github.io&#x2F;2022&#x2F;03&#x2F;11&#x2F;Python%E5%85%A5%E9%97%A8%E6%93%8D%E4%BD%9C&#x2F;index.html">https:&#x2F;&#x2F;zeng-jiayu.github.io&#x2F;2022&#x2F;03&#x2F;11&#x2F;Python%E5%85%A5%E9%97%A8%E6%93%8D%E4%BD%9C&#x2F;index.html</a></li>
+    <li><strong>版权声明：</strong>本博客所有文章均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" title="BY-NC-SA" target="_blank" rel="noopener">BY-NC-SA</a> 许可协议，转载请注明出处！</li>
+  
+</ul>
+        
+        
+        
+  <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Matplotlib/" rel="tag">Matplotlib</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Numpy/" rel="tag">Numpy</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/" rel="tag">Python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" rel="tag">数据结构</a></li></ul> 
+
+        
+  <nav class="nav">
+    <a href="/2022/03/12/Python%E5%A4%8D%E6%9D%82%E6%93%8D%E4%BD%9C/"><i class="iconfont iconleft"></i>Python复杂操作</a>
+    <a href="/2022/02/18/Ubuntu%E7%BE%8E%E5%8C%96/">Ubuntu美化<i class="iconfont iconright"></i></a>
+  </nav>
+
+      </section>
+      
+        <section class="comments">
+  
+    <div class="btn" id="comments-btn">查看评论</div>
+  
+  
+<div id="valine"></div>
+<script defer src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script>
+  window.onload = function () {
+    var loadValine = function () {
+      new Valine({
+        el: '#valine',
+        app_id: "nAsopJfB1mX9npjoQHpt4aAf-gzGzoHsz",
+        app_key: "5hSjjLLmtqSQ5JDtBnl3b7Y0",
+        placeholder: "雁过留痕",
+        avatar: "mp",
+        pageSize: "10",
+        lang: "zh-CN",
+      });
+    }
+    if ( true ) {
+      $("#comments-btn").on("click", function () {
+        $(this).hide();
+        loadValine();
+      });
+    } else {
+      loadValine();
+    }
+  };
+</script>
+
+</section>
+      
+    </section>
+  </div>
+</article></div>
+      <div class="col-xl-3">
+        
+          
+  <aside class="toc-wrap">
+    <h3 class="toc-title">文章目录：</h3>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Python%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84"><span class="toc-text">Python数据结构</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E5%AD%97-Number"><span class="toc-text">数字 Number</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2-String"><span class="toc-text">字符串 String</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%97%E8%A1%A8-List"><span class="toc-text">列表 List</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%83%E7%BB%84"><span class="toc-text">元组</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%97%E5%85%B8"><span class="toc-text">字典</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Numpy-%E5%BA%93"><span class="toc-text">Numpy 库</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%9B%E5%BB%BAndarray"><span class="toc-text">创建ndarray</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8B%E6%95%B0%E6%8D%AE%E5%B1%9E%E6%80%A7"><span class="toc-text">查看数据属性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E6%95%B0%E7%BB%84%E7%BB%9F%E8%AE%A1%E6%96%B9%E6%B3%95"><span class="toc-text">基本数组统计方法</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Matplotlib"><span class="toc-text">Matplotlib</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8"><span class="toc-text">使用</span></a></li></ol></li></ol>
+  </aside>
+
+        
+      </div>
+    </div>
+  </div>
+</main>
+  
+
+<footer class="footer">
+  <div class="footer-social"><a 
+        href="tencent://message/?Menu=yes&uin=1021987388 "
+        target="_blank"
+        class="footer-social-item"
+        onMouseOver="this.style.color= '#12B7F5'" 
+        onMouseOut="this.style.color='#33333D'">
+          <i class="iconfont  iconQQ "></i>
+      </a><a 
+        href="https://github.com/Zeng-JiaYu "
+        target="_blank"
+        class="footer-social-item"
+        onMouseOver="this.style.color= '#9f7be1'" 
+        onMouseOut="this.style.color='#33333D'">
+          <i class="iconfont  icongithub-fill "></i>
+      </a><a 
+        href="mailto:zeng_jyu@outlook.com "
+        target="_blank"
+        class="footer-social-item"
+        onMouseOver="this.style.color=#FF3B00" 
+        onMouseOut="this.style.color='#33333D'">
+          <i class="iconfont  iconmail"></i>
+      </a></div>
+  
+    <div class="footer-copyright"><p>Powered by <a target="_blank" href="https://hexo.io">Hexo</a>  |  Theme - <a target="_blank" href="https://github.com/izhaoo/hexo-theme-zhaoo">zhaoo</a></p></div>
+  
+</footer>
+  
+      <div class="fab fab-plus">
+    <i class="iconfont iconplus"></i>
+  </div>
+  
+    <div class="fab fab-like">
+      <i class="iconfont iconheart"></i>
+    </div>
+  
+  
+  
+  <div class="fab fab-up">
+    <i class="iconfont iconcaret-up"></i>
+  </div>
+  
+  
+  
+    
+<script src="/js/color-mode.js"></script>
+
+  
+  
+    <div class="search">
+  <div class="search-container">
+    <div class="search-close">
+      <i class="iconfont iconbaseline-close-px"></i>
+    </div>
+    <div class="search-input-wrapper">
+      <i class="search-input-icon iconfont iconsearch"></i>
+      <input class="search-input" type="search" id="search-input" placeholder="Search..." autofocus autocomplete="off"
+        autocorrect="off" autocapitalize="off">
+    </div>
+    <div class="search-output" id="search-output"></div>
+  </div>
+</div>
+  
+</body>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+
+
+
+  
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js"></script>
+
+
+
+
+  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+
+
+
+
+
+
+  
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery.qrcode/1.0/jquery.qrcode.min.js"></script>
+
+
+
+
+<script src="/js/utils.js"></script>
+<script src="/js/script.js"></script>
+
+
+
+  <script>
+  $.getScript("//cdn.jsdelivr.net/npm/leancloud-storage@4.1.0/dist/av-min.js", () => {
+
+    AV.init({
+      appId: 'nAsopJfB1mX9npjoQHpt4aAf-gzGzoHsz',
+      appKey: '5hSjjLLmtqSQ5JDtBnl3b7Y0',
+      serverURLs: 'https://leancloud.cn/',
+    });
+
+    const Counter = AV.Object.extend("Counter");
+    const Like = AV.Object.extend("Like");
+
+    const showCount = (Counter) => {
+      const asyncLimit = new AsyncLimit(2);
+      $(".leancloud-counter").each(async (e) => {
+        const url = $(".leancloud-counter").eq(e).attr('id').trim();
+        const query = new AV.Query("Counter");
+        query.equalTo("words", url);
+        let count = await asyncLimit.run(() => query.count());
+        $(".leancloud-counter").eq(e).text(count ? count : 0);
+      });
+    }
+
+    const addCount = (Counter) => {
+      const url = $(".leancloud-counter").length === 1 ? $(".leancloud-counter").attr('id').trim() : 'https://zeng-jiayu.github.io';
+      var query = new Counter;
+      query.save({
+        words: url
+      });
+    }
+
+    const showLike = (Like) => {
+      const asyncLimit = new AsyncLimit(2);
+      $(".leancloud-like").each(async (e) => {
+        const url = $(".leancloud-like").eq(e).attr('id').trim();
+        const query = new AV.Query("Like");
+        query.equalTo("path", url);
+        let count = await asyncLimit.run(() => query.count());
+        $(".leancloud-like").eq(e).text(count ? count : 0);
+      });
+    }
+
+    const addLike = (Like) => {
+      const url = $(".leancloud-like").length === 1 ? $(".leancloud-like").attr('id').trim() : 'https://zeng-jiayu.github.io';
+      var query = new Like;
+      query.save({
+        path: url,
+        nickName: 'Anonymous'
+      });
+      $(".leancloud-like").addClass('islike');
+      $(".fab-like").children(".iconfont").removeClass("iconheart").addClass("iconheart-fill").css("color", "#eb3223");
+      ZHAOO.zui.message({ text: '爱你哦~', type: 'success' });
+      setTimeout(() => showLike(Like), 1000);
+    }
+
+    const handleLikeClick = () => {
+      const isLike = $(".leancloud-like").length === 1 && $(".leancloud-like").hasClass('islike') ? true : false;
+      if (isLike) {
+        ZHAOO.zui.message({ text: '小心心不可以收回呢~', type: 'warning' });
+      } else {
+        addLike(Like);
+      }
+    }
+
+    $(function () {
+      addCount(Counter);
+      showCount(Counter);
+      showLike(Like);
+      $(".fab-like").on("click", function () {
+        handleLikeClick();
+      });
+    });
+
+  });
+</script>
+
+
+
+
+
+  <script>
+    (function () {
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+      } else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+      }
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
