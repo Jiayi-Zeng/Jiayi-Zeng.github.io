@@ -211,7 +211,7 @@
           <i class="iconfont iconheart"></i><span id="/2022/03/12/Python%E5%A4%8D%E6%9D%82%E6%93%8D%E4%BD%9C/" class="leancloud-like" data-flag-title="Python复杂操作"></span>
         </span>
       
-      <span class="post-info-item"><i class="iconfont iconfont-size"></i>5054</span>
+      <span class="post-info-item"><i class="iconfont iconfont-size"></i>5084</span>
     </div>
   </div>
 </section>
@@ -262,13 +262,15 @@
 
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs python">obj[<span class="hljs-number">2</span>]	<span class="hljs-comment"># -5</span><br>obj[<span class="hljs-number">1</span>] = <span class="hljs-number">8</span><br>obj[[<span class="hljs-number">0</span>,<span class="hljs-number">1</span>,<span class="hljs-number">3</span>]]<br></code></pre></td></tr></table></figure>
 
-<p><img   class="lazyload" data-original="/images/Python%E5%A4%8D%E6%9D%82%E6%93%8D%E4%BD%9C/image-20220312163832748.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  alt="image-20220312163832748"></p>
+<img src="/2022/03/12/Python%E5%A4%8D%E6%9D%82%E6%93%8D%E4%BD%9C/image-20220312163832748.png" class="" title="This is an example image">
+
 <ul>
 <li>在算术运算中自动对齐不同索引的数据</li>
 </ul>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs python">obj2 = pd.Series(&#123;<span class="hljs-string">&quot;Ohio&quot;</span>:<span class="hljs-number">35000</span>,<span class="hljs-string">&quot;Oregon&quot;</span>:<span class="hljs-number">16000</span>,<span class="hljs-string">&quot;Texas&quot;</span>:<span class="hljs-number">71000</span>,<span class="hljs-string">&quot;Utah&quot;</span>:<span class="hljs-number">5000</span>&#125;)<br>obj3 = pd.Series(&#123;<span class="hljs-string">&quot;California&quot;</span>:np.nan,<span class="hljs-string">&quot;Ohio&quot;</span>:<span class="hljs-number">35000</span>,<span class="hljs-string">&quot;Oregon&quot;</span>:<span class="hljs-number">16000</span>,<span class="hljs-string">&quot;Texas&quot;</span>:<span class="hljs-number">71000</span>&#125;)<br><br>obj2 + obj3<br></code></pre></td></tr></table></figure>
 
-<p><img   class="lazyload" data-original="/images/Python%E5%A4%8D%E6%9D%82%E6%93%8D%E4%BD%9C/image-20220312163655127.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  alt="image-20220312163655127"></p>
+<img src="/2022/03/12/Python%E5%A4%8D%E6%9D%82%E6%93%8D%E4%BD%9C/image-20220312163655127.png" class="" title="This is an example image">
+
 <h2 id="DataFrame"><a href="#DataFrame" class="headerlink" title="DataFrame"></a>DataFrame</h2><ul>
 <li><p>DataFrame是一个表格型的数据结构，它含有一组有序的列。每列可以是不同的值类型（数值、字符串、布尔值等）</p>
 </li>
@@ -283,72 +285,84 @@
 </ul>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs python">data = &#123;<span class="hljs-string">&#x27;state&#x27;</span>:[<span class="hljs-string">&#x27;Ohio&#x27;</span>,<span class="hljs-string">&#x27;Ohio&#x27;</span>,<span class="hljs-string">&#x27;Ohio&#x27;</span>,<span class="hljs-string">&#x27;Nevada&#x27;</span>,<span class="hljs-string">&#x27;Nevada&#x27;</span>],<span class="hljs-string">&#x27;year&#x27;</span>:[<span class="hljs-number">2000</span>,<span class="hljs-number">2001</span>,<span class="hljs-number">2002</span>,<span class="hljs-number">2001</span>,<span class="hljs-number">2002</span>],<span class="hljs-string">&#x27;pop&#x27;</span>:[<span class="hljs-number">1.5</span>,<span class="hljs-number">1.7</span>,<span class="hljs-number">3.6</span>,<span class="hljs-number">2.4</span>,<span class="hljs-number">2.9</span>]&#125;<br>frame = pd.DataFrame(data)<br>frame<br></code></pre></td></tr></table></figure>
 
-<p><img   class="lazyload" data-original="/images/Python%E5%A4%8D%E6%9D%82%E6%93%8D%E4%BD%9C/image-20220312163632344.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  alt="image-20220312163632344"></p>
+<img src="/2022/03/12/Python%E5%A4%8D%E6%9D%82%E6%93%8D%E4%BD%9C/image-20220312163632344.png" class="" title="This is an example image">
+
 <ul>
 <li>如果指定了列顺序，则DataFrame的列就会按照指定顺序进行排列。</li>
 </ul>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python">pd.DataFrame(data, columns=[<span class="hljs-string">&#x27;year&#x27;</span>,<span class="hljs-string">&#x27;state&#x27;</span>,<span class="hljs-string">&#x27;pop&#x27;</span>])<br></code></pre></td></tr></table></figure>
 
-<p><img   class="lazyload" data-original="/images/Python%E5%A4%8D%E6%9D%82%E6%93%8D%E4%BD%9C/image-20220312163611531.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  alt="image-20220312163611531"></p>
+<img src="/2022/03/12/Python%E5%A4%8D%E6%9D%82%E6%93%8D%E4%BD%9C/image-20220312163611531.png" class="" title="This is an example image">
+
 <ul>
 <li>跟原Series一样，如果传入的列在数据中找不到，就会产生NAN值</li>
 </ul>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python">frame2 = pd.DataFrame(data, columns=[<span class="hljs-string">&#x27;year&#x27;</span>,<span class="hljs-string">&#x27;state&#x27;</span>,<span class="hljs-string">&#x27;pop&#x27;</span>,<span class="hljs-string">&#x27;debt&#x27;</span>], index=[<span class="hljs-string">&#x27;one&#x27;</span>,<span class="hljs-string">&#x27;two&#x27;</span>,<span class="hljs-string">&#x27;three&#x27;</span>,<span class="hljs-string">&#x27;four&#x27;</span>,<span class="hljs-string">&#x27;five&#x27;</span>])<br></code></pre></td></tr></table></figure>
 
-<p><img   class="lazyload" data-original="/images/Python%E5%A4%8D%E6%9D%82%E6%93%8D%E4%BD%9C/image-20220312163541521.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  alt="image-20220312163541521"></p>
+<img src="/2022/03/12/Python%E5%A4%8D%E6%9D%82%E6%93%8D%E4%BD%9C/image-20220312163541521.png" class="" title="This is an example image">
+
 <ul>
 <li>列可以通过赋值的方式进行修改。例如，给那个空的“delt”列附上一个标值量或一组值</li>
 </ul>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs python">frame2[<span class="hljs-string">&#x27;debt&#x27;</span>] = <span class="hljs-number">16.5</span><br>frame2[<span class="hljs-string">&#x27;debt&#x27;</span>] = np.arange(<span class="hljs-number">5.</span>)<br></code></pre></td></tr></table></figure>
 
-<p><img   class="lazyload" data-original="/images/Python%E5%A4%8D%E6%9D%82%E6%93%8D%E4%BD%9C/image-20220312163447132.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  alt="image-20220312163447132"></p>
+<img src="/2022/03/12/Python%E5%A4%8D%E6%9D%82%E6%93%8D%E4%BD%9C/image-20220312163447132.png" class="" title="This is an example image">
+
 <ul>
 <li>将列表或数组赋值给某个列时，其长度必须跟DataFrame的长度相匹配</li>
 <li>如果赋值的是一个Series，就会精确匹配DataFrame的索引，所有空位都将被填上缺失值</li>
 </ul>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs python">val = pd.Series([-<span class="hljs-number">1.2</span>,-<span class="hljs-number">1.5</span>,-<span class="hljs-number">1.7</span>], index=[<span class="hljs-string">&#x27;two&#x27;</span>,<span class="hljs-string">&#x27;three&#x27;</span>,<span class="hljs-string">&#x27;five&#x27;</span>])<br>frame2[<span class="hljs-string">&#x27;debt&#x27;</span>] = val<br></code></pre></td></tr></table></figure>
 
-<p><img   class="lazyload" data-original="/images/Python%E5%A4%8D%E6%9D%82%E6%93%8D%E4%BD%9C/image-20220312163424277.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  alt="image-20220312163424277"></p>
+<img src="/2022/03/12/Python%E5%A4%8D%E6%9D%82%E6%93%8D%E4%BD%9C/image-20220312163424277.png" class="" title="This is an example image">
+
 <ul>
 <li>为不存在的列赋值，会创建一个新列</li>
 </ul>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python">frame2[<span class="hljs-string">&#x27;eastern&#x27;</span>] = frame2.state == <span class="hljs-string">&#x27;Ohio&#x27;</span><br></code></pre></td></tr></table></figure>
 
-<p><img   class="lazyload" data-original="/images/Python%E5%A4%8D%E6%9D%82%E6%93%8D%E4%BD%9C/image-20220312163406771.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  alt="image-20220312163406771"></p>
+<img src="/2022/03/12/Python%E5%A4%8D%E6%9D%82%E6%93%8D%E4%BD%9C/image-20220312163406771.png" class="" title="This is an example image">
+
 <ul>
 <li>关键词del用于删除列</li>
 </ul>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">del</span> frame2[<span class="hljs-string">&#x27;eastern&#x27;</span>]<br>frame2.columns<br></code></pre></td></tr></table></figure>
 
-<p><img   class="lazyload" data-original="/images/Python%E5%A4%8D%E6%9D%82%E6%93%8D%E4%BD%9C/image-20220312163343465.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  alt="image-20220312163343465"></p>
+<img src="/2022/03/12/Python%E5%A4%8D%E6%9D%82%E6%93%8D%E4%BD%9C/image-20220312163343465.png" class="" title="This is an example image">
+
 <ul>
 <li>将嵌套字典（也就是字典的字典）传给DataFrame，它就会被解释为：外层字典的键作为列，内层键则作为行索引</li>
 </ul>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs python">pop = &#123;<span class="hljs-string">&#x27;Nevada&#x27;</span>:&#123;<span class="hljs-number">2021</span>:<span class="hljs-number">2.4</span>,<span class="hljs-number">2002</span>:<span class="hljs-number">2.9</span>&#125;,<span class="hljs-string">&#x27;Ohio&#x27;</span>:&#123;<span class="hljs-number">2000</span>:<span class="hljs-number">1.5</span>,<span class="hljs-number">2001</span>:<span class="hljs-number">1.7</span>,<span class="hljs-number">2002</span>:<span class="hljs-number">3.6</span>&#125;&#125;<br>frame3 = pd.DataFrame(pop)<br></code></pre></td></tr></table></figure>
 
-<p><img   class="lazyload" data-original="/images/Python%E5%A4%8D%E6%9D%82%E6%93%8D%E4%BD%9C/image-20220312163254454.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  alt="image-20220312163254454"></p>
+<img src="/2022/03/12/Python%E5%A4%8D%E6%9D%82%E6%93%8D%E4%BD%9C/image-20220312163254454.png" class="" title="This is an example image">
+
 <ul>
 <li>也可以对上述结果进行转置</li>
 </ul>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python">frame3.T<br></code></pre></td></tr></table></figure>
 
-<p><img   class="lazyload" data-original="/images/Python%E5%A4%8D%E6%9D%82%E6%93%8D%E4%BD%9C/image-20220312163239375.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  alt="image-20220312163239375"></p>
+<img src="/2022/03/12/Python%E5%A4%8D%E6%9D%82%E6%93%8D%E4%BD%9C/image-20220312163239375.png" class="" title="This is an example image">
+
 <ul>
 <li>如果设置了DataFrame的index和columns的name属性，则这些信息也会被显示出来。</li>
 </ul>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs python">frame3.index.name = <span class="hljs-string">&#x27;year&#x27;</span><br>frame3.columns.name = <span class="hljs-string">&#x27;state&#x27;</span><br></code></pre></td></tr></table></figure>
 
-<p><img   class="lazyload" data-original="/images/Python%E5%A4%8D%E6%9D%82%E6%93%8D%E4%BD%9C/image-20220312163224297.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  alt="image-20220312163224297"></p>
+<img src="/2022/03/12/Python%E5%A4%8D%E6%9D%82%E6%93%8D%E4%BD%9C/image-20220312163224297.png" class="" title="This is an example image">
+
 <ul>
 <li>跟Series一样，values属性也会以二维数组ndarray的形式返回DataFrame中的数据</li>
 </ul>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python">frame3.values<br></code></pre></td></tr></table></figure>
 
-<p><img   class="lazyload" data-original="/images/Python%E5%A4%8D%E6%9D%82%E6%93%8D%E4%BD%9C/image-20220312163203045.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  alt="image-20220312163203045"></p>
+<img src="/2022/03/12/Python%E5%A4%8D%E6%9D%82%E6%93%8D%E4%BD%9C/image-20220312163203045.png" class="" title="This is an example image">
+
 <ul>
 <li>如果DataFrame各列的数据类型不同，则数组类型就会选用能兼容所有列的数据类型</li>
 </ul>
-<p><img   class="lazyload" data-original="/images/Python%E5%A4%8D%E6%9D%82%E6%93%8D%E4%BD%9C/image-20220312163114522.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  alt="image-20220312163114522"></p>
+<img src="/2022/03/12/Python%E5%A4%8D%E6%9D%82%E6%93%8D%E4%BD%9C/image-20220312163114522.png" class="" title="This is an example image">
+
 <ul>
 <li>Pandas的索引对象负责管理轴标签和其他元数据（比如轴名称）</li>
 <li>构建DataFrame时，所用到的任何数组或其他序列的标签都会被转换成一个Index</li>
@@ -356,7 +370,8 @@
 </ul>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs python">obj = pd.Series(<span class="hljs-built_in">range</span>(<span class="hljs-number">3</span>), index=[<span class="hljs-string">&#x27;a&#x27;</span>,<span class="hljs-string">&#x27;b&#x27;</span>,<span class="hljs-string">&#x27;c&#x27;</span>])<br>index = obj.index<br></code></pre></td></tr></table></figure>
 
-<p><img   class="lazyload" data-original="/images/Python%E5%A4%8D%E6%9D%82%E6%93%8D%E4%BD%9C/image-20220312163002948.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  alt="image-20220312163002948"></p>
+<img src="/2022/03/12/Python%E5%A4%8D%E6%9D%82%E6%93%8D%E4%BD%9C/image-20220312163002948.png" class="" title="This is an example image">
+
 <ul>
 <li>Pandas的每一个索引都有一些方法和属性，它们可用于设置逻辑并回答有关该索引包含的数据的常见问题。</li>
 </ul>
@@ -393,7 +408,7 @@
 </tr>
 <tr>
 <td>drop</td>
-<td>删除</td>
+<td>删除传入的值，并得到新的Index</td>
 </tr>
 <tr>
 <td>insert</td>
@@ -429,7 +444,7 @@
 
         
   <nav class="nav">
-    <a href="/2022/03/13/%E5%9B%BE%E5%83%8F%E7%9B%B4%E6%96%B9%E5%9B%BE%E7%BB%9F%E8%AE%A1/"><i class="iconfont iconleft"></i>图像直方图统计</a>
+    <a href="/2022/03/13/%E6%96%87%E6%9C%AC%E8%AF%8D%E9%A2%91%E5%88%86%E6%9E%90/"><i class="iconfont iconleft"></i>文本词频分析</a>
     <a href="/2022/03/11/Python%E5%85%A5%E9%97%A8%E6%93%8D%E4%BD%9C/">Python入门操作<i class="iconfont iconright"></i></a>
   </nav>
 
