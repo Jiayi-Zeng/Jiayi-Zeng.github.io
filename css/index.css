@@ -1,0 +1,39 @@
+.hero {
+    height: calc(100vh - 56px);
+    display: grid;
+    width: screen;
+    place-items: center;
+    /*background-image: url(/theme-img/ZorinMountainFog1.jpg);
+    background-size: contain;
+    background-position: no-repeat;
+    background-origin: border-box;*/
+}
+
+.hero .group {
+    width: 100%;
+}
+
+.hero .sub {
+    text-transform: uppercase;
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--black-4);
+    margin: 0;
+    transition: font-size 0.5s;
+}
+
+.hero .large {
+    font-size: 128px;
+    color: var(--black-2);
+    margin: 0;
+    transition: font-size 0.5s;
+}
+
+@media screen and (max-width: 800px) {
+    .hero .sub {
+        font-size: 16px;
+    }
+    .hero .large {
+        font-size: 84px;
+    }
+}
