@@ -1,0 +1,30 @@
+.categories {
+  margin-bottom: 128px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+@media screen and (max-width: 800px) {
+  .categories {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.categories .category {
+  padding: 12px 24px;
+  margin: 6px;
+  font-size: 20px;
+  border-radius: 12px;
+  background-color: var(--card-bg);
+  color: var(--black-2);
+  text-decoration: none;
+  text-align:center;
+  display: flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.categories .category:hover {
+  background-color: var(--white-1);
+  color: var(--black);
+}
