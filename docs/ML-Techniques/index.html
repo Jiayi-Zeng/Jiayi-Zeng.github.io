@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head prefix="og: https://ogp.me/ns#">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+  <meta name="color-scheme" content="light dark">
+  
+<link rel="stylesheet" href="/css/prism.css">
+ 
+    
+<script src="/js/prism.js"></script>
+
+  
+  <title>ML Techniques - Joooyce | Zeng</title>
+  
+    <link rel="shortcut icon" href="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/1f41f.png">
+  
+  
+    <link rel='manifest' href='/manifest.json'>
+  
+
+  
+  
+  
+  <meta property="og:title" content="ML Techniques - Joooyce | Zeng" />
+  
+  <meta property="og:type" content="article" />
+  
+  <meta property="og:url" content="https://jiayi-zeng.github.io/docs/ML-Techniques/index.html" />
+  
+  <meta property="og:image" content="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/202302211214.png" />
+  
+  <meta property="og:article:published_time" content="2023-02-21T08:00:00.000Z" />
+  
+  <meta property="og:article:author" content="Joyce Zeng" />
+  
+  
+
+  
+<link rel="stylesheet" href="/css/var.css">
+
+  
+<link rel="stylesheet" href="/css/main.css">
+
+  
+<link rel="stylesheet" href="/css/typography.css">
+
+  
+<link rel="stylesheet" href="/css/code-highlighting.css">
+
+  
+<link rel="stylesheet" href="/css/components.css">
+
+  
+<link rel="stylesheet" href="/css/nav.css">
+
+  
+<link rel="stylesheet" href="/css/paginator.css">
+
+  
+<link rel="stylesheet" href="/css/footer.css">
+
+  
+<link rel="stylesheet" href="/css/post-list.css">
+
+  
+  
+<link rel="stylesheet" href="/css/rainbow-banner.css">
+
+  
+  
+  
+<link rel="stylesheet" href="/css/toc.css">
+
+  
+  
+  
+  
+  
+<link rel="stylesheet" href="/css/post.css">
+
+  
+  
+  
+  
+  
+
+  
+<meta name="generator" content="Hexo 6.3.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+</head>
+    
+<link rel="stylesheet" href="/css/prism.css">
+ 
+    
+<script src="/js/prism.js"></script>
+
+    <body
+        data-color-scheme="auto"
+        data-uppercase-categories="true"
+        
+        data-rainbow-banner="true"
+        data-rainbow-banner-shown="auto"
+        data-rainbow-banner-month="6"
+        data-rainbow-banner-colors="#e50000,#ff8d00,#ffee00,#008121,#004cff,#760188"
+        
+        data-config-root="/"
+        
+        data-toc="true"
+        data-toc-max-depth="2"
+        
+        
+    >
+        <nav id="theme-nav">
+    <div class="inner">
+        <a class="title" href="/">Jiayi Zeng</a>
+        <div class="nav-arrow"></div>
+        <div class="nav-items">
+            <a class="nav-item nav-item-home" href="/">Home</a>
+            
+            
+            <a class="nav-item" href="/archives">Archives</a>
+            
+            
+            
+            <a class="nav-item" href="/tags">Tags</a>
+            
+            
+            
+            <a class="nav-item" href="/categories">Categories</a>
+            
+            
+            
+            <a class="nav-item" href="/projects">Projects</a>
+            
+            
+            
+            <a class="nav-item" href="/about">About</a>
+            
+            
+            
+            <a class="nav-item nav-item-github nav-item-icon" href="https://github.com/Jiayi-Zeng" target="_blank">&nbsp;</a>
+            
+            
+            
+            <a class="nav-item nav-item-search nav-item-icon" href="/search" target="_blank">&nbsp;</a>
+            
+            
+        </div>
+    </div>
+</nav>
+        
+
+
+<article class="post">
+
+<div class="meta">
+    
+    <div class="categories text-uppercase">
+    
+        <a href="/categories/Predicted-Analytics-Tools-Techniques/">Predicted Analytics: Tools &amp; Techniques</a>
+    
+    </div>
+    
+
+    
+    <div class="date" id="date">
+        <span>February</span>
+        <span>21,</span>
+        <span>2023</span>
+    </div>
+    
+
+    <h2 class="title">ML Techniques</h2>
+
+</div>
+
+<div class="divider"></div>
+
+<div class="content">
+    <h1 id="Modeling-Methods"><a href="#Modeling-Methods" class="headerlink" title="Modeling Methods"></a>Modeling Methods</h1><table>
+<thead>
+<tr>
+<th>#</th>
+<th>Modeling Methods</th>
+<th>Response Variable: Numerical /Categorical</th>
+<th>Supervised or Unsupervised</th>
+<th>Strategy</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>Linear &amp; Polynomial Regression</td>
+<td>Numerical</td>
+<td>Supervised</td>
+<td>Error Based<br>Minimizing Error</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Logistic Regression</td>
+<td>Categorical (Binary)</td>
+<td>Supervised</td>
+<td>Maximizing Likelihood</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Discriminant Analysis</td>
+<td>Categorical</td>
+<td>Supervised</td>
+<td></td>
+</tr>
+<tr>
+<td>4</td>
+<td>K Nearest Neighbor</td>
+<td>Categorical</td>
+<td>Supervised</td>
+<td>Similarity Based</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Decision and Regression Trees</td>
+<td>Categorical + Numerical</td>
+<td>Supervised</td>
+<td>Information Based</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Naïve Bayes</td>
+<td>Categorical</td>
+<td>Supervised</td>
+<td>Probability Based</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Neural Networks</td>
+<td>Numerical + Categorical</td>
+<td>Supervised</td>
+<td>Mimicking Human Brain</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Clustering</td>
+<td></td>
+<td>Unsupervised</td>
+<td></td>
+</tr>
+<tr>
+<td>9</td>
+<td>Principal Component Analysis</td>
+<td></td>
+<td>Unsupervised</td>
+<td></td>
+</tr>
+<tr>
+<td>10</td>
+<td>Support Vector Machines</td>
+<td>Categorical</td>
+<td>Supervised</td>
+<td>Error Based</td>
+</tr>
+<tr>
+<td>11</td>
+<td>ARIMA : Time Series</td>
+<td>Numerical</td>
+<td>Supervised</td>
+<td>Auto Regression &amp; Moving <br>Average</td>
+</tr>
+</tbody></table>
+<h1 id="Estimation-or-Classification"><a href="#Estimation-or-Classification" class="headerlink" title="Estimation or Classification"></a>Estimation or Classification</h1><p><strong>Goals of Machine Learning Application: Estimation or Classification</strong></p>
+<ul>
+<li><p><strong>Estimation</strong> – Regression modeling technique is used</p>
+<p><em>Output is a number</em></p>
+<ul>
+<li><p>House price</p>
+</li>
+<li><p>Product sales for next quarter</p>
+</li>
+<li><p>GNP growth for the next quarter</p>
+</li>
+<li><p>Employment</p>
+</li>
+</ul>
+</li>
+<li><p><strong>Classification</strong> – Naïve Bayes, Decision Trees etc. modeling techniques are used</p>
+<p><em>Output is a categorical variable</em></p>
+<ul>
+<li><p>Sports team will win or lose</p>
+</li>
+<li><p>Email is junk or not</p>
+</li>
+<li><p>Which grade student will get</p>
+</li>
+<li><p>Tweet is positive or negative</p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="Classification-of-Modeling-Methods"><a href="#Classification-of-Modeling-Methods" class="headerlink" title="Classification of Modeling Methods"></a>Classification of Modeling Methods</h1><p><strong>Response Variable</strong></p>
+<ul>
+<li>Numerical or Categorical</li>
+</ul>
+<p><strong>Supervised or unsupervised</strong></p>
+<p><strong>Strategy</strong></p>
+<ul>
+<li><p>Error based learning</p>
+</li>
+<li><p>Similarity Based Learning</p>
+</li>
+<li><p>Information Based Learning</p>
+</li>
+<li><p>Probability Based Learning</p>
+</li>
+<li><p>Mimicking the Human Brain</p>
+</li>
+</ul>
+<h1 id="Supervised-vs-Unsupervised"><a href="#Supervised-vs-Unsupervised" class="headerlink" title="Supervised vs. Unsupervised"></a>Supervised vs. Unsupervised</h1><p><strong>Supervisor learning</strong> is the most common learning type where <strong>there is a target/output variable</strong> (which is also called supervisor)</p>
+<ul>
+<li><p>Supervisor (target variable) teaches the algorithm how to build/learn the pattern model</p>
+</li>
+<li><p>In PA, supervised learning ≈ predictive modeling</p>
+</li>
+</ul>
+<p><strong>Unsupervised learning has NO target variable</strong></p>
+<ul>
+<li><p>No supervisor to teach → algorithm has to learn by itself</p>
+</li>
+<li><p>In PA, unsupervised learning ≈ descriptive modeling</p>
+</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20230221112637145.png" alt="image-20230221112637145"></p>
+<h1 id="Classifying-Based-on-Strategy-to-Build-a-Model"><a href="#Classifying-Based-on-Strategy-to-Build-a-Model" class="headerlink" title="Classifying Based on Strategy to Build a Model"></a>Classifying Based on Strategy to Build a Model</h1><h2 id="Error-based-learning"><a href="#Error-based-learning" class="headerlink" title="Error based learning"></a>Error based learning</h2><ul>
+<li><p>Linear Multi Variable Regression</p>
+</li>
+<li><p>Support Vector Machine</p>
+</li>
+</ul>
+<p>In error-based machine learning</p>
+<ul>
+<li><p>We perform a search for a set of parameters for a parameterized model</p>
+</li>
+<li><p>That minimizes the total error across the predictions made by the model</p>
+</li>
+<li><p>With respect to a set of training instances (training data)</p>
+</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20230221113355334.png" alt="image-20230221113355334"></p>
+<h2 id="Similarity-Based-Learning"><a href="#Similarity-Based-Learning" class="headerlink" title="Similarity Based Learning"></a>Similarity Based Learning</h2><ul>
+<li>K Nearest Neighbor</li>
+</ul>
+<p>Compute the distance matrices between objects</p>
+<p><img src="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20230221113427635.png" alt="image-20230221113427635"></p>
+<h2 id="Information-Based-Learning"><a href="#Information-Based-Learning" class="headerlink" title="Information Based Learning"></a>Information Based Learning</h2><ul>
+<li><p>Decision Trees</p>
+</li>
+<li><p>Regression Trees</p>
+</li>
+<li><p>Split of decision trees are based on the entropy of the tables</p>
+</li>
+</ul>
+<p>Learn by Asking Questions</p>
+<ul>
+<li><p>The Socratic approach to questioning is based on the practice of disciplined, thoughtful dialogue.</p>
+</li>
+<li><p>Socrates, the early Greek philosopher/teacher, believed that disciplined practice of thoughtful questioning enabled the student to examine ideas logically and to determine the validity of those ideas.</p>
+</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20230221113520227.png" alt="image-20230221113520227"></p>
+<h2 id="Probability-Based-Learning"><a href="#Probability-Based-Learning" class="headerlink" title="Probability Based Learning"></a>Probability Based Learning</h2><ul>
+<li>Naïve Bayes</li>
+</ul>
+<p>Provides a way to compute <em>reverse</em> probability. </p>
+<p>Given <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="6.975ex" height="2.509ex" style="vertical-align: -0.671ex;" viewBox="0 -791.3 3003 1080.4" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-1-Title">
+<title id="MathJax-SVG-1-Title">P(B|A)</title>
+<defs aria-hidden="true">
+<path stroke-width="1" id="E1-GYREPAGELLANORMAL-1D443" d="M594 541c0 -136 -110 -253 -239 -253c-29 0 -49 5 -86 23l-2 31c37 -14 57 -19 79 -19c88 0 160 88 160 196c0 93 -49 137 -151 137c-19 0 -35 -2 -71 -8c-3 -13 -6 -23 -7 -28c-5 -19 -9 -40 -9 -40l-82 -487c-3 -19 -4 -26 -4 -35c0 -21 10 -29 36 -30l65 -3l-3 -28 l-139 3l-132 -3l4 28l41 3c40 3 42 6 58 97l74 434c5 31 9 62 9 76c0 18 -11 26 -35 27l-55 2l3 28l166 -3c46 0 92 3 138 3c87 0 182 -50 182 -151Z"></path>
+<path stroke-width="1" id="E1-GYREPAGELLAMAIN-28" d="M344 636c-111 -112 -164 -237 -164 -353v-66c0 -116 53 -241 164 -353c-6 -3 -11 -7 -16 -12s-9 -10 -12 -16c-123 123 -196 254 -196 381v66c0 127 73 258 196 381c3 -6 7 -11 12 -16s10 -9 16 -12Z"></path>
+<path stroke-width="1" id="E1-GYREPAGELLANORMAL-1D435" d="M559 562c0 -51 -24 -97 -69 -137c-32 -27 -56 -40 -113 -60c69 -10 99 -19 125 -40c27 -22 41 -55 41 -98c0 -76 -44 -144 -123 -191c-47 -28 -94 -39 -142 -39c-54 0 -107 3 -161 3c-30 0 -61 -1 -91 -3l5 26c42 7 55 14 58 32l87 504c5 30 9 62 9 76 c0 18 -11 26 -35 27l-53 2l3 28l151 -3c50 0 100 3 150 3c77 0 158 -48 158 -130zM455 211c0 87 -50 129 -153 129h-85l-51 -299c16 -1 28 -2 34 -3c33 -3 62 -4 82 -4c100 0 173 74 173 177zM473 544c0 75 -40 111 -121 111c-27 0 -53 -5 -80 -5l-49 -274h52 c124 0 198 63 198 168Z"></path>
+<path stroke-width="1" id="E1-GYREPAGELLAMAIN-7C" d="M128 -150c-8 2 -16 3 -24 3s-16 -1 -24 -3v800c8 -2 16 -3 24 -3s16 1 24 3v-800Z"></path>
+<path stroke-width="1" id="E1-GYREPAGELLANORMAL-1D434" d="M677 -3l-122 3l-122 -3v28l44 3c28 2 43 11 43 27c0 5 -1 13 -2 22l-27 200h-246l-102 -175c-20 -34 -26 -47 -26 -55c0 -9 14 -18 31 -19l52 -3v-28c-35 2 -71 3 -107 3l-112 -3v30l20 5c34 8 53 24 88 80l373 593h46l87 -625c6 -45 9 -47 56 -52l26 -3v-28zM486 313 l-37 288l-179 -288h216Z"></path>
+<path stroke-width="1" id="E1-GYREPAGELLAMAIN-29" d="M304 217c0 -127 -73 -258 -196 -381c-3 6 -7 11 -12 16s-10 9 -16 12c111 112 164 237 164 353v66c0 116 -53 241 -164 353c6 3 11 7 16 12s9 10 12 16c123 -123 196 -254 196 -381v-66Z"></path>
+</defs>
+<g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
+ <use xlink:href="#E1-GYREPAGELLANORMAL-1D443" x="0" y="0"></use>
+ <use xlink:href="#E1-GYREPAGELLAMAIN-28" x="611" y="0"></use>
+ <use xlink:href="#E1-GYREPAGELLANORMAL-1D435" x="1036" y="0"></use>
+ <use xlink:href="#E1-GYREPAGELLAMAIN-7C" x="1647" y="0"></use>
+ <use xlink:href="#E1-GYREPAGELLANORMAL-1D434" x="1856" y="0"></use>
+ <use xlink:href="#E1-GYREPAGELLAMAIN-29" x="2578" y="0"></use>
+</g>
+</svg>, we can compute <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="6.975ex" height="2.509ex" style="vertical-align: -0.671ex;" viewBox="0 -791.3 3003 1080.4" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-1-Title">
+<title id="MathJax-SVG-1-Title">P(A|B)</title>
+<defs aria-hidden="true">
+<path stroke-width="1" id="E1-GYREPAGELLANORMAL-1D443" d="M594 541c0 -136 -110 -253 -239 -253c-29 0 -49 5 -86 23l-2 31c37 -14 57 -19 79 -19c88 0 160 88 160 196c0 93 -49 137 -151 137c-19 0 -35 -2 -71 -8c-3 -13 -6 -23 -7 -28c-5 -19 -9 -40 -9 -40l-82 -487c-3 -19 -4 -26 -4 -35c0 -21 10 -29 36 -30l65 -3l-3 -28 l-139 3l-132 -3l4 28l41 3c40 3 42 6 58 97l74 434c5 31 9 62 9 76c0 18 -11 26 -35 27l-55 2l3 28l166 -3c46 0 92 3 138 3c87 0 182 -50 182 -151Z"></path>
+<path stroke-width="1" id="E1-GYREPAGELLAMAIN-28" d="M344 636c-111 -112 -164 -237 -164 -353v-66c0 -116 53 -241 164 -353c-6 -3 -11 -7 -16 -12s-9 -10 -12 -16c-123 123 -196 254 -196 381v66c0 127 73 258 196 381c3 -6 7 -11 12 -16s10 -9 16 -12Z"></path>
+<path stroke-width="1" id="E1-GYREPAGELLANORMAL-1D434" d="M677 -3l-122 3l-122 -3v28l44 3c28 2 43 11 43 27c0 5 -1 13 -2 22l-27 200h-246l-102 -175c-20 -34 -26 -47 -26 -55c0 -9 14 -18 31 -19l52 -3v-28c-35 2 -71 3 -107 3l-112 -3v30l20 5c34 8 53 24 88 80l373 593h46l87 -625c6 -45 9 -47 56 -52l26 -3v-28zM486 313 l-37 288l-179 -288h216Z"></path>
+<path stroke-width="1" id="E1-GYREPAGELLAMAIN-7C" d="M128 -150c-8 2 -16 3 -24 3s-16 -1 -24 -3v800c8 -2 16 -3 24 -3s16 1 24 3v-800Z"></path>
+<path stroke-width="1" id="E1-GYREPAGELLANORMAL-1D435" d="M559 562c0 -51 -24 -97 -69 -137c-32 -27 -56 -40 -113 -60c69 -10 99 -19 125 -40c27 -22 41 -55 41 -98c0 -76 -44 -144 -123 -191c-47 -28 -94 -39 -142 -39c-54 0 -107 3 -161 3c-30 0 -61 -1 -91 -3l5 26c42 7 55 14 58 32l87 504c5 30 9 62 9 76 c0 18 -11 26 -35 27l-53 2l3 28l151 -3c50 0 100 3 150 3c77 0 158 -48 158 -130zM455 211c0 87 -50 129 -153 129h-85l-51 -299c16 -1 28 -2 34 -3c33 -3 62 -4 82 -4c100 0 173 74 173 177zM473 544c0 75 -40 111 -121 111c-27 0 -53 -5 -80 -5l-49 -274h52 c124 0 198 63 198 168Z"></path>
+<path stroke-width="1" id="E1-GYREPAGELLAMAIN-29" d="M304 217c0 -127 -73 -258 -196 -381c-3 6 -7 11 -12 16s-10 9 -16 12c111 112 164 237 164 353v66c0 116 -53 241 -164 353c6 3 11 7 16 12s9 10 12 16c123 -123 196 -254 196 -381v-66Z"></path>
+</defs>
+<g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
+ <use xlink:href="#E1-GYREPAGELLANORMAL-1D443" x="0" y="0"></use>
+ <use xlink:href="#E1-GYREPAGELLAMAIN-28" x="611" y="0"></use>
+ <use xlink:href="#E1-GYREPAGELLANORMAL-1D434" x="1036" y="0"></use>
+ <use xlink:href="#E1-GYREPAGELLAMAIN-7C" x="1758" y="0"></use>
+ <use xlink:href="#E1-GYREPAGELLANORMAL-1D435" x="1967" y="0"></use>
+ <use xlink:href="#E1-GYREPAGELLAMAIN-29" x="2578" y="0"></use>
+</g>
+</svg></p>
+<p style="text-align:center"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="28.019ex" height="2.509ex" style="vertical-align: -0.671ex;" viewBox="0 -791.3 12063.6 1080.4" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-1-Title">
+<title id="MathJax-SVG-1-Title">P(A|B) = P(B|A)P(A)/P(B)</title>
+<defs aria-hidden="true">
+<path stroke-width="1" id="E1-GYREPAGELLANORMAL-1D443" d="M594 541c0 -136 -110 -253 -239 -253c-29 0 -49 5 -86 23l-2 31c37 -14 57 -19 79 -19c88 0 160 88 160 196c0 93 -49 137 -151 137c-19 0 -35 -2 -71 -8c-3 -13 -6 -23 -7 -28c-5 -19 -9 -40 -9 -40l-82 -487c-3 -19 -4 -26 -4 -35c0 -21 10 -29 36 -30l65 -3l-3 -28 l-139 3l-132 -3l4 28l41 3c40 3 42 6 58 97l74 434c5 31 9 62 9 76c0 18 -11 26 -35 27l-55 2l3 28l166 -3c46 0 92 3 138 3c87 0 182 -50 182 -151Z"></path>
+<path stroke-width="1" id="E1-GYREPAGELLAMAIN-28" d="M344 636c-111 -112 -164 -237 -164 -353v-66c0 -116 53 -241 164 -353c-6 -3 -11 -7 -16 -12s-9 -10 -12 -16c-123 123 -196 254 -196 381v66c0 127 73 258 196 381c3 -6 7 -11 12 -16s10 -9 16 -12Z"></path>
+<path stroke-width="1" id="E1-GYREPAGELLANORMAL-1D434" d="M677 -3l-122 3l-122 -3v28l44 3c28 2 43 11 43 27c0 5 -1 13 -2 22l-27 200h-246l-102 -175c-20 -34 -26 -47 -26 -55c0 -9 14 -18 31 -19l52 -3v-28c-35 2 -71 3 -107 3l-112 -3v30l20 5c34 8 53 24 88 80l373 593h46l87 -625c6 -45 9 -47 56 -52l26 -3v-28zM486 313 l-37 288l-179 -288h216Z"></path>
+<path stroke-width="1" id="E1-GYREPAGELLAMAIN-7C" d="M128 -150c-8 2 -16 3 -24 3s-16 -1 -24 -3v800c8 -2 16 -3 24 -3s16 1 24 3v-800Z"></path>
+<path stroke-width="1" id="E1-GYREPAGELLANORMAL-1D435" d="M559 562c0 -51 -24 -97 -69 -137c-32 -27 -56 -40 -113 -60c69 -10 99 -19 125 -40c27 -22 41 -55 41 -98c0 -76 -44 -144 -123 -191c-47 -28 -94 -39 -142 -39c-54 0 -107 3 -161 3c-30 0 -61 -1 -91 -3l5 26c42 7 55 14 58 32l87 504c5 30 9 62 9 76 c0 18 -11 26 -35 27l-53 2l3 28l151 -3c50 0 100 3 150 3c77 0 158 -48 158 -130zM455 211c0 87 -50 129 -153 129h-85l-51 -299c16 -1 28 -2 34 -3c33 -3 62 -4 82 -4c100 0 173 74 173 177zM473 544c0 75 -40 111 -121 111c-27 0 -53 -5 -80 -5l-49 -274h52 c124 0 198 63 198 168Z"></path>
+<path stroke-width="1" id="E1-GYREPAGELLAMAIN-29" d="M304 217c0 -127 -73 -258 -196 -381c-3 6 -7 11 -12 16s-10 9 -16 12c111 112 164 237 164 353v66c0 116 -53 241 -164 353c6 3 11 7 16 12s9 10 12 16c123 -123 196 -254 196 -381v-66Z"></path>
+<path stroke-width="1" id="E1-GYREPAGELLAMAIN-3D" d="M680 330h-600c2 10 3 20 3 30s-1 20 -3 30h600c-2 -10 -3 -20 -3 -30s1 -20 3 -30zM680 110h-600c2 10 3 20 3 30s-1 20 -3 30h600c-2 -10 -3 -20 -3 -30s1 -20 3 -30Z"></path>
+<path stroke-width="1" id="E1-GYREPAGELLAMAIN-2F" d="M406 650l-275 -800c-9 2 -17 3 -26 3c-8 0 -17 -1 -25 -3l275 800c8 -2 17 -3 25 -3c9 0 17 1 26 3Z"></path>
+</defs>
+<g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
+ <use xlink:href="#E1-GYREPAGELLANORMAL-1D443" x="0" y="0"></use>
+ <use xlink:href="#E1-GYREPAGELLAMAIN-28" x="611" y="0"></use>
+ <use xlink:href="#E1-GYREPAGELLANORMAL-1D434" x="1036" y="0"></use>
+ <use xlink:href="#E1-GYREPAGELLAMAIN-7C" x="1758" y="0"></use>
+ <use xlink:href="#E1-GYREPAGELLANORMAL-1D435" x="1967" y="0"></use>
+ <use xlink:href="#E1-GYREPAGELLAMAIN-29" x="2578" y="0"></use>
+ <use xlink:href="#E1-GYREPAGELLAMAIN-3D" x="3280" y="0"></use>
+ <use xlink:href="#E1-GYREPAGELLANORMAL-1D443" x="4319" y="0"></use>
+ <use xlink:href="#E1-GYREPAGELLAMAIN-28" x="4930" y="0"></use>
+ <use xlink:href="#E1-GYREPAGELLANORMAL-1D435" x="5355" y="0"></use>
+ <use xlink:href="#E1-GYREPAGELLAMAIN-7C" x="5966" y="0"></use>
+ <use xlink:href="#E1-GYREPAGELLANORMAL-1D434" x="6175" y="0"></use>
+ <use xlink:href="#E1-GYREPAGELLAMAIN-29" x="6897" y="0"></use>
+ <use xlink:href="#E1-GYREPAGELLANORMAL-1D443" x="7322" y="0"></use>
+ <use xlink:href="#E1-GYREPAGELLAMAIN-28" x="7933" y="0"></use>
+ <use xlink:href="#E1-GYREPAGELLANORMAL-1D434" x="8358" y="0"></use>
+ <use xlink:href="#E1-GYREPAGELLAMAIN-29" x="9080" y="0"></use>
+ <use xlink:href="#E1-GYREPAGELLAMAIN-2F" x="9505" y="0"></use>
+ <use xlink:href="#E1-GYREPAGELLANORMAL-1D443" x="9991" y="0"></use>
+ <use xlink:href="#E1-GYREPAGELLAMAIN-28" x="10603" y="0"></use>
+ <use xlink:href="#E1-GYREPAGELLANORMAL-1D435" x="11027" y="0"></use>
+ <use xlink:href="#E1-GYREPAGELLAMAIN-29" x="11639" y="0"></use>
+</g>
+</svg></p>
+<p>Naïve Assumption: Assuming Variable Independence</p>
+<h2 id="Mimicking-the-Human-Brain-Neural-Networks"><a href="#Mimicking-the-Human-Brain-Neural-Networks" class="headerlink" title="Mimicking the Human Brain: Neural Networks"></a>Mimicking the Human Brain: Neural Networks</h2><ul>
+<li><p>Extract linear combinations of the inputs</p>
+</li>
+<li><p>Model the target as the non-linear functions of these features</p>
+</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20230221113814241.png" alt="image-20230221113814241"></p>
+<p><strong>Deep Learning:</strong> Complex set of Neural Networks with many layers of processing</p>
+<p><img src="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20230221114146210.png" alt="image-20230221114146210"></p>
+<p><strong>Main Applications of Deep Learning Neural Networks</strong></p>
+<ul>
+<li><p>Image Recognition</p>
+<ul>
+<li>Convolution Neural Networks</li>
+</ul>
+</li>
+<li><p>Image Classification</p>
+<ul>
+<li>Convolution Neural Networks</li>
+</ul>
+</li>
+<li><p>Hand Writing Identification</p>
+</li>
+<li><p>Speech Recognition</p>
+<ul>
+<li>Long Short-Term Memory Networks</li>
+</ul>
+</li>
+</ul>
+
+</div>
+
+
+<div class="about">
+    
+    <p class="tags">
+        
+        <i class="icon"></i>
+        <a href="/tags/ML/" class="tag"># ML</a><a href="/tags/PA/" class="tag"># PA</a>
+    </p>
+    
+</div>
+
+
+<div class="container post-prev-next">
+    <a class="next"></a>
+    
+    <a href="/docs/TO-DO-list/" class="prev">
+        <div>
+            <div class="text">
+                <p class="label">Previous</p>
+                <h3 class="title">TO-DO list</>
+            </div>
+        </div>
+    </a>
+    
+</div>
+
+
+    
+    
+
+    
+</article>          
+    
+  
+
+        <footer>
+    <div class="inner">
+        <div class="links">
+            
+            <div class="group">
+                <h4 class="title">Blog</h4>
+                
+                <a href="/" class="item">Home</a>
+                
+                <a href="/archives" class="item">Archives</a>
+                
+                <a href="/tags" class="item">Tags</a>
+                
+                <a href="/categories" class="item">Categories</a>
+                
+            </div>
+            
+            <div class="group">
+                <h4 class="title">Projects</h4>
+                
+                <a href="/projects" class="item">Intro</a>
+                
+            </div>
+            
+            <div class="group">
+                <h4 class="title">Me</h4>
+                
+                <a target="_blank" rel="noopener" href="https://github.com/Jiayi-Zeng" class="item">GitHub</a>
+                
+                <a href="mailto:joyce.j.zeng@outlook.com" class="item">Email</a>
+                
+                <a href="tencent://message/?Menu=yes&uin=1021987388" class="item">QQ</a>
+                
+                <a target="_blank" rel="noopener" href="https://www.instagram.com/iam_joycezeng/" class="item">Instagram</a>
+                
+                <a target="_blank" rel="noopener" href="https://www.linkedin.com/in/jiayi-zeng-joyce/" class="item">LinkedIn</a>
+                
+            </div>
+            
+        </div>
+        <span>&copy; 2023 Joyce Zeng<br>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> </span>
+        
+        
+            <br>
+            <div class="color-scheme-toggle" role="radiogroup" id="theme-color-scheme-toggle">
+                <label>
+                    <input type="radio" value="light">
+                    <span>Light</span>
+                </label>
+                <label>
+                    <input type="radio" value="dark">
+                    <span>Dark</span>
+                </label>
+                <label>
+                    <input type="radio" value="auto">
+                    <span>Auto</span>
+                </label>
+            </div>
+        
+    </div>
+</footer>
+
+
+        
+<script src="/js/main.js"></script>
+
+        
+        
+        
+
+        
+        <script src="https://unpkg.com/scrollreveal"></script>
+        <script>
+            window.addEventListener('load', () => {
+                ScrollReveal({ delay: 250, reset: true, easing: 'cubic-bezier(0, 0, 0, 1)' })
+                ScrollReveal().reveal('.post-list-item .cover-img img')
+                ScrollReveal().reveal('.post-list-item, .card, .content p img, .content .block-large img', { distance: '60px', origin: 'bottom', duration: 800 })
+            })
+        </script>
+        
+    </body>
+</html>
