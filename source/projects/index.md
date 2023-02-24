@@ -1,6 +1,5 @@
 ---
 title: Projects
-date: 2022-11-11 04:41:19
 ---
 
 ## Personal Projects
@@ -20,6 +19,7 @@ Shaanxi, China, Mar 2022 - Present
 ------
 
 [**Traffic Light Detector**](https://github.com/Jiayi-Zeng/Traffic-Light-Detector) 
+
 Shaanxi, China, Sep 2022 - Dec 2022   
 
 *Personal Project*             
@@ -42,9 +42,9 @@ Shaanxi, China, Sep 2022 - Dec 2022
 
 [**Winsock Example**](https://github.com/Jiayi-Zeng/Winsocket-emample)
 
-Shaanxi, China, May 2022 - May 2022   
+Shaanxi, China, May 2022 
 
-*course: Intro to Internet Development*
+*course: Web Development*
 
 * Some examples for win-socket programming
 
@@ -52,7 +52,7 @@ Shaanxi, China, May 2022 - May 2022
 
 [**8Puzzle**](https://github.com/Jiayi-Zeng/8Puzzle) 
 
-Shaanxi, China, May 2022 - May 2022   
+Shaanxi, China, May 2022 
 
 *course: Intro to Artificial Intelligence*
 
@@ -62,9 +62,9 @@ Shaanxi, China, May 2022 - May 2022
 
 [**MyNET**](https://github.com/Jiayi-Zeng/MyNET)  
 
-Shaanxi, China, Jan 2022 - Jan 2022   
+Shaanxi, China, Jan 2022   
 
-*course: Intro to Network*
+*course: Computer Network*
 
 * Packet capture tool based on C, MFC, Winpcap
 
@@ -72,7 +72,7 @@ Shaanxi, China, Jan 2022 - Jan 2022
 
 [**Virtual Keyboard**](Virtual-Keyboard)
 
-Shaanxi, China, Jan 2022 - Jan 2022   
+Shaanxi, China, Jan 2022 
 
 *course: Digital Image Process*    
 
@@ -82,7 +82,7 @@ Shaanxi, China, Jan 2022 - Jan 2022
 
 [**Digital Image Process Frame**](https://github.com/Jiayi-Zeng/Digital-Image-Process-Frame)   
 
-Shaanxi, China, Sep 2022 - Dec 2022   
+Shaanxi, China, Dec 2021   
 
 *course: Digital Image Process*    
 
@@ -92,9 +92,9 @@ Shaanxi, China, Sep 2022 - Dec 2022
 
 [**Computer-Graphics**](https://github.com/Jiayi-Zeng/Computer-Graphics)  
 
-Shaanxi, China, Sep 2022 - Dec 2022   
+Shaanxi, China, Dec 2021
 
-*course: Computer-Graphics*
+*course: Computer Graphics*
 
 * Based on Python, PyQt5, Pyopengl
 
@@ -104,9 +104,9 @@ Shaanxi, China, Sep 2022 - Dec 2022
 
 [**Chat**](https://github.com/Jiayi-Zeng/Chat)   
 
-Shaanxi, China, Dec 2020 - Dec 2020   
+Shaanxi, China, Dec 2020 
 
-*course: Intro to Java Programming*
+*course: Java Programming*
 
 * A chat software based on Java
 
@@ -114,16 +114,16 @@ Shaanxi, China, Dec 2020 - Dec 2020
 
 [**Paint**](https://github.com/Jiayi-Zeng/Paint)  
 
-Shaanxi, China, Dec 2020 - Dec 2020   
+Shaanxi, China, Dec 2020   
 
-*course: Intro to Object-Oriented Programming*
+*course: Object-Oriented Programming*
 
 * Drawing software based on C++
 
 ##  Mathematical Contest for Modeling
 **Preparation of C4 olefins by ethanol coupling based on Machine Learning**                                             
 
-Shaanxi, China, Sep 2021 – Sep 2021
+Shaanxi, China, Sep 2021
 
 *CUMCM, Second Prize in Shaanxi Province*                   
 
@@ -134,7 +134,3 @@ Shaanxi, China, Sep 2021 – Sep 2021
 * Described the data, told the story, predicted data trends, and found optimal solutions via MATLAB and Python
 
 * Awarded the second prize in the contest
-
-## Data Analytics for Business
-
-TBA

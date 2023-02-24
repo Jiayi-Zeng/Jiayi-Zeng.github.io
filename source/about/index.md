@@ -1,13 +1,14 @@
 ---
 title: About
-date: 2022-11-11 04:41:28
 ---
 
 # 曾嘉怡 Jiayi Zeng
 
-**A Computer Science Student Experienced in Analyzing Data and Machine Learning**
+A recent graduate computer science student experienced in data analytics and machine learning
 
-A recent graduate computer science student experienced in data analytics for two years. Won the second prize in a mathematical contest in modeling through data analysis, proficient with Office, Tableau, Python, SQL, and machine learning. 
+Used to do computer vision applications in transportation
+
+Will focus more on AI for Eduction in the future
 
 ## CONTACT INFO
 
@@ -19,74 +20,72 @@ A recent graduate computer science student experienced in data analytics for two
 
 :link: LinkedIn:  [linkedin.com/in/jiayi-zeng-joyce](https://www.linkedin.com/in/jiayi-zeng-joyce)
 
-## EDUCATION
+## EDUCATION                           
 
-**Bachelor's Degree - Computer Science**                                                       
+**East China Normal University**
 
-*Chang ‘an University*, Shaanxi, China                                                               
+*Academic Master Degree in Computer Science*
 
-Jun 2023 (Expected) 
-
-* **Grade:** 3.82
-
-* **Awarded** China National Scholarship for outstanding comprehensive quality and second-class scholarship six times for excellent grades and contributions
-
-* **Skills:** SQL · MATLAB · C++ · OpenCV · Java · Machine Learning · Python (Programming Language)
+Expected Jun 2026
 
 ------
 
-**Accelerated Certificate Program - Data Analytics for Business**                                                   
+**Chang ‘an University**  
 
-*University of California, Irvine Division of Continuing Education*, Irvine, CA                          
+*Bachelor's Degree in Computer Science (GPA: 3.82)*  
 
-Graduated: Mar 2023 (Expected)
+Expected Jun 2023
 
-* **Grade:** 4.0
+* **Awarded** China National Scholarship for outstanding comprehensive quality and second-class scholarship six times for excellent grades and contributions
 
-* **Related Courses:** Descriptive Analytics: Visualization & Storytelling, Predictive Analytics: Tools & Techniques, Prescriptive Analytics: Digital Decisioning
+------
 
-* **Skills:** Tableau · Python (Programming Language) · Microsoft Office
+**University of California, Irvine Division of Continuing Education**
 
-## PROFESSIONAL EXPERIENCE
+*Accelerated Certificate Program - Data Analytics for Business (GPA: 4.0)* 
 
-See the [Project](/projects/) website.
+Expected Mar 2023
 
-## CAMPUS LEADERSHIP EXPERIENCE
+* **Related Courses:** Descriptive Analytics - Visualization & Storytelling, Predictive Analytics - Tools & Techniques, Prescriptive Analytics - Digital Decisioning
+
+## PROJECTS EXPERIENCE
+
+More infomation on the [Project](/projects/) website.
+
+## LEADERSHIP EXPERIENCE
 
 **Baidu Songguo Elite Class of Chang'an University**                                        
 
-Shaanxi, China, Sep 2020 – Jul 2021
+Shaanxi, China, Dec 2021 – Dec 2022
 
-*Monitor*
+*Class Monitor*
 
-* Finished Artificial intelligence-related industry practice courses and Internet workplace competency courses
+* Completed artificial intelligence-related industry practice courses and internet workplace competency courses
 
 * Assisted the instructor in organizing the class of 80 students, investigated students' opinions, and convened instructors’ announcements
 
 ------
 
-**The Outreach Department of Student Union**                                             
+**Chang'an University’s Student Union – Outreach Department**                                             
 
 Shaanxi, China, Sep 2020 – Jul 2021      
 
-*Manager*                                                                          
+*Manager*               
 
-* Collaborated with the company to get sponsors up to ¥20000 for campus events
+* Collaborated with companies to get sponsors up to ¥20,000 for campus events
 
-* Organized activities with other universities
+* Organized activities with other universities to communicate and share student experience
 
-* Drafted official emails and managed the official mailbox
+* Managed official email communication to promote event participation
 
-## SKILLS
+## TECHNOLOGY STACK
 
-* **Data Science:** Proficient in Office, Tableau, Python, MATLAB, SQL, and machine learning
+* **Programming languages:** C/C++, Python, Java, PHP, MATLAB
 
-* **Software development:** C/C++, Java, HTML5, etc.
+* **Website Develop:** HTML, CSS, JavaScript, MySQL, Node.js
 
-## Language
+* **Workflow:** VSCode, Git, Github, conda, colab
 
-- **Mandarin** - Native or bilingual proficiency
+* **OS:** Windows 11, Linux
 
-- **English** - Professional working proficiency
-
-  
+* **Data Analytics:** MS Office, Jupyter, Tableau
