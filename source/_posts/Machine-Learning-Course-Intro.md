@@ -3,7 +3,7 @@ title: Class Intro
 date: 2022-10-24
 tags: [ML]
 categories: HUNG-YI LEE | MACHINE LEARNING
-cover_image: https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/class-intro.png
+cover_image: https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/202302230550.png
 ---
 
 # How to find a function

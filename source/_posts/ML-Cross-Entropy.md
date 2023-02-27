@@ -2,7 +2,7 @@
 title: Cross Entropy
 date: 2022-03-28 21:50:11
 tags: [ML]
-categories: Machine Learning
+categories: Other
 cover_image: https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/-%20LeNet%20(1998)%20(3).png
 ---
 

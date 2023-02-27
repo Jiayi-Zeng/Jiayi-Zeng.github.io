@@ -2,7 +2,7 @@
 title: Real-time Rendering & DLSS 2.0
 tags: [DL, CG]
 date: 2022/1/10
-categories: Computer Graphics
+categories: Other
 cover_image: https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/QQ%E5%9B%BE%E7%89%8720221111191353.png
 ---
 

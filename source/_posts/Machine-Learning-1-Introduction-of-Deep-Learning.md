@@ -3,7 +3,7 @@ title: 1 Introduction of Deep Learning
 date: 2022-10-25
 tags: [ML]
 categories: HUNG-YI LEE | MACHINE LEARNING
-cover_image: https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/1-intro-of-deep-learning.png
+cover_image: https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/202302230549.png
 ---
 
 # Machine Learning ≈ Looking for function

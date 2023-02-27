@@ -1,9 +1,13 @@
 ---
-title: ML Techniques
+title: 3 Modeling Techniques
+
 date: 2023-02-21
-tags: [PA, ML]
+
+tags: [DSBA, ML]
+
 categories: "Predicted Analytics: Tools & Techniques"
-cover_image: https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/202302211214.png
+
+cover_image: https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/20230223%20(2).png
 ---
 
 # Modeling Methods

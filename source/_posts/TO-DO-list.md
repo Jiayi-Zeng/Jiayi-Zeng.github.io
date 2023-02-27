@@ -15,6 +15,8 @@ cover_image: https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/p
 
 - [ ] 表格宽度根据内容宽度进行调整
 
+- [ ] 调整图片大小
+
 - [x] 实现home页面宽屏大图片
 
 - [x] 实现table居中显示
@@ -28,16 +30,8 @@ cover_image: https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/p
 - [x] 设计滑动栏
 
 
-```c++ 
-# include <iostream>
-using namespace std;
 
-int main(){
-    cout << "Hello World!" << endl;
-    return 0;
-}
-```
 
-  
 
-  
+
+
