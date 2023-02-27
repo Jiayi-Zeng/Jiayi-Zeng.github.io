@@ -1,0 +1,53 @@
+.hero {
+    height: calc(100vh - 56px);
+    display: grid;
+    height: screen;
+    place-items: center;
+    background-position: no-repeat;
+    background-size:100% 100%;
+    background-attachment: fixed;
+    height: calc(100vh);
+}
+
+.hero .group {
+    width: 100%;
+}
+
+body[data-color-scheme="auto"] .hero, body[data-color-scheme="light"] .hero {
+    background-image: url(/theme-img/ZorinMountainFog1.jpg);
+}
+
+@media (prefers-color-scheme: dark) {
+    body[data-color-scheme="auto"] nav .nav-item-github {
+        background-image: url(/theme-img/ZorinMountainFog2.jpg);
+    }
+}
+
+body[data-color-scheme="auto"] .hero, body[data-color-scheme="dark"] .hero {
+    background-image: url(/theme-img/ZorinMountainFog2.jpg);
+}
+
+.hero .sub {
+    text-transform: uppercase;
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--hero-white-1);
+    transition: font-size 0.5s;
+    margin: 0 20vw;
+}
+
+.hero .large {
+    font-size: 128px;
+    color: var(--hero-white);
+    margin: auto 20vw;
+    transition: font-size 0.5s;
+}
+
+@media screen and (max-width: 800px) {
+    .hero .sub {
+        font-size: 16px;
+    }
+    .hero .large {
+        font-size: 84px;
+    }
+}

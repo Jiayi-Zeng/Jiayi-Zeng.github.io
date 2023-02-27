@@ -1,0 +1,98 @@
+# REMEMBER TO EDIT THIS BEFORE DEPLOYING!!!
+
+# the path to your blog's icon:
+favicon: https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/1f41f.png
+
+# the path to manifest.json
+manifest: /manifest.json
+
+# [Open Graph Protocol](https://ogp.me/)
+og_enabled: true
+og_image: /favicon.png
+og:
+  # customize og properties here which will replace the defaults
+
+# show excerpt on post list
+show_excerpt: false
+
+# light/dark/auto color scheme
+color_scheme: auto
+
+# show floating color theme toggle
+show_color_scheme_toggle: true
+
+# uppercase categories
+uppercase_categories: true
+
+# capitalize tag names on tags page
+capitalize_tags: false
+
+# add hashtag prefix before tags
+hashtag_prefix_before_tags: true
+
+# rainbow!
+rainbow_banner: true
+rainbow_banner_colors:
+  - '#e50000'
+  - '#ff8d00'
+  - '#ffee00'
+  - '#008121'
+  - '#004cff'
+  - '#760188'
+# choose from [auto, always]
+rainbow_banner_shown: auto
+# Pride Month by default
+rainbow_banner_month: 6
+
+# TOC - table of contents
+toc: true
+toc_max_depth: 2
+toc_min_depth: 1
+
+# scroll reveal (https://scrollrevealjs.org/) - animating elements as they enter/leave the viewport
+scroll_reveal: true
+
+# navigation config
+nav:
+  # the title displays in the upper left corner which won't change
+  title: Jiayi Zeng
+  # the items displays in the upper right corner
+  items:
+    # these items will display as a link
+    Archives: /archives
+    Tags: /tags
+    Categories: /categories
+    Projects: /projects
+    About: /about
+    # these will be automatically be an icon
+    GitHub: https://github.com/Jiayi-Zeng
+    Search: /search
+
+# footer items
+footer:
+  Blog: 
+    Home: /
+    Archives: /archives
+    Tags: /tags
+    Categories: /categories
+  Projects:
+    Intro: /projects
+  Me:
+    GitHub: https://github.com/Jiayi-Zeng
+    Email: mailto:joyce.j.zeng@outlook.com
+    QQ: tencent://message/?Menu=yes&uin=1021987388
+    # wechat: javascript:; || iconwechat-fill || '#09BB07'
+    Instagram: https://www.instagram.com/iam_joycezeng/
+    LinkedIn: https://www.linkedin.com/in/jiayi-zeng-joyce/
+# footer extra description
+# footer_extra_description: 
+
+# the license your posts under
+# license: CC BY-NC 4.0
+# the link of your license
+# license_link: https://creativecommons.org/licenses/by-nc/4.0
+
+# search
+# based on [hexo-generator-search](https://github.com/wzpan/hexo-generator-search)
+search: true
+search_path: search.json
