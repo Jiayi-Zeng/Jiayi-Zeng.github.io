@@ -14,8 +14,6 @@ Shaanxi, China, Mar 2022 - Present
 
 * Achieved results: 87% recognition accuracy at a real-time speed of ~34 FPS on Tesla V100
 
-![Picture1](https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/Picture1.gif)
-
 ------
 
 [**Traffic Light Detector**](https://github.com/Jiayi-Zeng/Traffic-Light-Detector) 
