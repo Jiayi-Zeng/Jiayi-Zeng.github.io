@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head prefix="og: https://ogp.me/ns#">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+  <meta name="color-scheme" content="light dark">
+  
+<link rel="stylesheet" href="/css/prism.css">
+ 
+    
+<script src="/js/prism.js"></script>
+
+  
+  <title>Iterators and Generators - Joooyce | Zeng</title>
+  
+    <link rel="shortcut icon" href="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/1f41f.png">
+  
+  
+    <link rel='manifest' href='/manifest.json'>
+  
+
+  
+  
+  
+  <meta property="og:title" content="Iterators and Generators - Joooyce | Zeng" />
+  
+  <meta property="og:type" content="article" />
+  
+  <meta property="og:url" content="https://jiayi-zeng.github.io/docs/Iterators-and-Generators/index.html" />
+  
+  <meta property="og:image" content="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/20230225%20(1).png" />
+  
+  <meta property="og:article:published_time" content="2023-02-26T08:00:00.000Z" />
+  
+  <meta property="og:article:author" content="Joyce Zeng" />
+  
+  
+
+  
+<link rel="stylesheet" href="/css/var.css">
+
+  
+<link rel="stylesheet" href="/css/main.css">
+
+  
+<link rel="stylesheet" href="/css/typography.css">
+
+  
+<link rel="stylesheet" href="/css/code-highlighting.css">
+
+  
+<link rel="stylesheet" href="/css/components.css">
+
+  
+<link rel="stylesheet" href="/css/nav.css">
+
+  
+<link rel="stylesheet" href="/css/paginator.css">
+
+  
+<link rel="stylesheet" href="/css/footer.css">
+
+  
+<link rel="stylesheet" href="/css/post-list.css">
+
+  
+  
+<link rel="stylesheet" href="/css/rainbow-banner.css">
+
+  
+  
+  
+<link rel="stylesheet" href="/css/toc.css">
+
+  
+  
+  
+  
+  
+<link rel="stylesheet" href="/css/post.css">
+
+  
+  
+  
+  
+  
+
+  
+<meta name="generator" content="Hexo 6.3.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+</head>
+    
+<link rel="stylesheet" href="/css/prism.css">
+ 
+    
+<script src="/js/prism.js"></script>
+
+    <body
+        data-color-scheme="auto"
+        data-uppercase-categories="true"
+        
+        data-rainbow-banner="true"
+        data-rainbow-banner-shown="auto"
+        data-rainbow-banner-month="6"
+        data-rainbow-banner-colors="#e50000,#ff8d00,#ffee00,#008121,#004cff,#760188"
+        
+        data-config-root="/"
+        
+        data-toc="true"
+        data-toc-max-depth="2"
+        
+        
+    >
+        <nav id="theme-nav">
+    <div class="inner">
+        <a class="title" href="/">Jiayi Zeng</a>
+        <div class="nav-arrow"></div>
+        <div class="nav-items">
+            <a class="nav-item nav-item-home" href="/">Home</a>
+            
+            
+            <a class="nav-item" href="/archives">Archives</a>
+            
+            
+            
+            <a class="nav-item" href="/tags">Tags</a>
+            
+            
+            
+            <a class="nav-item" href="/categories">Categories</a>
+            
+            
+            
+            <a class="nav-item" href="/projects">Projects</a>
+            
+            
+            
+            <a class="nav-item" href="/about">About</a>
+            
+            
+            
+            <a class="nav-item nav-item-github nav-item-icon" href="https://github.com/Jiayi-Zeng" target="_blank">&nbsp;</a>
+            
+            
+            
+            <a class="nav-item nav-item-search nav-item-icon" href="/search" target="_blank">&nbsp;</a>
+            
+            
+        </div>
+    </div>
+</nav>
+        
+
+
+<article class="post">
+
+<div class="meta">
+    
+    <div class="categories text-uppercase">
+    
+        <a href="/categories/Immediate-to-Python/">Immediate to Python</a>
+    
+    </div>
+    
+
+    
+    <div class="date" id="date">
+        <span>February</span>
+        <span>26,</span>
+        <span>2023</span>
+    </div>
+    
+
+    <h2 class="title">Iterators and Generators</h2>
+
+</div>
+
+<div class="divider"></div>
+
+<div class="content">
+    <h1 id="Functions-Positional-and-Keyword-Arguments"><a href="#Functions-Positional-and-Keyword-Arguments" class="headerlink" title="Functions Positional and Keyword Arguments"></a>Functions Positional and Keyword Arguments</h1><h2 id="Positional-Arguments"><a href="#Positional-Arguments" class="headerlink" title="Positional Arguments"></a>Positional Arguments</h2><p>These are argument that are assigned based on their position in the function definition.  A example below will make this clear.</p>
+<figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">print_greeting</span>(<span class="params">username, date</span>):</span><br><span class="line">    <span class="string">"""Print a simple greeting"""</span></span><br><span class="line">    greeting = <span class="string">'Greetings, {}. The date is {}'</span>.<span class="built_in">format</span>(username, date)</span><br><span class="line">    <span class="built_in">print</span>(greeting)</span><br></pre></td></tr></tbody></table></figure>
+
+<figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># test the function</span></span><br><span class="line">print_greeting(<span class="string">'Ronda'</span>, <span class="string">'2019-01-01'</span>)</span><br></pre></td></tr></tbody></table></figure>
+
+<p>Why did the function treat ‘Ronda’ as the username argument and ‘2019-01-01’ as the date argument? The answer is simple: it is because ‘Ronda’ was the first argument passed to the function and, in the function definition, username is the first argument in the function signature.</p>
+<p>The arguments are assigned by <em>position</em>.</p>
+<h2 id="Keyword-Arguments"><a href="#Keyword-Arguments" class="headerlink" title="Keyword Arguments"></a>Keyword Arguments</h2><p>Keyword arguments are arguments that are passed to a function by the argument name.  For example, when calling the <code>print_greeting</code> function we can pass the arguments as shown in the cell below.</p>
+<figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">my_name = <span class="string">"Will"</span></span><br><span class="line">today = <span class="string">"2019-07-01"</span></span><br><span class="line">print_greeting(date=today, username=my_name)</span><br><span class="line"></span><br><span class="line">print_greeting(username=<span class="string">"Padma"</span>, date=<span class="string">"2019-03-01"</span>)</span><br></pre></td></tr></tbody></table></figure>
+
+<p><strong>Sometimes you can’t use keyword to specify arguments, and sometimes you can only use keywords to specify certain arguments.</strong></p>
+<p>Many built in Python function are implemented in C and use a position-only API for processing argument. That means that there are some function with arguments that can not be specified by keyword. </p>
+<figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">help</span>(<span class="built_in">sorted</span>)</span><br></pre></td></tr></tbody></table></figure>
+
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Help on built-in function sorted in module builtins:</span><br><span class="line"></span><br><span class="line">sorted(iterable, /, *, key=None, reverse=False)</span><br><span class="line">    Return a new list containing all items from the iterable in ascending order.</span><br><span class="line">    </span><br><span class="line">    A custom key function can be supplied to customize the sort order, and the</span><br><span class="line">    reverse flag can be set to request the result in descending order.</span><br></pre></td></tr></tbody></table></figure>
+
+<p>Notice the <code>/</code> in the function signature above?  This indicates that all the argument to the left of it can ONLY be specified by position. That is you can not pass the ‘iterable’ argument by keyword. (You may notice the <code>*</code> in the signature as well, we will discuss that in a moment)</p>
+<figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">my_list = [<span class="number">2</span>, <span class="number">3</span>, <span class="number">1</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment"># We incorrectly try to pass the iterable argument by keyword. This will produce an error</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># We correctly pass the iterable argument by position</span></span><br><span class="line">sorted_list = <span class="built_in">sorted</span>(my_list)</span><br><span class="line"><span class="built_in">print</span>(sorted_list)</span><br></pre></td></tr></tbody></table></figure>
+
+<p>Now, what about the <code>*</code> in the function signature? This means that you can ONLY specify the arguments to the right of it by keyword.  For example, in the sorted function, the arguments <code>key</code> and <code>reverse</code> can only be specified by keywords. See an example below:</p>
+<figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">my_list = [<span class="string">'a_3'</span>, <span class="string">'b_2'</span>, <span class="string">'c_1'</span>]</span><br><span class="line"></span><br><span class="line">sorted_list = <span class="built_in">sorted</span>(my_list, key=<span class="keyword">lambda</span> x: x.split(<span class="string">'_'</span>)[-<span class="number">1</span>])</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(sorted_list)</span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="Introducing-args"><a href="#Introducing-args" class="headerlink" title="Introducing *args"></a>Introducing *args</h2><p>Now, take your mind back to positional arguments.  What if you want a function to accept unlimited positional arguments? This is what the <code>*args</code> argument can do. By using the <code>*args</code> argument in our function definition, all positional arguments will be collected in a <strong>tuple</strong> named <code>args</code>. Let’s define a function below using the <code>*args</code> argument to see how this works</p>
+<figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">args_example</span>(<span class="params">*args</span>):</span><br><span class="line">    <span class="string">'''Print the contents of args.'''</span></span><br><span class="line">    <span class="built_in">print</span>(args)</span><br><span class="line">    </span><br><span class="line">args_example(<span class="string">'Miguel'</span>, <span class="string">'Mary'</span>, <span class="string">'Paul'</span>)</span><br><span class="line"><span class="comment"># Output: ('Miguel', 'Mary', 'Paul')</span></span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="Combining-args-with-other-positional-arguments"><a href="#Combining-args-with-other-positional-arguments" class="headerlink" title="Combining *args with other positional arguments."></a>Combining *args with other positional arguments.</h2><p>You can have positional arguments <em>before</em> <code>*args</code>. <code>*args</code> will collect all the extra position arguments passed to the function.</p>
+<figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">print_all_the_greetings_2</span>(<span class="params">greeting, *args</span>):</span><br><span class="line">  <span class="string">'''Print "{greeting}, {name} for the greeting and all the names passed as arguments</span></span><br><span class="line"><span class="string">	'''</span></span><br><span class="line">	<span class="keyword">for</span> name <span class="keyword">in</span> args:</span><br><span class="line">		<span class="built_in">print</span>(<span class="string">"{}, {}"</span>.<span class="built_in">format</span>(greeting, name))</span><br><span class="line">        </span><br><span class="line">print_all_the_greetings_2(<span class="string">'Good Morning'</span>, <span class="string">'Winston'</span>, <span class="string">'Aarav'</span>, <span class="string">'Julie'</span>)</span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="Introducing-kwargs"><a href="#Introducing-kwargs" class="headerlink" title="Introducing **kwargs"></a>Introducing **kwargs</h2><p>Much like <code>*args</code> captures extra positional arguments, <code>**kwargs</code> captures extra keyword arguments in a dictionary called <code>kwargs</code>.</p>
+<figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">kwargs_example</span>(<span class="params">**kwargs</span>):</span><br><span class="line">    <span class="string">"""Print kwargs"""</span></span><br><span class="line">    <span class="built_in">print</span>(kwargs)</span><br><span class="line">    </span><br><span class="line">kwargs_example(name=<span class="string">"Paloma"</span>, occupation=<span class="string">'teacher'</span>)</span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="Mixing-Positional-and-Keyword-Arguments"><a href="#Mixing-Positional-and-Keyword-Arguments" class="headerlink" title="Mixing Positional and Keyword Arguments."></a>Mixing Positional and Keyword Arguments.</h2><p>When using both positional and keyword arguments you must specify the positional arguments <strong>first</strong>.</p>
+<figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">print_greeting(username=<span class="string">"Padma"</span>, date=<span class="string">"2019-03-01"</span>)</span><br><span class="line"></span><br><span class="line">print_greeting(<span class="string">"Padma"</span>, date=<span class="string">"2019-03-01"</span>)</span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="Mixing-Positional-Arguments-args-Keyword-Arguments-and-kwargs"><a href="#Mixing-Positional-Arguments-args-Keyword-Arguments-and-kwargs" class="headerlink" title="Mixing Positional Arguments, *args, Keyword Arguments and **kwargs"></a>Mixing Positional Arguments, *args, Keyword Arguments and **kwargs</h2><figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">test_arg_and_kwarg</span>(<span class="params">arg1, arg2, *args, kwarg1, kwarg2, **kwargs</span>):</span><br><span class="line">    <span class="built_in">print</span>(arg1)</span><br><span class="line">    <span class="built_in">print</span>(arg2)</span><br><span class="line">    <span class="built_in">print</span>(args)</span><br><span class="line">    <span class="built_in">print</span>(kwarg1)</span><br><span class="line">    <span class="built_in">print</span>(kwarg2)</span><br><span class="line">    <span class="built_in">print</span>(kwargs)</span><br><span class="line">    <span class="keyword">return</span></span><br><span class="line"></span><br><span class="line">test_arg_and_kwarg(<span class="number">1</span>, <span class="number">2</span>, <span class="string">'extra_1'</span>, <span class="string">'extra_2'</span>, kwarg1=<span class="string">'kwarg 1'</span>,</span><br><span class="line">                   kwarg2=<span class="string">'kwarg 2'</span>, extra_kwarg1=<span class="string">'Bonus!'</span>,</span><br><span class="line">                  extra_kwarg2=<span class="string">"I'm extra!"</span>)</span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="Default-Arguments"><a href="#Default-Arguments" class="headerlink" title="Default Arguments"></a>Default Arguments</h2><p>Sometimes you want to specify a default argument value to one of the arguments in your function. This means that if no value is passed to that specific argument, it will still have a default value and the function will run successfully.</p>
+<p>This is very common. In fact, let’s look at the documentation for the built in function <code>sorted</code> again.</p>
+<p>See the ‘key=None’ and the ‘reverse=False’ in the function signature? This indicates that the default value for key is None, and the default value for reverse is False. This means that if we use the sorted function, these will be the values for these arguments if we do not specify other values.</p>
+<figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">help</span>(<span class="built_in">sorted</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Output:</span></span><br><span class="line">Help on built-<span class="keyword">in</span> function <span class="built_in">sorted</span> <span class="keyword">in</span> module builtins:</span><br><span class="line"></span><br><span class="line"><span class="built_in">sorted</span>(iterable, /, *, key=<span class="literal">None</span>, reverse=<span class="literal">False</span>)</span><br><span class="line">    Return a new <span class="built_in">list</span> containing <span class="built_in">all</span> items <span class="keyword">from</span> the iterable <span class="keyword">in</span> ascending order.</span><br><span class="line">    </span><br><span class="line">    A custom key function can be supplied to customize the sort order, <span class="keyword">and</span> the</span><br><span class="line">    reverse flag can be <span class="built_in">set</span> to request the result <span class="keyword">in</span> descending order.</span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="You-can-use-and-to-pass-arguments-to-functions"><a href="#You-can-use-and-to-pass-arguments-to-functions" class="headerlink" title="You can use * and ** to pass arguments to functions."></a>You can use * and ** to pass arguments to functions.</h2><p>Just as we used the * and ** to collection arguments that are passed to a function, you can also use the to pass arguments to a function from a tuple or dictionary.  Let’s walk through two examples below.</p>
+<figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">my_function</span>(<span class="params">x, y</span>):</span><br><span class="line">    result = x**<span class="number">2</span>-y**(<span class="number">0.5</span>)</span><br><span class="line">    <span class="keyword">return</span> result</span><br><span class="line">    </span><br><span class="line"><span class="comment"># Here we use the function and pass the values directly</span></span><br><span class="line">result1 = my_function(<span class="number">2.1</span>, <span class="number">0.6</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Belww, we define a tuple with the values, and then pass those values to the</span></span><br><span class="line"><span class="comment"># function by indexing them from the tuple.</span></span><br><span class="line">values = (<span class="number">2.1</span>, <span class="number">0.6</span>)</span><br><span class="line">result2 = my_function(values[<span class="number">0</span>], values[<span class="number">1</span>])</span><br><span class="line"></span><br><span class="line"><span class="comment"># Here, we just use the '*' to dump the arguments in the values tuple directly</span></span><br><span class="line"><span class="comment"># to the function</span></span><br><span class="line">result3 = my_function(*values)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Finally, print all three results so that we ensure all methods give the same</span></span><br><span class="line"><span class="comment">#result</span></span><br><span class="line"><span class="built_in">print</span>(result1, result2, result3)</span><br></pre></td></tr></tbody></table></figure>
+
+<figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">my_greeting</span>(<span class="params">date, greeting</span>):</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">'{}: {}'</span>.<span class="built_in">format</span>(date, greeting))</span><br><span class="line">    </span><br><span class="line"><span class="comment"># Here we use the function and pass the values directly</span></span><br><span class="line">my_greeting(<span class="string">'2018-11-07'</span>, <span class="string">"How are you today?"</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Below, we define a tuple with the values, and then pass those values to the</span></span><br><span class="line"><span class="comment"># function by indexing them from the tuple.</span></span><br><span class="line">my_greeting(greeting=<span class="string">'How are you today?'</span>, date=<span class="string">'2018-11-07'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Here, we just use the '*' to dump the arguments in the values tuple directly</span></span><br><span class="line"><span class="comment"># to the function</span></span><br><span class="line">values = {<span class="string">'greeting'</span>: <span class="string">'How are you today?'</span>, <span class="string">'date'</span>: <span class="string">'2018-11-07'</span>}</span><br><span class="line">my_greeting(**values)</span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="Let’s-look-at-an-example-of-a-built-in-function-that-actually-uses-args-and-kwargs"><a href="#Let’s-look-at-an-example-of-a-built-in-function-that-actually-uses-args-and-kwargs" class="headerlink" title="Let’s look at an example of a built-in function that actually uses args and kwargs!"></a>Let’s look at an example of a built-in function that actually uses <code>args</code> and <code>kwargs</code>!</h2><p>Now, let’s look at a built-in functions that uses both <code>*args</code> and <code>**kwargs</code>.</p>
+<p>The function is the <code>format</code> method of string objects.  Depending on which version of the prerequisite course you have taken, you may have already seen this, but we will do a quick review anyways.</p>
+<h3 id="The-format-method-of-a-string-object"><a href="#The-format-method-of-a-string-object" class="headerlink" title="The .format() method of a string object."></a>The .format() method of a string object.</h3><p>One of the preferred methods to format strings in Python is to use the format method of string objects. (The latest preferred method is something called ‘f strings’). Observe the example below.  First, we define a string and we put <code>{}</code> in the string wherever we would like to fill in the string by a variable. We then call the <code>.format()</code> method on the string and pass to it the variables we would like to use to fill in the <code>{}</code> portions of the string.  The <code>{}</code> are filled in by the order we pass the variables to the <code>.format()</code> method.</p>
+<figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">my_string = <span class="string">'Hi, my name is {}. I live in {} and I work at {}'</span>.<span class="built_in">format</span>(<span class="string">'Will'</span>, <span class="string">'California'</span>, <span class="string">'UCI'</span>)</span><br><span class="line"><span class="built_in">print</span>(my_string)</span><br></pre></td></tr></tbody></table></figure>
+
+<p>The point here is that <code>.format()</code> can accept <em>any</em> number of arguments, it just depend how many <code>{}</code> we have to fill in in the string.  How does <code>.format()</code> do this? It uses the <code>*args</code> argument to capture all of the positional arguments passed, and then it fills in the <code>{}</code> in the order of the arguments.</p>
+<h3 id="The-format-method-also-uses-kwargs"><a href="#The-format-method-also-uses-kwargs" class="headerlink" title="The .format() method also uses kwargs!"></a>The .format() method also uses kwargs!</h3><p>Format also supports keywords, observe the example below:</p>
+<figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">my_string = <span class="string">'Hi, my name is {name}. I live in {home} and I work at {work}'</span>. \</span><br><span class="line">    <span class="built_in">format</span>(name=<span class="string">'Will'</span>, home=<span class="string">'California'</span>, work=<span class="string">'UCI'</span>)</span><br><span class="line"><span class="built_in">print</span>(my_string)</span><br></pre></td></tr></tbody></table></figure>
+</div>
+
+
+<div class="about">
+    
+    <p class="tags">
+        
+        <i class="icon"></i>
+        <a href="/tags/Python/" class="tag"># Python</a>
+    </p>
+    
+</div>
+
+
+<div class="container post-prev-next">
+    <a class="next"></a>
+    
+    <a href="/docs/Regression-Quality/" class="prev">
+        <div>
+            <div class="text">
+                <p class="label">Previous</p>
+                <h3 class="title">6 Regression Quality</>
+            </div>
+        </div>
+    </a>
+    
+</div>
+
+
+    
+    
+
+    
+</article>          
+    
+  
+
+        <footer>
+    <div class="inner">
+        <div class="links">
+            
+            <div class="group">
+                <h4 class="title">Blog</h4>
+                
+                <a href="/" class="item">Home</a>
+                
+                <a href="/archives" class="item">Archives</a>
+                
+                <a href="/tags" class="item">Tags</a>
+                
+                <a href="/categories" class="item">Categories</a>
+                
+            </div>
+            
+            <div class="group">
+                <h4 class="title">Projects</h4>
+                
+                <a href="/projects" class="item">Intro</a>
+                
+            </div>
+            
+            <div class="group">
+                <h4 class="title">Me</h4>
+                
+                <a target="_blank" rel="noopener" href="https://github.com/Jiayi-Zeng" class="item">GitHub</a>
+                
+                <a href="mailto:joyce.j.zeng@outlook.com" class="item">Email</a>
+                
+                <a href="tencent://message/?Menu=yes&uin=1021987388" class="item">QQ</a>
+                
+                <a target="_blank" rel="noopener" href="https://www.instagram.com/iam_joycezeng/" class="item">Instagram</a>
+                
+                <a target="_blank" rel="noopener" href="https://www.linkedin.com/in/jiayi-zeng-joyce/" class="item">LinkedIn</a>
+                
+            </div>
+            
+        </div>
+        <span>&copy; 2023 Joyce Zeng<br>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> </span>
+        
+        
+            <br>
+            <div class="color-scheme-toggle" role="radiogroup" id="theme-color-scheme-toggle">
+                <label>
+                    <input type="radio" value="light">
+                    <span>Light</span>
+                </label>
+                <label>
+                    <input type="radio" value="dark">
+                    <span>Dark</span>
+                </label>
+                <label>
+                    <input type="radio" value="auto">
+                    <span>Auto</span>
+                </label>
+            </div>
+        
+    </div>
+</footer>
+
+
+        
+<script src="/js/main.js"></script>
+
+        
+        
+        
+
+        
+        <script src="https://unpkg.com/scrollreveal"></script>
+        <script>
+            window.addEventListener('load', () => {
+                ScrollReveal({ delay: 250, reset: true, easing: 'cubic-bezier(0, 0, 0, 1)' })
+                ScrollReveal().reveal('.post-list-item .cover-img img')
+                ScrollReveal().reveal('.post-list-item, .card, .content p img, .content .block-large img', { distance: '60px', origin: 'bottom', duration: 800 })
+            })
+        </script>
+        
+    </body>
+</html>

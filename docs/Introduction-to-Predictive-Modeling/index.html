@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head prefix="og: https://ogp.me/ns#">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+  <meta name="color-scheme" content="light dark">
+  
+<link rel="stylesheet" href="/css/prism.css">
+ 
+    
+<script src="/js/prism.js"></script>
+
+  
+  <title>2 Introduction to Predictive Modeling - Joooyce | Zeng</title>
+  
+    <link rel="shortcut icon" href="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/1f41f.png">
+  
+  
+    <link rel='manifest' href='/manifest.json'>
+  
+
+  
+  
+  
+  <meta property="og:title" content="2 Introduction to Predictive Modeling - Joooyce | Zeng" />
+  
+  <meta property="og:type" content="article" />
+  
+  <meta property="og:url" content="https://jiayi-zeng.github.io/docs/Introduction-to-Predictive-Modeling/index.html" />
+  
+  <meta property="og:image" content="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/20230223%20(1).png" />
+  
+  <meta property="og:article:published_time" content="2023-02-20T08:00:00.000Z" />
+  
+  <meta property="og:article:author" content="Joyce Zeng" />
+  
+  
+
+  
+<link rel="stylesheet" href="/css/var.css">
+
+  
+<link rel="stylesheet" href="/css/main.css">
+
+  
+<link rel="stylesheet" href="/css/typography.css">
+
+  
+<link rel="stylesheet" href="/css/code-highlighting.css">
+
+  
+<link rel="stylesheet" href="/css/components.css">
+
+  
+<link rel="stylesheet" href="/css/nav.css">
+
+  
+<link rel="stylesheet" href="/css/paginator.css">
+
+  
+<link rel="stylesheet" href="/css/footer.css">
+
+  
+<link rel="stylesheet" href="/css/post-list.css">
+
+  
+  
+<link rel="stylesheet" href="/css/rainbow-banner.css">
+
+  
+  
+  
+<link rel="stylesheet" href="/css/toc.css">
+
+  
+  
+  
+  
+  
+<link rel="stylesheet" href="/css/post.css">
+
+  
+  
+  
+  
+  
+
+  
+<meta name="generator" content="Hexo 6.3.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+</head>
+    
+<link rel="stylesheet" href="/css/prism.css">
+ 
+    
+<script src="/js/prism.js"></script>
+
+    <body
+        data-color-scheme="auto"
+        data-uppercase-categories="true"
+        
+        data-rainbow-banner="true"
+        data-rainbow-banner-shown="auto"
+        data-rainbow-banner-month="6"
+        data-rainbow-banner-colors="#e50000,#ff8d00,#ffee00,#008121,#004cff,#760188"
+        
+        data-config-root="/"
+        
+        data-toc="true"
+        data-toc-max-depth="2"
+        
+        
+    >
+        <nav id="theme-nav">
+    <div class="inner">
+        <a class="title" href="/">Jiayi Zeng</a>
+        <div class="nav-arrow"></div>
+        <div class="nav-items">
+            <a class="nav-item nav-item-home" href="/">Home</a>
+            
+            
+            <a class="nav-item" href="/archives">Archives</a>
+            
+            
+            
+            <a class="nav-item" href="/tags">Tags</a>
+            
+            
+            
+            <a class="nav-item" href="/categories">Categories</a>
+            
+            
+            
+            <a class="nav-item" href="/projects">Projects</a>
+            
+            
+            
+            <a class="nav-item" href="/about">About</a>
+            
+            
+            
+            <a class="nav-item nav-item-github nav-item-icon" href="https://github.com/Jiayi-Zeng" target="_blank">&nbsp;</a>
+            
+            
+            
+            <a class="nav-item nav-item-search nav-item-icon" href="/search" target="_blank">&nbsp;</a>
+            
+            
+        </div>
+    </div>
+</nav>
+        
+
+
+<article class="post">
+
+<div class="meta">
+    
+    <div class="categories text-uppercase">
+    
+        <a href="/categories/Predicted-Analytics-Tools-Techniques/">Predicted Analytics: Tools &amp; Techniques</a>
+    
+    </div>
+    
+
+    
+    <div class="date" id="date">
+        <span>February</span>
+        <span>20,</span>
+        <span>2023</span>
+    </div>
+    
+
+    <h2 class="title">2 Introduction to Predictive Modeling</h2>
+
+</div>
+
+<div class="divider"></div>
+
+<div class="content">
+    <p>Data analysis involves a number of modeling techniques that can be classified as three main types:</p>
+<ul>
+<li>Predictive</li>
+<li>Clustering</li>
+<li>Association</li>
+</ul>
+<h1 id="Predictive-Modeling"><a href="#Predictive-Modeling" class="headerlink" title="Predictive Modeling"></a>Predictive Modeling</h1><p><em>Predictive modeling</em>, sometimes called <em><strong>supervised learning</strong></em>, focuses on understanding or making predictions about a given variable based on one or more other variables. <strong>The ultimate goal of predictive analysis is accuracy</strong>. For example, you may want to predict which potential customers are more likely to apply for a credit card based on a knowledge of their demographic and financial information. In this scenario, there are two types of variables:</p>
+<ul>
+<li><strong>The</strong> <strong>dependent variable</strong> <strong>or</strong> <strong>target</strong>: The variable you are trying to predict or understand (i.e., the likelihood of applying for a credit card)</li>
+<li><strong>The</strong> <strong>independent variables</strong> <strong>or predictors</strong>: The variables you are using as a basis for predicting or understanding the target variable (i.e., demographic and financial information)</li>
+</ul>
+<p>Below are several additional applications of predictive modeling:</p>
+<ul>
+<li>Determining which students in a class will pass or fail</li>
+<li>Predicting which parts of a city will experience increasing crime (predictive policing)</li>
+<li>Forecasting the number of unfilled hotel rooms three months from now</li>
+<li>Projecting which patients are likely to have a heart attack</li>
+<li>Estimating how much each customer will purchase when shopping online</li>
+<li>Classifying shipping containers according to the likelihood that they carry drugs or weapons</li>
+<li>Identifying IP addresses that are sending unusual amounts of information</li>
+</ul>
+<h1 id="Cluster-Analysis"><a href="#Cluster-Analysis" class="headerlink" title="Cluster Analysis"></a>Cluster Analysis</h1><p>Cluster analysis, or segmentation, is a type of unsupervised learning problem that is very different from predictive modeling. Cluster analysis is appropriate when you can associate each case in a dataset with other cases that share similar distinct characteristics. You end up with several groups, in which the members of each group are very similar to each other but very different compared to members of other groups.</p>
+<p>Cluster analysis is often used in marketing campaigns so that customers receive ads tailored for the group to which they belong rather than generic ads. These groups are identified via cluster analysis. In such a scenario, there is no dependent variable; only independent variables are used to segment the cases.</p>
+<p>Cases in which the variables have similar values are grouped into <em>clusters</em> in an attempt to find homogenous subsets. Determining the number of clusters to create is part of the challenge of such techniques. Since clustering is exploratory in nature, the resulting clusters are not necessarily right or wrong. Instead, cluster solutions should be judged by their ability to address the specific business problem you are trying to solve. Applications of cluster analysis include:</p>
+<ul>
+<li>Market research</li>
+<li>Plant and animal ecology</li>
+<li>Medical imaging (e.g., PET Scans)</li>
+<li>Service/product usage pattern identification</li>
+<li>Social network analysis</li>
+<li>Crime analysis</li>
+<li>Anomaly detection</li>
+</ul>
+<h1 id="Association-Modeling"><a href="#Association-Modeling" class="headerlink" title="Association Modeling"></a>Association Modeling</h1><p>Companies like Amazon and Netflix have made <em>association modeling</em> commonplace. As consumers, most of us have encountered recommendation engines where a movie is recommended based upon our prior viewing habits or books are recommended based on our prior purchases (or even just our prior browsing behavior). <strong>Association models use transactional data to predict future transactions.</strong> The idea is that you may be able to suggest additional items that a person may want or need based on their previous buying behavior. This results in statements such as, “People who bought product A and product B might also like product C” appearing on their computer screens.</p>
+<p>Association modeling is often described primarily as a kind of market basket analysis, but while it is strongly associated with retail data, it can also be applied in other areas. For example, in predictive maintenance, a pair of part failures might frequently be associated with the failure of a third part even though that third part doesn’t show evidence of trouble at the time the first two fail.</p>
+<p><strong>Transactions in association models often occur at the same time.</strong> For instance, many items might be listed on a grocery store receipt, but, there is no indication of which purchases occurred before others. Hot dogs and hot dog buns may be frequently purchased together, but there is no “rule” that indicates which purchase occurred first. In a predictive model, you might say that hot dogs “predict” buns or that buns predict hot dogs. A further refinement involves <em><strong>sequence analysis</strong></em>, which does take into consideration the order in which events, such as purchases, occur. This can be useful in predictive maintenance or in web mining, where it might be beneficial to know the sequence in which website visitors click on links and buttons on a page or move to other pages in the site.</p>
+<p>Applications of association modeling include:</p>
+<ul>
+<li>Market basket analysis</li>
+<li>Retail data analysis</li>
+<li>Web usage </li>
+<li>Insurance claim analysis</li>
+<li>Service usage</li>
+<li>Medical procedures</li>
+</ul>
+<h1 id="Overview-of-Predictive-Models"><a href="#Overview-of-Predictive-Models" class="headerlink" title="Overview of Predictive Models"></a>Overview of Predictive Models</h1><p>This course covers only some of the most popular predictive models. Specifically, we’ll take a look at the following:</p>
+<ul>
+<li>Statistical models</li>
+<li>Decision Tree models</li>
+<li>Machine Learning models</li>
+</ul>
+<h2 id="Statistical-Models"><a href="#Statistical-Models" class="headerlink" title="Statistical Models"></a>Statistical Models</h2><p><strong><em>Statistical models</em> produce equations and <em>statistical tests</em> guide predictor selection. These models make certain assumptions whereas <em>rule induction</em> and <em>machine learning</em> models do not.</strong> Here are several characteristics of statistical predictive models:</p>
+<ul>
+<li>Predictions are expressed as equations.</li>
+<li>Equations allow users to see the effect of a one-unit change on any field and how this change impacts the outcome variable.</li>
+<li>Predictive models are based on statistical theory, which involves developing hypotheses and assessing statistical significance. This allows you to easily identify the important variables.</li>
+<li>Predictive models involve assumptions about the data, which may limit the situations in which some models can be used.</li>
+</ul>
+<p>Below is a list of some statistical models.</p>
+<ul>
+<li>Logistic Regression</li>
+<li>Discriminant Analysis</li>
+<li>Linear Regression</li>
+<li>Generalized Linear Models</li>
+<li>Cox Regression</li>
+<li>Time Series</li>
+</ul>
+<h2 id="Decision-Tree-Models"><a href="#Decision-Tree-Models" class="headerlink" title="Decision Tree Models"></a>Decision Tree Models</h2><p>A <em>decision tree</em> or <em>rule induction model</em> is an important type of predictive model. It derives a set of rules in relation to a dependent variable. The model’s output shows the reasoning for each rule and can therefore be used to understand the decision-making process that drives a particular outcome. Models that produce decision trees belong to this class of models. Generally, decision tree predictive models:</p>
+<ul>
+<li>Create segments that are mutually exclusive and exhaustive (identify homogeneous subgroups)</li>
+<li>Create rules for making predictions about individual cases</li>
+<li>Can easily handle a large number of predictors</li>
+<li>Can account for interaction and non-linear relationships</li>
+<li>Have few assumptions</li>
+<li>Can create overly complex models that over-fit data (does not generalize)</li>
+</ul>
+<p>Below is a list of several rule induction models:</p>
+<ul>
+<li>CHAID</li>
+<li>CART</li>
+<li>C5.0</li>
+<li>QUEST</li>
+<li>Decision List</li>
+<li>MARS</li>
+</ul>
+<h2 id="Machine-Learning-Models"><a href="#Machine-Learning-Models" class="headerlink" title="Machine Learning Models"></a>Machine Learning Models</h2><p><em>Machine learning models</em> are optimized for learning complex patterns. Unlike traditional statistical techniques, no assumptions are made about the data. Machine learning models do not produce a set of rules like rule induction models, nor do they produce easy-to-understand equations like statistical models. Thus, machine learning models are often said to be “black box” models. They produce a set of equations, but because there is a hidden layer (possibly several hidden layers), the interpretation of the coefficient weights is not straightforward as it is with traditional statistical models or rule induction models. Machine learning predictive models:</p>
+<ul>
+<li>Are optimized for learning complex patterns</li>
+<li>Can account for interaction and non-linear relationships</li>
+<li>Have few assumptions </li>
+<li>Are essentially “black box” models—their interpretation is not straight-forward</li>
+<li>Are used for predictive accuracy but not for understanding the mechanics behind a prediction</li>
+</ul>
+<p>Below is a list of several machine learning models:</p>
+<ul>
+<li>Neural Networks</li>
+<li>Support Vector Machines</li>
+<li>Random Forest</li>
+<li>Naïve Bayesian Algorithms</li>
+<li>Gradient Boosting Algorithms</li>
+<li>K-Nearest Neighbors</li>
+</ul>
+<h1 id="Model-Validation"><a href="#Model-Validation" class="headerlink" title="Model Validation"></a>Model Validation</h1><p>The process of statistical hypothesis testing, which involves a result’s statistical significance in the context of certain data distribution assumptions (such as having normally distributed errors), helps us determine when we have found a valid and reliable result. However, most data-mining methods do not depend on specific data distribution assumptions for drawing inferences from the sample to the population. So how is validation achieved? Model validation in data mining is usually done by partitioning the data into training and testing datasets. Models are developed from the training data and then the models’ predictions are tested on the testing data. Validity is established by demonstrating that the model applies to data different from what was used to derive the model. Statisticians often recommend such validation for statistical models, but it is crucial for more general (less distribution-bound) data-mining techniques.</p>
+<h1 id="How-to-Choose-a-Model"><a href="#How-to-Choose-a-Model" class="headerlink" title="How to Choose a Model"></a>How to Choose a Model</h1><p>Choosing a model is difficult. Obviously, if you have a variable in the data file that you want to predict, then any of the predictive models (depending on the target variable’s level of measurement) will perform the task albeit with varying degrees of success. If you want to find groups of individuals that behave similarly on a number of fields in the data, then any of the clustering methods are appropriate. The use of association rules, while not directly giving you the ability to make predictions, are extremely useful as a tool for understanding the various patterns within the data.</p>
+<p>However, determining which particular prediction technique will work best depends specifically on how the variables you want to predict are related to the predictors. There are suggested guidelines as to when one technique may work better than another, but these are only suggestions and not rules.</p>
+<p>From the previous discussion, it follows that more than one prediction model can be used to predict an outcome. The business context provides the first deciding factor in selecting a model. For example, if your goal is to extract a set of rules from the model, a rul<em>e induction model</em> is the only choice. Alternatively, if the model itself is of no interest but must nevertheless be as accurate as possible, then any of the models could be a candidate for the task. When one class of model is preferred but there are many models within that class, how do you choose a specific model?</p>
+<p>Each model has different characteristics when it comes to they way in which:</p>
+<ul>
+<li>Missing values are handled</li>
+<li>Continuous predictors are handled</li>
+<li>Categorical predictors are handled</li>
+<li>Outliers are handled</li>
+<li>The number of predictors impacts prediction</li>
+<li>The model scores data</li>
+</ul>
+<p>There are many subtle differences between the models. In the end, however, it is always the business users who balance the pros and cons, and decide which model or combination of models should be used. There is a wide range of possibilities and it is only the business user who can decide what to do.</p>
+<p>Data analytics and reporting tools such as KNIME provide for simplicity in building models. Machine learning models, rule induction models (decision trees), and statistical models can be built with great ease and speed, and their results compared. You must remember that data mining is an iterative process: models will be built, broken down, and often even combined before the user is satisfied with the results.</p>
+<p>One final yet important point to keep in mind when building models is that software will only find rules or patterns in data if they actually exist. You cannot extract a model with high predictive accuracy if there are no associations between the predictors and dependent variables.</p>
+<h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><p><strong>Course text:</strong> UCI. (2020). <a target="_blank" rel="noopener" href="https://docs.google.com/document/d/1lQI25BjQD4mNhVDyDWjfn7x1cFlfKfX6NnXl0zUUKIw/edit?usp=sharing">Introduction to Predictive Modeling. </a></p>
+
+</div>
+
+
+<div class="about">
+    
+    <p class="tags">
+        
+        <i class="icon"></i>
+        <a href="/tags/DSBA/" class="tag"># DSBA</a><a href="/tags/ML/" class="tag"># ML</a>
+    </p>
+    
+</div>
+
+
+<div class="container post-prev-next">
+    
+    <a href="/docs/ML-Techniques/" class="next">
+        <div>
+            <div class="text">
+                <p class="label">Next</p>
+                <h3 class="title">3 Modeling Techniques</h3>
+            </div>
+        </div>
+    </a>
+    
+    
+    <a href="/docs/Immediate-to-Python-Python-Scripts-and-Functions/" class="prev">
+        <div>
+            <div class="text">
+                <p class="label">Previous</p>
+                <h3 class="title">Python Scripts and Functions</>
+            </div>
+        </div>
+    </a>
+    
+</div>
+
+
+    
+    
+
+    
+</article>          
+    
+  
+
+        <footer>
+    <div class="inner">
+        <div class="links">
+            
+            <div class="group">
+                <h4 class="title">Blog</h4>
+                
+                <a href="/" class="item">Home</a>
+                
+                <a href="/archives" class="item">Archives</a>
+                
+                <a href="/tags" class="item">Tags</a>
+                
+                <a href="/categories" class="item">Categories</a>
+                
+            </div>
+            
+            <div class="group">
+                <h4 class="title">Projects</h4>
+                
+                <a href="/projects" class="item">Intro</a>
+                
+            </div>
+            
+            <div class="group">
+                <h4 class="title">Me</h4>
+                
+                <a target="_blank" rel="noopener" href="https://github.com/Jiayi-Zeng" class="item">GitHub</a>
+                
+                <a href="mailto:joyce.j.zeng@outlook.com" class="item">Email</a>
+                
+                <a href="tencent://message/?Menu=yes&uin=1021987388" class="item">QQ</a>
+                
+                <a target="_blank" rel="noopener" href="https://www.instagram.com/iam_joycezeng/" class="item">Instagram</a>
+                
+                <a target="_blank" rel="noopener" href="https://www.linkedin.com/in/jiayi-zeng-joyce/" class="item">LinkedIn</a>
+                
+            </div>
+            
+        </div>
+        <span>&copy; 2023 Joyce Zeng<br>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> </span>
+        
+        
+            <br>
+            <div class="color-scheme-toggle" role="radiogroup" id="theme-color-scheme-toggle">
+                <label>
+                    <input type="radio" value="light">
+                    <span>Light</span>
+                </label>
+                <label>
+                    <input type="radio" value="dark">
+                    <span>Dark</span>
+                </label>
+                <label>
+                    <input type="radio" value="auto">
+                    <span>Auto</span>
+                </label>
+            </div>
+        
+    </div>
+</footer>
+
+
+        
+<script src="/js/main.js"></script>
+
+        
+        
+        
+
+        
+        <script src="https://unpkg.com/scrollreveal"></script>
+        <script>
+            window.addEventListener('load', () => {
+                ScrollReveal({ delay: 250, reset: true, easing: 'cubic-bezier(0, 0, 0, 1)' })
+                ScrollReveal().reveal('.post-list-item .cover-img img')
+                ScrollReveal().reveal('.post-list-item, .card, .content p img, .content .block-large img', { distance: '60px', origin: 'bottom', duration: 800 })
+            })
+        </script>
+        
+    </body>
+</html>

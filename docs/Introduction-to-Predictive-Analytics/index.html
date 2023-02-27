@@ -184,31 +184,21 @@
 <p>Many of the techniques used in data mining are referred to as <em><strong>modeling</strong></em> and require a different approach for model generation and testing compared to standard, traditional statistics. While <strong>traditional statistics focuses on probabilities and hypothesis</strong> testing using data-specific research, <strong>data mining focuses on using historical data</strong> accumulated during the normal course of business. It is then the responsibility of the data miner to select, prepare, and analyze the data to determine whether it is acceptable and likely to generalize to the population of interest. Due to the typically large files involved and the weak assumptions made about the distribution of the data, <strong>data mining tends to be less focused on statistical significance tests and more focused on practical importance.</strong></p>
 <p>Data mining has been used in hundreds of applications, including:</p>
 <ul>
-<li><p>Detecting fraudulent financial activity;</p>
-</li>
-<li><p>Identifying specific purchases that are more likely to lead to additional purchases;</p>
-</li>
-<li><p>Classifying customers into groups based on distinct purchase or usage patterns; and</p>
-</li>
-<li><p>Predicting which page a website visitor will visit next.</p>
-</li>
+<li>Detecting fraudulent financial activity;</li>
+<li>Identifying specific purchases that are more likely to lead to additional purchases;</li>
+<li>Classifying customers into groups based on distinct purchase or usage patterns; and</li>
+<li>Predicting which page a website visitor will visit next.</li>
 </ul>
 <h1 id="The-Art-and-Practice-of-Data-Mining"><a href="#The-Art-and-Practice-of-Data-Mining" class="headerlink" title="The Art and Practice of Data Mining"></a>The Art and Practice of Data Mining</h1><p>This is the definition that Keith McCormick has previously used in books and presentations. </p>
 <blockquote>
 <p><em>Data mining is the selection and analysis of data accumulated during the normal course of business. The goal is to find (and confirm) previously unknown relationships that can be used to develop predictive models that, when applied to new data, can produce valuable insight for making business decisions. Several points are worth emphasizing:</em></p>
 <ul>
-<li><p><em>The data is not new.</em></p>
-</li>
-<li><p><em>The data is not collected solely to perform data mining.</em></p>
-</li>
-<li><p><em>The data miner is not testing known relationships (neither hypotheses nor hunches) against the data.</em></p>
-</li>
-<li><p><em>The patterns must be verifiable.</em></p>
-</li>
-<li><p><em>The resulting models must be capable of something useful.</em></p>
-</li>
-<li><p><em>The resulting models must actually work when deployed on new data.</em></p>
-</li>
+<li><em>The data is not new.</em></li>
+<li><em>The data is not collected solely to perform data mining.</em></li>
+<li><em>The data miner is not testing known relationships (neither hypotheses nor hunches) against the data.</em></li>
+<li><em>The patterns must be verifiable.</em></li>
+<li><em>The resulting models must be capable of something useful.</em></li>
+<li><em>The resulting models must actually work when deployed on new data.</em></li>
 </ul>
 <p>	</p>
 </blockquote>
@@ -219,64 +209,41 @@
 <p><img src="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20230223173655160.png" alt="image-20230223173655160"></p>
 <h2 id="Business-Understanding"><a href="#Business-Understanding" class="headerlink" title="Business Understanding"></a>Business Understanding</h2><p>The business objectives and question(s) to be answered, and formulating a concrete plan for proceeding through the data mining process. You need to:</p>
 <ul>
-<li><p>Identify business objectives and success criteria;</p>
-</li>
-<li><p>Perform a situational assessment (resources, constraints, assumptions, risks, costs, and benefits);</p>
-</li>
-<li><p>Determine the goals of the data mining project;</p>
-</li>
-<li><p>Identify success criteria; and</p>
-</li>
-<li><p>Produce a project plan.</p>
-</li>
+<li>Identify business objectives and success criteria;</li>
+<li>Perform a situational assessment (resources, constraints, assumptions, risks, costs, and benefits);</li>
+<li>Determine the goals of the data mining project;</li>
+<li>Identify success criteria; and</li>
+<li>Produce a project plan.</li>
 </ul>
 <h2 id="Data-Understanding"><a href="#Data-Understanding" class="headerlink" title="Data Understanding"></a>Data Understanding</h2><p>Once the business understanding phase is complete, you’re ready to begin collecting data and associated relevant information (such as the source of the data and the manner in which it was collected) for use in the project. It is also crucial to meet with subject matter experts (SMEs) to review what you have been collecting to ensure completeness (i.e., that no necessary data is missing) and verify your understanding of the data. It is also important to discuss the data in the context of the business problem you’re addressing. Sometimes, it may be necessary to return to the business understanding phase before proceeding.</p>
 <p>With data in hand, you can begin exploring it and becoming thoroughly familiar with its characteristics. For each field in your dataset, you should review <strong>the distribution, range (for continuous fields), outliers, anomalies, and missing values (type and amount)</strong>. You can also begin looking for obvious, interesting patterns in the data such as relationships between a predictor and a target field. You’ll need to:</p>
 <ul>
-<li><p>Understand your data resources;</p>
-</li>
-<li><p>Know the characteristics of the data;</p>
-</li>
-<li><p>Describe the data;</p>
-</li>
-<li><p>Explore the data; and</p>
-</li>
-<li><p>Verify data quality.</p>
-</li>
+<li>Understand your data resources;</li>
+<li>Know the characteristics of the data;</li>
+<li>Describe the data;</li>
+<li>Explore the data; and</li>
+<li>Verify data quality.</li>
 </ul>
 <h2 id="Data-Preparation"><a href="#Data-Preparation" class="headerlink" title="Data Preparation"></a>Data Preparation</h2><p>After cataloging your data resources, it’s time to prepare your data for mining. Data preparation is by far the most time-consuming step in the data mining process. <strong>Various estimates suggest that 70% to 90% of the time spent on a data mining project is allocated to data preparation;</strong> this is because you are using data that was collected for other reasons (for normal business operations, not for data mining). Preparations include:</p>
 <ul>
-<li><p>Selecting data;</p>
-</li>
-<li><p>Cleaning data;</p>
-</li>
-<li><p>Constructing data;</p>
-</li>
-<li><p>Integrating data; and</p>
-</li>
-<li><p>Formatting data.</p>
-</li>
+<li>Selecting data;</li>
+<li>Cleaning data;</li>
+<li>Constructing data;</li>
+<li>Integrating data; and</li>
+<li>Formatting data.</li>
 </ul>
 <p>These tasks will likely be performed multiple times and not in any prescribed order. They can be very time-consuming but are critical for the success of the data mining project. In particular, data construction is a critical aspect of data preparation. Models work much better when the variables have been adjusted (e.g., by creating ratios, determining change scores, and calculating total scores) to make patterns appear more clearly. </p>
 <h2 id="Modeling"><a href="#Modeling" class="headerlink" title="Modeling"></a>Modeling</h2><p><img src="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20230223173722789.png" alt="image-20230223173722789"></p>
 <p>Once you have prepared the data, you are ready for modeling, which involves sophisticated analytical methods that can extract information from the data. This phase involves:</p>
 <ul>
-<li><p>Selecting the modeling technique;</p>
-</li>
-<li><p>Generating a test design;</p>
-</li>
-<li><p>Building the model; and</p>
-</li>
-<li><p>Assessing the model.</p>
-</li>
-<li><p>Validation</p>
-<ul>
-<li><p>Split the data</p>
-<ul>
-<li><p>Training: Build the model</p>
-</li>
-<li><p>Testing: Test the model with testing dataset and compare the results with observed data</p>
-</li>
+<li>Selecting the modeling technique;</li>
+<li>Generating a test design;</li>
+<li>Building the model; and</li>
+<li>Assessing the model.</li>
+<li>Validation<ul>
+<li>Split the data<ul>
+<li>Training: Build the model</li>
+<li>Testing: Test the model with testing dataset and compare the results with observed data</li>
 </ul>
 </li>
 </ul>
@@ -286,33 +253,24 @@
 <p>An important part of model development is <em><strong>validating</strong></em> the model’s predictive capability. Briefly, the process involves dividing your dataset into two parts: <strong>a <em>training dataset</em> and a <em>testing dataset</em></strong>. You develop your model using the training data and then test it by making predictions using the testing data. If the predictions made using the two datasets are in agreement, you can begin applying the model to new data. In summary, you conclude that the model is valid by demonstrating that it applies to (fits) a dataset that is independent of the one used in the model’s derivation. Statisticians often recommend such validation for statistical models, generally, but it is especially important when employing data mining techniques. </p>
 <h2 id="Evaluation"><a href="#Evaluation" class="headerlink" title="Evaluation"></a>Evaluation</h2><p>Once you have chosen your models, you are ready to <strong>evaluate how the data mining results can help you achieve your business objectives</strong>. At this stage of the project, you have built one or more models that appear to be of high quality from a data analysis perspective. Before writing final reports and deploying the model, however, it is important to more thoroughly evaluate the model and review the steps taken in constructing the model so you can be certain it properly achieves your business objectives. A key aim is to determine if there are any important business issues that have not been sufficiently considered. At the end of this phase, a decision will be made on the use of the data mining results. The evaluation phase tasks are:</p>
 <ul>
-<li><p>Evaluate results;</p>
-</li>
-<li><p>Review the process; and</p>
-</li>
-<li><p>Determine the next steps.</p>
-</li>
+<li>Evaluate results;</li>
+<li>Review the process; and</li>
+<li>Determine the next steps.</li>
 </ul>
 <p>Evaluation is frequently confused with <em>model <strong>assessment</strong></em>—the last task of the modeling phase. <strong>Assessing the model focuses on the “data analysis perspective”</strong> <strong>and includes metrics like model accuracy and stability.</strong> The authors of CRISP-DM considered calling this phase <em>business evaluation</em> because it has to be conducted in the language of the business using the metrics of the business as indicators of success. The value of a predictive model arises in two ways (Khabaza, 2010):</p>
 <ol>
-<li><p>The model’s predictions lead to improved (more effective) action; and</p>
-</li>
-<li><p>The model delivers insight (new knowledge), which leads to improved strategy.</p>
-</li>
+<li>The model’s predictions lead to improved (more effective) action; and</li>
+<li>The model delivers insight (new knowledge), which leads to improved strategy.</li>
 </ol>
 <p>Keep in mind that the value of a predictive model is not determined by any technical measure. Data miners should <em>not</em> focus on predictive accuracy, model stability, or any other technical metric for predictive models at the expense of business insight and business fit.</p>
 <h2 id="Deployment"><a href="#Deployment" class="headerlink" title="Deployment"></a>Deployment</h2><p>Depending on the business requirements, deployment can be as simple as generating a report or as complex as implementing a repeatable data mining process. <strong>Keep in mind that creating the model is generally not the end of the project.</strong> Even if the purpose of the model is only to increase one’s knowledge of the data, the knowledge gained will need to be organized and presented in a way that the organization can use for decision-making. So in essentially all projects, a final report will need to be produced and distributed.</p>
 <p><strong>Most critical is the deployment of the model to make predictions or create scores against new data.</strong> This might be relatively simple if done within the data mining software you used, or more complex if the model is to be applied directly against an existing database. Whatever the case, a plan should be developed to monitor the model’s predictions and success in order to verify that the model is still valid.</p>
 <p>In many projects, It is not unusual for the deployment team to be different from the modeling team; in some situations deployment may be the responsibility of team members having more of an IT focus. The tasks in the deployment phase are:</p>
 <ul>
-<li><p>Plan the deployment;</p>
-</li>
-<li><p>Plan monitoring and maintenance activities;</p>
-</li>
-<li><p>Produce a final report; and</p>
-</li>
-<li><p>Review the project.</p>
-</li>
+<li>Plan the deployment;</li>
+<li>Plan monitoring and maintenance activities;</li>
+<li>Produce a final report; and</li>
+<li>Review the project.</li>
 </ul>
 <p>See also<a target="_blank" rel="noopener" href="https://keithmccormick.com/crispdm"> https://keithmccormick.com/crispdm</a> for additional information about CRISP-DM.</p>
 <h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><p><strong>Course text:</strong> UCI. (2020). <a target="_blank" rel="noopener" href="https://docs.google.com/document/d/1UDqqpr5whycIhD2gle4tcLBDGkkr8ajlixDLqhl28tE/edit?usp=sharing">Introduction to Predictive Analytics.</a></p>
@@ -333,11 +291,11 @@
 
 <div class="container post-prev-next">
     
-    <a href="/docs/ML-Techniques/" class="next">
+    <a href="/docs/Immediate-to-Python-Python-Scripts-and-Functions/" class="next">
         <div>
             <div class="text">
                 <p class="label">Next</p>
-                <h3 class="title">2 ML Techniques</h3>
+                <h3 class="title">Python Scripts and Functions</h3>
             </div>
         </div>
     </a>

@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head prefix="og: https://ogp.me/ns#">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+  <meta name="color-scheme" content="light dark">
+  
+<link rel="stylesheet" href="/css/prism.css">
+ 
+    
+<script src="/js/prism.js"></script>
+
+  
+  <title>5 Linear Regression - Joooyce | Zeng</title>
+  
+    <link rel="shortcut icon" href="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/1f41f.png">
+  
+  
+    <link rel='manifest' href='/manifest.json'>
+  
+
+  
+  
+  
+  <meta property="og:title" content="5 Linear Regression - Joooyce | Zeng" />
+  
+  <meta property="og:type" content="article" />
+  
+  <meta property="og:url" content="https://jiayi-zeng.github.io/docs/Linear-Regression/index.html" />
+  
+  <meta property="og:image" content="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/202302.png" />
+  
+  <meta property="og:article:published_time" content="2023-02-23T08:00:00.000Z" />
+  
+  <meta property="og:article:author" content="Joyce Zeng" />
+  
+  
+
+  
+<link rel="stylesheet" href="/css/var.css">
+
+  
+<link rel="stylesheet" href="/css/main.css">
+
+  
+<link rel="stylesheet" href="/css/typography.css">
+
+  
+<link rel="stylesheet" href="/css/code-highlighting.css">
+
+  
+<link rel="stylesheet" href="/css/components.css">
+
+  
+<link rel="stylesheet" href="/css/nav.css">
+
+  
+<link rel="stylesheet" href="/css/paginator.css">
+
+  
+<link rel="stylesheet" href="/css/footer.css">
+
+  
+<link rel="stylesheet" href="/css/post-list.css">
+
+  
+  
+<link rel="stylesheet" href="/css/rainbow-banner.css">
+
+  
+  
+  
+<link rel="stylesheet" href="/css/toc.css">
+
+  
+  
+  
+  
+  
+<link rel="stylesheet" href="/css/post.css">
+
+  
+  
+  
+  
+  
+
+  
+<meta name="generator" content="Hexo 6.3.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+</head>
+    
+<link rel="stylesheet" href="/css/prism.css">
+ 
+    
+<script src="/js/prism.js"></script>
+
+    <body
+        data-color-scheme="auto"
+        data-uppercase-categories="true"
+        
+        data-rainbow-banner="true"
+        data-rainbow-banner-shown="auto"
+        data-rainbow-banner-month="6"
+        data-rainbow-banner-colors="#e50000,#ff8d00,#ffee00,#008121,#004cff,#760188"
+        
+        data-config-root="/"
+        
+        data-toc="true"
+        data-toc-max-depth="2"
+        
+        
+    >
+        <nav id="theme-nav">
+    <div class="inner">
+        <a class="title" href="/">Jiayi Zeng</a>
+        <div class="nav-arrow"></div>
+        <div class="nav-items">
+            <a class="nav-item nav-item-home" href="/">Home</a>
+            
+            
+            <a class="nav-item" href="/archives">Archives</a>
+            
+            
+            
+            <a class="nav-item" href="/tags">Tags</a>
+            
+            
+            
+            <a class="nav-item" href="/categories">Categories</a>
+            
+            
+            
+            <a class="nav-item" href="/projects">Projects</a>
+            
+            
+            
+            <a class="nav-item" href="/about">About</a>
+            
+            
+            
+            <a class="nav-item nav-item-github nav-item-icon" href="https://github.com/Jiayi-Zeng" target="_blank">&nbsp;</a>
+            
+            
+            
+            <a class="nav-item nav-item-search nav-item-icon" href="/search" target="_blank">&nbsp;</a>
+            
+            
+        </div>
+    </div>
+</nav>
+        
+
+
+<article class="post">
+
+<div class="meta">
+    
+    <div class="categories text-uppercase">
+    
+        <a href="/categories/Predicted-Analytics-Tools-Techniques/">Predicted Analytics: Tools &amp; Techniques</a>
+    
+    </div>
+    
+
+    
+    <div class="date" id="date">
+        <span>February</span>
+        <span>23,</span>
+        <span>2023</span>
+    </div>
+    
+
+    <h2 class="title">5 Linear Regression</h2>
+
+</div>
+
+<div class="divider"></div>
+
+<div class="content">
+    <p><em>Linear regression</em> <em>analysis</em> is a widely used statistical technique used to explore relationships among continuous variables. In addition, this technique can be applied to categorical variables through the use of dummy variables.</p>
+<p>There are many situations where linear regression is useful. For instance,</p>
+<ul>
+<li>A market researcher can use regression to determine which one of several media markets is the best on which to spend their advertising dollars;</li>
+<li>In business, regression can be used to predict a competitive salary offer for a programmer with a given number of years of experience;</li>
+<li>In Major League Baseball, regression can be used to predict the salaries of free agents;</li>
+<li>In social science research, regression can predict a wide range of phenomena—from economic performance to college enrollment.</li>
+</ul>
+<h1 id="Simple-Linear-Regression"><a href="#Simple-Linear-Regression" class="headerlink" title="Simple Linear Regression"></a>Simple Linear Regression</h1><p><em>Simple linear regression</em> refers to the statistical relationship between a dependent continuous variable, say <em>y</em>, and a single independent continuous variable, say <em>x</em>. This relationship takes the form of an equation that lets us predict values of <em>y</em> given values of <em>x</em>. Regression equations are useful for estimating new data values or exploring “what if” questions.</p>
+<p>As an example of simple linear regression, suppose you survey a group of workers and notice that those who have more years of education tend to have received higher starting salaries when they began working. A linear regression analysis allows you to quantify the relationship between starting salary and years of education through an equation that you can then use to make predictions about starting salaries for other individuals. </p>
+<p>Linear regression analysis allows you to (1) determine whether one or more continuous (independent) variables can effectively predict the values of an outcome (dependent) variable and (2) quantify the impact that each independent variable has on that outcome variable.</p>
+<p>The relationship between a dependent variable and a single independent variable can be visualized using a scatter plot, as shown in Figure 1, below. The figure shows a set of data points along with the “best-fit” line that results from a regression analysis of that data.</p>
+<p><img src="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/8z2gseSWiCfo4OvgpV_tyZr16er1sl1k6bsCGtrVhCrH8DrIRl3Jz4zaXHG7FmUiUiGqhjLPxpJXNjleOFdQP-8SW78yLrc_XzCSzZKO7wiBI7OFv7z-PCZ9VCRBgqkjM9weT-_CqN1WgquKbimuQA" alt="A simple scatter with Fit Line of Cred card debt in the thousands by Household income in thousands showing the relationship between credit card debt and household income."></p>
+<p><em>Figure 1: A scatter plot showing the relationship between credit card debt (in thousands) and household income (also in thousands)</em></p>
+<p>The line is represented in general form by the equation<br>MATHJAX-SSR-0<br>where <em>b</em> is the slope (the change in <em>y</em> per unit change in <em>x</em>) and <em>a</em> is the intercept (the value of <em>y</em> when <em>x</em> is zero). People are usually more interested in the slope than in the intercept. Also, note that <em>a</em> and <em>b</em> depend on the unit of measurement of the variables and, as such, do not necessarily indicate anything about the strength of the relationship.</p>
+<p>As you can see, the data points don’t necessarily fall on this line, so it’s important to evaluate how well the line actually represents the data. To determine this, we start by looking at the <em>correlation</em> between the <em>x</em> and <em>y</em> values, and calculating a <em>correlation coefficient, r,</em> to quantify this relationship. Because the correlation coefficient can take on negative values and we prefer to work with only positive values, we typically square it (<em>r**2</em>) and refer to it as <em>R-squared.</em> This quantity lies on a scale from 0 (no linear association) to 1 (perfect linear association), and can be interpreted as the proportion of variation in one variable that can be predicted from the other. Thus an R-squared of 0.5 indicates that you can account for 50% of the variance in one variable if you knew the values of the other variable. Think of this value as a measure of the improvement in your ability to predict one variable from the other (or others if there are multiple independent variables).</p>
+<p>While R-squared provides a good starting point for determining how well your regression equation fits your data, a more rigorous way involves performing <em>statistical tests</em> to determine the <em>statistical significance</em> of the relationship. A relationship that is statistically significant means that your regression equation can reliably make predictions given new values of the independent variable. In other words, the predictions are more likely to be due to some factor of interest rather than random chance.</p>
+<p>Referring to Figure 1, notice that many points fall near the line but some are quite a distance from it. For each point, the difference between the value of the dependent variable and the value predicted by the equation (the value on the line) is called the <em>residual</em> (also known as the <em>error</em>). Points above the line have positive residuals (the equation under-predicted them), those below the line have negative residuals (the equation over-predicted them), and those points falling on the line have a residual of zero (perfect prediction). Points having relatively large residuals are of interest because they represent instances where the prediction performed poorly. Outliers, or points far from the positions of the other points, are of interest in regression because they can exert a considerable influence on the equation (especially if the sample size is small).</p>
+<p>Let’s apply linear regression analysis to an example in which household income is the independent (predictor) variable and credit card debt is the dependent variable. A standard linear regression analysis generates three tables depicting the relationship between the two variables. Here are several key points about the information appearing in those tables:</p>
+<ul>
+<li>The <em>model summary table</em> provides several measures of how well the model fits the data (see Table 1).</li>
+<li>As discussed above, R-squared, which can range from 0 to 1, is the correlation coefficient squared. It can be interpreted as the proportion of variance of the dependent measure that can be predicted from the independent variable(s).</li>
+<li>The <em>adjusted R-squared</em> represents a technical improvement over R-squared in that it explicitly adjusts for the number of predictor variables relative to the sample size. If the adjusted R-squared and R-squared differ dramatically, it is a sign that you have used too many predictor variables for the sample size.</li>
+<li>The <em>standard error of the estimate</em> is a measure of the standard deviation of the residuals. It represents the amount of variation that is not accounted for by the regression line on the scale of the dependent variable.</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20230223222504355.png" alt="image-20230223222504355"></p>
+<p>While the goodness-of-fit measures indicate how well you can expect the regression equation to predict the dependent variable, they do not tell whether there is a statistically significant relationship between the dependent and independent variable(s). For this, we turn to an <em>analysis of variance</em> (ANOVA) table, which presents technical summaries (i.e., sums of squares and mean square statistics) of the variation accounted for by the prediction equation (Table 2). The main goal is to determine whether there is a statistically significant (non-zero) linear relation between the dependent variable and the independent variable(s).</p>
+<p>The significance (Sig.) column in the ANOVA table provides the probability that there is no relationship between the dependent and independent variable(s). A zero or nearly zero Sig. value means that the relationship is statistically significant and that you should further investigate the results of the regression coefficients appearing in the Coefficients table (Table 3).</p>
+<p><img src="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20230223222446131.png" alt="image-20230223222446131"></p>
+<p><em>Table 2: ANOVA table showing sums of squares, mean squares, and the probability that there is no relationship between dependent and independent variables</em></p>
+<p>The first column contains a list of the independent variables plus the intercept (constant). The intercept is the value of the dependent variable when the independent variable is 0—it is also <em>a</em> in the equation <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="10.306ex" height="2.843ex" style="vertical-align: -0.838ex; margin-left: -0.017ex;" viewBox="-7.5 -863.1 4437.5 1223.9" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-1-Title">
+<title id="MathJax-SVG-1-Title">y=bx+a</title>
+<defs aria-hidden="true">
+<path stroke-width="1" id="E1-GYREPAGELLANORMAL-1D466" d="M490 473l-141 -440c-59 -185 -169 -309 -275 -309c-45 0 -82 35 -82 78c0 5 0 11 1 18l48 34l10 -4c-1 -9 -2 -17 -2 -22c0 -35 27 -62 62 -62c70 0 120 73 171 250l49 171c-75 -113 -159 -198 -196 -198c-25 0 -44 29 -43 71l1 40l17 243c1 16 5 67 -21 67 c-7 0 -20 -8 -25 -12l-50 -30l-11 18l82 56c48 33 62 40 75 40c17 0 24 -18 24 -63c0 -28 -2 -66 -4 -97l-15 -194c-1 -13 -3 -61 19 -61s71 44 106 95c33 49 68 122 80 169l35 132c22 2 45 8 74 19Z"></path>
+<path stroke-width="1" id="E1-GYREPAGELLAMAIN-3D" d="M680 330h-600c2 10 3 20 3 30s-1 20 -3 30h600c-2 -10 -3 -20 -3 -30s1 -20 3 -30zM680 110h-600c2 10 3 20 3 30s-1 20 -3 30h600c-2 -10 -3 -20 -3 -30s1 -20 3 -30Z"></path>
+<path stroke-width="1" id="E1-GYREPAGELLANORMAL-1D44F" d="M433 376c0 -132 -66 -269 -162 -337c-43 -31 -94 -50 -131 -50c-55 0 -103 33 -103 72c0 3 0 7 1 10l101 551c1 6 2 17 2 24c0 17 -10 24 -34 24h-48l4 21c72 7 108 16 160 42l12 -11l-86 -398c62 79 95 109 146 136c28 14 58 22 82 22c15 0 28 -5 35 -14 c12 -15 21 -54 21 -92zM361 352c0 49 -13 72 -39 72c-29 0 -81 -29 -114 -63c-40 -42 -64 -90 -83 -170c-9 -37 -13 -65 -13 -90c0 -42 25 -65 71 -65c54 0 94 32 127 101c30 65 51 151 51 215Z"></path>
+<path stroke-width="1" id="E1-GYREPAGELLANORMAL-1D465" d="M484 472l-15 -85l-14 -4c-5 15 -17 23 -33 23c-31 0 -58 -23 -105 -88l-35 -49l18 -101c5 -29 16 -66 25 -85c10 -20 23 -30 38 -30c16 0 41 15 77 45l9 -19l-49 -44c-32 -29 -64 -46 -86 -46c-36 0 -58 39 -72 124l-11 69l-76 -117c-31 -47 -70 -76 -103 -76 c-12 0 -28 4 -43 12c1 7 2 10 4 22c6 32 8 45 8 65l20 3l11 -28c2 -5 13 -9 28 -9c28 0 62 32 105 99l40 62l-11 62c-17 98 -39 139 -72 139c-19 0 -39 -14 -69 -48l-17 10l58 83c9 13 31 21 57 21c59 0 86 -36 98 -135l6 -48l37 55c62 92 102 128 142 128c9 0 18 -3 30 -10 Z"></path>
+<path stroke-width="1" id="E1-GYREPAGELLAMAIN-2B" d="M680 220h-270v-270c-10 2 -20 3 -30 3s-20 -1 -30 -3v270h-270c2 10 3 20 3 30s-1 20 -3 30h270v270c10 -2 20 -3 30 -3s20 1 30 3v-270h270c-2 -10 -3 -20 -3 -30s1 -20 3 -30Z"></path>
+<path stroke-width="1" id="E1-GYREPAGELLANORMAL-1D44E" d="M406 85c-82 -68 -123 -96 -146 -96c-15 0 -24 14 -24 37c0 16 2 33 6 51l29 127c-55 -78 -95 -125 -138 -162c-37 -32 -74 -53 -95 -53c-19 0 -34 34 -34 77c0 80 31 199 75 288c25 49 57 79 120 110c27 13 47 18 75 18c27 0 46 -4 85 -19l33 18l10 -9l-92 -379 c-1 -3 -1 -6 -1 -10c0 -16 5 -24 15 -24c15 0 30 9 62 36c5 4 6 5 13 11zM319 414c-43 15 -62 19 -85 19c-49 0 -73 -18 -97 -76c-35 -83 -61 -194 -61 -258c0 -27 6 -40 18 -40c33 0 96 61 151 145c33 51 52 103 74 210Z"></path>
+</defs>
+<g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
+ <use xlink:href="#E1-GYREPAGELLANORMAL-1D466" x="0" y="0"></use>
+ <use xlink:href="#E1-GYREPAGELLAMAIN-3D" x="778" y="0"></use>
+ <use xlink:href="#E1-GYREPAGELLANORMAL-1D44F" x="1816" y="0"></use>
+ <use xlink:href="#E1-GYREPAGELLANORMAL-1D465" x="2280" y="0"></use>
+ <use xlink:href="#E1-GYREPAGELLAMAIN-2B" x="3002" y="0"></use>
+ <use xlink:href="#E1-GYREPAGELLANORMAL-1D44E" x="3985" y="0"></use>
+</g>
+</svg>.</p>
+<ul>
+<li>The column labeled B contains the estimated regression coefficients you would use in a prediction equation. In this example, the coefficient for household income indicates that on average, each additional unit increase in household income is associated with an increase of 0.030 in credit card debt.</li>
+<li>The Std. Error column contains standard errors of the regression coefficients. The standard errors can be used to calculate a 95% confidence interval above and below the B coefficients. (This means that statistically, the true value of B will fall within this interval 95% of the time.)</li>
+<li>Betas are standardized regression coefficients used to judge the relative importance of each of several independent variables.</li>
+<li>The t statistics provide a significance test for each B coefficient, indicating which predictors are statistically significant.</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20230223222431472.png" alt="image-20230223222431472"></p>
+<p><em>Table 3: A tabulation of statistical information for the coefficients in the regression model relating credit card debt to household income</em></p>
+<h1 id="Multiple-Linear-Regression"><a href="#Multiple-Linear-Regression" class="headerlink" title="Multiple Linear Regression"></a>Multiple Linear Regression</h1><p>Regression involving more than one independent variable is called <em>multiple linear regression</em> and is a direct extension of simple linear regression. When running a multiple linear regression analysis you are again concerned with fitting a linear model to the data, determining whether any of the variables are significant predictors, and estimating the coefficients of the best-fitting prediction equation. In addition, you are interested in the relative importance of the independent variables in predicting the dependent measure.</p>
+<p>Continuing with the previous example, we add age, years with current employer, and having previously defaulted as independent variables to the model, which now explains about 43% of the variance in credit card debt. This is a substantial increase in explanatory power from the 30% we were able to explain with just one predictor variable, namely household income.</p>
+<p><img src="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20230223222534173.png" alt="image-20230223222534173"></p>
+<p><em>Table 4: The model summary table for a multiple linear regression</em></p>
+<p>Not surprisingly, we still have a statistically significant model as shown in the ANOVA table Table 5).</p>
+<p><img src="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20230223222555334.png" alt="image-20230223222555334"></p>
+<p><em>Table 5: ANOVA table showing sums of squares, mean squares, and the probability that there is no relationship between dependent and independent variables</em></p>
+<p>Finally, we can see in Table 6 that all of the variables in the model are statistically significant except age, which means that we can remove this variable from the model. We can also see that household income is the most important predictor, followed by previous defaults, and then years with the current employer. We can use the regression equation that resulted from this analysis to predict someone’s credit card debt as follows:<br>MATHJAX-SSR-1<br>Note that “previously defaulted” is a categorical variable, which is coded as a dummy variable in which “no” is 0 and “yes” is 1.</p>
+<p><img src="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20230223222722318.png" alt="image-20230223222722318"></p>
+<p><em>Table 6: A tabulation of statistical information for the coefficients in the regression model relating credit card debt to household income, age, years with employer, and previous defaults</em></p>
+<h1 id="Polynomials-and-Interaction-Terms"><a href="#Polynomials-and-Interaction-Terms" class="headerlink" title="Polynomials and Interaction Terms"></a>Polynomials and Interaction Terms</h1><p>This is an advanced and important topic. It is not true that linear regression can identify only linear relationships. It can handle curvilinear relationships as well if you know how to prepare the data. For instance, if you determined (through visual inspection) that income would predict credit card debt better with a quadratic relationship, you could do the following.</p>
+<ul>
+<li>Create a new variable consisting of income squared</li>
+<li>Add another coefficient corresponding to the new variable</li>
+</ul>
+<p>It would look like this:<br>MATHJAX-SSR-2<br>where <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="2.217ex" height="2.009ex" style="vertical-align: -0.671ex;" viewBox="0 -576.1 954.4 865.1" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-1-Title">
+<title id="MathJax-SVG-1-Title">x_1</title>
+<defs aria-hidden="true">
+<path stroke-width="1" id="E1-GYREPAGELLANORMAL-1D465" d="M484 472l-15 -85l-14 -4c-5 15 -17 23 -33 23c-31 0 -58 -23 -105 -88l-35 -49l18 -101c5 -29 16 -66 25 -85c10 -20 23 -30 38 -30c16 0 41 15 77 45l9 -19l-49 -44c-32 -29 -64 -46 -86 -46c-36 0 -58 39 -72 124l-11 69l-76 -117c-31 -47 -70 -76 -103 -76 c-12 0 -28 4 -43 12c1 7 2 10 4 22c6 32 8 45 8 65l20 3l11 -28c2 -5 13 -9 28 -9c28 0 62 32 105 99l40 62l-11 62c-17 98 -39 139 -72 139c-19 0 -39 -14 -69 -48l-17 10l58 83c9 13 31 21 57 21c59 0 86 -36 98 -135l6 -48l37 55c62 92 102 128 142 128c9 0 18 -3 30 -10 Z"></path>
+<path stroke-width="1" id="E1-GYREPAGELLAMAIN-31" d="M418 -3l-157 3l-165 -3v30l56 3c54 3 65 14 65 66v485c0 24 -2 33 -8 33l-3 -1l-129 -58h-10l-7 43c91 32 162 62 227 96l14 -5v-593c0 -52 10 -63 65 -66l52 -3v-30Z"></path>
+</defs>
+<g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
+ <use xlink:href="#E1-GYREPAGELLANORMAL-1D465" x="0" y="0"></use>
+ <use transform="scale(0.707)" xlink:href="#E1-GYREPAGELLAMAIN-31" x="707" y="-213"></use>
+</g>
+</svg>= income and <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="2.217ex" height="3.176ex" style="vertical-align: -1.005ex;" viewBox="0 -934.9 954.4 1367.4" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-1-Title">
+<title id="MathJax-SVG-1-Title">x_1^2</title>
+<defs aria-hidden="true">
+<path stroke-width="1" id="E1-GYREPAGELLANORMAL-1D465" d="M484 472l-15 -85l-14 -4c-5 15 -17 23 -33 23c-31 0 -58 -23 -105 -88l-35 -49l18 -101c5 -29 16 -66 25 -85c10 -20 23 -30 38 -30c16 0 41 15 77 45l9 -19l-49 -44c-32 -29 -64 -46 -86 -46c-36 0 -58 39 -72 124l-11 69l-76 -117c-31 -47 -70 -76 -103 -76 c-12 0 -28 4 -43 12c1 7 2 10 4 22c6 32 8 45 8 65l20 3l11 -28c2 -5 13 -9 28 -9c28 0 62 32 105 99l40 62l-11 62c-17 98 -39 139 -72 139c-19 0 -39 -14 -69 -48l-17 10l58 83c9 13 31 21 57 21c59 0 86 -36 98 -135l6 -48l37 55c62 92 102 128 142 128c9 0 18 -3 30 -10 Z"></path>
+<path stroke-width="1" id="E1-GYREPAGELLAMAIN-32" d="M468 -3l-229 3l-223 -3v26l170 181c113 120 155 194 155 269c0 85 -55 139 -141 139c-67 0 -103 -25 -119 -83l-13 -46h-29l17 136c49 50 98 70 170 70c127 0 205 -71 205 -186c0 -75 -30 -130 -127 -233l-182 -193l346 10c-2 -22 -2 -32 -2 -45c0 -14 0 -24 2 -45Z"></path>
+<path stroke-width="1" id="E1-GYREPAGELLAMAIN-31" d="M418 -3l-157 3l-165 -3v30l56 3c54 3 65 14 65 66v485c0 24 -2 33 -8 33l-3 -1l-129 -58h-10l-7 43c91 32 162 62 227 96l14 -5v-593c0 -52 10 -63 65 -66l52 -3v-30Z"></path>
+</defs>
+<g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
+ <use xlink:href="#E1-GYREPAGELLANORMAL-1D465" x="0" y="0"></use>
+ <use transform="scale(0.707)" xlink:href="#E1-GYREPAGELLAMAIN-32" x="707" y="491"></use>
+ <use transform="scale(0.707)" xlink:href="#E1-GYREPAGELLAMAIN-31" x="707" y="-463"></use>
+</g>
+</svg>= income squared.</p>
+<p>Another feature you might uncover through visual inspection is a pair of variables that interact. Here again the solution is to create a new variable. A good indicator that you have an interaction occurring is if the slopes of the regression lines for two groups (e.g., males and females) are different. In our example, this would suggest that the relationship between credit card debt and income is different for people that had previously defaulted on a loan than it is for people that had not previously defaulted on a loan (see Figure 2).</p>
+<p>The resulting regression formula looks like this:<br>MATHJAX-SSR-3<br>where <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="2.217ex" height="2.009ex" style="vertical-align: -0.671ex;" viewBox="0 -576.1 954.4 865.1" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-1-Title">
+<title id="MathJax-SVG-1-Title">x_1</title>
+<defs aria-hidden="true">
+<path stroke-width="1" id="E1-GYREPAGELLANORMAL-1D465" d="M484 472l-15 -85l-14 -4c-5 15 -17 23 -33 23c-31 0 -58 -23 -105 -88l-35 -49l18 -101c5 -29 16 -66 25 -85c10 -20 23 -30 38 -30c16 0 41 15 77 45l9 -19l-49 -44c-32 -29 -64 -46 -86 -46c-36 0 -58 39 -72 124l-11 69l-76 -117c-31 -47 -70 -76 -103 -76 c-12 0 -28 4 -43 12c1 7 2 10 4 22c6 32 8 45 8 65l20 3l11 -28c2 -5 13 -9 28 -9c28 0 62 32 105 99l40 62l-11 62c-17 98 -39 139 -72 139c-19 0 -39 -14 -69 -48l-17 10l58 83c9 13 31 21 57 21c59 0 86 -36 98 -135l6 -48l37 55c62 92 102 128 142 128c9 0 18 -3 30 -10 Z"></path>
+<path stroke-width="1" id="E1-GYREPAGELLAMAIN-31" d="M418 -3l-157 3l-165 -3v30l56 3c54 3 65 14 65 66v485c0 24 -2 33 -8 33l-3 -1l-129 -58h-10l-7 43c91 32 162 62 227 96l14 -5v-593c0 -52 10 -63 65 -66l52 -3v-30Z"></path>
+</defs>
+<g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
+ <use xlink:href="#E1-GYREPAGELLANORMAL-1D465" x="0" y="0"></use>
+ <use transform="scale(0.707)" xlink:href="#E1-GYREPAGELLAMAIN-31" x="707" y="-213"></use>
+</g>
+</svg>= income and <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="2.217ex" height="2.009ex" style="vertical-align: -0.671ex;" viewBox="0 -576.1 954.4 865.1" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-1-Title">
+<title id="MathJax-SVG-1-Title">x_2</title>
+<defs aria-hidden="true">
+<path stroke-width="1" id="E1-GYREPAGELLANORMAL-1D465" d="M484 472l-15 -85l-14 -4c-5 15 -17 23 -33 23c-31 0 -58 -23 -105 -88l-35 -49l18 -101c5 -29 16 -66 25 -85c10 -20 23 -30 38 -30c16 0 41 15 77 45l9 -19l-49 -44c-32 -29 -64 -46 -86 -46c-36 0 -58 39 -72 124l-11 69l-76 -117c-31 -47 -70 -76 -103 -76 c-12 0 -28 4 -43 12c1 7 2 10 4 22c6 32 8 45 8 65l20 3l11 -28c2 -5 13 -9 28 -9c28 0 62 32 105 99l40 62l-11 62c-17 98 -39 139 -72 139c-19 0 -39 -14 -69 -48l-17 10l58 83c9 13 31 21 57 21c59 0 86 -36 98 -135l6 -48l37 55c62 92 102 128 142 128c9 0 18 -3 30 -10 Z"></path>
+<path stroke-width="1" id="E1-GYREPAGELLAMAIN-32" d="M468 -3l-229 3l-223 -3v26l170 181c113 120 155 194 155 269c0 85 -55 139 -141 139c-67 0 -103 -25 -119 -83l-13 -46h-29l17 136c49 50 98 70 170 70c127 0 205 -71 205 -186c0 -75 -30 -130 -127 -233l-182 -193l346 10c-2 -22 -2 -32 -2 -45c0 -14 0 -24 2 -45Z"></path>
+</defs>
+<g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
+ <use xlink:href="#E1-GYREPAGELLANORMAL-1D465" x="0" y="0"></use>
+ <use transform="scale(0.707)" xlink:href="#E1-GYREPAGELLAMAIN-32" x="707" y="-213"></use>
+</g>
+</svg>= previously defaulted. The interaction appears as the product <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="4.433ex" height="2.009ex" style="vertical-align: -0.671ex;" viewBox="0 -576.1 1908.8 865.1" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-1-Title">
+<title id="MathJax-SVG-1-Title">x_1x_2</title>
+<defs aria-hidden="true">
+<path stroke-width="1" id="E1-GYREPAGELLANORMAL-1D465" d="M484 472l-15 -85l-14 -4c-5 15 -17 23 -33 23c-31 0 -58 -23 -105 -88l-35 -49l18 -101c5 -29 16 -66 25 -85c10 -20 23 -30 38 -30c16 0 41 15 77 45l9 -19l-49 -44c-32 -29 -64 -46 -86 -46c-36 0 -58 39 -72 124l-11 69l-76 -117c-31 -47 -70 -76 -103 -76 c-12 0 -28 4 -43 12c1 7 2 10 4 22c6 32 8 45 8 65l20 3l11 -28c2 -5 13 -9 28 -9c28 0 62 32 105 99l40 62l-11 62c-17 98 -39 139 -72 139c-19 0 -39 -14 -69 -48l-17 10l58 83c9 13 31 21 57 21c59 0 86 -36 98 -135l6 -48l37 55c62 92 102 128 142 128c9 0 18 -3 30 -10 Z"></path>
+<path stroke-width="1" id="E1-GYREPAGELLAMAIN-31" d="M418 -3l-157 3l-165 -3v30l56 3c54 3 65 14 65 66v485c0 24 -2 33 -8 33l-3 -1l-129 -58h-10l-7 43c91 32 162 62 227 96l14 -5v-593c0 -52 10 -63 65 -66l52 -3v-30Z"></path>
+<path stroke-width="1" id="E1-GYREPAGELLAMAIN-32" d="M468 -3l-229 3l-223 -3v26l170 181c113 120 155 194 155 269c0 85 -55 139 -141 139c-67 0 -103 -25 -119 -83l-13 -46h-29l17 136c49 50 98 70 170 70c127 0 205 -71 205 -186c0 -75 -30 -130 -127 -233l-182 -193l346 10c-2 -22 -2 -32 -2 -45c0 -14 0 -24 2 -45Z"></path>
+</defs>
+<g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
+ <use xlink:href="#E1-GYREPAGELLANORMAL-1D465" x="0" y="0"></use>
+ <use transform="scale(0.707)" xlink:href="#E1-GYREPAGELLAMAIN-31" x="707" y="-213"></use>
+<g transform="translate(954,0)">
+ <use xlink:href="#E1-GYREPAGELLANORMAL-1D465" x="0" y="0"></use>
+ <use transform="scale(0.707)" xlink:href="#E1-GYREPAGELLAMAIN-32" x="707" y="-213"></use>
+</g>
+</g>
+</svg>.</p>
+<p>If you fail to include the interaction term, the model will mathematically force the lines to be parallel and maintain the same “ gap” over the entire income range. Figure 2 makes it clear that this would not be accurate since the gap is clearly more severe at higher levels of income. Polynomials and interaction terms can seem tricky and abstract at first, but they are critical for understanding neural networks, which will be presented in a later module.</p>
+<p><img src="https://lh3.googleusercontent.com/Ej3sVrRFTs-bdKkJtOaIiAGX-PEAf5_Qu3oJrL9rB6FV4Ba9qaasgKCZRvvuOfmXwVbQwHnykt_t91faPELw1vPP7Z8UHXUAWMavQhsVs6EH5eqKCsegJRdqbzd7etezFIwh0fLcwoN5-UqvJjIRbw" alt="A simple scatter with Fit Line of Cred card debt in the thousands by Household income in the thousands by Previously defaulted showing differing linear regression line slopes for customers that had and had not previously defaulted on a loan"></p>
+<p><em>Figure 2: Differing linear regression line slopes for customers that had and had not previously defaulted on a loan</em></p>
+
+</div>
+
+
+<div class="about">
+    
+    <p class="tags">
+        
+        <i class="icon"></i>
+        <a href="/tags/DSBA/" class="tag"># DSBA</a><a href="/tags/ML/" class="tag"># ML</a>
+    </p>
+    
+</div>
+
+
+<div class="container post-prev-next">
+    
+    <a href="/docs/Regression-Quality/" class="next">
+        <div>
+            <div class="text">
+                <p class="label">Next</p>
+                <h3 class="title">6 Regression Quality</h3>
+            </div>
+        </div>
+    </a>
+    
+    
+    <a href="/docs/Introduction-to-Regression/" class="prev">
+        <div>
+            <div class="text">
+                <p class="label">Previous</p>
+                <h3 class="title">4 Introduction to Regression</>
+            </div>
+        </div>
+    </a>
+    
+</div>
+
+
+    
+    
+
+    
+</article>          
+    
+  
+
+        <footer>
+    <div class="inner">
+        <div class="links">
+            
+            <div class="group">
+                <h4 class="title">Blog</h4>
+                
+                <a href="/" class="item">Home</a>
+                
+                <a href="/archives" class="item">Archives</a>
+                
+                <a href="/tags" class="item">Tags</a>
+                
+                <a href="/categories" class="item">Categories</a>
+                
+            </div>
+            
+            <div class="group">
+                <h4 class="title">Projects</h4>
+                
+                <a href="/projects" class="item">Intro</a>
+                
+            </div>
+            
+            <div class="group">
+                <h4 class="title">Me</h4>
+                
+                <a target="_blank" rel="noopener" href="https://github.com/Jiayi-Zeng" class="item">GitHub</a>
+                
+                <a href="mailto:joyce.j.zeng@outlook.com" class="item">Email</a>
+                
+                <a href="tencent://message/?Menu=yes&uin=1021987388" class="item">QQ</a>
+                
+                <a target="_blank" rel="noopener" href="https://www.instagram.com/iam_joycezeng/" class="item">Instagram</a>
+                
+                <a target="_blank" rel="noopener" href="https://www.linkedin.com/in/jiayi-zeng-joyce/" class="item">LinkedIn</a>
+                
+            </div>
+            
+        </div>
+        <span>&copy; 2023 Joyce Zeng<br>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> </span>
+        
+        
+            <br>
+            <div class="color-scheme-toggle" role="radiogroup" id="theme-color-scheme-toggle">
+                <label>
+                    <input type="radio" value="light">
+                    <span>Light</span>
+                </label>
+                <label>
+                    <input type="radio" value="dark">
+                    <span>Dark</span>
+                </label>
+                <label>
+                    <input type="radio" value="auto">
+                    <span>Auto</span>
+                </label>
+            </div>
+        
+    </div>
+</footer>
+
+
+        
+<script src="/js/main.js"></script>
+
+        
+        
+        
+
+        
+        <script src="https://unpkg.com/scrollreveal"></script>
+        <script>
+            window.addEventListener('load', () => {
+                ScrollReveal({ delay: 250, reset: true, easing: 'cubic-bezier(0, 0, 0, 1)' })
+                ScrollReveal().reveal('.post-list-item .cover-img img')
+                ScrollReveal().reveal('.post-list-item, .card, .content p img, .content .block-large img', { distance: '60px', origin: 'bottom', duration: 800 })
+            })
+        </script>
+        
+    </body>
+</html>
