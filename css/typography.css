@@ -10,10 +10,10 @@
 
 img {
     /* width: 100%; */
-    width: auto;
-    height: auto;
+    width: 80%;
+    /* height: auto; */
     max-width: 100%;
-    max-height: 100%;
+    /* max-height: 100%; */
 }
 
 ::marker {
@@ -36,10 +36,10 @@ pre {
 
 code {
     background-color: var(--bg-color5);
-    padding: .3em;
-    padding-top: 0em;
-    padding-bottom: 0em;
-    border: 2px solid var(--black-2);
+    padding: .15em .3em;
+    /* padding-top: 0em; */
+    /* padding-bottom: 0em; */
+    background-color: var(--white-1-opacity-8);
     border-radius: 0.25rem;
     font-size: 0.9em;
     font-weight: bold;

@@ -85,14 +85,13 @@ hr,
 .content table {
   padding: 0;
   border-collapse: collapse;
-  border-radius: 15px;
   max-width: 800px;
   /* width: 100%; */
   overflow-x: auto;
   /* margin: 10px auto; */
   /* background-color: var(--white-1); */
-  display: block;
-  font-size: 13px;
+  /* font-size: 13px; */
+  --border-color: 0;
 }
 
 .content table tr {
@@ -110,13 +109,14 @@ hr,
 .content table td {
   margin: 0;
   padding: 6px 12px;
-  text-align: left;
+  text-align: center;
   background-color: var(--table-bg-color);
+  /* border: 0px; */
 }
 
 .content table th {
   font-weight: bold;
-  text-align: left;
+  text-align: center;
   margin: 0;
   padding: 6px 13px;
   background-color: var(--table-thead-color);
@@ -377,4 +377,11 @@ body[data-color-scheme="light"] .tags .icon {
 .post-prev-next .text .label {
   margin-bottom: 4px;
   color: var(--grey);
+}
+
+.markdown-section img {
+  max-width: 50%;
+  padding: 0.5em 0;
+  margin: auto;
+  display: block;
 }

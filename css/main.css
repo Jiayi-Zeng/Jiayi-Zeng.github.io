@@ -2,6 +2,10 @@
     transition: color 0.2s, background-color 0.2s;
 }
 
+mark {
+    background-color: var(--white-2);
+}
+
 body {
     color: var(--black-2);
     background-color: var(--body-bg);
