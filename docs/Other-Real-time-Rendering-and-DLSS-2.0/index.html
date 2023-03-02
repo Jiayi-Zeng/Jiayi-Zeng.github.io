@@ -209,7 +209,7 @@
 <li><p>一篇2021年7月的期刊：<a target="_blank" rel="noopener" href="https://www.webofscience.com/wos/alldb/full-record/INSPEC:20799965">An overview of current deep learned rendering technologies</a> 着重讨论实时渲染和深度学习渲染。其中介绍了实时渲染技术中的抗锯齿和超分辨率，深度学习渲染技术中的DLSS和NSS模型，并且介绍了DLSR技术面临的挑战。本文的思路也从这篇期刊而来。</p>
 </li>
 </ul>
-<h1 id="1-前言"><a href="#1-前言" class="headerlink" title="1 前言"></a>1 前言</h1><p>通俗讲，<strong>渲染</strong>（Render)是处理器将需要计算的画面信息，计算并“绘制”在显示屏幕上的过程。随着显示技术的进步，渲染技术也慢慢地出现了两条主流分支：一种用于视频游戏技术，另一种则是用于影视技术。这两类需求对应的渲染技术分别为：<strong>实时渲染与离线渲染</strong>。</p>
+<h1 id="1-前言"><a href="#1-前言" class="headerlink" title="1 前言"></a><strong>1 前言</strong></h1><p>通俗讲，<strong>渲染</strong>（Render)是处理器将需要计算的画面信息，计算并“绘制”在显示屏幕上的过程。随着显示技术的进步，渲染技术也慢慢地出现了两条主流分支：一种用于视频游戏技术，另一种则是用于影视技术。这两类需求对应的渲染技术分别为：<strong>实时渲染与离线渲染</strong>。</p>
 <p><strong>实时渲染</strong>（Real-time rendering）指的是在计算机上快速生成图像。它是计算机图形学中最具交互性的领域。首先一幅图像显示在屏幕上，然后观察者做出动作与反应，并且其动作反馈会影响接下来的生成内容。由于这种反馈、渲染的循环速度足够快，观察者就不会只看到独立的图像，而是会沉浸在这种动态过程中。</p>
 <p>由于追求高分辨率和高帧率的真实性体验，RTR技术难度呈指数型上升。显示设备的更新换代以及物理着色、光线追踪、精确物理引擎、更高质量的纹理模型的实现使最新一代 GPU 也难以在不影响帧率的情况下以原始分辨率渲染图像。此时，<strong>低分辨率的性能开销实现高分辨率的画面</strong>成为大势所趋。</p>
 <center>
@@ -226,7 +226,7 @@
 </center>
 
 <p>本文旨在介绍实时渲染图像重建技术部分基础，同时着重于讨论新兴的基于深度学习的实时渲染重建DLSS 2.0。文章结构如下：<strong>第一部分讨论了实时渲染重建技术基础，包括抗锯齿和超分辨率采样两个方向；第二部分着重讨论DLSS 2.0技术的理论、工作原理和实现效果；第三部分分析DLSS 2.0的优点和缺点，并讨论了DLSR技术面临的挑战和展望。</strong></p>
-<h1 id="2-实时渲染图像重建技术基础"><a href="#2-实时渲染图像重建技术基础" class="headerlink" title="2 实时渲染图像重建技术基础"></a>2 实时渲染图像重建技术基础</h1><h2 id="2-1-抗锯齿技术"><a href="#2-1-抗锯齿技术" class="headerlink" title="2.1 抗锯齿技术"></a>2.1 抗锯齿技术</h2><p><strong>Aliasing</strong>（锯齿）这个术语最早出现在信号处理这门学科中，指的是当一个连续信号被采样后和其他非一致信号混淆的现象。在3D渲染中，这个术语有着更特殊的意思——它涵盖了所有3D渲染光栅化后产生的画面瑕疵。3D场景渲染在光栅化之前是连续信号，但在进行像素渲染（对每个像素生成相应的色彩值）的时候就不得不对连续信号进行采样以获得能够输出到显示器的结果。反锯齿的目标就在于让最终输出的画面和原生场景尽可能接近，修复渲染瑕疵。</p>
+<h1 id="2-实时渲染图像重建技术基础"><a href="#2-实时渲染图像重建技术基础" class="headerlink" title="2 实时渲染图像重建技术基础"></a><strong>2 实时渲染图像重建技术基础</strong></h1><h2 id="2-1-抗锯齿技术"><a href="#2-1-抗锯齿技术" class="headerlink" title="2.1 抗锯齿技术"></a>2.1 抗锯齿技术</h2><p><strong>Aliasing</strong>（锯齿）这个术语最早出现在信号处理这门学科中，指的是当一个连续信号被采样后和其他非一致信号混淆的现象。在3D渲染中，这个术语有着更特殊的意思——它涵盖了所有3D渲染光栅化后产生的画面瑕疵。3D场景渲染在光栅化之前是连续信号，但在进行像素渲染（对每个像素生成相应的色彩值）的时候就不得不对连续信号进行采样以获得能够输出到显示器的结果。反锯齿的目标就在于让最终输出的画面和原生场景尽可能接近，修复渲染瑕疵。</p>
 <p><strong>所有的渲染失真都可以归因于采样问题</strong>（用有限的像素展示无限的细节），使用哪种反锯齿手段与锯齿成因息息相关。因此，为了探讨不同反锯齿手段的优势和劣势，我们先将3D渲染的瑕疵根据其成因简单归纳为6个类别：<strong>几何失真、透明失真、子像素失真、纹理失真、渲染失真、闪烁情形（时间性锯齿）</strong>。</p>
  <center>
     <img style="border-radius: 0.3125em;
@@ -426,7 +426,7 @@
 
 <p>这一类算法需要首先检测过去帧和当前帧因为场景的变化导致的样本错误，然后在不影响画质太多的情况下，“合理”的纠正那些错误的样本。乍一看这简直是个计算机视觉问题，然而在实时渲染中这一步需要非常高效的完成。所以过去十几年，游戏开发者绞尽脑汁的发明了各种<strong>“启发式”的方法（Heuristics）</strong>。</p>
 <p>目前解决这个问题效果最好，也最常用的Heuristic，叫做<strong>Neighborhood Clamping</strong>，是Epic的Brian Karis在14年的SIGGRAPH的一个实时渲染讲座里最先提到的。思路其实很简单，就是把过去帧采样的样本的值的范围，限制在当前帧像素周围3x3大小的Local neighborhood的所有样本的值的范围内。</p>
-<h1 id="3-DLSS-2-0技术介绍"><a href="#3-DLSS-2-0技术介绍" class="headerlink" title="3 DLSS 2.0技术介绍"></a>3 DLSS 2.0技术介绍</h1><h2 id="3-1-DLSS-2-0原理与思路"><a href="#3-1-DLSS-2-0原理与思路" class="headerlink" title="3.1 DLSS 2.0原理与思路"></a>3.1 DLSS 2.0原理与思路</h2><p>DLSS 2.0首先也是一个基于多帧的图像重建技术。因为我们的目标是重建出和原生渲染一致的画面，所以基于用单帧的算法去“想象”不存在的信息是不适用的。</p>
+<h1 id="3-DLSS-2-0技术介绍"><a href="#3-DLSS-2-0技术介绍" class="headerlink" title="3 DLSS 2.0技术介绍"></a><strong>3 DLSS 2.0技术介绍</strong></h1><h2 id="3-1-DLSS-2-0原理与思路"><a href="#3-1-DLSS-2-0原理与思路" class="headerlink" title="3.1 DLSS 2.0原理与思路"></a>3.1 DLSS 2.0原理与思路</h2><p>DLSS 2.0首先也是一个基于多帧的图像重建技术。因为我们的目标是重建出和原生渲染一致的画面，所以基于用单帧的算法去“想象”不存在的信息是不适用的。</p>
 <p>那DLSS 2.0和现有的实时渲染中的时域超采样有什么区别呢？DLSS 2.0抛弃了人肉手调的启发式算法，用一个在超级计算机上数万张超高质量图片训练的神经网络来代替这些Heuristics。就像深度学习在几年前在计算机视觉领域超越了各种手调的特征提取算法一样，深度学习第一次在实时渲染中也非常合理的跑赢了图形领域的手调算法。</p>
 <p>用DLSS 2.0重建的渲染图像序列达到了非常高的多帧样本利用率，这也是为什么只用四分之一的样本就可以重建出媲美原生分辨率渲染的图像质量的原因。</p>
 <center>
@@ -476,7 +476,7 @@
     box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" src="https://img-blog.csdnimg.cn/1a58dfc0348741b0861f2ebbec493c72.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6Zi_6bKr5piv5p2h5ZK46bG8,size_20,color_FFFFFF,t_70,g_se,x_16">
     <br><div style="color: #999;">图 26 DLSS cost</div></center> 
 
-<h1 id="4-DLSS挑战与总结"><a href="#4-DLSS挑战与总结" class="headerlink" title="4 DLSS挑战与总结"></a>4 DLSS挑战与总结</h1><h2 id="4-1-DLSS效果对比"><a href="#4-1-DLSS效果对比" class="headerlink" title="4.1 DLSS效果对比"></a>4.1 DLSS效果对比</h2><p>DLSS 2.0可以将540p的渲染图像直接放大到1080p，或者720p到1440p，1080p到4K。并且放大的画面在质量以及细节程度完全不输原生分辨率渲染，网上的许多测评也都反映了这一点。</p>
+<h1 id="4-DLSS挑战与总结"><a href="#4-DLSS挑战与总结" class="headerlink" title="4 DLSS挑战与总结"></a><strong>4 DLSS挑战与总结</strong></h1><h2 id="4-1-DLSS效果对比"><a href="#4-1-DLSS效果对比" class="headerlink" title="4.1 DLSS效果对比"></a>4.1 DLSS效果对比</h2><p>DLSS 2.0可以将540p的渲染图像直接放大到1080p，或者720p到1440p，1080p到4K。并且放大的画面在质量以及细节程度完全不输原生分辨率渲染，网上的许多测评也都反映了这一点。</p>
 <p>下面放几组例子，第一个是一个几何非常密集的森林场景，开启实时光线追踪后540p原生分辨率渲染大概有89fps，但是因为分辨率太低，画面非常模糊。</p>
  <center>
     <img style="border-radius: 0.3125em;
@@ -534,7 +534,7 @@
 <li><strong>专注于更广泛的实施和支持</strong></li>
 </ol>
 <p>DLSR 是一项非常新的技术，仍处于起步阶段。因此，目前只有少数应用程序提供对 DLSR 的实现支持。需要完成工作并需要构建相关的 API 以扩展对更多应用程序的支持，并且必须为开发人员创建软件工具以实现更快的增长。</p>
-<h1 id="Postscript：总结"><a href="#Postscript：总结" class="headerlink" title="Postscript：总结"></a>Postscript：总结</h1><p>调查和攥写报告前前后后花了一周时间。前期也是随心所欲的查文献看资料写md，后期三天狂肝出小20页的报告还是相当痛苦的一件事……确实时间安排相当不合理（拖延症你又来啦），但更多的时间我认为是花费在捋思路上。在查阅资料过程中，我一直在尝试摸清内在的逻辑链——可惜思路一直被推翻重建，文章结构也一改再改，直到ddl前的最后一天的我基本满意。</p>
+<h1 id="Postscript：总结"><a href="#Postscript：总结" class="headerlink" title="Postscript：总结"></a><strong>Postscript：总结</strong></h1><p>调查和攥写报告前前后后花了一周时间。前期也是随心所欲的查文献看资料写md，后期三天狂肝出小20页的报告还是相当痛苦的一件事……确实时间安排相当不合理（拖延症你又来啦），但更多的时间我认为是花费在捋思路上。在查阅资料过程中，我一直在尝试摸清内在的逻辑链——可惜思路一直被推翻重建，文章结构也一改再改，直到ddl前的最后一天的我基本满意。</p>
 <p>总体来说，收获还是相当大的，调研调查本身就是一件令人兴奋的事——可以自己思考内在联系，提出问题，再去解决……这也是我第一次看这么多的外文材料（原先对英文文献有些畏惧心理，一直没有迈出这一步，或者说没迈几步）。</p>
 <p>我最感兴趣或者最想从事的方向之一就是游戏开发（一个爱玩游戏的人也想去做游戏）。原先我多多少少低估了这个领域的难度，但现在更多地我对这个方向产生了敬畏之情。当然打动我的还有很多这个领域的前辈们。当我研究《Real time rendering》，翻看毛星云的总结提炼时，我佩服着他的热爱，也惋惜着他的离开；当我浏览文刀秋二的<a target="_blank" rel="noopener" href="https://www.zhihu.com/question/29504480/answer/44764493">知乎回答</a>时，我也是深深佩服的——我认为我对coding是很感兴趣的，以至于每次课设和项目我很多时间都花在学习新东西加上去，以做得好些，更好些。但当我发现大神的”兴趣”后，我也意识到，我还有很长的一段路要走：</p>
  <center>
@@ -645,21 +645,12 @@
 
 
         
-<script src="../js/main.js"></script>
+<script src="../../../js/main.js"></script>
 
         
         
         
 
-        
-        <script src="https://unpkg.com/scrollreveal"></script>
-        <script>
-            window.addEventListener('load', () => {
-                ScrollReveal({ delay: 250, reset: true, easing: 'cubic-bezier(0, 0, 0, 1)' })
-                ScrollReveal().reveal('.post-list-item .cover-img img')
-                ScrollReveal().reveal('.post-list-item, .card, .content p img, .content .block-large img', { distance: '60px', origin: 'bottom', duration: 800 })
-            })
-        </script>
         
     </body>
 </html>

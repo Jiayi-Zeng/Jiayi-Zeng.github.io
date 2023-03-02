@@ -70,6 +70,7 @@ hr,
   margin-right: auto;
   padding: 0 16px;
   /* margin-block: 0px; */
+  overflow: auto;
 }
 
 .content p img,
@@ -248,7 +249,7 @@ body[data-color-scheme="light"] .tags .icon {
 .tags .tag {
   font-size: 14px;
   display: block;
-  height: 14px;
+  height: auto;
   margin-right: 4px;
 }
 

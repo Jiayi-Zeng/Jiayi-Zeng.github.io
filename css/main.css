@@ -1,5 +1,6 @@
 * {
     transition: color 0.2s, background-color 0.2s;
+    /* overflow-x: auto; */
 }
 
 mark {
@@ -39,7 +40,7 @@ a:visited {
 
 .section-title {
     font-size: 32px;
-    line-height: 1.125;
+    line-height: 1.5;
     font-weight: 700;
     letter-spacing: .004em;
     margin-bottom: 24px;

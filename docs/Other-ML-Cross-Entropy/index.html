@@ -190,7 +190,7 @@
 <span id="more"></span>
 
 <p>交叉熵是信息论中的一个概念，要想了解交叉熵的本质，需要先从最基本的概念讲起。</p>
-<h1 id="1-信息量"><a href="#1-信息量" class="headerlink" title="1 信息量"></a>1 信息量</h1><p>首先是信息量。假设我们听到了两件事，分别如下：</p>
+<h1 id="1-信息量"><a href="#1-信息量" class="headerlink" title="1 信息量"></a><strong>1 信息量</strong></h1><p>首先是信息量。假设我们听到了两件事，分别如下：</p>
 <blockquote>
 <p>事件A：巴西队进入了2018世界杯决赛圈。<br>事件B：中国队进入了2018世界杯决赛圈。</p>
 </blockquote>
@@ -341,7 +341,7 @@
 </g>
 </svg>,绘制为图形如下，可见该函数符合我们对信息量的直觉。</p>
 <p><img src="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20221111062251336.png" alt="image-20221111062251336"></p>
-<h1 id="2-熵"><a href="#2-熵" class="headerlink" title="2 熵"></a>2 熵</h1><p>考虑另一个问题，对于某个事件，有<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1.293ex" height="1.676ex" style="vertical-align: -0.338ex;" viewBox="0 -576.1 556.5 721.6" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-1-Title">
+<h1 id="2-熵"><a href="#2-熵" class="headerlink" title="2 熵"></a><strong>2 熵</strong></h1><p>考虑另一个问题，对于某个事件，有<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1.293ex" height="1.676ex" style="vertical-align: -0.338ex;" viewBox="0 -576.1 556.5 721.6" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-1-Title">
 <title id="MathJax-SVG-1-Title">n</title>
 <defs aria-hidden="true">
 <path stroke-width="1" id="E1-GYREPAGELLANORMAL-1D45B" d="M514 85c-98 -73 -134 -94 -160 -94c-19 0 -30 15 -30 40c0 16 4 39 13 76l52 212c8 32 11 53 11 71c0 15 -6 24 -17 24c-45 0 -119 -62 -174 -146c-45 -69 -67 -134 -86 -260c-22 -4 -45 -10 -70 -17l-7 11c41 143 82 336 82 387c0 15 -7 25 -18 25c-7 0 -11 -1 -47 -25 l-32 -21l-7 20l28 20c73 52 112 74 133 74c15 0 23 -12 23 -33c0 -11 -2 -23 -6 -41l-38 -161c52 73 80 107 118 142c59 55 128 93 170 93c20 0 31 -13 31 -36c0 -17 -4 -45 -11 -74l-66 -276c-1 -4 -2 -15 -2 -20c0 -11 6 -20 13 -20c10 0 32 11 61 30l26 17Z"></path>
@@ -845,7 +845,7 @@ H(X)&amp;=−\sum_{i=1}^np(xi)log(p(xi))\\
 </g>
 </g>
 </svg></p>
-<h1 id="3-相对熵（KL散度）"><a href="#3-相对熵（KL散度）" class="headerlink" title="3 相对熵（KL散度）"></a>3 相对熵（KL散度）</h1><p>相对熵又称KL散度,如果我们对于同一个随机变量 <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1.162ex" height="1.676ex" style="vertical-align: -0.338ex;" viewBox="0 -576.1 500.5 721.6" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-1-Title">
+<h1 id="3-相对熵（KL散度）"><a href="#3-相对熵（KL散度）" class="headerlink" title="3 相对熵（KL散度）"></a><strong>3 相对熵（KL散度）</strong></h1><p>相对熵又称KL散度,如果我们对于同一个随机变量 <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1.162ex" height="1.676ex" style="vertical-align: -0.338ex;" viewBox="0 -576.1 500.5 721.6" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-1-Title">
 <title id="MathJax-SVG-1-Title"> x </title>
 <defs aria-hidden="true">
 <path stroke-width="1" id="E1-GYREPAGELLANORMAL-1D465" d="M484 472l-15 -85l-14 -4c-5 15 -17 23 -33 23c-31 0 -58 -23 -105 -88l-35 -49l18 -101c5 -29 16 -66 25 -85c10 -20 23 -30 38 -30c16 0 41 15 77 45l9 -19l-49 -44c-32 -29 -64 -46 -86 -46c-36 0 -58 39 -72 124l-11 69l-76 -117c-31 -47 -70 -76 -103 -76 c-12 0 -28 4 -43 12c1 7 2 10 4 22c6 32 8 45 8 65l20 3l11 -28c2 -5 13 -9 28 -9c28 0 62 32 105 99l40 62l-11 62c-17 98 -39 139 -72 139c-19 0 -39 -14 -69 -48l-17 10l58 83c9 13 31 21 57 21c59 0 86 -36 98 -135l6 -48l37 55c62 92 102 128 142 128c9 0 18 -3 30 -10 Z"></path>
@@ -1180,7 +1180,7 @@ H(X)&amp;=−\sum_{i=1}^np(xi)log(p(xi))\\
  <use xlink:href="#E1-GYREPAGELLANORMAL-1D444" x="0" y="0"></use>
 </g>
 </svg> 分布越接近</p>
-<h1 id="4-交叉熵"><a href="#4-交叉熵" class="headerlink" title="4 交叉熵"></a>4 交叉熵</h1><p>对式<em>KL散度的计算公式</em>变形可以得到：</p>
+<h1 id="4-交叉熵"><a href="#4-交叉熵" class="headerlink" title="4 交叉熵"></a><strong>4 交叉熵</strong></h1><p>对式<em>KL散度的计算公式</em>变形可以得到：</p>
 <p style="text-align:center"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="51.743ex" height="14.509ex" style="vertical-align: -6.671ex;" viewBox="0 -3374.7 22278.2 6247" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-1-Title">
 <title id="MathJax-SVG-1-Title">\begin{aligned}
 D_{KL}(p||q)&amp;=\sum_{i=1}^np(xi)log(p(xi))−\sum_{i=1}^np(xi)log(q(xi))\\
@@ -1432,7 +1432,7 @@ D_{KL}(p||q)&amp;=\sum_{i=1}^np(xi)log(p(xi))−\sum_{i=1}^np(xi)log(q(xi))\\
  <use xlink:href="#E1-GYREPAGELLAMAIN-29" x="2486" y="0"></use>
 </g>
 </svg> 不变，故在优化过程中，只需要关注交叉熵就可以了。所以一般在机器学习中直接用用交叉熵做<code>loss</code>，评估模型。</p>
-<h1 id="5-机器学习中交叉熵的应用"><a href="#5-机器学习中交叉熵的应用" class="headerlink" title="5 机器学习中交叉熵的应用"></a>5 机器学习中交叉熵的应用</h1><h2 id="5-1-为什么要用交叉熵做loss函数？"><a href="#5-1-为什么要用交叉熵做loss函数？" class="headerlink" title="5.1 为什么要用交叉熵做loss函数？"></a>5.1 为什么要用交叉熵做loss函数？</h2><p>在线性回归问题中，常常使用MSE（Mean Squared Error）作为loss函数，比如：</p>
+<h1 id="5-机器学习中交叉熵的应用"><a href="#5-机器学习中交叉熵的应用" class="headerlink" title="5 机器学习中交叉熵的应用"></a><strong>5 机器学习中交叉熵的应用</strong></h1><h2 id="5-1-为什么要用交叉熵做loss函数？"><a href="#5-1-为什么要用交叉熵做loss函数？" class="headerlink" title="5.1 为什么要用交叉熵做loss函数？"></a>5.1 为什么要用交叉熵做loss函数？</h2><p>在线性回归问题中，常常使用MSE（Mean Squared Error）作为loss函数，比如：</p>
 <p style="text-align:center"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="23.163ex" height="7.176ex" style="vertical-align: -3.171ex;" viewBox="0 -1724.2 9972.9 3089.6" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-1-Title">
 <title id="MathJax-SVG-1-Title">loss=\frac{1}{2m}\sum_{i=1}^m(y_i−\hat{y_i})^2</title>
 <defs aria-hidden="true">
@@ -2379,7 +2379,7 @@ loss_{mouse}&amp;=−1×log(0.8)−(1−1)log(1−0.8)=−log(0.8)
  <use xlink:href="#E1-GYREPAGELLANORMAL-1D45B" x="0" y="0"></use>
 </g>
 </svg> 为类别数。</p>
-<h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/tsyccnh/article/details/79163834">https://blog.csdn.net/tsyccnh/article/details/79163834</a></p>
+<h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a><strong>Reference</strong></h1><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/tsyccnh/article/details/79163834">https://blog.csdn.net/tsyccnh/article/details/79163834</a></p>
 
 </div>
 
@@ -2491,21 +2491,12 @@ loss_{mouse}&amp;=−1×log(0.8)−(1−1)log(1−0.8)=−log(0.8)
 
 
         
-<script src="../js/main.js"></script>
+<script src="../../../js/main.js"></script>
 
         
         
         
 
-        
-        <script src="https://unpkg.com/scrollreveal"></script>
-        <script>
-            window.addEventListener('load', () => {
-                ScrollReveal({ delay: 250, reset: true, easing: 'cubic-bezier(0, 0, 0, 1)' })
-                ScrollReveal().reveal('.post-list-item .cover-img img')
-                ScrollReveal().reveal('.post-list-item, .card, .content p img, .content .block-large img', { distance: '60px', origin: 'bottom', duration: 800 })
-            })
-        </script>
         
     </body>
 </html>

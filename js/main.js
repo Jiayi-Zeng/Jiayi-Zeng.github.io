@@ -120,7 +120,7 @@
     if (document.body.attributes['data-toc']) {
         const content = document.getElementsByClassName('content')[0]
         const maxDepth = document.body.attributes['data-toc-max-depth'].value
-        
+
         var headingSelector = ''
         for (var i = 1; i <= maxDepth; i++) {
             headingSelector += 'h' + i + ','
