@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head prefix="og: https://ogp.me/ns#">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+  <meta name="color-scheme" content="light dark">
+  
+<link rel="stylesheet" href="../../css/prism.css">
+ 
+    
+<script src="../js/prism.js"></script>
+
+  
+  <title>4 Introduction to Regression - Joooyce | Zeng</title>
+  
+    <link rel="shortcut icon" href="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/1f41f.png">
+  
+  
+    <link rel='manifest' href='/manifest.json'>
+  
+
+  
+  
+  
+  <meta property="og:title" content="4 Introduction to Regression - Joooyce | Zeng" />
+  
+  <meta property="og:type" content="article" />
+  
+  <meta property="og:url" content="https://jiayi-zeng.github.io/docs/Predicted-Analytics-3.1-Introduction-to-Regression/index.html" />
+  
+  <meta property="og:image" content="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/20230223%20(3).png" />
+  
+  <meta property="og:article:published_time" content="2023-02-22T08:00:00.000Z" />
+  
+  <meta property="og:article:author" content="Joyce Zeng" />
+  
+  
+
+  
+<link rel="stylesheet" href="../../css/var.css">
+
+  
+<link rel="stylesheet" href="../../css/main.css">
+
+  
+<link rel="stylesheet" href="../../css/typography.css">
+
+  
+<link rel="stylesheet" href="../../css/code-highlighting.css">
+
+  
+<link rel="stylesheet" href="../../css/components.css">
+
+  
+<link rel="stylesheet" href="../../css/nav.css">
+
+  
+<link rel="stylesheet" href="../../css/paginator.css">
+
+  
+<link rel="stylesheet" href="../../css/footer.css">
+
+  
+<link rel="stylesheet" href="../../css/post-list.css">
+
+  
+  
+<link rel="stylesheet" href="../../css/rainbow-banner.css">
+
+  
+  
+  
+<link rel="stylesheet" href="../../css/toc.css">
+
+  
+  
+  
+  
+  
+<link rel="stylesheet" href="../../css/post.css">
+
+  
+  
+  
+  
+  
+
+  
+<meta name="generator" content="Hexo 6.3.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+</head>
+    
+<link rel="stylesheet" href="../../css/prism.css">
+ 
+    
+<script src="../js/prism.js"></script>
+
+    <body
+        data-color-scheme="auto"
+        data-uppercase-categories="true"
+        
+        data-rainbow-banner="true"
+        data-rainbow-banner-shown="auto"
+        data-rainbow-banner-month="6"
+        data-rainbow-banner-colors="#e50000,#ff8d00,#ffee00,#008121,#004cff,#760188"
+        
+        data-config-root="/"
+        
+        data-toc="true"
+        data-toc-max-depth="2"
+        
+        
+    >
+        <nav id="theme-nav">
+    <div class="inner">
+        <a class="title" href="/">Jiayi Zeng</a>
+        <div class="nav-arrow"></div>
+        <div class="nav-items">
+            <a class="nav-item nav-item-home" href="/">Home</a>
+            
+            
+            <a class="nav-item" href="../../archives">Archives</a>
+            
+            
+            
+            <a class="nav-item" href="../../tags">Tags</a>
+            
+            
+            
+            <a class="nav-item" href="../../categories">Categories</a>
+            
+            
+            
+            <a class="nav-item" href="../../projects">Projects</a>
+            
+            
+            
+            <a class="nav-item" href="../../about">About</a>
+            
+            
+            
+            <a class="nav-item nav-item-github nav-item-icon" href="https://github.com/Jiayi-Zeng" target="_blank">&nbsp;</a>
+            
+            
+            
+            <a class="nav-item nav-item-search nav-item-icon" href="../../search" target="_blank">&nbsp;</a>
+            
+            
+        </div>
+    </div>
+</nav>
+        
+
+
+<article class="post">
+
+<div class="meta">
+    
+    <div class="categories text-uppercase">
+    
+        <a href="/categories/Predicted-Analytics-Tools-Techniques/">Predicted Analytics: Tools &amp; Techniques</a>
+    
+    </div>
+    
+
+    
+    <div class="date" id="date">
+        <span>February</span>
+        <span>22,</span>
+        <span>2023</span>
+    </div>
+    
+
+    <h2 class="title">4 Introduction to Regression</h2>
+
+</div>
+
+<div class="divider"></div>
+
+<div class="content">
+    <h1 id="Linear-Regression-–-Ordinary-Least-Square-OLS"><a href="#Linear-Regression-–-Ordinary-Least-Square-OLS" class="headerlink" title="Linear Regression – Ordinary Least Square (OLS)"></a>Linear Regression – Ordinary Least Square (OLS)</h1><p>2 variable regression - how a response variable <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1.18ex" height="2.176ex" style="vertical-align: -0.838ex; margin-left: -0.017ex;" viewBox="-7.5 -576.1 508 936.9" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-1-Title">
+<title id="MathJax-SVG-1-Title">y</title>
+<defs aria-hidden="true">
+<path stroke-width="1" id="E1-GYREPAGELLANORMAL-1D466" d="M490 473l-141 -440c-59 -185 -169 -309 -275 -309c-45 0 -82 35 -82 78c0 5 0 11 1 18l48 34l10 -4c-1 -9 -2 -17 -2 -22c0 -35 27 -62 62 -62c70 0 120 73 171 250l49 171c-75 -113 -159 -198 -196 -198c-25 0 -44 29 -43 71l1 40l17 243c1 16 5 67 -21 67 c-7 0 -20 -8 -25 -12l-50 -30l-11 18l82 56c48 33 62 40 75 40c17 0 24 -18 24 -63c0 -28 -2 -66 -4 -97l-15 -194c-1 -13 -3 -61 19 -61s71 44 106 95c33 49 68 122 80 169l35 132c22 2 45 8 74 19Z"></path>
+</defs>
+<g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
+ <use xlink:href="#E1-GYREPAGELLANORMAL-1D466" x="0" y="0"></use>
+</g>
+</svg> changes the predictor (explanatory) variable <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1.162ex" height="1.676ex" style="vertical-align: -0.338ex;" viewBox="0 -576.1 500.5 721.6" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-1-Title">
+<title id="MathJax-SVG-1-Title">x</title>
+<defs aria-hidden="true">
+<path stroke-width="1" id="E1-GYREPAGELLANORMAL-1D465" d="M484 472l-15 -85l-14 -4c-5 15 -17 23 -33 23c-31 0 -58 -23 -105 -88l-35 -49l18 -101c5 -29 16 -66 25 -85c10 -20 23 -30 38 -30c16 0 41 15 77 45l9 -19l-49 -44c-32 -29 -64 -46 -86 -46c-36 0 -58 39 -72 124l-11 69l-76 -117c-31 -47 -70 -76 -103 -76 c-12 0 -28 4 -43 12c1 7 2 10 4 22c6 32 8 45 8 65l20 3l11 -28c2 -5 13 -9 28 -9c28 0 62 32 105 99l40 62l-11 62c-17 98 -39 139 -72 139c-19 0 -39 -14 -69 -48l-17 10l58 83c9 13 31 21 57 21c59 0 86 -36 98 -135l6 -48l37 55c62 92 102 128 142 128c9 0 18 -3 30 -10 Z"></path>
+</defs>
+<g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
+ <use xlink:href="#E1-GYREPAGELLANORMAL-1D465" x="0" y="0"></use>
+</g>
+</svg> changes.</p>
+<p style="text-align:center"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="11.551ex" height="2.676ex" style="vertical-align: -0.838ex; margin-left: -0.017ex;" viewBox="-7.5 -791.3 4973.4 1152.1" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-1-Title">
+<title id="MathJax-SVG-1-Title">y = \beta_1x + c</title>
+<defs aria-hidden="true">
+<path stroke-width="1" id="E1-GYREPAGELLANORMAL-1D466" d="M490 473l-141 -440c-59 -185 -169 -309 -275 -309c-45 0 -82 35 -82 78c0 5 0 11 1 18l48 34l10 -4c-1 -9 -2 -17 -2 -22c0 -35 27 -62 62 -62c70 0 120 73 171 250l49 171c-75 -113 -159 -198 -196 -198c-25 0 -44 29 -43 71l1 40l17 243c1 16 5 67 -21 67 c-7 0 -20 -8 -25 -12l-50 -30l-11 18l82 56c48 33 62 40 75 40c17 0 24 -18 24 -63c0 -28 -2 -66 -4 -97l-15 -194c-1 -13 -3 -61 19 -61s71 44 106 95c33 49 68 122 80 169l35 132c22 2 45 8 74 19Z"></path>
+<path stroke-width="1" id="E1-GYREPAGELLAMAIN-3D" d="M680 330h-600c2 10 3 20 3 30s-1 20 -3 30h600c-2 -10 -3 -20 -3 -30s1 -20 3 -30zM680 110h-600c2 10 3 20 3 30s-1 20 -3 30h600c-2 -10 -3 -20 -3 -30s1 -20 3 -30Z"></path>
+<path stroke-width="1" id="E1-GYREPAGELLANORMAL-1D6FD" d="M534 235c-4 -136 -131 -246 -284 -246c-51 0 -88 9 -127 31c-19 -78 -29 -191 -39 -280c-29 -4 -37 -9 -63 -17l-14 8l132 642l31 125c14 59 29 94 88 137c58 44 132 76 173 76c51 0 91 -46 90 -101c-2 -55 -23 -86 -90 -164c-3 -4 -8 -10 -11 -14 c-18 -21 -25 -33 -28 -46v-5c47 -12 70 -21 93 -39c34 -26 50 -55 49 -107zM457 575c1 51 -32 86 -82 86c-49 0 -92 -30 -112 -82c-8 -22 -27 -99 -51 -200l-55 -213c-2 -16 -2 -26 -3 -36c-2 -66 43 -107 119 -107c42 0 78 14 106 43c42 41 66 101 68 162 c4 85 -45 124 -132 124c-24 0 -41 -3 -78 -16l-5 12l19 43c10 0 15 0 22 -1c4 -1 14 -1 22 -1c41 0 59 13 88 38c56 78 73 104 74 148Z"></path>
+<path stroke-width="1" id="E1-GYREPAGELLAMAIN-31" d="M418 -3l-157 3l-165 -3v30l56 3c54 3 65 14 65 66v485c0 24 -2 33 -8 33l-3 -1l-129 -58h-10l-7 43c91 32 162 62 227 96l14 -5v-593c0 -52 10 -63 65 -66l52 -3v-30Z"></path>
+<path stroke-width="1" id="E1-GYREPAGELLANORMAL-1D465" d="M484 472l-15 -85l-14 -4c-5 15 -17 23 -33 23c-31 0 -58 -23 -105 -88l-35 -49l18 -101c5 -29 16 -66 25 -85c10 -20 23 -30 38 -30c16 0 41 15 77 45l9 -19l-49 -44c-32 -29 -64 -46 -86 -46c-36 0 -58 39 -72 124l-11 69l-76 -117c-31 -47 -70 -76 -103 -76 c-12 0 -28 4 -43 12c1 7 2 10 4 22c6 32 8 45 8 65l20 3l11 -28c2 -5 13 -9 28 -9c28 0 62 32 105 99l40 62l-11 62c-17 98 -39 139 -72 139c-19 0 -39 -14 -69 -48l-17 10l58 83c9 13 31 21 57 21c59 0 86 -36 98 -135l6 -48l37 55c62 92 102 128 142 128c9 0 18 -3 30 -10 Z"></path>
+<path stroke-width="1" id="E1-GYREPAGELLAMAIN-2B" d="M680 220h-270v-270c-10 2 -20 3 -30 3s-20 -1 -30 -3v270h-270c2 10 3 20 3 30s-1 20 -3 30h270v270c10 -2 20 -3 30 -3s20 1 30 3v-270h270c-2 -10 -3 -20 -3 -30s1 -20 3 -30Z"></path>
+<path stroke-width="1" id="E1-GYREPAGELLANORMAL-1D450" d="M389 458c-9 -26 -16 -63 -24 -128h-23v60c0 24 -36 43 -81 43c-32 0 -57 -8 -78 -26c-48 -39 -82 -142 -82 -248c0 -79 29 -119 85 -119c35 0 73 17 145 65l15 10l8 -20l-50 -41c-55 -45 -103 -65 -157 -65c-80 0 -122 51 -122 147c0 107 38 211 95 261s128 85 173 85 c38 0 71 -8 96 -24Z"></path>
+</defs>
+<g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
+ <use xlink:href="#E1-GYREPAGELLANORMAL-1D466" x="0" y="0"></use>
+ <use xlink:href="#E1-GYREPAGELLAMAIN-3D" x="778" y="0"></use>
+<g transform="translate(1816,0)">
+ <use xlink:href="#E1-GYREPAGELLANORMAL-1D6FD" x="0" y="0"></use>
+ <use transform="scale(0.707)" xlink:href="#E1-GYREPAGELLAMAIN-31" x="823" y="-213"></use>
+</g>
+ <use xlink:href="#E1-GYREPAGELLANORMAL-1D465" x="2852" y="0"></use>
+ <use xlink:href="#E1-GYREPAGELLAMAIN-2B" x="3575" y="0"></use>
+ <use xlink:href="#E1-GYREPAGELLANORMAL-1D450" x="4558" y="0"></use>
+</g>
+</svg></p>
+<p>Multiple regression - how a response variable <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1.18ex" height="2.176ex" style="vertical-align: -0.838ex; margin-left: -0.017ex;" viewBox="-7.5 -576.1 508 936.9" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-1-Title">
+<title id="MathJax-SVG-1-Title">y</title>
+<defs aria-hidden="true">
+<path stroke-width="1" id="E1-GYREPAGELLANORMAL-1D466" d="M490 473l-141 -440c-59 -185 -169 -309 -275 -309c-45 0 -82 35 -82 78c0 5 0 11 1 18l48 34l10 -4c-1 -9 -2 -17 -2 -22c0 -35 27 -62 62 -62c70 0 120 73 171 250l49 171c-75 -113 -159 -198 -196 -198c-25 0 -44 29 -43 71l1 40l17 243c1 16 5 67 -21 67 c-7 0 -20 -8 -25 -12l-50 -30l-11 18l82 56c48 33 62 40 75 40c17 0 24 -18 24 -63c0 -28 -2 -66 -4 -97l-15 -194c-1 -13 -3 -61 19 -61s71 44 106 95c33 49 68 122 80 169l35 132c22 2 45 8 74 19Z"></path>
+</defs>
+<g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
+ <use xlink:href="#E1-GYREPAGELLANORMAL-1D466" x="0" y="0"></use>
+</g>
+</svg> changes as the predictor (explanatory) variables <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="2.325ex" height="2.176ex" style="vertical-align: -0.338ex;" viewBox="0 -791.3 1001 936.9" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-1-Title">
+<title id="MathJax-SVG-1-Title">x1</title>
+<defs aria-hidden="true">
+<path stroke-width="1" id="E1-GYREPAGELLANORMAL-1D465" d="M484 472l-15 -85l-14 -4c-5 15 -17 23 -33 23c-31 0 -58 -23 -105 -88l-35 -49l18 -101c5 -29 16 -66 25 -85c10 -20 23 -30 38 -30c16 0 41 15 77 45l9 -19l-49 -44c-32 -29 -64 -46 -86 -46c-36 0 -58 39 -72 124l-11 69l-76 -117c-31 -47 -70 -76 -103 -76 c-12 0 -28 4 -43 12c1 7 2 10 4 22c6 32 8 45 8 65l20 3l11 -28c2 -5 13 -9 28 -9c28 0 62 32 105 99l40 62l-11 62c-17 98 -39 139 -72 139c-19 0 -39 -14 -69 -48l-17 10l58 83c9 13 31 21 57 21c59 0 86 -36 98 -135l6 -48l37 55c62 92 102 128 142 128c9 0 18 -3 30 -10 Z"></path>
+<path stroke-width="1" id="E1-GYREPAGELLAMAIN-31" d="M418 -3l-157 3l-165 -3v30l56 3c54 3 65 14 65 66v485c0 24 -2 33 -8 33l-3 -1l-129 -58h-10l-7 43c91 32 162 62 227 96l14 -5v-593c0 -52 10 -63 65 -66l52 -3v-30Z"></path>
+</defs>
+<g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
+ <use xlink:href="#E1-GYREPAGELLANORMAL-1D465" x="0" y="0"></use>
+ <use xlink:href="#E1-GYREPAGELLAMAIN-31" x="500" y="0"></use>
+</g>
+</svg>, <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="2.325ex" height="2.176ex" style="vertical-align: -0.338ex;" viewBox="0 -791.3 1001 936.9" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-1-Title">
+<title id="MathJax-SVG-1-Title">x2</title>
+<defs aria-hidden="true">
+<path stroke-width="1" id="E1-GYREPAGELLANORMAL-1D465" d="M484 472l-15 -85l-14 -4c-5 15 -17 23 -33 23c-31 0 -58 -23 -105 -88l-35 -49l18 -101c5 -29 16 -66 25 -85c10 -20 23 -30 38 -30c16 0 41 15 77 45l9 -19l-49 -44c-32 -29 -64 -46 -86 -46c-36 0 -58 39 -72 124l-11 69l-76 -117c-31 -47 -70 -76 -103 -76 c-12 0 -28 4 -43 12c1 7 2 10 4 22c6 32 8 45 8 65l20 3l11 -28c2 -5 13 -9 28 -9c28 0 62 32 105 99l40 62l-11 62c-17 98 -39 139 -72 139c-19 0 -39 -14 -69 -48l-17 10l58 83c9 13 31 21 57 21c59 0 86 -36 98 -135l6 -48l37 55c62 92 102 128 142 128c9 0 18 -3 30 -10 Z"></path>
+<path stroke-width="1" id="E1-GYREPAGELLAMAIN-32" d="M468 -3l-229 3l-223 -3v26l170 181c113 120 155 194 155 269c0 85 -55 139 -141 139c-67 0 -103 -25 -119 -83l-13 -46h-29l17 136c49 50 98 70 170 70c127 0 205 -71 205 -186c0 -75 -30 -130 -127 -233l-182 -193l346 10c-2 -22 -2 -32 -2 -45c0 -14 0 -24 2 -45Z"></path>
+</defs>
+<g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
+ <use xlink:href="#E1-GYREPAGELLANORMAL-1D465" x="0" y="0"></use>
+ <use xlink:href="#E1-GYREPAGELLAMAIN-32" x="500" y="0"></use>
+</g>
+</svg>, … <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="2.455ex" height="1.676ex" style="vertical-align: -0.338ex;" viewBox="0 -576.1 1057 721.6" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-1-Title">
+<title id="MathJax-SVG-1-Title">xn</title>
+<defs aria-hidden="true">
+<path stroke-width="1" id="E1-GYREPAGELLANORMAL-1D465" d="M484 472l-15 -85l-14 -4c-5 15 -17 23 -33 23c-31 0 -58 -23 -105 -88l-35 -49l18 -101c5 -29 16 -66 25 -85c10 -20 23 -30 38 -30c16 0 41 15 77 45l9 -19l-49 -44c-32 -29 -64 -46 -86 -46c-36 0 -58 39 -72 124l-11 69l-76 -117c-31 -47 -70 -76 -103 -76 c-12 0 -28 4 -43 12c1 7 2 10 4 22c6 32 8 45 8 65l20 3l11 -28c2 -5 13 -9 28 -9c28 0 62 32 105 99l40 62l-11 62c-17 98 -39 139 -72 139c-19 0 -39 -14 -69 -48l-17 10l58 83c9 13 31 21 57 21c59 0 86 -36 98 -135l6 -48l37 55c62 92 102 128 142 128c9 0 18 -3 30 -10 Z"></path>
+<path stroke-width="1" id="E1-GYREPAGELLANORMAL-1D45B" d="M514 85c-98 -73 -134 -94 -160 -94c-19 0 -30 15 -30 40c0 16 4 39 13 76l52 212c8 32 11 53 11 71c0 15 -6 24 -17 24c-45 0 -119 -62 -174 -146c-45 -69 -67 -134 -86 -260c-22 -4 -45 -10 -70 -17l-7 11c41 143 82 336 82 387c0 15 -7 25 -18 25c-7 0 -11 -1 -47 -25 l-32 -21l-7 20l28 20c73 52 112 74 133 74c15 0 23 -12 23 -33c0 -11 -2 -23 -6 -41l-38 -161c52 73 80 107 118 142c59 55 128 93 170 93c20 0 31 -13 31 -36c0 -17 -4 -45 -11 -74l-66 -276c-1 -4 -2 -15 -2 -20c0 -11 6 -20 13 -20c10 0 32 11 61 30l26 17Z"></path>
+</defs>
+<g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
+ <use xlink:href="#E1-GYREPAGELLANORMAL-1D465" x="0" y="0"></use>
+ <use xlink:href="#E1-GYREPAGELLANORMAL-1D45B" x="500" y="0"></use>
+</g>
+</svg> change</p>
+<p style="text-align:center"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="38.697ex" height="2.676ex" style="vertical-align: -0.838ex; margin-left: -0.017ex;" viewBox="-7.5 -791.3 16661.3 1152.1" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-1-Title">
+<title id="MathJax-SVG-1-Title">y = \beta_1x_1+\beta_2x_2+\beta_3x_3+...+\beta_nx_n+c</title>
+<defs aria-hidden="true">
+<path stroke-width="1" id="E1-GYREPAGELLANORMAL-1D466" d="M490 473l-141 -440c-59 -185 -169 -309 -275 -309c-45 0 -82 35 -82 78c0 5 0 11 1 18l48 34l10 -4c-1 -9 -2 -17 -2 -22c0 -35 27 -62 62 -62c70 0 120 73 171 250l49 171c-75 -113 -159 -198 -196 -198c-25 0 -44 29 -43 71l1 40l17 243c1 16 5 67 -21 67 c-7 0 -20 -8 -25 -12l-50 -30l-11 18l82 56c48 33 62 40 75 40c17 0 24 -18 24 -63c0 -28 -2 -66 -4 -97l-15 -194c-1 -13 -3 -61 19 -61s71 44 106 95c33 49 68 122 80 169l35 132c22 2 45 8 74 19Z"></path>
+<path stroke-width="1" id="E1-GYREPAGELLAMAIN-3D" d="M680 330h-600c2 10 3 20 3 30s-1 20 -3 30h600c-2 -10 -3 -20 -3 -30s1 -20 3 -30zM680 110h-600c2 10 3 20 3 30s-1 20 -3 30h600c-2 -10 -3 -20 -3 -30s1 -20 3 -30Z"></path>
+<path stroke-width="1" id="E1-GYREPAGELLANORMAL-1D6FD" d="M534 235c-4 -136 -131 -246 -284 -246c-51 0 -88 9 -127 31c-19 -78 -29 -191 -39 -280c-29 -4 -37 -9 -63 -17l-14 8l132 642l31 125c14 59 29 94 88 137c58 44 132 76 173 76c51 0 91 -46 90 -101c-2 -55 -23 -86 -90 -164c-3 -4 -8 -10 -11 -14 c-18 -21 -25 -33 -28 -46v-5c47 -12 70 -21 93 -39c34 -26 50 -55 49 -107zM457 575c1 51 -32 86 -82 86c-49 0 -92 -30 -112 -82c-8 -22 -27 -99 -51 -200l-55 -213c-2 -16 -2 -26 -3 -36c-2 -66 43 -107 119 -107c42 0 78 14 106 43c42 41 66 101 68 162 c4 85 -45 124 -132 124c-24 0 -41 -3 -78 -16l-5 12l19 43c10 0 15 0 22 -1c4 -1 14 -1 22 -1c41 0 59 13 88 38c56 78 73 104 74 148Z"></path>
+<path stroke-width="1" id="E1-GYREPAGELLAMAIN-31" d="M418 -3l-157 3l-165 -3v30l56 3c54 3 65 14 65 66v485c0 24 -2 33 -8 33l-3 -1l-129 -58h-10l-7 43c91 32 162 62 227 96l14 -5v-593c0 -52 10 -63 65 -66l52 -3v-30Z"></path>
+<path stroke-width="1" id="E1-GYREPAGELLANORMAL-1D465" d="M484 472l-15 -85l-14 -4c-5 15 -17 23 -33 23c-31 0 -58 -23 -105 -88l-35 -49l18 -101c5 -29 16 -66 25 -85c10 -20 23 -30 38 -30c16 0 41 15 77 45l9 -19l-49 -44c-32 -29 -64 -46 -86 -46c-36 0 -58 39 -72 124l-11 69l-76 -117c-31 -47 -70 -76 -103 -76 c-12 0 -28 4 -43 12c1 7 2 10 4 22c6 32 8 45 8 65l20 3l11 -28c2 -5 13 -9 28 -9c28 0 62 32 105 99l40 62l-11 62c-17 98 -39 139 -72 139c-19 0 -39 -14 -69 -48l-17 10l58 83c9 13 31 21 57 21c59 0 86 -36 98 -135l6 -48l37 55c62 92 102 128 142 128c9 0 18 -3 30 -10 Z"></path>
+<path stroke-width="1" id="E1-GYREPAGELLAMAIN-2B" d="M680 220h-270v-270c-10 2 -20 3 -30 3s-20 -1 -30 -3v270h-270c2 10 3 20 3 30s-1 20 -3 30h270v270c10 -2 20 -3 30 -3s20 1 30 3v-270h270c-2 -10 -3 -20 -3 -30s1 -20 3 -30Z"></path>
+<path stroke-width="1" id="E1-GYREPAGELLAMAIN-32" d="M468 -3l-229 3l-223 -3v26l170 181c113 120 155 194 155 269c0 85 -55 139 -141 139c-67 0 -103 -25 -119 -83l-13 -46h-29l17 136c49 50 98 70 170 70c127 0 205 -71 205 -186c0 -75 -30 -130 -127 -233l-182 -193l346 10c-2 -22 -2 -32 -2 -45c0 -14 0 -24 2 -45Z"></path>
+<path stroke-width="1" id="E1-GYREPAGELLAMAIN-33" d="M462 224c0 -47 -17 -91 -51 -132c-55 -67 -147 -112 -227 -112c-37 0 -81 8 -134 26c-6 50 -14 86 -35 147l27 10c19 -54 32 -77 56 -99c30 -28 71 -43 117 -43c93 0 154 67 154 169c0 91 -48 144 -131 144c-27 0 -46 -5 -84 -22l-7 6l12 53s39 -3 47 -3 c71 0 130 63 130 138c0 63 -53 116 -118 116c-52 0 -115 -34 -126 -68l-18 -56h-31l29 124c48 48 93 67 161 67c111 0 185 -59 185 -148c0 -59 -30 -105 -110 -167c50 -9 73 -17 98 -35c36 -25 56 -67 56 -115Z"></path>
+<path stroke-width="1" id="E1-GYREPAGELLAMAIN-2E" d="M183 53c0 -31 -28 -58 -60 -58c-29 0 -56 28 -56 58s27 58 57 58c31 0 59 -28 59 -58Z"></path>
+<path stroke-width="1" id="E1-GYREPAGELLANORMAL-1D45B" d="M514 85c-98 -73 -134 -94 -160 -94c-19 0 -30 15 -30 40c0 16 4 39 13 76l52 212c8 32 11 53 11 71c0 15 -6 24 -17 24c-45 0 -119 -62 -174 -146c-45 -69 -67 -134 -86 -260c-22 -4 -45 -10 -70 -17l-7 11c41 143 82 336 82 387c0 15 -7 25 -18 25c-7 0 -11 -1 -47 -25 l-32 -21l-7 20l28 20c73 52 112 74 133 74c15 0 23 -12 23 -33c0 -11 -2 -23 -6 -41l-38 -161c52 73 80 107 118 142c59 55 128 93 170 93c20 0 31 -13 31 -36c0 -17 -4 -45 -11 -74l-66 -276c-1 -4 -2 -15 -2 -20c0 -11 6 -20 13 -20c10 0 32 11 61 30l26 17Z"></path>
+<path stroke-width="1" id="E1-GYREPAGELLANORMAL-1D450" d="M389 458c-9 -26 -16 -63 -24 -128h-23v60c0 24 -36 43 -81 43c-32 0 -57 -8 -78 -26c-48 -39 -82 -142 -82 -248c0 -79 29 -119 85 -119c35 0 73 17 145 65l15 10l8 -20l-50 -41c-55 -45 -103 -65 -157 -65c-80 0 -122 51 -122 147c0 107 38 211 95 261s128 85 173 85 c38 0 71 -8 96 -24Z"></path>
+</defs>
+<g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
+ <use xlink:href="#E1-GYREPAGELLANORMAL-1D466" x="0" y="0"></use>
+ <use xlink:href="#E1-GYREPAGELLAMAIN-3D" x="778" y="0"></use>
+<g transform="translate(1816,0)">
+ <use xlink:href="#E1-GYREPAGELLANORMAL-1D6FD" x="0" y="0"></use>
+ <use transform="scale(0.707)" xlink:href="#E1-GYREPAGELLAMAIN-31" x="823" y="-213"></use>
+</g>
+<g transform="translate(2852,0)">
+ <use xlink:href="#E1-GYREPAGELLANORMAL-1D465" x="0" y="0"></use>
+ <use transform="scale(0.707)" xlink:href="#E1-GYREPAGELLAMAIN-31" x="707" y="-213"></use>
+</g>
+ <use xlink:href="#E1-GYREPAGELLAMAIN-2B" x="4029" y="0"></use>
+<g transform="translate(5012,0)">
+ <use xlink:href="#E1-GYREPAGELLANORMAL-1D6FD" x="0" y="0"></use>
+ <use transform="scale(0.707)" xlink:href="#E1-GYREPAGELLAMAIN-32" x="823" y="-213"></use>
+</g>
+<g transform="translate(6048,0)">
+ <use xlink:href="#E1-GYREPAGELLANORMAL-1D465" x="0" y="0"></use>
+ <use transform="scale(0.707)" xlink:href="#E1-GYREPAGELLAMAIN-32" x="707" y="-213"></use>
+</g>
+ <use xlink:href="#E1-GYREPAGELLAMAIN-2B" x="7225" y="0"></use>
+<g transform="translate(8208,0)">
+ <use xlink:href="#E1-GYREPAGELLANORMAL-1D6FD" x="0" y="0"></use>
+ <use transform="scale(0.707)" xlink:href="#E1-GYREPAGELLAMAIN-33" x="823" y="-213"></use>
+</g>
+<g transform="translate(9244,0)">
+ <use xlink:href="#E1-GYREPAGELLANORMAL-1D465" x="0" y="0"></use>
+ <use transform="scale(0.707)" xlink:href="#E1-GYREPAGELLAMAIN-33" x="707" y="-213"></use>
+</g>
+ <use xlink:href="#E1-GYREPAGELLAMAIN-2B" x="10198" y="0"></use>
+ <use xlink:href="#E1-GYREPAGELLAMAIN-2E" x="10959" y="0"></use>
+ <use xlink:href="#E1-GYREPAGELLAMAIN-2E" x="11376" y="0"></use>
+ <use xlink:href="#E1-GYREPAGELLAMAIN-2E" x="11793" y="0"></use>
+ <use xlink:href="#E1-GYREPAGELLAMAIN-2B" x="12210" y="0"></use>
+<g transform="translate(12971,0)">
+ <use xlink:href="#E1-GYREPAGELLANORMAL-1D6FD" x="0" y="0"></use>
+ <use transform="scale(0.707)" xlink:href="#E1-GYREPAGELLANORMAL-1D45B" x="823" y="-213"></use>
+</g>
+<g transform="translate(14047,0)">
+ <use xlink:href="#E1-GYREPAGELLANORMAL-1D465" x="0" y="0"></use>
+ <use transform="scale(0.707)" xlink:href="#E1-GYREPAGELLANORMAL-1D45B" x="707" y="-213"></use>
+</g>
+ <use xlink:href="#E1-GYREPAGELLAMAIN-2B" x="15263" y="0"></use>
+ <use xlink:href="#E1-GYREPAGELLANORMAL-1D450" x="16246" y="0"></use>
+</g>
+</svg></p>
+<p><strong>Single Variable Polynomial Regression: First degree to Fifth Degree</strong></p>
+<p>The concept can be extended to polynomial regression</p>
+<p style="text-align:center"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="47.658ex" height="20.176ex" style="vertical-align: -9.505ex;" viewBox="0 -4594.6 20519.4 8686.8" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-1-Title">
+<title id="MathJax-SVG-1-Title">\begin{align}
+y &amp;= c + a_1x \\
+y &amp;= c + a_1x + a_2x^2 \\
+y &amp;= c + a_1x + a_2x^2 + a_3x^3 \\
+y &amp;= c + a_1x + a_2x^2 + a_3x^3 + a_4x^4 \\
+y &amp;= c + a_1x + a_2x^2 + a_3x^3 + a_4x^4 + a_5x^5 \\
+y &amp;= c + a_1x + a_2x^2 + a_3x^3 + a_4x^4 + a_5x^5 +a_nx^n\\
+\end{align}</title>
+<defs aria-hidden="true">
+<path stroke-width="1" id="E1-GYREPAGELLANORMAL-1D466" d="M490 473l-141 -440c-59 -185 -169 -309 -275 -309c-45 0 -82 35 -82 78c0 5 0 11 1 18l48 34l10 -4c-1 -9 -2 -17 -2 -22c0 -35 27 -62 62 -62c70 0 120 73 171 250l49 171c-75 -113 -159 -198 -196 -198c-25 0 -44 29 -43 71l1 40l17 243c1 16 5 67 -21 67 c-7 0 -20 -8 -25 -12l-50 -30l-11 18l82 56c48 33 62 40 75 40c17 0 24 -18 24 -63c0 -28 -2 -66 -4 -97l-15 -194c-1 -13 -3 -61 19 -61s71 44 106 95c33 49 68 122 80 169l35 132c22 2 45 8 74 19Z"></path>
+<path stroke-width="1" id="E1-GYREPAGELLAMAIN-3D" d="M680 330h-600c2 10 3 20 3 30s-1 20 -3 30h600c-2 -10 -3 -20 -3 -30s1 -20 3 -30zM680 110h-600c2 10 3 20 3 30s-1 20 -3 30h600c-2 -10 -3 -20 -3 -30s1 -20 3 -30Z"></path>
+<path stroke-width="1" id="E1-GYREPAGELLANORMAL-1D450" d="M389 458c-9 -26 -16 -63 -24 -128h-23v60c0 24 -36 43 -81 43c-32 0 -57 -8 -78 -26c-48 -39 -82 -142 -82 -248c0 -79 29 -119 85 -119c35 0 73 17 145 65l15 10l8 -20l-50 -41c-55 -45 -103 -65 -157 -65c-80 0 -122 51 -122 147c0 107 38 211 95 261s128 85 173 85 c38 0 71 -8 96 -24Z"></path>
+<path stroke-width="1" id="E1-GYREPAGELLAMAIN-2B" d="M680 220h-270v-270c-10 2 -20 3 -30 3s-20 -1 -30 -3v270h-270c2 10 3 20 3 30s-1 20 -3 30h270v270c10 -2 20 -3 30 -3s20 1 30 3v-270h270c-2 -10 -3 -20 -3 -30s1 -20 3 -30Z"></path>
+<path stroke-width="1" id="E1-GYREPAGELLANORMAL-1D44E" d="M406 85c-82 -68 -123 -96 -146 -96c-15 0 -24 14 -24 37c0 16 2 33 6 51l29 127c-55 -78 -95 -125 -138 -162c-37 -32 -74 -53 -95 -53c-19 0 -34 34 -34 77c0 80 31 199 75 288c25 49 57 79 120 110c27 13 47 18 75 18c27 0 46 -4 85 -19l33 18l10 -9l-92 -379 c-1 -3 -1 -6 -1 -10c0 -16 5 -24 15 -24c15 0 30 9 62 36c5 4 6 5 13 11zM319 414c-43 15 -62 19 -85 19c-49 0 -73 -18 -97 -76c-35 -83 -61 -194 -61 -258c0 -27 6 -40 18 -40c33 0 96 61 151 145c33 51 52 103 74 210Z"></path>
+<path stroke-width="1" id="E1-GYREPAGELLAMAIN-31" d="M418 -3l-157 3l-165 -3v30l56 3c54 3 65 14 65 66v485c0 24 -2 33 -8 33l-3 -1l-129 -58h-10l-7 43c91 32 162 62 227 96l14 -5v-593c0 -52 10 -63 65 -66l52 -3v-30Z"></path>
+<path stroke-width="1" id="E1-GYREPAGELLANORMAL-1D465" d="M484 472l-15 -85l-14 -4c-5 15 -17 23 -33 23c-31 0 -58 -23 -105 -88l-35 -49l18 -101c5 -29 16 -66 25 -85c10 -20 23 -30 38 -30c16 0 41 15 77 45l9 -19l-49 -44c-32 -29 -64 -46 -86 -46c-36 0 -58 39 -72 124l-11 69l-76 -117c-31 -47 -70 -76 -103 -76 c-12 0 -28 4 -43 12c1 7 2 10 4 22c6 32 8 45 8 65l20 3l11 -28c2 -5 13 -9 28 -9c28 0 62 32 105 99l40 62l-11 62c-17 98 -39 139 -72 139c-19 0 -39 -14 -69 -48l-17 10l58 83c9 13 31 21 57 21c59 0 86 -36 98 -135l6 -48l37 55c62 92 102 128 142 128c9 0 18 -3 30 -10 Z"></path>
+<path stroke-width="1" id="E1-GYREPAGELLAMAIN-32" d="M468 -3l-229 3l-223 -3v26l170 181c113 120 155 194 155 269c0 85 -55 139 -141 139c-67 0 -103 -25 -119 -83l-13 -46h-29l17 136c49 50 98 70 170 70c127 0 205 -71 205 -186c0 -75 -30 -130 -127 -233l-182 -193l346 10c-2 -22 -2 -32 -2 -45c0 -14 0 -24 2 -45Z"></path>
+<path stroke-width="1" id="E1-GYREPAGELLAMAIN-33" d="M462 224c0 -47 -17 -91 -51 -132c-55 -67 -147 -112 -227 -112c-37 0 -81 8 -134 26c-6 50 -14 86 -35 147l27 10c19 -54 32 -77 56 -99c30 -28 71 -43 117 -43c93 0 154 67 154 169c0 91 -48 144 -131 144c-27 0 -46 -5 -84 -22l-7 6l12 53s39 -3 47 -3 c71 0 130 63 130 138c0 63 -53 116 -118 116c-52 0 -115 -34 -126 -68l-18 -56h-31l29 124c48 48 93 67 161 67c111 0 185 -59 185 -148c0 -59 -30 -105 -110 -167c50 -9 73 -17 98 -35c36 -25 56 -67 56 -115Z"></path>
+<path stroke-width="1" id="E1-GYREPAGELLAMAIN-34" d="M472 -3l-153 3l-161 -3v30l62 3c49 2 60 16 60 76v75h-267l-11 23l283 463l74 27l12 -5c-5 -41 -7 -127 -7 -305v-139h27c32 0 81 3 81 3v-71c-28 3 -49 4 -108 4v-75c0 -60 11 -73 60 -76l48 -3v-30zM280 245v352l-215 -352h215Z"></path>
+<path stroke-width="1" id="E1-GYREPAGELLAMAIN-35" d="M459 253c0 -74 -32 -142 -93 -196c-55 -48 -126 -77 -193 -77c-43 0 -83 9 -111 24c-14 44 -26 76 -49 133l24 14l46 -82c14 -26 64 -44 118 -44c109 0 173 65 173 176c0 108 -60 176 -156 176c-49 0 -76 -14 -123 -61l-20 6c3 44 6 137 6 225l-2 137l5 5s106 -5 174 -5 s174 5 174 5l5 -5c-2 -18 -2 -24 -2 -40c0 -15 0 -21 2 -39l-5 -5l-305 5l-9 -209c62 37 98 50 146 50c114 0 195 -80 195 -193Z"></path>
+<path stroke-width="1" id="E1-GYREPAGELLANORMAL-1D45B" d="M514 85c-98 -73 -134 -94 -160 -94c-19 0 -30 15 -30 40c0 16 4 39 13 76l52 212c8 32 11 53 11 71c0 15 -6 24 -17 24c-45 0 -119 -62 -174 -146c-45 -69 -67 -134 -86 -260c-22 -4 -45 -10 -70 -17l-7 11c41 143 82 336 82 387c0 15 -7 25 -18 25c-7 0 -11 -1 -47 -25 l-32 -21l-7 20l28 20c73 52 112 74 133 74c15 0 23 -12 23 -33c0 -11 -2 -23 -6 -41l-38 -161c52 73 80 107 118 142c59 55 128 93 170 93c20 0 31 -13 31 -36c0 -17 -4 -45 -11 -74l-66 -276c-1 -4 -2 -15 -2 -20c0 -11 6 -20 13 -20c10 0 32 11 61 30l26 17Z"></path>
+</defs>
+<g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
+<g transform="translate(167,0)">
+<g transform="translate(-11,0)">
+ <use xlink:href="#E1-GYREPAGELLANORMAL-1D466" x="0" y="3688"></use>
+ <use xlink:href="#E1-GYREPAGELLANORMAL-1D466" x="0" y="2210"></use>
+ <use xlink:href="#E1-GYREPAGELLANORMAL-1D466" x="0" y="732"></use>
+ <use xlink:href="#E1-GYREPAGELLANORMAL-1D466" x="0" y="-749"></use>
+ <use xlink:href="#E1-GYREPAGELLANORMAL-1D466" x="0" y="-2230"></use>
+ <use xlink:href="#E1-GYREPAGELLANORMAL-1D466" x="0" y="-3712"></use>
+</g>
+<g transform="translate(490,0)">
+<g transform="translate(0,3688)">
+ <use xlink:href="#E1-GYREPAGELLAMAIN-3D" x="277" y="0"></use>
+ <use xlink:href="#E1-GYREPAGELLANORMAL-1D450" x="1316" y="0"></use>
+ <use xlink:href="#E1-GYREPAGELLAMAIN-2B" x="1945" y="0"></use>
+<g transform="translate(2928,0)">
+ <use xlink:href="#E1-GYREPAGELLANORMAL-1D44E" x="0" y="0"></use>
+ <use transform="scale(0.707)" xlink:href="#E1-GYREPAGELLAMAIN-31" x="628" y="-213"></use>
+</g>
+ <use xlink:href="#E1-GYREPAGELLANORMAL-1D465" x="3826" y="0"></use>
+</g>
+<g transform="translate(0,2210)">
+ <use xlink:href="#E1-GYREPAGELLAMAIN-3D" x="277" y="0"></use>
+ <use xlink:href="#E1-GYREPAGELLANORMAL-1D450" x="1316" y="0"></use>
+ <use xlink:href="#E1-GYREPAGELLAMAIN-2B" x="1945" y="0"></use>
+<g transform="translate(2928,0)">
+ <use xlink:href="#E1-GYREPAGELLANORMAL-1D44E" x="0" y="0"></use>
+ <use transform="scale(0.707)" xlink:href="#E1-GYREPAGELLAMAIN-31" x="628" y="-213"></use>
+</g>
+ <use xlink:href="#E1-GYREPAGELLANORMAL-1D465" x="3826" y="0"></use>
+ <use xlink:href="#E1-GYREPAGELLAMAIN-2B" x="4549" y="0"></use>
+<g transform="translate(5532,0)">
+ <use xlink:href="#E1-GYREPAGELLANORMAL-1D44E" x="0" y="0"></use>
+ <use transform="scale(0.707)" xlink:href="#E1-GYREPAGELLAMAIN-32" x="628" y="-213"></use>
+</g>
+<g transform="translate(6430,0)">
+ <use xlink:href="#E1-GYREPAGELLANORMAL-1D465" x="0" y="0"></use>
+ <use transform="scale(0.707)" xlink:href="#E1-GYREPAGELLAMAIN-32" x="707" y="583"></use>
+</g>
+</g>
+<g transform="translate(0,732)">
+ <use xlink:href="#E1-GYREPAGELLAMAIN-3D" x="277" y="0"></use>
+ <use xlink:href="#E1-GYREPAGELLANORMAL-1D450" x="1316" y="0"></use>
+ <use xlink:href="#E1-GYREPAGELLAMAIN-2B" x="1945" y="0"></use>
+<g transform="translate(2928,0)">
+ <use xlink:href="#E1-GYREPAGELLANORMAL-1D44E" x="0" y="0"></use>
+ <use transform="scale(0.707)" xlink:href="#E1-GYREPAGELLAMAIN-31" x="628" y="-213"></use>
+</g>
+ <use xlink:href="#E1-GYREPAGELLANORMAL-1D465" x="3826" y="0"></use>
+ <use xlink:href="#E1-GYREPAGELLAMAIN-2B" x="4549" y="0"></use>
+<g transform="translate(5532,0)">
+ <use xlink:href="#E1-GYREPAGELLANORMAL-1D44E" x="0" y="0"></use>
+ <use transform="scale(0.707)" xlink:href="#E1-GYREPAGELLAMAIN-32" x="628" y="-213"></use>
+</g>
+<g transform="translate(6430,0)">
+ <use xlink:href="#E1-GYREPAGELLANORMAL-1D465" x="0" y="0"></use>
+ <use transform="scale(0.707)" xlink:href="#E1-GYREPAGELLAMAIN-32" x="707" y="583"></use>
+</g>
+ <use xlink:href="#E1-GYREPAGELLAMAIN-2B" x="7607" y="0"></use>
+<g transform="translate(8590,0)">
+ <use xlink:href="#E1-GYREPAGELLANORMAL-1D44E" x="0" y="0"></use>
+ <use transform="scale(0.707)" xlink:href="#E1-GYREPAGELLAMAIN-33" x="628" y="-213"></use>
+</g>
+<g transform="translate(9488,0)">
+ <use xlink:href="#E1-GYREPAGELLANORMAL-1D465" x="0" y="0"></use>
+ <use transform="scale(0.707)" xlink:href="#E1-GYREPAGELLAMAIN-33" x="707" y="583"></use>
+</g>
+</g>
+<g transform="translate(0,-749)">
+ <use xlink:href="#E1-GYREPAGELLAMAIN-3D" x="277" y="0"></use>
+ <use xlink:href="#E1-GYREPAGELLANORMAL-1D450" x="1316" y="0"></use>
+ <use xlink:href="#E1-GYREPAGELLAMAIN-2B" x="1945" y="0"></use>
+<g transform="translate(2928,0)">
+ <use xlink:href="#E1-GYREPAGELLANORMAL-1D44E" x="0" y="0"></use>
+ <use transform="scale(0.707)" xlink:href="#E1-GYREPAGELLAMAIN-31" x="628" y="-213"></use>
+</g>
+ <use xlink:href="#E1-GYREPAGELLANORMAL-1D465" x="3826" y="0"></use>
+ <use xlink:href="#E1-GYREPAGELLAMAIN-2B" x="4549" y="0"></use>
+<g transform="translate(5532,0)">
+ <use xlink:href="#E1-GYREPAGELLANORMAL-1D44E" x="0" y="0"></use>
+ <use transform="scale(0.707)" xlink:href="#E1-GYREPAGELLAMAIN-32" x="628" y="-213"></use>
+</g>
+<g transform="translate(6430,0)">
+ <use xlink:href="#E1-GYREPAGELLANORMAL-1D465" x="0" y="0"></use>
+ <use transform="scale(0.707)" xlink:href="#E1-GYREPAGELLAMAIN-32" x="707" y="583"></use>
+</g>
+ <use xlink:href="#E1-GYREPAGELLAMAIN-2B" x="7607" y="0"></use>
+<g transform="translate(8590,0)">
+ <use xlink:href="#E1-GYREPAGELLANORMAL-1D44E" x="0" y="0"></use>
+ <use transform="scale(0.707)" xlink:href="#E1-GYREPAGELLAMAIN-33" x="628" y="-213"></use>
+</g>
+<g transform="translate(9488,0)">
+ <use xlink:href="#E1-GYREPAGELLANORMAL-1D465" x="0" y="0"></use>
+ <use transform="scale(0.707)" xlink:href="#E1-GYREPAGELLAMAIN-33" x="707" y="583"></use>
+</g>
+ <use xlink:href="#E1-GYREPAGELLAMAIN-2B" x="10665" y="0"></use>
+<g transform="translate(11647,0)">
+ <use xlink:href="#E1-GYREPAGELLANORMAL-1D44E" x="0" y="0"></use>
+ <use transform="scale(0.707)" xlink:href="#E1-GYREPAGELLAMAIN-34" x="628" y="-213"></use>
+</g>
+<g transform="translate(12546,0)">
+ <use xlink:href="#E1-GYREPAGELLANORMAL-1D465" x="0" y="0"></use>
+ <use transform="scale(0.707)" xlink:href="#E1-GYREPAGELLAMAIN-34" x="707" y="583"></use>
+</g>
+</g>
+<g transform="translate(0,-2230)">
+ <use xlink:href="#E1-GYREPAGELLAMAIN-3D" x="277" y="0"></use>
+ <use xlink:href="#E1-GYREPAGELLANORMAL-1D450" x="1316" y="0"></use>
+ <use xlink:href="#E1-GYREPAGELLAMAIN-2B" x="1945" y="0"></use>
+<g transform="translate(2928,0)">
+ <use xlink:href="#E1-GYREPAGELLANORMAL-1D44E" x="0" y="0"></use>
+ <use transform="scale(0.707)" xlink:href="#E1-GYREPAGELLAMAIN-31" x="628" y="-213"></use>
+</g>
+ <use xlink:href="#E1-GYREPAGELLANORMAL-1D465" x="3826" y="0"></use>
+ <use xlink:href="#E1-GYREPAGELLAMAIN-2B" x="4549" y="0"></use>
+<g transform="translate(5532,0)">
+ <use xlink:href="#E1-GYREPAGELLANORMAL-1D44E" x="0" y="0"></use>
+ <use transform="scale(0.707)" xlink:href="#E1-GYREPAGELLAMAIN-32" x="628" y="-213"></use>
+</g>
+<g transform="translate(6430,0)">
+ <use xlink:href="#E1-GYREPAGELLANORMAL-1D465" x="0" y="0"></use>
+ <use transform="scale(0.707)" xlink:href="#E1-GYREPAGELLAMAIN-32" x="707" y="583"></use>
+</g>
+ <use xlink:href="#E1-GYREPAGELLAMAIN-2B" x="7607" y="0"></use>
+<g transform="translate(8590,0)">
+ <use xlink:href="#E1-GYREPAGELLANORMAL-1D44E" x="0" y="0"></use>
+ <use transform="scale(0.707)" xlink:href="#E1-GYREPAGELLAMAIN-33" x="628" y="-213"></use>
+</g>
+<g transform="translate(9488,0)">
+ <use xlink:href="#E1-GYREPAGELLANORMAL-1D465" x="0" y="0"></use>
+ <use transform="scale(0.707)" xlink:href="#E1-GYREPAGELLAMAIN-33" x="707" y="583"></use>
+</g>
+ <use xlink:href="#E1-GYREPAGELLAMAIN-2B" x="10665" y="0"></use>
+<g transform="translate(11647,0)">
+ <use xlink:href="#E1-GYREPAGELLANORMAL-1D44E" x="0" y="0"></use>
+ <use transform="scale(0.707)" xlink:href="#E1-GYREPAGELLAMAIN-34" x="628" y="-213"></use>
+</g>
+<g transform="translate(12546,0)">
+ <use xlink:href="#E1-GYREPAGELLANORMAL-1D465" x="0" y="0"></use>
+ <use transform="scale(0.707)" xlink:href="#E1-GYREPAGELLAMAIN-34" x="707" y="583"></use>
+</g>
+ <use xlink:href="#E1-GYREPAGELLAMAIN-2B" x="13722" y="0"></use>
+<g transform="translate(14705,0)">
+ <use xlink:href="#E1-GYREPAGELLANORMAL-1D44E" x="0" y="0"></use>
+ <use transform="scale(0.707)" xlink:href="#E1-GYREPAGELLAMAIN-35" x="628" y="-213"></use>
+</g>
+<g transform="translate(15604,0)">
+ <use xlink:href="#E1-GYREPAGELLANORMAL-1D465" x="0" y="0"></use>
+ <use transform="scale(0.707)" xlink:href="#E1-GYREPAGELLAMAIN-35" x="707" y="583"></use>
+</g>
+</g>
+<g transform="translate(0,-3712)">
+ <use xlink:href="#E1-GYREPAGELLAMAIN-3D" x="277" y="0"></use>
+ <use xlink:href="#E1-GYREPAGELLANORMAL-1D450" x="1316" y="0"></use>
+ <use xlink:href="#E1-GYREPAGELLAMAIN-2B" x="1945" y="0"></use>
+<g transform="translate(2928,0)">
+ <use xlink:href="#E1-GYREPAGELLANORMAL-1D44E" x="0" y="0"></use>
+ <use transform="scale(0.707)" xlink:href="#E1-GYREPAGELLAMAIN-31" x="628" y="-213"></use>
+</g>
+ <use xlink:href="#E1-GYREPAGELLANORMAL-1D465" x="3826" y="0"></use>
+ <use xlink:href="#E1-GYREPAGELLAMAIN-2B" x="4549" y="0"></use>
+<g transform="translate(5532,0)">
+ <use xlink:href="#E1-GYREPAGELLANORMAL-1D44E" x="0" y="0"></use>
+ <use transform="scale(0.707)" xlink:href="#E1-GYREPAGELLAMAIN-32" x="628" y="-213"></use>
+</g>
+<g transform="translate(6430,0)">
+ <use xlink:href="#E1-GYREPAGELLANORMAL-1D465" x="0" y="0"></use>
+ <use transform="scale(0.707)" xlink:href="#E1-GYREPAGELLAMAIN-32" x="707" y="583"></use>
+</g>
+ <use xlink:href="#E1-GYREPAGELLAMAIN-2B" x="7607" y="0"></use>
+<g transform="translate(8590,0)">
+ <use xlink:href="#E1-GYREPAGELLANORMAL-1D44E" x="0" y="0"></use>
+ <use transform="scale(0.707)" xlink:href="#E1-GYREPAGELLAMAIN-33" x="628" y="-213"></use>
+</g>
+<g transform="translate(9488,0)">
+ <use xlink:href="#E1-GYREPAGELLANORMAL-1D465" x="0" y="0"></use>
+ <use transform="scale(0.707)" xlink:href="#E1-GYREPAGELLAMAIN-33" x="707" y="583"></use>
+</g>
+ <use xlink:href="#E1-GYREPAGELLAMAIN-2B" x="10665" y="0"></use>
+<g transform="translate(11647,0)">
+ <use xlink:href="#E1-GYREPAGELLANORMAL-1D44E" x="0" y="0"></use>
+ <use transform="scale(0.707)" xlink:href="#E1-GYREPAGELLAMAIN-34" x="628" y="-213"></use>
+</g>
+<g transform="translate(12546,0)">
+ <use xlink:href="#E1-GYREPAGELLANORMAL-1D465" x="0" y="0"></use>
+ <use transform="scale(0.707)" xlink:href="#E1-GYREPAGELLAMAIN-34" x="707" y="583"></use>
+</g>
+ <use xlink:href="#E1-GYREPAGELLAMAIN-2B" x="13722" y="0"></use>
+<g transform="translate(14705,0)">
+ <use xlink:href="#E1-GYREPAGELLANORMAL-1D44E" x="0" y="0"></use>
+ <use transform="scale(0.707)" xlink:href="#E1-GYREPAGELLAMAIN-35" x="628" y="-213"></use>
+</g>
+<g transform="translate(15604,0)">
+ <use xlink:href="#E1-GYREPAGELLANORMAL-1D465" x="0" y="0"></use>
+ <use transform="scale(0.707)" xlink:href="#E1-GYREPAGELLAMAIN-35" x="707" y="583"></use>
+</g>
+ <use xlink:href="#E1-GYREPAGELLAMAIN-2B" x="16780" y="0"></use>
+<g transform="translate(17763,0)">
+ <use xlink:href="#E1-GYREPAGELLANORMAL-1D44E" x="0" y="0"></use>
+ <use transform="scale(0.707)" xlink:href="#E1-GYREPAGELLANORMAL-1D45B" x="628" y="-213"></use>
+</g>
+<g transform="translate(18701,0)">
+ <use xlink:href="#E1-GYREPAGELLANORMAL-1D465" x="0" y="0"></use>
+ <use transform="scale(0.707)" xlink:href="#E1-GYREPAGELLANORMAL-1D45B" x="707" y="583"></use>
+</g>
+</g>
+</g>
+</g>
+</g>
+</svg></p>
+<p><strong>Regression Strategy: Ordinary Least Squares (OLS)</strong></p>
+<p><img src="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20230222092629577.png" alt="image-20230222092629577"></p>
+<h1 id="Nearest-Neighbor-Regression"><a href="#Nearest-Neighbor-Regression" class="headerlink" title="Nearest Neighbor Regression"></a>Nearest Neighbor Regression</h1><p>A method for predicting a numerical variable <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1.18ex" height="2.176ex" style="vertical-align: -0.838ex; margin-left: -0.017ex;" viewBox="-7.5 -576.1 508 936.9" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-1-Title">
+<title id="MathJax-SVG-1-Title">y</title>
+<defs aria-hidden="true">
+<path stroke-width="1" id="E1-GYREPAGELLANORMAL-1D466" d="M490 473l-141 -440c-59 -185 -169 -309 -275 -309c-45 0 -82 35 -82 78c0 5 0 11 1 18l48 34l10 -4c-1 -9 -2 -17 -2 -22c0 -35 27 -62 62 -62c70 0 120 73 171 250l49 171c-75 -113 -159 -198 -196 -198c-25 0 -44 29 -43 71l1 40l17 243c1 16 5 67 -21 67 c-7 0 -20 -8 -25 -12l-50 -30l-11 18l82 56c48 33 62 40 75 40c17 0 24 -18 24 -63c0 -28 -2 -66 -4 -97l-15 -194c-1 -13 -3 -61 19 -61s71 44 106 95c33 49 68 122 80 169l35 132c22 2 45 8 74 19Z"></path>
+</defs>
+<g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
+ <use xlink:href="#E1-GYREPAGELLANORMAL-1D466" x="0" y="0"></use>
+</g>
+</svg>, given a value of <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1.162ex" height="1.676ex" style="vertical-align: -0.338ex;" viewBox="0 -576.1 500.5 721.6" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-1-Title">
+<title id="MathJax-SVG-1-Title">x</title>
+<defs aria-hidden="true">
+<path stroke-width="1" id="E1-GYREPAGELLANORMAL-1D465" d="M484 472l-15 -85l-14 -4c-5 15 -17 23 -33 23c-31 0 -58 -23 -105 -88l-35 -49l18 -101c5 -29 16 -66 25 -85c10 -20 23 -30 38 -30c16 0 41 15 77 45l9 -19l-49 -44c-32 -29 -64 -46 -86 -46c-36 0 -58 39 -72 124l-11 69l-76 -117c-31 -47 -70 -76 -103 -76 c-12 0 -28 4 -43 12c1 7 2 10 4 22c6 32 8 45 8 65l20 3l11 -28c2 -5 13 -9 28 -9c28 0 62 32 105 99l40 62l-11 62c-17 98 -39 139 -72 139c-19 0 -39 -14 -69 -48l-17 10l58 83c9 13 31 21 57 21c59 0 86 -36 98 -135l6 -48l37 55c62 92 102 128 142 128c9 0 18 -3 30 -10 Z"></path>
+</defs>
+<g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
+ <use xlink:href="#E1-GYREPAGELLANORMAL-1D465" x="0" y="0"></use>
+</g>
+</svg>:</p>
+<ul>
+<li>Identify the group of points for which the values of <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1.162ex" height="1.676ex" style="vertical-align: -0.338ex;" viewBox="0 -576.1 500.5 721.6" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-1-Title">
+<title id="MathJax-SVG-1-Title">x</title>
+<defs aria-hidden="true">
+<path stroke-width="1" id="E1-GYREPAGELLANORMAL-1D465" d="M484 472l-15 -85l-14 -4c-5 15 -17 23 -33 23c-31 0 -58 -23 -105 -88l-35 -49l18 -101c5 -29 16 -66 25 -85c10 -20 23 -30 38 -30c16 0 41 15 77 45l9 -19l-49 -44c-32 -29 -64 -46 -86 -46c-36 0 -58 39 -72 124l-11 69l-76 -117c-31 -47 -70 -76 -103 -76 c-12 0 -28 4 -43 12c1 7 2 10 4 22c6 32 8 45 8 65l20 3l11 -28c2 -5 13 -9 28 -9c28 0 62 32 105 99l40 62l-11 62c-17 98 -39 139 -72 139c-19 0 -39 -14 -69 -48l-17 10l58 83c9 13 31 21 57 21c59 0 86 -36 98 -135l6 -48l37 55c62 92 102 128 142 128c9 0 18 -3 30 -10 Z"></path>
+</defs>
+<g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
+ <use xlink:href="#E1-GYREPAGELLANORMAL-1D465" x="0" y="0"></use>
+</g>
+</svg> are close to the given value</li>
+<li>The prediction is the average of the <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1.18ex" height="2.176ex" style="vertical-align: -0.838ex; margin-left: -0.017ex;" viewBox="-7.5 -576.1 508 936.9" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-1-Title">
+<title id="MathJax-SVG-1-Title">y</title>
+<defs aria-hidden="true">
+<path stroke-width="1" id="E1-GYREPAGELLANORMAL-1D466" d="M490 473l-141 -440c-59 -185 -169 -309 -275 -309c-45 0 -82 35 -82 78c0 5 0 11 1 18l48 34l10 -4c-1 -9 -2 -17 -2 -22c0 -35 27 -62 62 -62c70 0 120 73 171 250l49 171c-75 -113 -159 -198 -196 -198c-25 0 -44 29 -43 71l1 40l17 243c1 16 5 67 -21 67 c-7 0 -20 -8 -25 -12l-50 -30l-11 18l82 56c48 33 62 40 75 40c17 0 24 -18 24 -63c0 -28 -2 -66 -4 -97l-15 -194c-1 -13 -3 -61 19 -61s71 44 106 95c33 49 68 122 80 169l35 132c22 2 45 8 74 19Z"></path>
+</defs>
+<g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
+ <use xlink:href="#E1-GYREPAGELLANORMAL-1D466" x="0" y="0"></use>
+</g>
+</svg> values for the group</li>
+<li></li>
+</ul>
+
+</div>
+
+
+<div class="about">
+    
+    <p class="tags">
+        
+        <i class="icon"></i>
+        <a href="/tags/ML/" class="tag"># ML</a><a href="/tags/DSBA/" class="tag"># DSBA</a>
+    </p>
+    
+</div>
+
+
+<div class="container post-prev-next">
+    
+    <a href="../Predicted-Analytics-3.2-Linear-Regression/" class="next">
+        <div>
+            <div class="text">
+                <p class="label">Next</p>
+                <h3 class="title">5 Linear Regression</h3>
+            </div>
+        </div>
+    </a>
+    
+    
+    <a href="../Predicted-Analytics-2.2-ML-Techniques/" class="prev">
+        <div>
+            <div class="text">
+                <p class="label">Previous</p>
+                <h3 class="title">3 Modeling Techniques</>
+            </div>
+        </div>
+    </a>
+    
+</div>
+
+
+    
+    
+
+    
+</article>          
+    
+  
+
+        <footer>
+    <div class="inner">
+        <div class="links">
+            
+            <div class="group">
+                <h4 class="title">Blog</h4>
+                
+                <a href="/" class="item">Home</a>
+                
+                <a href="/archives" class="item">Archives</a>
+                
+                <a href="/tags" class="item">Tags</a>
+                
+                <a href="/categories" class="item">Categories</a>
+                
+            </div>
+            
+            <div class="group">
+                <h4 class="title">Projects</h4>
+                
+                <a href="/projects" class="item">Intro</a>
+                
+            </div>
+            
+            <div class="group">
+                <h4 class="title">Me</h4>
+                
+                <a target="_blank" rel="noopener" href="https://github.com/Jiayi-Zeng" class="item">GitHub</a>
+                
+                <a href="mailto:joyce.j.zeng@outlook.com" class="item">Email</a>
+                
+                <a href="tencent://message/?Menu=yes&uin=1021987388" class="item">QQ</a>
+                
+                <a target="_blank" rel="noopener" href="https://www.instagram.com/iam_joycezeng/" class="item">Instagram</a>
+                
+                <a target="_blank" rel="noopener" href="https://www.linkedin.com/in/jiayi-zeng-joyce/" class="item">LinkedIn</a>
+                
+            </div>
+            
+        </div>
+        <span>&copy; 2023 Joyce Zeng<br>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> </span>
+        
+        
+            <br>
+            <div class="color-scheme-toggle" role="radiogroup" id="theme-color-scheme-toggle">
+                <label>
+                    <input type="radio" value="light">
+                    <span>Light</span>
+                </label>
+                <label>
+                    <input type="radio" value="dark">
+                    <span>Dark</span>
+                </label>
+                <label>
+                    <input type="radio" value="auto">
+                    <span>Auto</span>
+                </label>
+            </div>
+        
+    </div>
+</footer>
+
+
+        
+<script src="../js/main.js"></script>
+
+        
+        
+        
+
+        
+        <script src="https://unpkg.com/scrollreveal"></script>
+        <script>
+            window.addEventListener('load', () => {
+                ScrollReveal({ delay: 250, reset: true, easing: 'cubic-bezier(0, 0, 0, 1)' })
+                ScrollReveal().reveal('.post-list-item .cover-img img')
+                ScrollReveal().reveal('.post-list-item, .card, .content p img, .content .block-large img', { distance: '60px', origin: 'bottom', duration: 800 })
+            })
+        </script>
+        
+    </body>
+</html>
