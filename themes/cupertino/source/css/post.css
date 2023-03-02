@@ -3,7 +3,7 @@ body {
 }
 
 .post {
-  max-width: 760px;
+  max-width: 800px;
   margin: 100px auto 20px;
   background-color: var(--card-bg);
   padding: 40px;
@@ -70,6 +70,7 @@ hr,
   margin-right: auto;
   padding: 0 16px;
   /* margin-block: 0px; */
+  overflow: auto;
 }
 
 .content p img,
@@ -84,13 +85,14 @@ hr,
 
 .content table {
   padding: 0;
-  /* border-collapse: collapse; */
-  border-radius: 15px;
-  /* max-width: 800px; */
-  width: 90%;
+  border-collapse: collapse;
+  max-width: 800px;
+  /* width: 100%; */
   overflow-x: auto;
-  margin: 10px auto;
+  /* margin: 10px auto; */
   /* background-color: var(--white-1); */
+  /* font-size: 13px; */
+  --border-color: 0;
 }
 
 .content table tr {
@@ -108,13 +110,14 @@ hr,
 .content table td {
   margin: 0;
   padding: 6px 12px;
-  text-align: left;
+  text-align: center;
   background-color: var(--table-bg-color);
+  /* border: 0px; */
 }
 
 .content table th {
   font-weight: bold;
-  text-align: left;
+  text-align: center;
   margin: 0;
   padding: 6px 13px;
   background-color: var(--table-thead-color);
@@ -142,7 +145,7 @@ hr,
   .content table thead tr th:last-child,
   .content table tbody tr:last-child td:first-child,
   .content table tbody tr:last-child td:last-child {
-    /* border-radius: 20px; */
+    border-radius: 0;
     /* background-color: var(--white-1); */
   }
 }
@@ -156,7 +159,7 @@ hr,
 .content > pre {
   overflow-x: auto;
   overflow-y: hidden;
-  background-color: var(--card-bg);
+  background-color: var(--table-bg-color);
   border-radius: 15px;
   max-width: calc(800px - 16px * 2);
 }
@@ -164,7 +167,7 @@ hr,
 @media screen and (max-width: 800px) {
   .content .highlight,
   .content > pre {
-    border-radius: 0;
+    border-radius: 20px;
   }
 }
 
@@ -246,7 +249,7 @@ body[data-color-scheme="light"] .tags .icon {
 .tags .tag {
   font-size: 14px;
   display: block;
-  height: 14px;
+  height: auto;
   margin-right: 4px;
 }
 
@@ -375,4 +378,11 @@ body[data-color-scheme="light"] .tags .icon {
 .post-prev-next .text .label {
   margin-bottom: 4px;
   color: var(--grey);
+}
+
+.markdown-section img {
+  max-width: 50%;
+  padding: 0.5em 0;
+  margin: auto;
+  display: block;
 }

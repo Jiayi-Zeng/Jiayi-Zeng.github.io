@@ -10,7 +10,7 @@ Used to do computer vision applications in transportation
 
 Will focus more on AI for Eduction in the future
 
-## CONTACT INFO
+## Contact Infomation
 
 :house: Location: Irvine, CA 92612
 
@@ -20,7 +20,7 @@ Will focus more on AI for Eduction in the future
 
 :link: LinkedIn:  [linkedin.com/in/jiayi-zeng-joyce](https://www.linkedin.com/in/jiayi-zeng-joyce)
 
-## EDUCATION                           
+## Education                       
 
 **East China Normal University**
 
@@ -48,11 +48,11 @@ Expected Mar 2023
 
 * **Related Courses:** Descriptive Analytics - Visualization & Storytelling, Predictive Analytics - Tools & Techniques, Prescriptive Analytics - Digital Decisioning
 
-## PROJECTS EXPERIENCE
+## Projects Experience
 
 More infomation on the [Project](/projects/) website.
 
-## LEADERSHIP EXPERIENCE
+## Leadership Experience
 
 **Baidu Songguo Elite Class of Chang'an University**                                        
 
@@ -78,7 +78,7 @@ Shaanxi, China, Sep 2020 – Jul 2021
 
 * Managed official email communication to promote event participation
 
-## TECHNOLOGY STACK
+## Technology Stack
 
 * **Programming languages:** C/C++, Python, Java, PHP, MATLAB
 
@@ -88,4 +88,4 @@ Shaanxi, China, Sep 2020 – Jul 2021
 
 * **OS:** Windows 11, Linux
 
-* **Data Analytics:** MS Office, Jupyter, Tableau
+* **Data Analytics:** MS Office, Jupyter, Tableau, KNIME

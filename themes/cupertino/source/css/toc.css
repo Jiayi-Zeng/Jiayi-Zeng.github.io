@@ -6,7 +6,7 @@
 .toc > p > a {
   color: var(--black-4);
   text-decoration: none;
-  display: inline-block;
+  display: block;
   padding: 8px 0;
   padding-left: 12px;
   border-left: 2px solid var(--border-color);
@@ -18,5 +18,8 @@
   color: var(--black);
   text-decoration: none;
   border-color: var(--black-2);
-  font-weight: bold;
+  background-color: var(--body-bg);
+  width: 95%;
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
 }

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="<%= config.language %>">
+    
     <%- partial('_partial/head') %>
     <%- css('css/prism')  %> 
     <%- js('js/prism.js') %>
@@ -25,7 +26,7 @@
         <%- body %>
         <%- partial('_partial/footer') %>
 
-        <%- js('js/main.js') %>
+        <%- js('../../js/main.js') %>
         <% if (theme.search == true && page.type == 'search') { %>
         <%- js('js/search.js') %>
         <% } %>

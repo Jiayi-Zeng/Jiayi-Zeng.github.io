@@ -1,26 +1,28 @@
 ---
 title: 1 Introduction of Deep Learning
+
 date: 2022-10-25
+
 tags: [ML]
+
 categories: HUNG-YI LEE | MACHINE LEARNING
+
 cover_image: https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/202302230549.png
 ---
 
-# Machine Learning ≈ Looking for function
+# **Machine Learning ≈ Looking for function**
 
 ![image-20221206053236150](https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20221206053236150.png)
 
-# Different Types of functions
+# **Different Types of functions**
 
 - **Regression**: The function outputs a scalar
-
 - **Classification**: Given options (classes), the function outputs the correct one.
-
 - **Structured Learning:** create something with structure (image, document)
 
 ![image-20221206053348699](https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20221206053348699.png)
 
-# How to find a function
+# **How to find a function**
 
 A case study
 
@@ -42,7 +44,7 @@ A case study
 
 ![image-20221208223418427](https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20221208223418427.png)
 
-# ML Framework
+# **ML Framework**
 
 ![image-20221206053857892](https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20221206053857892.png)
 
@@ -82,7 +84,6 @@ $$
 hyperparameter: 
 
 * $i$ : no. of features
-
 * $j$ : no. of sigmoid
 
 ![image-20221206054613829](https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20221206054613829.png)
@@ -109,7 +110,7 @@ hyperparameter:
 
 ![image-20221206054855172](https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20221206054855172.png)
 
-# Deep Learning
+# **Deep Learning**
 
 ![image-20221206054927207](https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20221206054927207.png)
 

@@ -76,13 +76,14 @@ footer .color-scheme-toggle label input {
 
 footer .color-scheme-toggle label span {
     font-size: 14px;
-    line-height: 12px;
+    line-height: 14px;
     padding: 2px 4px;
     border-radius: 12px;
     color: var(--link);
     width: 40px;
-    display: inline-block;
+    height: 16px;
     text-align: center;
+    display: inline-grid;
 }
 
 footer .color-scheme-toggle label input:checked+span {
