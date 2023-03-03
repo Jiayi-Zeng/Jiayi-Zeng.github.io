@@ -3,7 +3,7 @@ title: Image Classification | Paper
 
 date: 2022-04-03
 
-tags: [Classification]
+tags: [CV]
 
 categories: Computer Vision
 

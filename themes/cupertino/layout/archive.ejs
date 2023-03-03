@@ -1,16 +1,65 @@
+<%#  %>
 <div class="container">
     <div class="meta">
         <div class="type">
             <%= is_category() ? __('category') : '' %>
             <%= is_tag() ? __('tag') : '' %>
         </div>
-
-        <h2 class="title<%= theme.capitalize_tags && is_tag() ? ' text-capitalize' : '' %>"><%= is_category() ? page.category : '' %><%= is_tag() ? (theme.hashtag_prefix_before_tags ? '#' : '') + page.tag : '' %><%= is_archive() ? __('archives') : '' %></h2>
+        <h2 class="title
+            <%= theme.capitalize_tags && is_tag() ? ' text-capitalize' : '' %>">
+            <%= is_category() ? page.category : '' %>
+            <%= is_tag() ? (theme.hashtag_prefix_before_tags ? '# ' : '') + page.tag : '' %>
+            <%= is_archive() ? __('Total Archives: ' + site.posts.length) : '' %></h2>
     </div>
 
     <div class="divider"></div>
 
-    <div class="post-list archives">
+    <%# archive %>
+    <% if (is_archive()) { %>
+    <div class="archives">
+        <div class="archive-post">
+            <% var posts = site.posts.sort('date', 'desc'); %>
+            <% for(var i = 0, year = -1; i < site.posts.length; ++i) { %>
+            <% var post = posts.data[i];
+            if (post.date.year() !== year) {
+            year = post.date.year();
+            %>
+            <h2 class="archive-year"><%= year %></h3>
+            <% } %>
+
+            <article class="archives-list-item">
+                <a href="<%- url_for(post.path) %>">
+                    
+                     <div class="content">
+                        
+                        <% if (post.categories && post.categories.length && !is_category()) { %>
+                        
+                        <div class="time">
+                            <span><%= ['Jan.', 'Feb.', 'Mar.', 'Apr.', 'May', 'June', 'July', 'Aug.', 'Sep.', 'Oct.', 'Nov.', 'Dec.'][post.date.month()] %></span>
+                            <span>&nbsp;<%- post.date.date() %>,&nbsp;</span>
+                            <span><%- post.date.year() %></span>
+                        </div>
+                        <div class="categories<%= theme.uppercase_categories ? ' text-uppercase' : '' %>">
+                            <% post.categories.forEach((category) => { %>
+                                <span>[<%= category.name %>]</span>
+                            <% }) %>
+                        </div>
+                        <div class="title">
+                            <%= post.title %>
+                        </div>
+                        <% } %>
+                    </div>
+                </a>
+            </article>
+
+            <% } %>
+          </div>
+    </div>
+    <% } %>
+
+    <%# category & tag %>
+    <% if (is_category() || is_tag()) {  %>
+        <div class="post-list archives">
         <% page.posts.each(function (post) { %>
         <article class="post-list-item">
             <a href="<%- url_for(post.path) %>">
@@ -20,13 +69,11 @@
                 </div>
                 <% } %>
                 <div class="content">
-                    <% if (post.categories && post.categories.length && !is_category()) { %>
                     <div class="categories<%= theme.uppercase_categories ? ' text-uppercase' : '' %>">
                     <% post.categories.forEach((category) => { %>
                         <span><%= category.name %></span>
                     <% }) %>
                     </div>
-                    <% } %>
                     <div class="title">
                         <%= post.title %>
                     </div>
@@ -47,4 +94,5 @@
     </div>
 
     <%- partial('_partial/paginator') %>
+    <% } %>
 </div>

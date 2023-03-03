@@ -3,7 +3,7 @@ title: 1 Introduction to Predictive Analytics
 
 date: 2023-02-17
 
-tags: [DSBA]
+tags: [DSBA, Data Mining]
 
 categories: "Predicted Analytics: Tools & Techniques"
 

@@ -14,23 +14,16 @@ cover_image: https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/p
 
 <!--more-->
 
-# Reference
+# **Reference**
 
 * 如果想要入门或者快速了解一下可以先看B站的科普视频，可以大致了解DLSS是什么，为什么，怎么做。看完视频方便你进一步提出问题，查找资料。
-
 	*  [B站：DLSS到底是什么技术？为何能提升游戏性能？有代价吗？](https://www.bilibili.com/video/BV1Dy4y117BM?spm_id_from=333.999.0.0),
-
 	* [B站：【硬件科普】免费提升画质和帧数？详解DLSS2.0的工作原理与作用](https://www.bilibili.com/video/BV1PA41187g2?spm_id_from=333.999.0.0)
-
 * NVIDIA官网介绍：[NVIDIA：DLSS 2.0](https://www.nvidia.com/en-us/geforce/news/nvidia-dlss-2-0-a-big-leap-in-ai-rendering/)
 此外，NVIDA还在GTC上给出了相应的Talk，其中介绍了DLSS 2.0、针对于游戏的图像超分辨率的挑战以及DLSS 2.0引擎集成：NVIDA's Talk：[GTC 2020: DLSS 2.0 - Image Reconstruction for Real-time Rendering with Deep Learning](https://www.youtube.com/watch?v=d5knHzv0IQE)（这是油管上面的，英语听力ok的可以直接冲，英语不太行的可以开中文字母。好像b站也上线了，但还没点进去过，不知道有没有翻译）本文有关于DLSS 2.0的介绍大抵上也出自这个Talk.
-
 * 同时，DLSS团队成员[文刀秋二](https://www.zhihu.com/people/edliu/posts)也是这个Talk的汇报人在知乎上也对Talk进行了总结，详见：[DLSS 2.0 - 基于深度学习的实时渲染图像重建](https://zhuanlan.zhihu.com/p/123642175)
-
 * [Beyond3D: Diving into Anti-Aliasing](https://www.beyond3d.com/content/news/798)个人觉得是很全面很有逻辑的抗锯齿的介绍。有需要的朋友可以自取！
-
 * 书籍：[Real time rendering](https://www.taylorfrancis.com/books/mono/10.1201/9781315365459/real-time-rendering-tomas-akenine-mo%CC%88ller-eric-haines-naty-hoffman) 在实时渲染和计算机图形学领域，《Real-Time Rendering》这本书一直备受推崇。有人说，它实时渲染的圣经。也有人说，它是绝世武功的目录。这次调查主要阅读了本书关于抗锯齿方面的介绍。如有机会可以进军相关领域，还是很期待可以把这本书读一下的。当然毛星云也在CSDN上发布了这本书第三版提炼总结的专栏：[【《Real-Time Rendering 3rd》提炼总结】](https://blog.csdn.net/poem_qianmo/category_9269285.html?spm=1001.2014.3001.5482)，两者可以配合食用。
-
 * 一篇2021年7月的期刊：[An overview of current deep learned rendering technologies](https://www.webofscience.com/wos/alldb/full-record/INSPEC:20799965) 着重讨论实时渲染和深度学习渲染。其中介绍了实时渲染技术中的抗锯齿和超分辨率，深度学习渲染技术中的DLSS和NSS模型，并且介绍了DLSR技术面临的挑战。本文的思路也从这篇期刊而来。
 
 # **1 前言**
@@ -198,9 +191,7 @@ cover_image: https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/p
 总体而言，所有的后处理抗锯齿都包含了以下三个步骤，而不同的后处理抗锯齿主要区别就在这三个步骤的具体实现方法上。
 
 1. **检测图像中不连续的部分，即检测边缘信息**
-
 2. **通过这些不连续部分的信息重建原始边缘信息**
-
 3. **对估测边缘上的像素进行重着色**
 
 **形态抗锯齿（Morphological Anti-Aliasing，简称 MLAA）**，是 AMD 推出的完全基于 CPU 处理的抗锯齿解决方案。例如图10展示了MLAA对边缘的识别和重建方式。左侧是走样图像。我们的目的是确定边缘的可能方向。中间图展示了算法通过检查相邻像素来记录其为边缘的可能性，图中显示了两个可能的边缘位置。右侧图则展示使用了最佳的推测边缘后，将相邻的颜色与估计的覆盖率成比例地混合到中心像素中。
@@ -435,17 +426,13 @@ DLSS 2.0可以将540p的渲染图像直接放大到1080p，或者720p到1440p，
     <br><div style="color: #999;">图 31 DLSS 2.0四大特性</div></center>
 
 1. 画质极大提升，细节和锐度媲美、甚至超越原生分辨率
-
 2. 4倍像素超采样（540p到1080p，1080p到4K，每4个像素中有3个是通过超采样生成）
-
 3. 通用模型，一个神经网络适用于所有游戏（不同引擎，着色风格，分辨率都有很强的通用性）
-
 4. Inference开销减半
 
 ### 4.2.2 DLSS缺点
 
 1. DLSS似乎不能很好地与某些AA技术(如TSAA)一起工作，当启用这些技术时，DLSS性能会受到严重影响。
-
 2. 此外，由于DLSS只能工作在张量核的GPU上，所以CUDA-only和Stream处理器的gpu不能实现DLSS。
 
 ## 4.2.3 DLSS技术的展望

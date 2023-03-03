@@ -30,7 +30,7 @@ body {
 
 .meta .title {
   font-size: 48px;
-  margin-top: 16px;
+  margin: 16px auto;
 }
 
 .content {
@@ -70,7 +70,8 @@ hr,
   margin-right: auto;
   padding: 0 16px;
   /* margin-block: 0px; */
-  overflow: auto;
+  overflow-x: auto;
+  overflow-y: hidden;
 }
 
 .content p img,
@@ -195,10 +196,6 @@ hr,
   max-width: calc(800px - 16px * 2);
 }
 
-.content ul *,
-.content ol * {
-}
-
 .content blockquote {
   max-width: calc(800px - 16px * 2);
   padding: 0 8px;
@@ -215,6 +212,7 @@ hr,
   display: flex;
   flex-wrap: wrap;
   margin: auto, 0;
+  align-items: center;
 }
 
 .tags .icon {

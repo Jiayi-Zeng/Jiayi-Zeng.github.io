@@ -27,4 +27,5 @@
 .categories .category:hover {
   background-color: var(--white-1);
   color: var(--black);
+  font-weight: bold
 }

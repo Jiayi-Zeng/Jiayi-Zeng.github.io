@@ -19,5 +19,3 @@ Metrics to measure the Quality of Regression
 * Residuals are normally distributed. 
 
 # **Linear Regression**
-
-# 

@@ -3,7 +3,7 @@ title: 5 Linear Regression
 
 date: 2023-02-23
 
-tags: [DSBA, ML]
+tags: [DSBA, ML, Data Mining]
 
 categories: "Predicted Analytics: Tools & Techniques"
 

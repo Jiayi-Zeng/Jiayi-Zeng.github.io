@@ -22,6 +22,8 @@ categories: Other
 
 # **About Website**
 
+- [x] Motify `Archives` and `Tags`
+
 - [x] 公式超出卡片范围 [Reference]( https://docs.mathjax.org/en/latest/options/output/index.html#options-common-to-all-output-processors)
 
 - [x] 实现目录分级显示 

@@ -3,7 +3,7 @@ title: Basic Knowledge of CNN
 
 date: 2022-03-27
 
-tags: [CNN]
+tags: [CV]
 
 categories: Computer Vision
 
@@ -19,7 +19,6 @@ cover_image: https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/p
 # **1 卷积神经网络 CNN**
 
 * 卷积神经网络，即包含卷积层的神经网络。
-
 * 第一个卷积神经网路：LeCun的LeNet（1998）网络结构
 
 ![Net_LeNet](https://github.com/Jiayi-Zeng/Jiayi-Zeng.github.io/blob/pic/img/Net_LeNet_covoer.png?raw=true)
@@ -103,7 +102,6 @@ $$
 通过观察可以发现：
 
 * **`卷积核channel`与`输入层的channel`相同**
-
 * **输出的`特征矩阵channel`与`卷积核个数`相同**
 
 ## 5.2 激活函数
@@ -113,7 +111,6 @@ $$
 1. **`Sigmoid`激活函数**
 
 * 饱和时梯度非常小，故网络层数较深时易出现梯度消失。
-  
 * 计算多类损失最后使用`softmax`激活函数，经过`softmax`处理后所有输出节点概率和为1。
 
 $$
@@ -124,7 +121,6 @@ $$
 2. **ReLU激活函数**
 
 * 缺点在于当反向传播的过程中有一个非常大的梯度经过时，反向传播更新后可能导致权重分布中心小于0，导致该处的倒数始终为0，反向传播无法更新权重，即进入失活状态。
-
 * 失活后无法“复活”。建议一开始不使用较大学习率，否则大多数神经元容易失活。
 
 ![image-20220327215434274](https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20220327215434274.png)
@@ -144,9 +140,7 @@ $$
 目的：对特征图进行稀疏处理，减少数据运算量
 
 * 没有训练参数
-
 * 只改变特征矩阵`W`和`h`，不改变`channel`
-
 * 一般`pool size`和`stride`相同
 
 1. **MaxPooling 下采样层**
