@@ -14,7 +14,7 @@ body {
 }
 
 .tags a:link {
-    color: var(--link);
+    /* color: var(--link); */
     text-decoration: none;
 }
 
