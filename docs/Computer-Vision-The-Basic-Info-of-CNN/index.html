@@ -190,10 +190,8 @@
 <span id="more"></span>
 
 <h1 id="1-卷积神经网络-CNN"><a href="#1-卷积神经网络-CNN" class="headerlink" title="1 卷积神经网络 CNN"></a><strong>1 卷积神经网络 CNN</strong></h1><ul>
-<li><p>卷积神经网络，即包含卷积层的神经网络。</p>
-</li>
-<li><p>第一个卷积神经网路：LeCun的LeNet（1998）网络结构</p>
-</li>
+<li>卷积神经网络，即包含卷积层的神经网络。</li>
+<li>第一个卷积神经网路：LeCun的LeNet（1998）网络结构</li>
 </ul>
 <p><img src="https://github.com/Jiayi-Zeng/Jiayi-Zeng.github.io/blob/pic/img/Net_LeNet_covoer.png?raw=true" alt="Net_LeNet"></p>
 <h2 id="1-1-CNN的发展"><a href="#1-1-CNN的发展" class="headerlink" title="1.1 CNN的发展"></a>1.1 CNN的发展</h2><p><img src="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20220327213127062.png"></p>
@@ -326,20 +324,16 @@
 <p><img src="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20220327215117151.png" alt="image-20220327215117151"></p>
 <p>通过观察可以发现：</p>
 <ul>
-<li><p><strong><code>卷积核channel</code>与<code>输入层的channel</code>相同</strong></p>
-</li>
-<li><p><strong>输出的<code>特征矩阵channel</code>与<code>卷积核个数</code>相同</strong></p>
-</li>
+<li><strong><code>卷积核channel</code>与<code>输入层的channel</code>相同</strong></li>
+<li><strong>输出的<code>特征矩阵channel</code>与<code>卷积核个数</code>相同</strong></li>
 </ul>
 <h2 id="5-2-激活函数"><a href="#5-2-激活函数" class="headerlink" title="5.2 激活函数"></a>5.2 激活函数</h2><p>目的：<strong>引入非线性因素，使其具备解决非线性问题的能力。</strong></p>
 <ol>
 <li><strong><code>Sigmoid</code>激活函数</strong></li>
 </ol>
 <ul>
-<li><p>饱和时梯度非常小，故网络层数较深时易出现梯度消失。</p>
-</li>
-<li><p>计算多类损失最后使用<code>softmax</code>激活函数，经过<code>softmax</code>处理后所有输出节点概率和为1。</p>
-</li>
+<li>饱和时梯度非常小，故网络层数较深时易出现梯度消失。</li>
+<li>计算多类损失最后使用<code>softmax</code>激活函数，经过<code>softmax</code>处理后所有输出节点概率和为1。</li>
 </ul>
 <p style="text-align:center"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="100ex" height="11.509ex" style="vertical-align: -8.005ex; max-width: 60000px;" viewBox="0 -1508.9 43055.4 4955.4" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-1-Title">
 <title id="MathJax-SVG-1-Title">o_1=\frac{e^{y_1}}{e^{y_1}+e^{y_2}}\\
@@ -424,10 +418,8 @@ o_2=\frac{e^{y_2}}{e^{y_1}+e^{y_2}}</title>
 <li><strong>ReLU激活函数</strong></li>
 </ol>
 <ul>
-<li><p>缺点在于当反向传播的过程中有一个非常大的梯度经过时，反向传播更新后可能导致权重分布中心小于0，导致该处的倒数始终为0，反向传播无法更新权重，即进入失活状态。</p>
-</li>
-<li><p>失活后无法“复活”。建议一开始不使用较大学习率，否则大多数神经元容易失活。</p>
-</li>
+<li>缺点在于当反向传播的过程中有一个非常大的梯度经过时，反向传播更新后可能导致权重分布中心小于0，导致该处的倒数始终为0，反向传播无法更新权重，即进入失活状态。</li>
+<li>失活后无法“复活”。建议一开始不使用较大学习率，否则大多数神经元容易失活。</li>
 </ul>
 <p><img src="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20220327215434274.png" alt="image-20220327215434274"></p>
 <h2 id="5-3-越界情况"><a href="#5-3-越界情况" class="headerlink" title="5.3 越界情况"></a>5.3 越界情况</h2><p>利用<strong>padding</strong>补零，经卷积后的矩阵尺寸大小计算公式为：</p>
@@ -506,12 +498,9 @@ o_2=\frac{e^{y_2}}{e^{y_1}+e^{y_2}}</title>
 </svg>.</p>
 <h1 id="6-池化层"><a href="#6-池化层" class="headerlink" title="6 池化层"></a><strong>6 池化层</strong></h1><p>目的：对特征图进行稀疏处理，减少数据运算量</p>
 <ul>
-<li><p>没有训练参数</p>
-</li>
-<li><p>只改变特征矩阵<code>W</code>和<code>h</code>，不改变<code>channel</code></p>
-</li>
-<li><p>一般<code>pool size</code>和<code>stride</code>相同</p>
-</li>
+<li>没有训练参数</li>
+<li>只改变特征矩阵<code>W</code>和<code>h</code>，不改变<code>channel</code></li>
+<li>一般<code>pool size</code>和<code>stride</code>相同</li>
 </ul>
 <ol>
 <li><strong>MaxPooling 下采样层</strong></li>
@@ -711,7 +700,7 @@ o_2=\frac{e^{y_2}}{e^{y_1}+e^{y_2}}</title>
     <p class="tags">
         
         <i class="icon"></i>
-        <a href="/tags/CNN/" class="tag"># CNN</a>
+        <a href="/tags/CV/" class="tag"># CV</a>
     </p>
     
 </div>

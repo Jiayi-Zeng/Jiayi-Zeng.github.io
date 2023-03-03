@@ -2,9 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://jiayi-zeng.github.io/docs/Other-Real-time-Rendering-and-DLSS-2.0/</loc>
+    
+    <lastmod>2023-03-03</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://jiayi-zeng.github.io/docs/Computer-Vision-The-Basic-Info-of-CNN/</loc>
+    
+    <lastmod>2023-03-03</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://jiayi-zeng.github.io/docs/Other-TO-DO-list/</loc>
     
-    <lastmod>2023-03-02</lastmod>
+    <lastmod>2023-03-03</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -12,6 +30,15 @@
   
   <url>
     <loc>https://jiayi-zeng.github.io/docs/Predicted-Analytics-4-Regression-Quality/</loc>
+    
+    <lastmod>2023-03-03</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://jiayi-zeng.github.io/docs/Other-ML-Cross-Entropy/</loc>
     
     <lastmod>2023-03-02</lastmod>
     
@@ -65,25 +92,7 @@
   </url>
   
   <url>
-    <loc>https://jiayi-zeng.github.io/docs/Other-Real-time-Rendering-and-DLSS-2.0/</loc>
-    
-    <lastmod>2023-03-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://jiayi-zeng.github.io/docs/Other-ML-Cross-Entropy/</loc>
-    
-    <lastmod>2023-03-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://jiayi-zeng.github.io/docs/Machine-Learning-1-Introduction-of-Deep-Learning/</loc>
+    <loc>https://jiayi-zeng.github.io/docs/Computer-Vision-Image-Classification-Paper/</loc>
     
     <lastmod>2023-03-02</lastmod>
     
@@ -93,6 +102,15 @@
   
   <url>
     <loc>https://jiayi-zeng.github.io/docs/Machine-Learning-0-Course-Intro/</loc>
+    
+    <lastmod>2023-03-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://jiayi-zeng.github.io/docs/Machine-Learning-1-Introduction-of-Deep-Learning/</loc>
     
     <lastmod>2023-03-02</lastmod>
     
@@ -119,27 +137,9 @@
   </url>
   
   <url>
-    <loc>https://jiayi-zeng.github.io/docs/Computer-Vision-The-Basic-Info-of-CNN/</loc>
-    
-    <lastmod>2023-03-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://jiayi-zeng.github.io/about/</loc>
     
     <lastmod>2023-03-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://jiayi-zeng.github.io/docs/Computer-Vision-Image-Classification-Paper/</loc>
-    
-    <lastmod>2023-02-27</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -184,57 +184,57 @@
 
   <url>
     <loc>https://jiayi-zeng.github.io/</loc>
-    <lastmod>2023-03-02</lastmod>
+    <lastmod>2023-03-03</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
 
   
   <url>
-    <loc>https://jiayi-zeng.github.io/tags/CNN/</loc>
-    <lastmod>2023-03-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://jiayi-zeng.github.io/tags/Python/</loc>
-    <lastmod>2023-03-02</lastmod>
+    <lastmod>2023-03-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://jiayi-zeng.github.io/tags/ML/</loc>
-    <lastmod>2023-03-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://jiayi-zeng.github.io/tags/Classification/</loc>
-    <lastmod>2023-03-02</lastmod>
+    <lastmod>2023-03-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://jiayi-zeng.github.io/tags/DL/</loc>
-    <lastmod>2023-03-02</lastmod>
+    <lastmod>2023-03-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://jiayi-zeng.github.io/tags/CG/</loc>
-    <lastmod>2023-03-02</lastmod>
+    <lastmod>2023-03-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://jiayi-zeng.github.io/tags/DSBA/</loc>
-    <lastmod>2023-03-02</lastmod>
+    <lastmod>2023-03-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://jiayi-zeng.github.io/tags/CV/</loc>
+    <lastmod>2023-03-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://jiayi-zeng.github.io/tags/Data-Mining/</loc>
+    <lastmod>2023-03-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -243,35 +243,35 @@
   
   <url>
     <loc>https://jiayi-zeng.github.io/categories/Computer-Vision/</loc>
-    <lastmod>2023-03-02</lastmod>
+    <lastmod>2023-03-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://jiayi-zeng.github.io/categories/Immediate-to-Python/</loc>
-    <lastmod>2023-03-02</lastmod>
+    <lastmod>2023-03-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://jiayi-zeng.github.io/categories/HUNG-YI-LEE-MACHINE-LEARNING/</loc>
-    <lastmod>2023-03-02</lastmod>
+    <lastmod>2023-03-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://jiayi-zeng.github.io/categories/Other/</loc>
-    <lastmod>2023-03-02</lastmod>
+    <lastmod>2023-03-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://jiayi-zeng.github.io/categories/Predicted-Analytics-Tools-Techniques/</loc>
-    <lastmod>2023-03-02</lastmod>
+    <lastmod>2023-03-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>

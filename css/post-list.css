@@ -3,7 +3,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   max-width: 980px;
-  margin: auto;
+  margin: 80px auto;
 }
 
 @media screen and (max-width: 600px) {
@@ -68,6 +68,7 @@
 
 .post-list-item .content {
   padding: 32px;
+  padding-top: 20px;
 }
 
 .post-list-item a,
@@ -162,6 +163,150 @@ post-list.archives .post-list-item {
 }
 
 .post-list.archives .post-list-item .cover-img {
+  height: initial;
+  min-width: 180px;
+  width: 25vw;
+  border-radius: 16px;
+  flex-shrink: 0;
+}
+
+
+
+
+
+/* achieve */
+.archives-list-item {
+  overflow: hidden;
+  border-radius: 16px;
+  background-color: var(--card-bg);
+  margin: 13px 0px;
+  transition: all 200ms ease;
+  /*box-shadow: */
+}
+
+.archives-list-item:hover {
+    background-color: var(--white-1);
+}
+
+@media screen and (max-width: 600px) {
+  .archives-list-item:nth-child(n) {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+.archives-list-item .title {
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.009em;
+  max-height: 7em;
+  color: var(--card-title);
+  overflow: hidden;
+}
+
+.archives-list-item .content {
+  padding: 5px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  align-content: center;
+  flex-wrap: nowrap;
+}
+
+.archives-list-item a,
+.archives-list-item a:hover,
+.archives-list-item a:focus,
+.archives-list-item a:active,
+.archives-list-item a:link,
+.archives-list-item a:visited {
+  font-weight: bold;
+  font-size: 24px;
+  color: var(--black);
+  text-decoration: none;
+}
+
+.archives-list-item .categories {
+  color: var(--link);
+  font-weight: 600;
+}
+
+.archives-list-item .categories span {
+  font-size: 14px;
+  margin: auto 6px;
+  text-decoration: none;
+  display: block;
+}
+
+.archives-list-item .excerpt {
+  font-size: 17px;
+  color: var(--black-1);
+}
+
+@media screen and (max-width: 800px) {
+  .archives-list-item .content {
+    font-size: 12px;
+  }
+}
+
+.archives-list-item .time {
+  font-size: 14px;
+  line-height: 1.28577;
+  font-weight: 600;
+  letter-spacing: -0.016em;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: var(--card-time);
+  margin-left: 15px;
+  width: 85px;
+}
+
+.archives-list-item .read-more {
+  text-align: right;
+}
+
+.archives-list-item .read-more button {
+  font-size: 12px;
+  outline: none;
+  border: none;
+  background-color: var(--blue);
+  color: var(--white-txt-on-blue-bg);
+  padding: 6px 12px;
+  border-radius: 32px;
+  cursor: pointer;
+}
+
+/* in archive page, use a more compact list view */
+
+.archives-list.archives {
+  display: block;
+  max-width: 980px;
+  margin: auto;
+}
+
+archives-list.archives .archives-list-item {
+  background-color: var(--white);
+  padding: 21px 0;
+  margin: 1;
+  border-bottom: 1px solid var(--border-color);
+  transition: all 200ms ease;
+}
+
+.archives-list.archives .archives-list-item:nth-child(n) {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.archives-list.archives .archives-list-item:last-child {
+  border-bottom: none;
+}
+
+.archives-list.archives .archives-list-item a {
+  display: flex;
+}
+
+.archives-list.archives .archives-list-item .cover-img {
   height: initial;
   min-width: 180px;
   width: 25vw;
