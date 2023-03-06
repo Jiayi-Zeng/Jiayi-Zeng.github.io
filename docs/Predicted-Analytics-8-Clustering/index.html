@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head prefix="og: https://ogp.me/ns#">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+  <meta name="color-scheme" content="light dark">
+
+  
+<link rel="stylesheet" href="../../css/prism.css">
+ 
+    
+<script src="../js/prism.js"></script>
+
+  
+  <title>10 Clustering - Joooyce | Zeng</title>
+  
+    <link rel="shortcut icon" href="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/1f41f.png">
+  
+  
+    <link rel='manifest' href='/manifest.json'>
+  
+
+  
+  
+  
+  <meta property="og:title" content="10 Clustering - Joooyce | Zeng" />
+  
+  <meta property="og:type" content="article" />
+  
+  <meta property="og:url" content="https://jiayi-zeng.github.io/docs/Predicted-Analytics-8-Clustering/index.html" />
+  
+  <meta property="og:image" content="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/202302.png" />
+  
+  <meta property="og:article:published_time" content="2023-03-03T08:00:00.000Z" />
+  
+  <meta property="og:article:author" content="Joyce Zeng" />
+  
+  
+
+  
+<link rel="stylesheet" href="../../css/var.css">
+
+  
+<link rel="stylesheet" href="../../css/main.css">
+
+  
+<link rel="stylesheet" href="../../css/typography.css">
+
+  
+<link rel="stylesheet" href="../../css/code-highlighting.css">
+
+  
+<link rel="stylesheet" href="../../css/components.css">
+
+  
+<link rel="stylesheet" href="../../css/nav.css">
+
+  
+<link rel="stylesheet" href="../../css/paginator.css">
+
+  
+<link rel="stylesheet" href="../../css/footer.css">
+
+  
+<link rel="stylesheet" href="../../css/post-list.css">
+
+  
+  
+<link rel="stylesheet" href="../../css/rainbow-banner.css">
+
+  
+  
+  
+<link rel="stylesheet" href="../../css/toc.css">
+
+  
+  
+  
+  
+  
+<link rel="stylesheet" href="../../css/post.css">
+
+  
+  
+  
+  
+  
+
+  
+<meta name="generator" content="Hexo 6.3.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+    
+<link rel="stylesheet" href="../../css/prism.css">
+ 
+    
+<script src="../js/prism.js"></script>
+
+    <body
+        data-color-scheme="auto"
+        data-uppercase-categories="true"
+        
+        data-rainbow-banner="true"
+        data-rainbow-banner-shown="auto"
+        data-rainbow-banner-month="6"
+        data-rainbow-banner-colors="#e50000,#ff8d00,#ffee00,#008121,#004cff,#760188"
+        
+        data-config-root="/"
+        
+        data-toc="true"
+        data-toc-max-depth="2"
+        
+        
+    >
+        <nav id="theme-nav">
+    <div class="inner">
+        <a class="title" href="/">Jiayi Zeng</a>
+        <div class="nav-arrow"></div>
+        <div class="nav-items">
+            <a class="nav-item nav-item-home" href="/">Home</a>
+            
+            
+            <a class="nav-item" href="../../archives">Archives</a>
+            
+            
+            
+            <a class="nav-item" href="../../tags">Tags</a>
+            
+            
+            
+            <a class="nav-item" href="../../categories">Categories</a>
+            
+            
+            
+            <a class="nav-item" href="../../projects">Projects</a>
+            
+            
+            
+            <a class="nav-item" href="../../about">About</a>
+            
+            
+            
+            <a class="nav-item nav-item-github nav-item-icon" href="https://github.com/Jiayi-Zeng" target="_blank">&nbsp;</a>
+            
+            
+            
+            <a class="nav-item nav-item-search nav-item-icon" href="../../search" target="_blank">&nbsp;</a>
+            
+            
+        </div>
+    </div>
+</nav>
+        
+
+<link rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css">
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+    <script src="//lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js"> </script>
+<article class="post">
+
+<script src="../js/fancybox.js"></script>
+  
+
+<div class="meta">
+    
+    <div class="categories text-uppercase">
+    
+        <a href="/categories/Predicted-Analytics-Tools-Techniques/">Predicted Analytics: Tools &amp; Techniques</a>
+    
+    </div>
+    
+
+    
+    <div class="date" id="date">
+        <span>March</span>
+        <span>3,</span>
+        <span>2023</span>
+    </div>
+    
+
+    <h2 class="title">10 Clustering</h2>
+
+</div>
+
+<div class="divider"></div>
+
+<div class="content">
+    <h1 id="Unsupervised-Learning"><a href="#Unsupervised-Learning" class="headerlink" title="Unsupervised Learning"></a><strong>Unsupervised Learning</strong></h1><ul>
+<li>Clustering<ul>
+<li>k-means clustering</li>
+<li>Hierarchical Clustering</li>
+</ul>
+</li>
+<li>Principal Component Analysis</li>
+</ul>
+<p><strong>Unsupervised Learning in Predictive Analytics</strong></p>
+<p>Unsupervised learning is part of Machine Learning family of methods</p>
+<p>Although, it may not be as popular as supervised learning, it has a significant footprint in Analytics</p>
+<p><strong>The Challenge of Unsupervised Learning</strong></p>
+<p>Model assessment</p>
+<ul>
+<li>We cannot tell if the model we have built is good</li>
+<li>Because we do not have the test data with known response variable information</li>
+<li>We cannot do cross validation</li>
+</ul>
+<h1 id="Clustering"><a href="#Clustering" class="headerlink" title="Clustering"></a><strong>Clustering</strong></h1><p>Categorize objects into groups (or clusters) so that </p>
+<ul>
+<li>Objects in each group are similar </li>
+<li>Objects in each group are different from objects in other groups</li>
+</ul>
+<p><strong>Clustering Applications</strong></p>
+<ul>
+<li>Decrease the size and complexity of problems for other data mining methods</li>
+<li>Identify outliers in a specific domain<ul>
+<li>Customer Segmentation</li>
+</ul>
+</li>
+</ul>
+<h2 id="Clustering-Definition"><a href="#Clustering-Definition" class="headerlink" title="Clustering Definition"></a>Clustering Definition</h2><ul>
+<li>Suppose ‘n’ observations</li>
+<li>Let <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="13.833ex" height="2.676ex" style="vertical-align: -0.671ex; margin-right: -0.012ex;" viewBox="0 -863.1 5956 1152.1" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-1-Title">
+<title id="MathJax-SVG-1-Title">𝐶1,𝐶2,...,𝐶𝑘</title>
+<defs aria-hidden="true">
+<path stroke-width="1" id="E1-GYREPAGELLANORMAL-1D436" d="M651 665c-14 -46 -22 -89 -27 -146h-27v84c-56 36 -107 50 -179 50c-79 0 -143 -24 -190 -72c-61 -62 -95 -160 -95 -272c0 -178 85 -274 243 -274c78 0 130 17 224 75l10 -7l-10 -36c-91 -62 -161 -85 -257 -85c-192 0 -298 108 -298 302c0 153 60 271 177 350 c70 47 152 72 234 72c62 0 118 -12 195 -41Z"></path>
+<path stroke-width="1" id="E1-GYREPAGELLAMAIN-31" d="M418 -3l-157 3l-165 -3v30l56 3c54 3 65 14 65 66v485c0 24 -2 33 -8 33l-3 -1l-129 -58h-10l-7 43c91 32 162 62 227 96l14 -5v-593c0 -52 10 -63 65 -66l52 -3v-30Z"></path>
+<path stroke-width="1" id="E1-GYREPAGELLAMAIN-2C" d="M218 109c-28 -77 -66 -140 -147 -245l-41 -19l-14 11c58 96 83 161 90 237c53 15 71 21 98 30Z"></path>
+<path stroke-width="1" id="E1-GYREPAGELLAMAIN-32" d="M468 -3l-229 3l-223 -3v26l170 181c113 120 155 194 155 269c0 85 -55 139 -141 139c-67 0 -103 -25 -119 -83l-13 -46h-29l17 136c49 50 98 70 170 70c127 0 205 -71 205 -186c0 -75 -30 -130 -127 -233l-182 -193l346 10c-2 -22 -2 -32 -2 -45c0 -14 0 -24 2 -45Z"></path>
+<path stroke-width="1" id="E1-GYREPAGELLAMAIN-2E" d="M183 53c0 -31 -28 -58 -60 -58c-29 0 -56 28 -56 58s27 58 57 58c31 0 59 -28 59 -58Z"></path>
+<path stroke-width="1" id="E1-GYREPAGELLANORMAL-1D458" d="M449 473l-17 -63c-17 4 -28 6 -36 6c-50 0 -96 -25 -157 -86l-14 -14c39 -123 61 -177 96 -241c9 -17 16 -23 26 -23c8 0 15 2 29 10l43 24l8 -19l-46 -32c-44 -31 -68 -44 -81 -44c-25 0 -57 68 -126 268c-34 -34 -58 -79 -67 -127l-23 -124l-67 -17l-9 10 c52 209 69 278 82 353l48 268c1 7 2 16 2 24c0 17 -10 24 -34 24h-48l4 21c72 7 108 16 160 42l12 -11l-107 -492c125 175 208 252 274 252c12 0 30 -3 48 -9Z"></path>
+</defs>
+<g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
+ <use xlink:href="#E1-GYREPAGELLANORMAL-1D436" x="0" y="0"></use>
+ <use xlink:href="#E1-GYREPAGELLAMAIN-31" x="667" y="0"></use>
+ <use xlink:href="#E1-GYREPAGELLAMAIN-2C" x="1168" y="0"></use>
+ <use xlink:href="#E1-GYREPAGELLANORMAL-1D436" x="1585" y="0"></use>
+ <use xlink:href="#E1-GYREPAGELLAMAIN-32" x="2252" y="0"></use>
+ <use xlink:href="#E1-GYREPAGELLAMAIN-2C" x="2753" y="0"></use>
+ <use xlink:href="#E1-GYREPAGELLAMAIN-2E" x="3170" y="0"></use>
+ <use xlink:href="#E1-GYREPAGELLAMAIN-2E" x="3587" y="0"></use>
+ <use xlink:href="#E1-GYREPAGELLAMAIN-2E" x="4004" y="0"></use>
+ <use xlink:href="#E1-GYREPAGELLAMAIN-2C" x="4421" y="0"></use>
+ <use xlink:href="#E1-GYREPAGELLANORMAL-1D436" x="4839" y="0"></use>
+ <use xlink:href="#E1-GYREPAGELLANORMAL-1D458" x="5506" y="0"></use>
+</g>
+</svg> are sets containing</li>
+<li>the indices of the observations in each other<ul>
+<li><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="31.347ex" height="2.676ex" style="vertical-align: -0.671ex;" viewBox="0 -863.1 13496.8 1152.1" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-1-Title">
+<title id="MathJax-SVG-1-Title">𝐶1 ∪ 𝐶2 ∪ 𝐶3 ...∪ 𝐶𝑘 = 1,...,𝑛</title>
+<defs aria-hidden="true">
+<path stroke-width="1" id="E1-GYREPAGELLANORMAL-1D436" d="M651 665c-14 -46 -22 -89 -27 -146h-27v84c-56 36 -107 50 -179 50c-79 0 -143 -24 -190 -72c-61 -62 -95 -160 -95 -272c0 -178 85 -274 243 -274c78 0 130 17 224 75l10 -7l-10 -36c-91 -62 -161 -85 -257 -85c-192 0 -298 108 -298 302c0 153 60 271 177 350 c70 47 152 72 234 72c62 0 118 -12 195 -41Z"></path>
+<path stroke-width="1" id="E1-GYREPAGELLAMAIN-31" d="M418 -3l-157 3l-165 -3v30l56 3c54 3 65 14 65 66v485c0 24 -2 33 -8 33l-3 -1l-129 -58h-10l-7 43c91 32 162 62 227 96l14 -5v-593c0 -52 10 -63 65 -66l52 -3v-30Z"></path>
+<path stroke-width="1" id="E1-GYREPAGELLAMAIN-222A" d="M680 232c0 -195 -105 -300 -300 -300s-300 105 -300 300v318c10 -2 20 -3 30 -3s20 1 30 3v-318c0 -156 84 -240 240 -240s240 84 240 240v318c10 -2 20 -3 30 -3s20 1 30 3v-318Z"></path>
+<path stroke-width="1" id="E1-GYREPAGELLAMAIN-32" d="M468 -3l-229 3l-223 -3v26l170 181c113 120 155 194 155 269c0 85 -55 139 -141 139c-67 0 -103 -25 -119 -83l-13 -46h-29l17 136c49 50 98 70 170 70c127 0 205 -71 205 -186c0 -75 -30 -130 -127 -233l-182 -193l346 10c-2 -22 -2 -32 -2 -45c0 -14 0 -24 2 -45Z"></path>
+<path stroke-width="1" id="E1-GYREPAGELLAMAIN-33" d="M462 224c0 -47 -17 -91 -51 -132c-55 -67 -147 -112 -227 -112c-37 0 -81 8 -134 26c-6 50 -14 86 -35 147l27 10c19 -54 32 -77 56 -99c30 -28 71 -43 117 -43c93 0 154 67 154 169c0 91 -48 144 -131 144c-27 0 -46 -5 -84 -22l-7 6l12 53s39 -3 47 -3 c71 0 130 63 130 138c0 63 -53 116 -118 116c-52 0 -115 -34 -126 -68l-18 -56h-31l29 124c48 48 93 67 161 67c111 0 185 -59 185 -148c0 -59 -30 -105 -110 -167c50 -9 73 -17 98 -35c36 -25 56 -67 56 -115Z"></path>
+<path stroke-width="1" id="E1-GYREPAGELLAMAIN-2E" d="M183 53c0 -31 -28 -58 -60 -58c-29 0 -56 28 -56 58s27 58 57 58c31 0 59 -28 59 -58Z"></path>
+<path stroke-width="1" id="E1-GYREPAGELLANORMAL-1D458" d="M449 473l-17 -63c-17 4 -28 6 -36 6c-50 0 -96 -25 -157 -86l-14 -14c39 -123 61 -177 96 -241c9 -17 16 -23 26 -23c8 0 15 2 29 10l43 24l8 -19l-46 -32c-44 -31 -68 -44 -81 -44c-25 0 -57 68 -126 268c-34 -34 -58 -79 -67 -127l-23 -124l-67 -17l-9 10 c52 209 69 278 82 353l48 268c1 7 2 16 2 24c0 17 -10 24 -34 24h-48l4 21c72 7 108 16 160 42l12 -11l-107 -492c125 175 208 252 274 252c12 0 30 -3 48 -9Z"></path>
+<path stroke-width="1" id="E1-GYREPAGELLAMAIN-3D" d="M680 330h-600c2 10 3 20 3 30s-1 20 -3 30h600c-2 -10 -3 -20 -3 -30s1 -20 3 -30zM680 110h-600c2 10 3 20 3 30s-1 20 -3 30h600c-2 -10 -3 -20 -3 -30s1 -20 3 -30Z"></path>
+<path stroke-width="1" id="E1-GYREPAGELLAMAIN-2C" d="M218 109c-28 -77 -66 -140 -147 -245l-41 -19l-14 11c58 96 83 161 90 237c53 15 71 21 98 30Z"></path>
+<path stroke-width="1" id="E1-GYREPAGELLANORMAL-1D45B" d="M514 85c-98 -73 -134 -94 -160 -94c-19 0 -30 15 -30 40c0 16 4 39 13 76l52 212c8 32 11 53 11 71c0 15 -6 24 -17 24c-45 0 -119 -62 -174 -146c-45 -69 -67 -134 -86 -260c-22 -4 -45 -10 -70 -17l-7 11c41 143 82 336 82 387c0 15 -7 25 -18 25c-7 0 -11 -1 -47 -25 l-32 -21l-7 20l28 20c73 52 112 74 133 74c15 0 23 -12 23 -33c0 -11 -2 -23 -6 -41l-38 -161c52 73 80 107 118 142c59 55 128 93 170 93c20 0 31 -13 31 -36c0 -17 -4 -45 -11 -74l-66 -276c-1 -4 -2 -15 -2 -20c0 -11 6 -20 13 -20c10 0 32 11 61 30l26 17Z"></path>
+</defs>
+<g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
+ <use xlink:href="#E1-GYREPAGELLANORMAL-1D436" x="0" y="0"></use>
+ <use xlink:href="#E1-GYREPAGELLAMAIN-31" x="667" y="0"></use>
+ <use xlink:href="#E1-GYREPAGELLAMAIN-222A" x="1390" y="0"></use>
+ <use xlink:href="#E1-GYREPAGELLANORMAL-1D436" x="2372" y="0"></use>
+ <use xlink:href="#E1-GYREPAGELLAMAIN-32" x="3040" y="0"></use>
+ <use xlink:href="#E1-GYREPAGELLAMAIN-222A" x="3763" y="0"></use>
+ <use xlink:href="#E1-GYREPAGELLANORMAL-1D436" x="4745" y="0"></use>
+ <use xlink:href="#E1-GYREPAGELLAMAIN-33" x="5413" y="0"></use>
+ <use xlink:href="#E1-GYREPAGELLAMAIN-2E" x="5913" y="0"></use>
+ <use xlink:href="#E1-GYREPAGELLAMAIN-2E" x="6331" y="0"></use>
+ <use xlink:href="#E1-GYREPAGELLAMAIN-2E" x="6748" y="0"></use>
+ <use xlink:href="#E1-GYREPAGELLAMAIN-222A" x="7165" y="0"></use>
+ <use xlink:href="#E1-GYREPAGELLANORMAL-1D436" x="7925" y="0"></use>
+ <use xlink:href="#E1-GYREPAGELLANORMAL-1D458" x="8593" y="0"></use>
+ <use xlink:href="#E1-GYREPAGELLAMAIN-3D" x="9315" y="0"></use>
+ <use xlink:href="#E1-GYREPAGELLAMAIN-31" x="10353" y="0"></use>
+ <use xlink:href="#E1-GYREPAGELLAMAIN-2C" x="10854" y="0"></use>
+ <use xlink:href="#E1-GYREPAGELLAMAIN-2E" x="11271" y="0"></use>
+ <use xlink:href="#E1-GYREPAGELLAMAIN-2E" x="11688" y="0"></use>
+ <use xlink:href="#E1-GYREPAGELLAMAIN-2E" x="12105" y="0"></use>
+ <use xlink:href="#E1-GYREPAGELLAMAIN-2C" x="12523" y="0"></use>
+ <use xlink:href="#E1-GYREPAGELLANORMAL-1D45B" x="12940" y="0"></use>
+</g>
+</svg> . Each observation belongs to at least one of the ‘k’ clusters.</li>
+<li><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="12.865ex" height="2.343ex" style="vertical-align: -0.338ex;" viewBox="0 -863.1 5539 1008.6" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-1-Title">
+<title id="MathJax-SVG-1-Title">𝐶𝑘 ∩ 𝐶𝑘′ = 0</title>
+<defs aria-hidden="true">
+<path stroke-width="1" id="E1-GYREPAGELLANORMAL-1D436" d="M651 665c-14 -46 -22 -89 -27 -146h-27v84c-56 36 -107 50 -179 50c-79 0 -143 -24 -190 -72c-61 -62 -95 -160 -95 -272c0 -178 85 -274 243 -274c78 0 130 17 224 75l10 -7l-10 -36c-91 -62 -161 -85 -257 -85c-192 0 -298 108 -298 302c0 153 60 271 177 350 c70 47 152 72 234 72c62 0 118 -12 195 -41Z"></path>
+<path stroke-width="1" id="E1-GYREPAGELLANORMAL-1D458" d="M449 473l-17 -63c-17 4 -28 6 -36 6c-50 0 -96 -25 -157 -86l-14 -14c39 -123 61 -177 96 -241c9 -17 16 -23 26 -23c8 0 15 2 29 10l43 24l8 -19l-46 -32c-44 -31 -68 -44 -81 -44c-25 0 -57 68 -126 268c-34 -34 -58 -79 -67 -127l-23 -124l-67 -17l-9 10 c52 209 69 278 82 353l48 268c1 7 2 16 2 24c0 17 -10 24 -34 24h-48l4 21c72 7 108 16 160 42l12 -11l-107 -492c125 175 208 252 274 252c12 0 30 -3 48 -9Z"></path>
+<path stroke-width="1" id="E1-GYREPAGELLAMAIN-2229" d="M680 -50c-10 2 -20 3 -30 3s-20 -1 -30 -3v318c0 156 -84 240 -240 240s-240 -84 -240 -240v-318c-10 2 -20 3 -30 3s-20 -1 -30 -3v318c0 195 105 300 300 300s300 -105 300 -300v-318Z"></path>
+<path stroke-width="1" id="E1-GYREPAGELLAMAIN-2032" d="M233 766l-125 -303l-33 -17l-15 10l78 293l82 30Z"></path>
+<path stroke-width="1" id="E1-GYREPAGELLAMAIN-3D" d="M680 330h-600c2 10 3 20 3 30s-1 20 -3 30h600c-2 -10 -3 -20 -3 -30s1 -20 3 -30zM680 110h-600c2 10 3 20 3 30s-1 20 -3 30h600c-2 -10 -3 -20 -3 -30s1 -20 3 -30Z"></path>
+<path stroke-width="1" id="E1-GYREPAGELLAMAIN-30" d="M465 366c0 -256 -76 -386 -227 -386c-62 0 -118 28 -153 77s-56 150 -56 267c0 242 79 365 234 365c137 0 202 -104 202 -323zM381 316c0 240 -39 338 -136 338c-95 0 -132 -83 -132 -294c0 -244 41 -345 138 -345c92 0 130 88 130 301Z"></path>
+</defs>
+<g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
+ <use xlink:href="#E1-GYREPAGELLANORMAL-1D436" x="0" y="0"></use>
+ <use xlink:href="#E1-GYREPAGELLANORMAL-1D458" x="667" y="0"></use>
+ <use xlink:href="#E1-GYREPAGELLAMAIN-2229" x="1334" y="0"></use>
+ <use xlink:href="#E1-GYREPAGELLANORMAL-1D436" x="2316" y="0"></use>
+ <use xlink:href="#E1-GYREPAGELLANORMAL-1D458" x="2984" y="0"></use>
+ <use xlink:href="#E1-GYREPAGELLAMAIN-2032" x="3428" y="0"></use>
+ <use xlink:href="#E1-GYREPAGELLAMAIN-3D" x="4000" y="0"></use>
+ <use xlink:href="#E1-GYREPAGELLAMAIN-30" x="5038" y="0"></use>
+</g>
+</svg> for all <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="5.133ex" height="2.676ex" style="vertical-align: -0.671ex; margin-right: -0.012ex;" viewBox="0 -863.1 2210.1 1152.1" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-1-Title">
+<title id="MathJax-SVG-1-Title">𝑘≠𝑘</title>
+<defs aria-hidden="true">
+<path stroke-width="1" id="E1-GYREPAGELLANORMAL-1D458" d="M449 473l-17 -63c-17 4 -28 6 -36 6c-50 0 -96 -25 -157 -86l-14 -14c39 -123 61 -177 96 -241c9 -17 16 -23 26 -23c8 0 15 2 29 10l43 24l8 -19l-46 -32c-44 -31 -68 -44 -81 -44c-25 0 -57 68 -126 268c-34 -34 -58 -79 -67 -127l-23 -124l-67 -17l-9 10 c52 209 69 278 82 353l48 268c1 7 2 16 2 24c0 17 -10 24 -34 24h-48l4 21c72 7 108 16 160 42l12 -11l-107 -492c125 175 208 252 274 252c12 0 30 -3 48 -9Z"></path>
+<path stroke-width="1" id="E1-GYREPAGELLAMAIN-2260" d="M680 110h-323l-89 -260c-8 2 -17 3 -25 3c-9 0 -18 -1 -26 -3l89 260h-226c2 10 3 20 3 30s-1 20 -3 30h247l55 160h-302c2 10 3 20 3 30s-1 20 -3 30h323l89 260c8 -2 17 -3 26 -3c8 0 17 1 25 3l-89 -260h226c-2 -10 -3 -20 -3 -30s1 -20 3 -30h-247l-55 -160h302 c-2 -10 -3 -20 -3 -30s1 -20 3 -30Z"></path>
+</defs>
+<g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
+ <use xlink:href="#E1-GYREPAGELLANORMAL-1D458" x="0" y="0"></use>
+ <use xlink:href="#E1-GYREPAGELLAMAIN-2260" x="722" y="0"></use>
+ <use xlink:href="#E1-GYREPAGELLANORMAL-1D458" x="1760" y="0"></use>
+</g>
+</svg>′. Clusters are non-overlapping: no observation belongs to more than one cluster.</li>
+</ul>
+</li>
+</ul>
+<h2 id="Compute-the-Distance-between-Clusters"><a href="#Compute-the-Distance-between-Clusters" class="headerlink" title="Compute the Distance between Clusters"></a>Compute the Distance between Clusters</h2><p><img src="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20230303111030606.png" alt="image-20230303111030606"></p>
+<h2 id="Clustering-Assessment"><a href="#Clustering-Assessment" class="headerlink" title="Clustering Assessment"></a>Clustering Assessment</h2><p>A good cluster should have the within-cluster-variation is as small as possible.</p>
+<ul>
+<li>within - cluster - variation = <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="7.154ex" height="2.509ex" style="vertical-align: -0.671ex;" viewBox="0 -791.3 3080.3 1080.4" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-1-Title">
+<title id="MathJax-SVG-1-Title">W(C_K)</title>
+<defs aria-hidden="true">
+<path stroke-width="1" id="E1-GYREPAGELLANORMAL-1D44A" d="M980 664l-20 -2c-22 -2 -37 -14 -43 -31l-171 -507c-13 -39 -20 -66 -31 -106l-7 -26h-51c-13 61 -24 110 -39 162l-112 392l-224 -444c-18 -36 -36 -75 -50 -110h-50c-1 52 -3 100 -8 166l-32 430c-4 57 -12 69 -53 74l-18 2v28l111 -3l121 3v-28l-37 -2 c-32 -2 -47 -16 -45 -46l31 -484l224 456l52 112h18l158 -572l147 462c6 18 9 36 9 49c0 14 -12 22 -41 23l-39 2l5 28c32 -2 65 -3 98 -3c32 0 65 1 97 3v-28Z"></path>
+<path stroke-width="1" id="E1-GYREPAGELLAMAIN-28" d="M344 636c-111 -112 -164 -237 -164 -353v-66c0 -116 53 -241 164 -353c-6 -3 -11 -7 -16 -12s-9 -10 -12 -16c-123 123 -196 254 -196 381v66c0 127 73 258 196 381c3 -6 7 -11 12 -16s10 -9 16 -12Z"></path>
+<path stroke-width="1" id="E1-GYREPAGELLANORMAL-1D436" d="M651 665c-14 -46 -22 -89 -27 -146h-27v84c-56 36 -107 50 -179 50c-79 0 -143 -24 -190 -72c-61 -62 -95 -160 -95 -272c0 -178 85 -274 243 -274c78 0 130 17 224 75l10 -7l-10 -36c-91 -62 -161 -85 -257 -85c-192 0 -298 108 -298 302c0 153 60 271 177 350 c70 47 152 72 234 72c62 0 118 -12 195 -41Z"></path>
+<path stroke-width="1" id="E1-GYREPAGELLANORMAL-1D43E" d="M683 665h-21c-17 0 -38 -10 -54 -25l-292 -273l246 -302c21 -26 41 -38 64 -38h20v-30c-22 2 -45 3 -68 3s-46 -1 -69 -3c-105 143 -128 172 -278 343l-43 -262c-1 -4 -2 -15 -2 -21c0 -20 9 -27 36 -29l49 -3l-3 -28l-123 3l-132 -3l4 28l41 3c40 3 42 5 58 97l73 434 c6 33 9 62 9 76c0 18 -11 26 -35 27l-47 2l3 28l141 -3l114 3l-3 -28l-42 -3c-37 -3 -44 -10 -51 -48l-45 -260c64 50 105 86 149 131l128 130c28 28 38 41 38 49v29c22 -2 44 -3 67 -3s45 1 68 3v-27Z"></path>
+<path stroke-width="1" id="E1-GYREPAGELLAMAIN-29" d="M304 217c0 -127 -73 -258 -196 -381c-3 6 -7 11 -12 16s-10 9 -16 12c111 112 164 237 164 353v66c0 116 -53 241 -164 353c6 3 11 7 16 12s9 10 12 16c123 -123 196 -254 196 -381v-66Z"></path>
+</defs>
+<g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
+ <use xlink:href="#E1-GYREPAGELLANORMAL-1D44A" x="0" y="0"></use>
+ <use xlink:href="#E1-GYREPAGELLAMAIN-28" x="980" y="0"></use>
+<g transform="translate(1405,0)">
+ <use xlink:href="#E1-GYREPAGELLANORMAL-1D436" x="0" y="0"></use>
+ <use transform="scale(0.707)" xlink:href="#E1-GYREPAGELLANORMAL-1D43E" x="943" y="-213"></use>
+</g>
+ <use xlink:href="#E1-GYREPAGELLAMAIN-29" x="2655" y="0"></use>
+</g>
+</svg></li>
+<li>Good cluster: <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="20.81ex" height="7.509ex" style="vertical-align: -3.171ex;" viewBox="0 -1867.7 8960 3233.2" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-1-Title">
+<title id="MathJax-SVG-1-Title">minimize(\sum_1^kW(C_k))</title>
+<defs aria-hidden="true">
+<path stroke-width="1" id="E1-GYREPAGELLANORMAL-1D45A" d="M740 85c-98 -73 -134 -94 -160 -94c-19 0 -30 15 -30 40c0 22 5 48 13 76l43 157c24 87 25 101 25 125c0 16 -5 25 -13 25c-32 0 -82 -35 -137 -96c-44 -49 -78 -124 -94 -205l-21 -107l-69 -15l-5 11l16 67c42 175 63 289 63 324c0 13 -4 21 -11 21 c-28 0 -73 -30 -115 -76c-55 -60 -82 -119 -106 -230l-22 -102l-68 -15l-3 11c41 143 82 336 82 387c0 15 -7 25 -18 25c-7 0 -11 -1 -47 -25l-32 -21l-7 20l28 20c74 53 112 74 133 74c14 0 23 -12 23 -31c0 -12 -2 -27 -6 -43l-33 -133c65 88 85 109 129 143 c55 42 101 64 131 64c16 0 26 -12 26 -31c0 -7 -3 -22 -7 -42l-30 -137c49 69 84 104 147 149c61 43 99 61 128 61c16 0 26 -11 26 -28c0 -8 -3 -24 -7 -41l-75 -297c-5 -21 -7 -30 -7 -40c0 -11 6 -20 13 -20c10 0 32 11 61 30l26 17Z"></path>
+<path stroke-width="1" id="E1-GYREPAGELLANORMAL-1D456" d="M241 85c-97 -72 -134 -94 -160 -94c-19 0 -30 15 -30 39c0 20 4 45 13 77l66 240c4 15 8 36 8 44c0 12 -7 21 -17 21c-9 0 -19 -4 -48 -23l-32 -21l-7 20l28 20c76 54 112 74 134 74c17 0 25 -9 25 -26c0 -9 -2 -19 -6 -36l-77 -304c-6 -22 -7 -30 -7 -40 c0 -11 6 -20 13 -20c10 0 31 10 61 30l26 17zM266 629c0 -38 -23 -67 -54 -67c-25 0 -40 16 -40 41c0 34 28 67 58 67c21 0 36 -17 36 -41Z"></path>
+<path stroke-width="1" id="E1-GYREPAGELLANORMAL-1D45B" d="M514 85c-98 -73 -134 -94 -160 -94c-19 0 -30 15 -30 40c0 16 4 39 13 76l52 212c8 32 11 53 11 71c0 15 -6 24 -17 24c-45 0 -119 -62 -174 -146c-45 -69 -67 -134 -86 -260c-22 -4 -45 -10 -70 -17l-7 11c41 143 82 336 82 387c0 15 -7 25 -18 25c-7 0 -11 -1 -47 -25 l-32 -21l-7 20l28 20c73 52 112 74 133 74c15 0 23 -12 23 -33c0 -11 -2 -23 -6 -41l-38 -161c52 73 80 107 118 142c59 55 128 93 170 93c20 0 31 -13 31 -36c0 -17 -4 -45 -11 -74l-66 -276c-1 -4 -2 -15 -2 -20c0 -11 6 -20 13 -20c10 0 32 11 61 30l26 17Z"></path>
+<path stroke-width="1" id="E1-GYREPAGELLANORMAL-1D467" d="M416 473l-6 -32l-339 -382c36 15 63 21 95 21c19 0 53 -5 86 -12c22 -5 45 -11 67 -11c21 0 32 7 39 25l22 60h22c-11 -47 -19 -81 -30 -143c-29 -8 -38 -10 -50 -10c-27 0 -58 6 -118 20c-52 13 -80 17 -105 17c-35 0 -62 -9 -91 -32l-9 27l353 400 c-33 -17 -57 -23 -93 -23c-21 0 -47 3 -81 10c-20 4 -31 5 -45 5c-13 0 -22 -1 -39 -5l-30 -58h-21l32 122c24 7 44 10 61 10c27 0 54 -9 80 -16c48 -13 100 -21 134 -21c14 0 24 4 34 14l23 23Z"></path>
+<path stroke-width="1" id="E1-GYREPAGELLANORMAL-1D452" d="M374 404c0 -62 -39 -107 -124 -145c-26 -11 -52 -21 -69 -25l-82 -20c-6 -29 -8 -54 -8 -80c0 -61 28 -98 76 -98c36 0 84 20 137 58l24 17l8 -19c-93 -75 -148 -103 -205 -103c-72 0 -116 46 -116 123c0 70 31 190 61 239c40 64 149 131 214 131c51 0 84 -31 84 -78z M300 388c0 32 -19 52 -48 52c-25 0 -57 -13 -76 -31c-27 -25 -47 -68 -63 -135l-9 -37c45 10 81 22 109 35c52 25 87 72 87 116Z"></path>
+<path stroke-width="1" id="E1-GYREPAGELLAMAIN-28" d="M344 636c-111 -112 -164 -237 -164 -353v-66c0 -116 53 -241 164 -353c-6 -3 -11 -7 -16 -12s-9 -10 -12 -16c-123 123 -196 254 -196 381v66c0 127 73 258 196 381c3 -6 7 -11 12 -16s10 -9 16 -12Z"></path>
+<path stroke-width="1" id="E1-GYREPAGELLASIZE1-2211" d="M1166 -218c-6 -63 -7 -152 -7 -253l-476 4l-603 -4v33l446 672l-446 703l5 34l264 -4l740 4c-3 -44 -4 -65 -4 -95c0 -31 1 -52 4 -95h-40l-7 83c-4 46 -35 55 -315 55h-503l402 -634l-434 -654h612c290 0 307 7 315 84l7 67h40Z"></path>
+<path stroke-width="1" id="E1-GYREPAGELLAMAIN-31" d="M418 -3l-157 3l-165 -3v30l56 3c54 3 65 14 65 66v485c0 24 -2 33 -8 33l-3 -1l-129 -58h-10l-7 43c91 32 162 62 227 96l14 -5v-593c0 -52 10 -63 65 -66l52 -3v-30Z"></path>
+<path stroke-width="1" id="E1-GYREPAGELLANORMAL-1D458" d="M449 473l-17 -63c-17 4 -28 6 -36 6c-50 0 -96 -25 -157 -86l-14 -14c39 -123 61 -177 96 -241c9 -17 16 -23 26 -23c8 0 15 2 29 10l43 24l8 -19l-46 -32c-44 -31 -68 -44 -81 -44c-25 0 -57 68 -126 268c-34 -34 -58 -79 -67 -127l-23 -124l-67 -17l-9 10 c52 209 69 278 82 353l48 268c1 7 2 16 2 24c0 17 -10 24 -34 24h-48l4 21c72 7 108 16 160 42l12 -11l-107 -492c125 175 208 252 274 252c12 0 30 -3 48 -9Z"></path>
+<path stroke-width="1" id="E1-GYREPAGELLANORMAL-1D44A" d="M980 664l-20 -2c-22 -2 -37 -14 -43 -31l-171 -507c-13 -39 -20 -66 -31 -106l-7 -26h-51c-13 61 -24 110 -39 162l-112 392l-224 -444c-18 -36 -36 -75 -50 -110h-50c-1 52 -3 100 -8 166l-32 430c-4 57 -12 69 -53 74l-18 2v28l111 -3l121 3v-28l-37 -2 c-32 -2 -47 -16 -45 -46l31 -484l224 456l52 112h18l158 -572l147 462c6 18 9 36 9 49c0 14 -12 22 -41 23l-39 2l5 28c32 -2 65 -3 98 -3c32 0 65 1 97 3v-28Z"></path>
+<path stroke-width="1" id="E1-GYREPAGELLANORMAL-1D436" d="M651 665c-14 -46 -22 -89 -27 -146h-27v84c-56 36 -107 50 -179 50c-79 0 -143 -24 -190 -72c-61 -62 -95 -160 -95 -272c0 -178 85 -274 243 -274c78 0 130 17 224 75l10 -7l-10 -36c-91 -62 -161 -85 -257 -85c-192 0 -298 108 -298 302c0 153 60 271 177 350 c70 47 152 72 234 72c62 0 118 -12 195 -41Z"></path>
+<path stroke-width="1" id="E1-GYREPAGELLAMAIN-29" d="M304 217c0 -127 -73 -258 -196 -381c-3 6 -7 11 -12 16s-10 9 -16 12c111 112 164 237 164 353v66c0 116 -53 241 -164 353c6 3 11 7 16 12s9 10 12 16c123 -123 196 -254 196 -381v-66Z"></path>
+</defs>
+<g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
+ <use xlink:href="#E1-GYREPAGELLANORMAL-1D45A" x="0" y="0"></use>
+ <use xlink:href="#E1-GYREPAGELLANORMAL-1D456" x="778" y="0"></use>
+ <use xlink:href="#E1-GYREPAGELLANORMAL-1D45B" x="1057" y="0"></use>
+ <use xlink:href="#E1-GYREPAGELLANORMAL-1D456" x="1613" y="0"></use>
+ <use xlink:href="#E1-GYREPAGELLANORMAL-1D45A" x="1892" y="0"></use>
+ <use xlink:href="#E1-GYREPAGELLANORMAL-1D456" x="2670" y="0"></use>
+ <use xlink:href="#E1-GYREPAGELLANORMAL-1D467" x="2949" y="0"></use>
+ <use xlink:href="#E1-GYREPAGELLANORMAL-1D452" x="3393" y="0"></use>
+ <use xlink:href="#E1-GYREPAGELLAMAIN-28" x="3783" y="0"></use>
+<g transform="translate(4207,0)">
+ <use xlink:href="#E1-GYREPAGELLASIZE1-2211" x="0" y="0"></use>
+ <use transform="scale(0.707)" xlink:href="#E1-GYREPAGELLAMAIN-31" x="631" y="-1599"></use>
+ <use transform="scale(0.707)" xlink:href="#E1-GYREPAGELLANORMAL-1D458" x="656" y="1657"></use>
+</g>
+ <use xlink:href="#E1-GYREPAGELLANORMAL-1D44A" x="5620" y="0"></use>
+ <use xlink:href="#E1-GYREPAGELLAMAIN-28" x="6601" y="0"></use>
+<g transform="translate(7025,0)">
+ <use xlink:href="#E1-GYREPAGELLANORMAL-1D436" x="0" y="0"></use>
+ <use transform="scale(0.707)" xlink:href="#E1-GYREPAGELLANORMAL-1D458" x="943" y="-247"></use>
+</g>
+ <use xlink:href="#E1-GYREPAGELLAMAIN-29" x="8111" y="0"></use>
+ <use xlink:href="#E1-GYREPAGELLAMAIN-29" x="8535" y="0"></use>
+</g>
+</svg><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="0.985ex" height="2.676ex" style="vertical-align: -0.338ex;" viewBox="0 -1006.6 424 1152.1" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-1-Title">
+<title id="MathJax-SVG-1-Title">\hat{i}</title>
+<defs aria-hidden="true">
+<path stroke-width="1" id="E1-GYREPAGELLANORMAL-1D456" d="M241 85c-97 -72 -134 -94 -160 -94c-19 0 -30 15 -30 39c0 20 4 45 13 77l66 240c4 15 8 36 8 44c0 12 -7 21 -17 21c-9 0 -19 -4 -48 -23l-32 -21l-7 20l28 20c76 54 112 74 134 74c17 0 25 -9 25 -26c0 -9 -2 -19 -6 -36l-77 -304c-6 -22 -7 -30 -7 -40 c0 -11 6 -20 13 -20c10 0 31 10 61 30l26 17zM266 629c0 -38 -23 -67 -54 -67c-25 0 -40 16 -40 41c0 34 28 67 58 67c21 0 36 -17 36 -41Z"></path>
+<path stroke-width="1" id="E1-GYREPAGELLAMAIN-302" d="M-76 586l-16 -28l-158 86l-158 -86l-16 28c56 41 114 79 174 114c60 -35 118 -73 174 -114Z"></path>
+</defs>
+<g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
+ <use xlink:href="#E1-GYREPAGELLANORMAL-1D456" x="72" y="0"></use>
+ <use xlink:href="#E1-GYREPAGELLAMAIN-302" x="423" y="221"></use>
+</g>
+</svg>  </li>
+<li><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="32.08ex" height="8.009ex" style="vertical-align: -3.838ex;" viewBox="0 -1796 13812.2 3448.4" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-1-Title">
+<title id="MathJax-SVG-1-Title">W(C_K) = \frac{1}{|C_k|} \sum_{i,\hat{i}}\sum_{j=1}^p(x_{ij}-x_{i^ij})^2</title>
+<defs aria-hidden="true">
+<path stroke-width="1" id="E1-GYREPAGELLANORMAL-1D44A" d="M980 664l-20 -2c-22 -2 -37 -14 -43 -31l-171 -507c-13 -39 -20 -66 -31 -106l-7 -26h-51c-13 61 -24 110 -39 162l-112 392l-224 -444c-18 -36 -36 -75 -50 -110h-50c-1 52 -3 100 -8 166l-32 430c-4 57 -12 69 -53 74l-18 2v28l111 -3l121 3v-28l-37 -2 c-32 -2 -47 -16 -45 -46l31 -484l224 456l52 112h18l158 -572l147 462c6 18 9 36 9 49c0 14 -12 22 -41 23l-39 2l5 28c32 -2 65 -3 98 -3c32 0 65 1 97 3v-28Z"></path>
+<path stroke-width="1" id="E1-GYREPAGELLAMAIN-28" d="M344 636c-111 -112 -164 -237 -164 -353v-66c0 -116 53 -241 164 -353c-6 -3 -11 -7 -16 -12s-9 -10 -12 -16c-123 123 -196 254 -196 381v66c0 127 73 258 196 381c3 -6 7 -11 12 -16s10 -9 16 -12Z"></path>
+<path stroke-width="1" id="E1-GYREPAGELLANORMAL-1D436" d="M651 665c-14 -46 -22 -89 -27 -146h-27v84c-56 36 -107 50 -179 50c-79 0 -143 -24 -190 -72c-61 -62 -95 -160 -95 -272c0 -178 85 -274 243 -274c78 0 130 17 224 75l10 -7l-10 -36c-91 -62 -161 -85 -257 -85c-192 0 -298 108 -298 302c0 153 60 271 177 350 c70 47 152 72 234 72c62 0 118 -12 195 -41Z"></path>
+<path stroke-width="1" id="E1-GYREPAGELLANORMAL-1D43E" d="M683 665h-21c-17 0 -38 -10 -54 -25l-292 -273l246 -302c21 -26 41 -38 64 -38h20v-30c-22 2 -45 3 -68 3s-46 -1 -69 -3c-105 143 -128 172 -278 343l-43 -262c-1 -4 -2 -15 -2 -21c0 -20 9 -27 36 -29l49 -3l-3 -28l-123 3l-132 -3l4 28l41 3c40 3 42 5 58 97l73 434 c6 33 9 62 9 76c0 18 -11 26 -35 27l-47 2l3 28l141 -3l114 3l-3 -28l-42 -3c-37 -3 -44 -10 -51 -48l-45 -260c64 50 105 86 149 131l128 130c28 28 38 41 38 49v29c22 -2 44 -3 67 -3s45 1 68 3v-27Z"></path>
+<path stroke-width="1" id="E1-GYREPAGELLAMAIN-29" d="M304 217c0 -127 -73 -258 -196 -381c-3 6 -7 11 -12 16s-10 9 -16 12c111 112 164 237 164 353v66c0 116 -53 241 -164 353c6 3 11 7 16 12s9 10 12 16c123 -123 196 -254 196 -381v-66Z"></path>
+<path stroke-width="1" id="E1-GYREPAGELLAMAIN-3D" d="M680 330h-600c2 10 3 20 3 30s-1 20 -3 30h600c-2 -10 -3 -20 -3 -30s1 -20 3 -30zM680 110h-600c2 10 3 20 3 30s-1 20 -3 30h600c-2 -10 -3 -20 -3 -30s1 -20 3 -30Z"></path>
+<path stroke-width="1" id="E1-GYREPAGELLAMAIN-31" d="M418 -3l-157 3l-165 -3v30l56 3c54 3 65 14 65 66v485c0 24 -2 33 -8 33l-3 -1l-129 -58h-10l-7 43c91 32 162 62 227 96l14 -5v-593c0 -52 10 -63 65 -66l52 -3v-30Z"></path>
+<path stroke-width="1" id="E1-GYREPAGELLAMAIN-7C" d="M128 -150c-8 2 -16 3 -24 3s-16 -1 -24 -3v800c8 -2 16 -3 24 -3s16 1 24 3v-800Z"></path>
+<path stroke-width="1" id="E1-GYREPAGELLANORMAL-1D458" d="M449 473l-17 -63c-17 4 -28 6 -36 6c-50 0 -96 -25 -157 -86l-14 -14c39 -123 61 -177 96 -241c9 -17 16 -23 26 -23c8 0 15 2 29 10l43 24l8 -19l-46 -32c-44 -31 -68 -44 -81 -44c-25 0 -57 68 -126 268c-34 -34 -58 -79 -67 -127l-23 -124l-67 -17l-9 10 c52 209 69 278 82 353l48 268c1 7 2 16 2 24c0 17 -10 24 -34 24h-48l4 21c72 7 108 16 160 42l12 -11l-107 -492c125 175 208 252 274 252c12 0 30 -3 48 -9Z"></path>
+<path stroke-width="1" id="E1-GYREPAGELLASIZE1-2211" d="M1166 -218c-6 -63 -7 -152 -7 -253l-476 4l-603 -4v33l446 672l-446 703l5 34l264 -4l740 4c-3 -44 -4 -65 -4 -95c0 -31 1 -52 4 -95h-40l-7 83c-4 46 -35 55 -315 55h-503l402 -634l-434 -654h612c290 0 307 7 315 84l7 67h40Z"></path>
+<path stroke-width="1" id="E1-GYREPAGELLANORMAL-1D456" d="M241 85c-97 -72 -134 -94 -160 -94c-19 0 -30 15 -30 39c0 20 4 45 13 77l66 240c4 15 8 36 8 44c0 12 -7 21 -17 21c-9 0 -19 -4 -48 -23l-32 -21l-7 20l28 20c76 54 112 74 134 74c17 0 25 -9 25 -26c0 -9 -2 -19 -6 -36l-77 -304c-6 -22 -7 -30 -7 -40 c0 -11 6 -20 13 -20c10 0 31 10 61 30l26 17zM266 629c0 -38 -23 -67 -54 -67c-25 0 -40 16 -40 41c0 34 28 67 58 67c21 0 36 -17 36 -41Z"></path>
+<path stroke-width="1" id="E1-GYREPAGELLAMAIN-2C" d="M218 109c-28 -77 -66 -140 -147 -245l-41 -19l-14 11c58 96 83 161 90 237c53 15 71 21 98 30Z"></path>
+<path stroke-width="1" id="E1-GYREPAGELLAMAIN-302" d="M-76 586l-16 -28l-158 86l-158 -86l-16 28c56 41 114 79 174 114c60 -35 118 -73 174 -114Z"></path>
+<path stroke-width="1" id="E1-GYREPAGELLANORMAL-1D457" d="M228 457c0 -5 -2 -20 -6 -37l-76 -350c-29 -132 -43 -181 -64 -228c-36 -78 -75 -118 -114 -118c-15 0 -28 2 -38 7l8 57c22 -13 39 -19 53 -19c18 0 36 35 47 87l100 495c3 13 7 27 7 40s-8 23 -18 23c-15 0 -33 -19 -47 -25l-32 -21l-7 20l28 20c76 54 112 74 134 74 c16 0 25 -9 25 -25zM273 629c0 -38 -23 -67 -54 -67c-25 0 -40 16 -40 41c0 34 28 67 58 67c21 0 36 -17 36 -41Z"></path>
+<path stroke-width="1" id="E1-GYREPAGELLANORMAL-1D45D" d="M465 371c0 -75 -34 -185 -75 -246c-43 -63 -158 -136 -214 -136c-11 0 -26 2 -52 11l-9 3l-42 -262c-32 -5 -52 -10 -73 -17l-7 6l8 37l49 241l58 343c2 10 4 30 4 38c0 14 -7 23 -17 23c-9 0 -20 -5 -48 -23l-32 -21l-7 20l28 20c74 53 112 74 133 74 c14 0 22 -11 22 -30c0 -12 -2 -27 -5 -44l-24 -119c36 59 57 84 97 120c53 46 105 73 147 73c36 0 59 -44 59 -111zM393 356c0 46 -12 68 -38 68c-83 0 -190 -131 -212 -259l-18 -106c26 -16 51 -23 82 -23c41 0 73 15 93 44c53 76 93 195 93 276Z"></path>
+<path stroke-width="1" id="E1-GYREPAGELLANORMAL-1D465" d="M484 472l-15 -85l-14 -4c-5 15 -17 23 -33 23c-31 0 -58 -23 -105 -88l-35 -49l18 -101c5 -29 16 -66 25 -85c10 -20 23 -30 38 -30c16 0 41 15 77 45l9 -19l-49 -44c-32 -29 -64 -46 -86 -46c-36 0 -58 39 -72 124l-11 69l-76 -117c-31 -47 -70 -76 -103 -76 c-12 0 -28 4 -43 12c1 7 2 10 4 22c6 32 8 45 8 65l20 3l11 -28c2 -5 13 -9 28 -9c28 0 62 32 105 99l40 62l-11 62c-17 98 -39 139 -72 139c-19 0 -39 -14 -69 -48l-17 10l58 83c9 13 31 21 57 21c59 0 86 -36 98 -135l6 -48l37 55c62 92 102 128 142 128c9 0 18 -3 30 -10 Z"></path>
+<path stroke-width="1" id="E1-GYREPAGELLAMAIN-2212" d="M680 220h-600c2 10 3 20 3 30s-1 20 -3 30h600c-2 -10 -3 -20 -3 -30s1 -20 3 -30Z"></path>
+<path stroke-width="1" id="E1-GYREPAGELLAMAIN-32" d="M468 -3l-229 3l-223 -3v26l170 181c113 120 155 194 155 269c0 85 -55 139 -141 139c-67 0 -103 -25 -119 -83l-13 -46h-29l17 136c49 50 98 70 170 70c127 0 205 -71 205 -186c0 -75 -30 -130 -127 -233l-182 -193l346 10c-2 -22 -2 -32 -2 -45c0 -14 0 -24 2 -45Z"></path>
+</defs>
+<g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
+ <use xlink:href="#E1-GYREPAGELLANORMAL-1D44A" x="0" y="0"></use>
+ <use xlink:href="#E1-GYREPAGELLAMAIN-28" x="980" y="0"></use>
+<g transform="translate(1405,0)">
+ <use xlink:href="#E1-GYREPAGELLANORMAL-1D436" x="0" y="0"></use>
+ <use transform="scale(0.707)" xlink:href="#E1-GYREPAGELLANORMAL-1D43E" x="943" y="-213"></use>
+</g>
+ <use xlink:href="#E1-GYREPAGELLAMAIN-29" x="2655" y="0"></use>
+ <use xlink:href="#E1-GYREPAGELLAMAIN-3D" x="3358" y="0"></use>
+<g transform="translate(4118,0)">
+<g transform="translate(397,0)">
+<rect stroke="none" width="1622" height="60" x="0" y="220"></rect>
+ <use xlink:href="#E1-GYREPAGELLAMAIN-31" x="560" y="676"></use>
+<g transform="translate(60,-727)">
+ <use xlink:href="#E1-GYREPAGELLAMAIN-7C" x="0" y="0"></use>
+<g transform="translate(208,0)">
+ <use xlink:href="#E1-GYREPAGELLANORMAL-1D436" x="0" y="0"></use>
+ <use transform="scale(0.707)" xlink:href="#E1-GYREPAGELLANORMAL-1D458" x="943" y="-247"></use>
+</g>
+ <use xlink:href="#E1-GYREPAGELLAMAIN-7C" x="1293" y="0"></use>
+</g>
+</g>
+</g>
+<g transform="translate(6425,0)">
+ <use xlink:href="#E1-GYREPAGELLASIZE1-2211" x="0" y="0"></use>
+<g transform="translate(286,-1323)">
+ <use transform="scale(0.707)" xlink:href="#E1-GYREPAGELLANORMAL-1D456" x="0" y="0"></use>
+ <use transform="scale(0.707)" xlink:href="#E1-GYREPAGELLAMAIN-2C" x="278" y="0"></use>
+<g transform="translate(374,0)">
+ <use transform="scale(0.707)" xlink:href="#E1-GYREPAGELLANORMAL-1D456" x="72" y="0"></use>
+ <use transform="scale(0.707)" xlink:href="#E1-GYREPAGELLAMAIN-302" x="423" y="266"></use>
+</g>
+</g>
+</g>
+<g transform="translate(7838,0)">
+ <use xlink:href="#E1-GYREPAGELLASIZE1-2211" x="0" y="0"></use>
+<g transform="translate(78,-1131)">
+ <use transform="scale(0.707)" xlink:href="#E1-GYREPAGELLANORMAL-1D457" x="0" y="0"></use>
+ <use transform="scale(0.707)" xlink:href="#E1-GYREPAGELLAMAIN-3D" x="278" y="0"></use>
+ <use transform="scale(0.707)" xlink:href="#E1-GYREPAGELLAMAIN-31" x="1039" y="0"></use>
+</g>
+ <use transform="scale(0.707)" xlink:href="#E1-GYREPAGELLANORMAL-1D45D" x="631" y="1808"></use>
+</g>
+ <use xlink:href="#E1-GYREPAGELLAMAIN-28" x="9085" y="0"></use>
+<g transform="translate(9509,0)">
+ <use xlink:href="#E1-GYREPAGELLANORMAL-1D465" x="0" y="0"></use>
+<g transform="translate(500,-150)">
+ <use transform="scale(0.707)" xlink:href="#E1-GYREPAGELLANORMAL-1D456" x="0" y="0"></use>
+ <use transform="scale(0.707)" xlink:href="#E1-GYREPAGELLANORMAL-1D457" x="278" y="0"></use>
+</g>
+</g>
+ <use xlink:href="#E1-GYREPAGELLAMAIN-2212" x="10726" y="0"></use>
+<g transform="translate(11708,0)">
+ <use xlink:href="#E1-GYREPAGELLANORMAL-1D465" x="0" y="0"></use>
+<g transform="translate(500,-294)">
+ <use transform="scale(0.707)" xlink:href="#E1-GYREPAGELLANORMAL-1D456" x="0" y="0"></use>
+ <use transform="scale(0.574)" xlink:href="#E1-GYREPAGELLANORMAL-1D456" x="343" y="440"></use>
+ <use transform="scale(0.707)" xlink:href="#E1-GYREPAGELLANORMAL-1D457" x="604" y="0"></use>
+</g>
+</g>
+<g transform="translate(12933,0)">
+ <use xlink:href="#E1-GYREPAGELLAMAIN-29" x="0" y="0"></use>
+ <use transform="scale(0.707)" xlink:href="#E1-GYREPAGELLAMAIN-32" x="600" y="583"></use>
+</g>
+</g>
+</svg></li>
+</ul>
+<h1 id="K-Means"><a href="#K-Means" class="headerlink" title="K-Means"></a><strong>K-Means</strong></h1><h2 id="K-means-Algorithm"><a href="#K-means-Algorithm" class="headerlink" title="K-means Algorithm"></a>K-means Algorithm</h2><ul>
+<li>Given a K, find a partition of K cluster</li>
+<li>Each cluster is represented by the center of the cluster and the algorithm converges to stable centers of clusters.</li>
+<li>the K-means algorithm is carried out in three steps:<br><img src="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20230303095557785.png" alt="image-20230303095557785"></li>
+</ul>
+<h2 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h2><p><img src="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20230303095421868.png" alt="image-20230303095421868"></p>
+<p><img src="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20230303095038636.png" alt="image-20230303095038636"></p>
+<p><img src="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20230303095058835.png" alt="image-20230303095058835"></p>
+<p><img src="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20230303095357240.png" alt="image-20230303095357240"></p>
+<p><img src="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20230303095344768.png" alt="image-20230303095344768"></p>
+<p><img src="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20230303095333733.png" alt="image-20230303095333733"></p>
+<p><img src="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20230303095510057.png" alt="image-20230303095510057"></p>
+<p><strong>Difference between kNN Classifier (k Nearest Neighbor) &amp; k-Means Clustering</strong></p>
+<p><img src="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20230303092358992.png" alt="image-20230303092358992"></p>
+<h2 id="Example-Code"><a href="#Example-Code" class="headerlink" title="Example Code"></a>Example Code</h2><h3 id="Load-the-Libraries"><a href="#Load-the-Libraries" class="headerlink" title="Load the Libraries"></a>Load the Libraries</h3><pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
+<span class="token keyword">from</span> sklearn <span class="token keyword">import</span> datasets
+<span class="token keyword">from</span> sklearn<span class="token punctuation">.</span>cluster <span class="token keyword">import</span> KMeans
+
+<span class="token keyword">import</span> matplotlib<span class="token punctuation">.</span>pyplot <span class="token keyword">as</span> plt
+<span class="token keyword">from</span> matplotlib <span class="token keyword">import</span> style
+style<span class="token punctuation">.</span>use<span class="token punctuation">(</span><span class="token string">"ggplot"</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true"># grammar of graphic</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="Read-Data-and-Show-the-Scatterplot"><a href="#Read-Data-and-Show-the-Scatterplot" class="headerlink" title="Read Data and Show the Scatterplot"></a>Read Data and Show the Scatterplot</h3><pre class="line-numbers language-python"><code class="language-python">X <span class="token operator">=</span> np<span class="token punctuation">.</span>array<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+            <span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+            <span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+            <span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span>X<span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>scatter<span class="token punctuation">(</span>X<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> X<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span> s<span class="token operator">=</span><span class="token number">10</span><span class="token punctuation">,</span> linewidth<span class="token operator">=</span><span class="token number">5</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><strong>Output:</strong></p>
+<pre><code>[[1 1]
+ [2 1]
+ [4 5]
+ [5 4]]
+</code></pre>
+<p><img src="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/download.png" alt="download"></p>
+<h3 id="Build-Clusters"><a href="#Build-Clusters" class="headerlink" title="Build Clusters"></a>Build Clusters</h3><pre class="line-numbers language-python"><code class="language-python">clf <span class="token operator">=</span> KMeans<span class="token punctuation">(</span>n_clusters<span class="token operator">=</span><span class="token number">2</span><span class="token punctuation">)</span>
+clf<span class="token punctuation">.</span>fit<span class="token punctuation">(</span>X<span class="token punctuation">)</span>
+
+centroids <span class="token operator">=</span> clf<span class="token punctuation">.</span>cluster_centers_
+labels <span class="token operator">=</span> clf<span class="token punctuation">.</span>labels_
+<span class="token keyword">print</span><span class="token punctuation">(</span>centroids<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"labels="</span><span class="token punctuation">,</span> labels<span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><strong>Output:</strong></p>
+<pre><code>[[1.5 1. ]
+ [4.5 4.5]]
+labels= [0 0 1 1]
+</code></pre>
+<h3 id="Plot-the-Clusters"><a href="#Plot-the-Clusters" class="headerlink" title="Plot the Clusters"></a>Plot the Clusters</h3><pre class="line-numbers language-python"><code class="language-python">colors <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">"g."</span><span class="token punctuation">,</span><span class="token string">"r."</span><span class="token punctuation">,</span><span class="token string">"c."</span><span class="token punctuation">,</span><span class="token string">"b."</span><span class="token punctuation">,</span><span class="token string">"k."</span><span class="token punctuation">,</span><span class="token string">"g."</span><span class="token punctuation">]</span>
+
+<span class="token keyword">for</span> i <span class="token keyword">in</span> range<span class="token punctuation">(</span>len<span class="token punctuation">(</span>X<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    plt<span class="token punctuation">.</span>plot<span class="token punctuation">(</span>X<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> X<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span> colors<span class="token punctuation">[</span>labels<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">,</span> markersize <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">)</span>
+    
+plt<span class="token punctuation">.</span>scatter<span class="token punctuation">(</span>centroids<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> centroids<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span> marker<span class="token operator">=</span><span class="token string">'x'</span><span class="token punctuation">,</span> s<span class="token operator">=</span><span class="token number">150</span><span class="token punctuation">,</span> linewidth<span class="token operator">=</span><span class="token number">5</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><img src="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/download%20(1).png" alt="download (1)"></p>
+<h2 id="Parameter-nstart"><a href="#Parameter-nstart" class="headerlink" title="Parameter: nstart"></a>Parameter: <code>nstart</code></h2><p>Clustering algorithm will give slightly different results if we start with different initial values</p>
+<p>The <code>kmeans</code> algorithm implemented in R has a parameter <code>nstart</code> which indicates multiple random initial assignments</p>
+<p>Suppose <code>nstart</code> = n</p>
+<ul>
+<li>Algorithm builds ‘n’ clusters and only the best cluster is reported</li>
+<li>Best cluster is the one which has minimum within-<br>cluster-variation</li>
+</ul>
+<p><strong>Disadvantage of K-means clustering</strong> </p>
+<ul>
+<li>You have specify the number of clusters</li>
+</ul>
+<h1 id="Hierarchical-Clustering"><a href="#Hierarchical-Clustering" class="headerlink" title="Hierarchical Clustering"></a>Hierarchical Clustering</h1><p>Hierarchical clustering solves this problem – no specification of number of clusters</p>
+<p>Hierarchical structure also creates a hierarchical structure of data called <strong>Dendrogram</strong></p>
+<h2 id="Strategy-to-build-Hierarchical-Clustering"><a href="#Strategy-to-build-Hierarchical-Clustering" class="headerlink" title="Strategy to build Hierarchical Clustering"></a>Strategy to build Hierarchical Clustering</h2><p>Bottom-up approach</p>
+<ul>
+<li>Agglomerative clustering</li>
+</ul>
+<p>Compute the Euclidean distance between data points</p>
+<ul>
+<li>Shortest distance observations should be in a<br>single cluster</li>
+<li>Next we compute the distance between cluster<br>that we have created and the next point closets to<br>it</li>
+<li>Include that point in that cluster</li>
+</ul>
+<h2 id="Hierarchical-Clustering-Algorithm"><a href="#Hierarchical-Clustering-Algorithm" class="headerlink" title="Hierarchical Clustering Algorithm"></a>Hierarchical Clustering Algorithm</h2><p><img src="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20230303111410608.png" alt="image-20230303111410608"></p>
+<h2 id="Example-code"><a href="#Example-code" class="headerlink" title="Example code"></a>Example code</h2><p><a target="_blank" rel="noopener" href="https://uciunex.instructure.com/courses/16600/files/2324830?wrap=1">Mall_Customers.csv</a></p>
+<h3 id="Load-the-Libraries-1"><a href="#Load-the-Libraries-1" class="headerlink" title="Load the Libraries"></a>Load the Libraries</h3><pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
+<span class="token keyword">import</span> pandas <span class="token keyword">as</span> pd
+<span class="token keyword">import</span> matplotlib<span class="token punctuation">.</span>pyplot <span class="token keyword">as</span> plt
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<h3 id="Read-Data"><a href="#Read-Data" class="headerlink" title="Read Data"></a>Read Data</h3><pre class="line-numbers language-python"><code class="language-python"><span class="token triple-quoted-string string">'''
+Since we are performing clustering
+we only need X variable
+
+Clustering is a unsupervised method, 
+that's why we do NOT need the response variable or the 'y' variable
+'''</span>
+dataset <span class="token operator">=</span> pd<span class="token punctuation">.</span>read_csv<span class="token punctuation">(</span><span class="token string">"Mall_Customers.csv"</span><span class="token punctuation">)</span>
+X <span class="token operator">=</span> dataset<span class="token punctuation">.</span>iloc<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">,</span><span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">.</span>values
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="Plot-the-Dendrogram"><a href="#Plot-the-Dendrogram" class="headerlink" title="Plot the Dendrogram"></a>Plot the Dendrogram</h3><pre class="line-numbers language-python"><code class="language-python"><span class="token triple-quoted-string string">'''
+Plot the dendrogram
+The plot will determine how many clusters we should need
+'''</span>
+<span class="token keyword">import</span> scipy<span class="token punctuation">.</span>cluster<span class="token punctuation">.</span>hierarchy <span class="token keyword">as</span> sch
+
+dendrogram <span class="token operator">=</span> sch<span class="token punctuation">.</span>dendrogram<span class="token punctuation">(</span>sch<span class="token punctuation">.</span>linkage<span class="token punctuation">(</span>X<span class="token punctuation">,</span>method<span class="token operator">=</span><span class="token string">'ward'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>title<span class="token punctuation">(</span><span class="token string">'Dendrogram'</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>xlabel<span class="token punctuation">(</span><span class="token string">'Customers'</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>ylabel<span class="token punctuation">(</span><span class="token string">'Eucledian Distance'</span><span class="token punctuation">)</span>
+
+plt<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><img src="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/download3.png" alt="download3"></p>
+<pre class="line-numbers language-python"><code class="language-python"><span class="token triple-quoted-string string">'''
+We can have 3 clusters as standard
+Or we can have 5 clusters
+Find the longest line which is not crossed by horizontal line
+
+This shows total number of clusters = 5
+'''</span>
+ 
+<span class="token keyword">from</span> sklearn<span class="token punctuation">.</span>cluster <span class="token keyword">import</span> AgglomerativeClustering
+hc <span class="token operator">=</span> AgglomerativeClustering<span class="token punctuation">(</span>n_clusters<span class="token operator">=</span><span class="token number">5</span><span class="token punctuation">,</span> affinity<span class="token operator">=</span><span class="token string">'euclidean'</span><span class="token punctuation">,</span>linkage<span class="token operator">=</span><span class="token string">'average'</span><span class="token punctuation">)</span>
+
+y_hc <span class="token operator">=</span> hc<span class="token punctuation">.</span>fit_predict<span class="token punctuation">(</span>X<span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-python"><code class="language-python">plt<span class="token punctuation">.</span>scatter<span class="token punctuation">(</span>X<span class="token punctuation">[</span>y_hc<span class="token operator">==</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span>X<span class="token punctuation">[</span>y_hc<span class="token operator">==</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span>s<span class="token operator">=</span><span class="token number">50</span><span class="token punctuation">,</span>c<span class="token operator">=</span><span class="token string">'red'</span><span class="token punctuation">,</span>label<span class="token operator">=</span><span class="token string">'Cluster1'</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>scatter<span class="token punctuation">(</span>X<span class="token punctuation">[</span>y_hc<span class="token operator">==</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span>X<span class="token punctuation">[</span>y_hc<span class="token operator">==</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span>s<span class="token operator">=</span><span class="token number">50</span><span class="token punctuation">,</span>c<span class="token operator">=</span><span class="token string">'blue'</span><span class="token punctuation">,</span>label<span class="token operator">=</span><span class="token string">'Cluster2'</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>scatter<span class="token punctuation">(</span>X<span class="token punctuation">[</span>y_hc<span class="token operator">==</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span>X<span class="token punctuation">[</span>y_hc<span class="token operator">==</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span>s<span class="token operator">=</span><span class="token number">50</span><span class="token punctuation">,</span>c<span class="token operator">=</span><span class="token string">'green'</span><span class="token punctuation">,</span>label<span class="token operator">=</span><span class="token string">'Cluster3'</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>scatter<span class="token punctuation">(</span>X<span class="token punctuation">[</span>y_hc<span class="token operator">==</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span>X<span class="token punctuation">[</span>y_hc<span class="token operator">==</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span>s<span class="token operator">=</span><span class="token number">50</span><span class="token punctuation">,</span>c<span class="token operator">=</span><span class="token string">'cyan'</span><span class="token punctuation">,</span>label<span class="token operator">=</span><span class="token string">'Cluster4'</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>scatter<span class="token punctuation">(</span>X<span class="token punctuation">[</span>y_hc<span class="token operator">==</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span>X<span class="token punctuation">[</span>y_hc<span class="token operator">==</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span>s<span class="token operator">=</span><span class="token number">50</span><span class="token punctuation">,</span>c<span class="token operator">=</span><span class="token string">'magenta'</span><span class="token punctuation">,</span>label<span class="token operator">=</span><span class="token string">'Cluster5'</span><span class="token punctuation">)</span>
+
+plt<span class="token punctuation">.</span>title<span class="token punctuation">(</span><span class="token string">'Cluster of the Customers'</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>xlabel<span class="token punctuation">(</span><span class="token string">'Annual Income (K$)'</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>ylabel<span class="token punctuation">(</span><span class="token string">'Spending Score (1-100)'</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>legend<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><img src="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/download4.png" alt="download4"></p>
+
+</div>
+
+
+<div class="about">
+    
+    <p class="tags">
+        
+        <i class="icon"></i>
+        <a href="/tags/DSBA/" class="tag"># DSBA</a><a href="/tags/Data-Mining/" class="tag"># Data Mining</a>
+    </p>
+    
+</div>
+
+
+<div class="container post-prev-next">
+    
+    <a href="../Immediate-to-Python-4-Understanding-Namespace-and-Scope/" class="next">
+        <div>
+            <div class="text">
+                <p class="label">Next</p>
+                <h3 class="title">Understanding Namespace and Scope</h3>
+            </div>
+        </div>
+    </a>
+    
+    
+    <a href="../Immediate-to-Python-3-Iterators-and-Generators/" class="prev">
+        <div>
+            <div class="text">
+                <p class="label">Previous</p>
+                <h3 class="title">Iterators and Generators</>
+            </div>
+        </div>
+    </a>
+    
+</div>
+
+
+    
+    
+
+    
+</article>          
+    
+  
+
+        <footer>
+    <div class="inner">
+        <div class="links">
+            
+            <div class="group">
+                <h4 class="title">Blog</h4>
+                
+                <a href="/" class="item">Home</a>
+                
+                <a href="/archives" class="item">Archives</a>
+                
+                <a href="/tags" class="item">Tags</a>
+                
+                <a href="/categories" class="item">Categories</a>
+                
+            </div>
+            
+            <div class="group">
+                <h4 class="title">Projects</h4>
+                
+                <a href="/projects" class="item">Intro</a>
+                
+            </div>
+            
+            <div class="group">
+                <h4 class="title">Me</h4>
+                
+                <a target="_blank" rel="noopener" href="https://github.com/Jiayi-Zeng" class="item">GitHub</a>
+                
+                <a href="mailto:joyce.j.zeng@outlook.com" class="item">Email</a>
+                
+                <a href="tencent://message/?Menu=yes&uin=1021987388" class="item">QQ</a>
+                
+                <a target="_blank" rel="noopener" href="https://www.instagram.com/iam_joycezeng/" class="item">Instagram</a>
+                
+                <a target="_blank" rel="noopener" href="https://www.linkedin.com/in/jiayi-zeng-joyce/" class="item">LinkedIn</a>
+                
+            </div>
+            
+        </div>
+        <span>&copy; 2023 Joyce Zeng<br>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> </span>
+        
+        
+            <br>
+            <div class="color-scheme-toggle" role="radiogroup" id="theme-color-scheme-toggle">
+                <label>
+                    <input type="radio" value="light">
+                    <span>Light</span>
+                </label>
+                <label>
+                    <input type="radio" value="dark">
+                    <span>Dark</span>
+                </label>
+                <label>
+                    <input type="radio" value="auto">
+                    <span>Auto</span>
+                </label>
+            </div>
+        
+    </div>
+</footer>
+
+
+        
+<script src="../../../js/main.js"></script>
+
+        
+        
+        
+
+        
+    </body>
+</html>

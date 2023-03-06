@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head prefix="og: https://ogp.me/ns#">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+  <meta name="color-scheme" content="light dark">
+
+  
+<link rel="stylesheet" href="../../css/prism.css">
+ 
+    
+<script src="../js/prism.js"></script>
+
+  
+  <title>Iterators and Generators - Joooyce | Zeng</title>
+  
+    <link rel="shortcut icon" href="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/1f41f.png">
+  
+  
+    <link rel='manifest' href='/manifest.json'>
+  
+
+  
+  
+  
+  <meta property="og:title" content="Iterators and Generators - Joooyce | Zeng" />
+  
+  <meta property="og:type" content="article" />
+  
+  <meta property="og:url" content="https://jiayi-zeng.github.io/docs/Immediate-to-Python-3-Iterators-and-Generators/index.html" />
+  
+  <meta property="og:image" content="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/20230225%20(1).png" />
+  
+  <meta property="og:article:published_time" content="2023-02-27T08:00:00.000Z" />
+  
+  <meta property="og:article:author" content="Joyce Zeng" />
+  
+  
+
+  
+<link rel="stylesheet" href="../../css/var.css">
+
+  
+<link rel="stylesheet" href="../../css/main.css">
+
+  
+<link rel="stylesheet" href="../../css/typography.css">
+
+  
+<link rel="stylesheet" href="../../css/code-highlighting.css">
+
+  
+<link rel="stylesheet" href="../../css/components.css">
+
+  
+<link rel="stylesheet" href="../../css/nav.css">
+
+  
+<link rel="stylesheet" href="../../css/paginator.css">
+
+  
+<link rel="stylesheet" href="../../css/footer.css">
+
+  
+<link rel="stylesheet" href="../../css/post-list.css">
+
+  
+  
+<link rel="stylesheet" href="../../css/rainbow-banner.css">
+
+  
+  
+  
+<link rel="stylesheet" href="../../css/toc.css">
+
+  
+  
+  
+  
+  
+<link rel="stylesheet" href="../../css/post.css">
+
+  
+  
+  
+  
+  
+
+  
+<meta name="generator" content="Hexo 6.3.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+    
+<link rel="stylesheet" href="../../css/prism.css">
+ 
+    
+<script src="../js/prism.js"></script>
+
+    <body
+        data-color-scheme="auto"
+        data-uppercase-categories="true"
+        
+        data-rainbow-banner="true"
+        data-rainbow-banner-shown="auto"
+        data-rainbow-banner-month="6"
+        data-rainbow-banner-colors="#e50000,#ff8d00,#ffee00,#008121,#004cff,#760188"
+        
+        data-config-root="/"
+        
+        data-toc="true"
+        data-toc-max-depth="2"
+        
+        
+    >
+        <nav id="theme-nav">
+    <div class="inner">
+        <a class="title" href="/">Jiayi Zeng</a>
+        <div class="nav-arrow"></div>
+        <div class="nav-items">
+            <a class="nav-item nav-item-home" href="/">Home</a>
+            
+            
+            <a class="nav-item" href="../../archives">Archives</a>
+            
+            
+            
+            <a class="nav-item" href="../../tags">Tags</a>
+            
+            
+            
+            <a class="nav-item" href="../../categories">Categories</a>
+            
+            
+            
+            <a class="nav-item" href="../../projects">Projects</a>
+            
+            
+            
+            <a class="nav-item" href="../../about">About</a>
+            
+            
+            
+            <a class="nav-item nav-item-github nav-item-icon" href="https://github.com/Jiayi-Zeng" target="_blank">&nbsp;</a>
+            
+            
+            
+            <a class="nav-item nav-item-search nav-item-icon" href="../../search" target="_blank">&nbsp;</a>
+            
+            
+        </div>
+    </div>
+</nav>
+        
+
+<link rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css">
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+    <script src="//lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js"> </script>
+<article class="post">
+
+<script src="../js/fancybox.js"></script>
+  
+
+<div class="meta">
+    
+    <div class="categories text-uppercase">
+    
+        <a href="/categories/Immediate-to-Python/">Immediate to Python</a>
+    
+    </div>
+    
+
+    
+    <div class="date" id="date">
+        <span>February</span>
+        <span>27,</span>
+        <span>2023</span>
+    </div>
+    
+
+    <h2 class="title">Iterators and Generators</h2>
+
+</div>
+
+<div class="divider"></div>
+
+<div class="content">
+    <h1 id="Iterators"><a href="#Iterators" class="headerlink" title="Iterators"></a><strong>Iterators</strong></h1><h2 id="Another-look-at-range"><a href="#Another-look-at-range" class="headerlink" title="Another look at range()"></a>Another look at <code>range()</code></h2><p>The <code>range()</code> function returns an iterator that will iterate through the values that we specify when we call <code>range()</code>.</p>
+<p>The iterator only calculates and yields one value at a time.  It does not calculate or store those numbers in memory up front, it calculates them only when they are needed, one at a time.</p>
+<pre class="line-numbers language-python"><code class="language-python">my_range <span class="token operator">=</span> range<span class="token punctuation">(</span><span class="token number">11</span><span class="token punctuation">,</span> <span class="token number">23</span><span class="token punctuation">)</span>
+<span class="token keyword">for</span> x <span class="token keyword">in</span> my_range<span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<h2 id="File-Object-Are-Also-Iterators"><a href="#File-Object-Are-Also-Iterators" class="headerlink" title="File Object Are Also Iterators"></a>File Object Are Also Iterators</h2><p>You may have remembered from the prerequisite course how we opened files and iterated through the lines one at a time. The main takeaway is that each line is read in (iterated through) one at a time.  The entire file is not read up-front, each line is read into this notebook one at a time, as needed.</p>
+<pre class="line-numbers language-python"><code class="language-python">filepath <span class="token operator">=</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>join<span class="token punctuation">(</span>os<span class="token punctuation">.</span>getcwd<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">'AAA_Fuel_Prices.csv'</span><span class="token punctuation">)</span>
+count <span class="token operator">=</span> <span class="token number">0</span>
+<span class="token keyword">with</span> open<span class="token punctuation">(</span>filepath<span class="token punctuation">,</span> <span class="token string">'r'</span><span class="token punctuation">)</span> <span class="token keyword">as</span> my_file<span class="token punctuation">:</span>
+    <span class="token keyword">for</span> line <span class="token keyword">in</span> my_file<span class="token punctuation">:</span>
+        line <span class="token operator">=</span> line<span class="token punctuation">.</span>strip<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span>line<span class="token punctuation">)</span>
+        count <span class="token operator">+=</span> <span class="token number">1</span>
+        <span class="token keyword">if</span> count <span class="token operator">></span> <span class="token number">10</span><span class="token punctuation">:</span>
+            <span class="token keyword">break</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="Iterators-Can-Also-Be-Made-From-Lists-as-well-as-other-data-types"><a href="#Iterators-Can-Also-Be-Made-From-Lists-as-well-as-other-data-types" class="headerlink" title="Iterators Can Also Be Made From Lists (as well as other data types)"></a>Iterators Can Also Be Made From Lists (as well as other data types)</h2><p>Iterators can also be made out of lists. This is what happens when we use a list in a for loop.</p>
+<pre class="line-numbers language-python"><code class="language-python">my_list <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">]</span>
+<span class="token keyword">for</span> x <span class="token keyword">in</span> my_list<span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-python"><code class="language-python">my_list_iterator <span class="token operator">=</span> iter<span class="token punctuation">(</span>my_list<span class="token punctuation">)</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span>type<span class="token punctuation">(</span>my_list_iterator<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>my_list_iterator<span class="token punctuation">.</span>__next__<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>my_list_iterator<span class="token punctuation">.</span>__next__<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>my_list_iterator<span class="token punctuation">.</span>__next__<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h1 id="Generators"><a href="#Generators" class="headerlink" title="Generators"></a><strong>Generators</strong></h1><p>You may wonder how can we write functions, like <code>range()</code>, that return iterators that we can iterate through. We can!  In order to do so, we must use the keyword <code>yield</code> instead of <code>return</code>.</p>
+<h2 id="Our-Own-Version-Of-Range"><a href="#Our-Own-Version-Of-Range" class="headerlink" title="Our Own Version Of Range"></a>Our Own Version Of Range</h2><p>Let’s write our own version of the <code>range()</code> function.  We need to write a function the will yield numbers between a beginning and ending number. Note that when the function reaches the yield keyword, it will return that value (in this case, the value of <code>i</code>) and it will cease execution until it is asked for the next value. </p>
+<pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">my_range</span><span class="token punctuation">(</span>beg<span class="token punctuation">,</span> end<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token string">"Generate numbers from start to stop"</span>
+    i <span class="token operator">=</span> beg
+    <span class="token keyword">while</span> i <span class="token operator">&lt;</span> end<span class="token punctuation">:</span>
+        <span class="token keyword">yield</span> i
+        i <span class="token operator">+=</span> <span class="token number">1</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-python"><code class="language-python"><span class="token comment" spellcheck="true"># Let's call the function to return a generator that we can iterate through. </span>
+range_of_nums <span class="token operator">=</span> my_range<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">)</span>
+
+<span class="token comment" spellcheck="true"># Now, let's call the __next__() method to get each value is the it is </span>
+<span class="token comment" spellcheck="true"># "yielded" by the generator</span>
+
+<span class="token comment" spellcheck="true"># This executes the code in the generator until it hits the yield statement.  It then stops until __next__() is called again.</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>range_of_nums<span class="token punctuation">.</span>__next__<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>range_of_nums<span class="token punctuation">.</span>__next__<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>range_of_nums<span class="token punctuation">.</span>__next__<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><strong>output:</strong></p>
+<pre><code>0
+1
+2
+</code></pre>
+<p>We do not usually use the <code>__next__()</code> method directly. We are usually looping over the iterator, or passing the iterator to another iterative process (in these case,<code>__next__()</code> is still used “under the hood”, but we are not using it directly as programmers). Below, we simple use <code>range_of_nums</code> in a loop, we also use the <code>my_range()</code> function directly in a for loop, just like you would use <code>range()</code>.</p>
+<pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">for</span> num <span class="token keyword">in</span> my_range<span class="token punctuation">(</span><span class="token number">30</span><span class="token punctuation">,</span> <span class="token number">33</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>num<span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<h2 id="A-Fibonacci-Series-Generator"><a href="#A-Fibonacci-Series-Generator" class="headerlink" title="A Fibonacci Series Generator."></a><strong>A Fibonacci Series Generator.</strong></h2><p>A Fibonacci Series is a series of numbers in which the next number is the sum of the two preceding numbers.  If we start with 0 and 1, then the series is 0, 1, 1, 2, 3, 5, 8, 13, etc.  This is a fun series that is often used in computer science lessons. Let’s code a function that will return a generator that iterates through the Fibonacci Series (starting with 0 and 1).</p>
+<pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">fibonacci_series</span><span class="token punctuation">(</span>N<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token triple-quoted-string string">"""Generate the Fibonacci series starting at 0 and 1"""</span>
+    <span class="token comment" spellcheck="true"># We start by seeding 0 and 1 as the first two numbers</span>
+    i_prev <span class="token operator">=</span> <span class="token number">0</span>
+    i <span class="token operator">=</span> <span class="token number">1</span>
+    <span class="token keyword">yield</span> i_prev  <span class="token comment" spellcheck="true"># we yield 0 first</span>
+    <span class="token comment" spellcheck="true"># now in the following loop, we yield "i" and then calculate i_next by</span>
+    <span class="token comment" spellcheck="true"># summing the two previous</span>
+    <span class="token keyword">for</span> _ <span class="token keyword">in</span> range<span class="token punctuation">(</span>N<span class="token number">-1</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">yield</span> i 
+        i<span class="token punctuation">,</span> i_prev <span class="token operator">=</span> i <span class="token operator">+</span> i_prev<span class="token punctuation">,</span> i
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-python"><code class="language-python">f_s <span class="token operator">=</span> fibonacci_series<span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span>
+<span class="token keyword">for</span> x <span class="token keyword">in</span> f_s<span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p><strong>Iterators Can Only Be Iterated Over Once</strong></p>
+<p>Once we create an iterator, it can only be iterated over once.  For example, in the above cell we looped over the entirety of <code>f_s</code>.  Below, we try to loop over it again, but nothing prints. This is because we have already looped over the iterator to its end.  If we need to iterate again, we will have to create a new iterator.</p>
+<h2 id="File-Word-Counts"><a href="#File-Word-Counts" class="headerlink" title="File Word Counts"></a>File Word Counts</h2><p>Another example, which will become more meaningful if you take the course Python Data Structures, Data Mining and Big Data, is producing a word counts from a file, line by line.</p>
+<p>Let’s write a function that will generate word counts, from a file, line by line.</p>
+<pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">file_word_count</span><span class="token punctuation">(</span>filepath<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token triple-quoted-string string">"""Generate word counts from ta file, line by line"""</span>
+    <span class="token comment" spellcheck="true"># First, open the file</span>
+    <span class="token keyword">with</span> open<span class="token punctuation">(</span>filepath<span class="token punctuation">,</span> <span class="token string">'r'</span><span class="token punctuation">)</span> <span class="token keyword">as</span> my_file<span class="token punctuation">:</span>
+        <span class="token comment" spellcheck="true"># Loop through the lines</span>
+        <span class="token keyword">for</span> line <span class="token keyword">in</span> my_file<span class="token punctuation">:</span>
+            line <span class="token operator">=</span> line<span class="token punctuation">.</span>strip<span class="token punctuation">(</span><span class="token punctuation">)</span>  <span class="token comment" spellcheck="true"># strip whitespace from the line</span>
+            words <span class="token operator">=</span> line<span class="token punctuation">.</span>split<span class="token punctuation">(</span><span class="token punctuation">)</span>  <span class="token comment" spellcheck="true"># split the line into words</span>
+            <span class="token comment" spellcheck="true"># create a dictionary that we will store the word counts in</span>
+            word_count_dict <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+            <span class="token comment" spellcheck="true"># loop through the words in the line and tally them in the</span>
+            <span class="token comment" spellcheck="true"># dictionary</span>
+            <span class="token keyword">for</span> word <span class="token keyword">in</span> words<span class="token punctuation">:</span>
+                <span class="token keyword">if</span> word <span class="token keyword">in</span> word_count_dict<span class="token punctuation">:</span>
+                    word_count_dict<span class="token punctuation">[</span>word<span class="token punctuation">]</span> <span class="token operator">+=</span> <span class="token number">1</span>
+                <span class="token keyword">else</span><span class="token punctuation">:</span>
+                    word_count_dict<span class="token punctuation">[</span>word<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">1</span>
+            <span class="token comment" spellcheck="true"># now loop through the dictionary and yield up the word counts </span>
+            <span class="token keyword">for</span> word <span class="token keyword">in</span> word_count_dict<span class="token punctuation">:</span>
+                <span class="token keyword">yield</span> word<span class="token punctuation">,</span> word_count_dict<span class="token punctuation">[</span>word<span class="token punctuation">]</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-python"><code class="language-python">aesopa10_path <span class="token operator">=</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>join<span class="token punctuation">(</span>os<span class="token punctuation">.</span>getcwd<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">'aesopa10.txt'</span><span class="token punctuation">)</span>
+counter <span class="token operator">=</span> <span class="token number">0</span>
+<span class="token keyword">for</span> word<span class="token punctuation">,</span> count <span class="token keyword">in</span> file_word_count<span class="token punctuation">(</span>aesopa10_path<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>word<span class="token punctuation">,</span> count<span class="token punctuation">)</span>
+    counter <span class="token operator">+=</span> <span class="token number">1</span>
+    <span class="token keyword">if</span> counter <span class="token operator">></span> <span class="token number">2000</span><span class="token punctuation">:</span>
+        <span class="token keyword">break</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h1 id="Enumerate-and-Zip"><a href="#Enumerate-and-Zip" class="headerlink" title="Enumerate and Zip"></a><strong>Enumerate and Zip</strong></h1><h2 id="Enumerate"><a href="#Enumerate" class="headerlink" title="Enumerate"></a>Enumerate</h2><p>Enumerate takes in an iterable object (like a list, tuple, or some other iterator) and outputs tuples that are enumerated. The first element in the tuple is the number and the second is the value from the original iterable object.</p>
+<pre class="line-numbers language-python"><code class="language-python">my_list <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'a'</span><span class="token punctuation">,</span> <span class="token string">'b'</span><span class="token punctuation">,</span> <span class="token string">'c'</span><span class="token punctuation">]</span>
+
+<span class="token keyword">for</span> item <span class="token keyword">in</span> enumerate<span class="token punctuation">(</span>my_list<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>item<span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<pre><code>(0, 'a')
+(1, 'b')
+(2, 'c')
+</code></pre>
+<h2 id="Zip"><a href="#Zip" class="headerlink" title="Zip"></a>Zip</h2><p>Zip will take multiple iterable objects as inputs and output tuples that contain items from each iterable, in order. That is the first tuple will contain the first item from each iterable, the second tuple will contain the second items, etc…</p>
+<pre class="line-numbers language-python"><code class="language-python">tuple_1 <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token number">2012</span><span class="token punctuation">,</span> <span class="token number">2012</span><span class="token punctuation">,</span> <span class="token number">2012</span><span class="token punctuation">)</span>
+tuple_2 <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token string">'01'</span><span class="token punctuation">,</span> <span class="token string">'02'</span><span class="token punctuation">,</span> <span class="token string">'03'</span><span class="token punctuation">)</span>
+
+new_list <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+<span class="token keyword">for</span> val1<span class="token punctuation">,</span> val2 <span class="token keyword">in</span> zip<span class="token punctuation">(</span>tuple_1<span class="token punctuation">,</span> tuple_2<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>val1<span class="token punctuation">,</span> val2<span class="token punctuation">)</span>
+    new_list<span class="token punctuation">.</span>append<span class="token punctuation">(</span>str<span class="token punctuation">(</span>val1<span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">'_'</span> <span class="token operator">+</span> val2<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>new_list<span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre><code>2012 01
+2012 02
+2012 03
+['2012_01', '2012_02', '2012_03']
+</code></pre>
+<pre class="line-numbers language-py"><code class="language-py">for x in zip(tuple_1, tuple_2):
+    print(x)
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<pre><code>(2012, '01')
+(2012, '02')
+(2012, '03')
+</code></pre>
+
+</div>
+
+
+<div class="about">
+    
+    <p class="tags">
+        
+        <i class="icon"></i>
+        <a href="/tags/Python/" class="tag"># Python</a>
+    </p>
+    
+</div>
+
+
+<div class="container post-prev-next">
+    
+    <a href="../Predicted-Analytics-8-Clustering/" class="next">
+        <div>
+            <div class="text">
+                <p class="label">Next</p>
+                <h3 class="title">10 Clustering</h3>
+            </div>
+        </div>
+    </a>
+    
+    
+    <a href="../Immediate-to-Python-2-Functions-Positional-and-Keyword-Arguments/" class="prev">
+        <div>
+            <div class="text">
+                <p class="label">Previous</p>
+                <h3 class="title">Functions Positional and Keyword Arguments</>
+            </div>
+        </div>
+    </a>
+    
+</div>
+
+
+    
+    
+
+    
+</article>          
+    
+  
+
+        <footer>
+    <div class="inner">
+        <div class="links">
+            
+            <div class="group">
+                <h4 class="title">Blog</h4>
+                
+                <a href="/" class="item">Home</a>
+                
+                <a href="/archives" class="item">Archives</a>
+                
+                <a href="/tags" class="item">Tags</a>
+                
+                <a href="/categories" class="item">Categories</a>
+                
+            </div>
+            
+            <div class="group">
+                <h4 class="title">Projects</h4>
+                
+                <a href="/projects" class="item">Intro</a>
+                
+            </div>
+            
+            <div class="group">
+                <h4 class="title">Me</h4>
+                
+                <a target="_blank" rel="noopener" href="https://github.com/Jiayi-Zeng" class="item">GitHub</a>
+                
+                <a href="mailto:joyce.j.zeng@outlook.com" class="item">Email</a>
+                
+                <a href="tencent://message/?Menu=yes&uin=1021987388" class="item">QQ</a>
+                
+                <a target="_blank" rel="noopener" href="https://www.instagram.com/iam_joycezeng/" class="item">Instagram</a>
+                
+                <a target="_blank" rel="noopener" href="https://www.linkedin.com/in/jiayi-zeng-joyce/" class="item">LinkedIn</a>
+                
+            </div>
+            
+        </div>
+        <span>&copy; 2023 Joyce Zeng<br>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> </span>
+        
+        
+            <br>
+            <div class="color-scheme-toggle" role="radiogroup" id="theme-color-scheme-toggle">
+                <label>
+                    <input type="radio" value="light">
+                    <span>Light</span>
+                </label>
+                <label>
+                    <input type="radio" value="dark">
+                    <span>Dark</span>
+                </label>
+                <label>
+                    <input type="radio" value="auto">
+                    <span>Auto</span>
+                </label>
+            </div>
+        
+    </div>
+</footer>
+
+
+        
+<script src="../../../js/main.js"></script>
+
+        
+        
+        
+
+        
+    </body>
+</html>
