@@ -186,7 +186,138 @@
 <div class="divider"></div>
 
 <div class="content">
-    
+    <h1 id="Namespaces"><a href="#Namespaces" class="headerlink" title="Namespaces"></a><strong>Namespaces</strong></h1><h2 id="The-Global-Namespace"><a href="#The-Global-Namespace" class="headerlink" title="The Global Namespace"></a>The Global Namespace</h2><p>t is a collection of names that map to objects (variables, functions, etc…) that have been created in our code. Anytime we run a python script (or a jupyter notebook), a global namespace is created. We can print the names that are in the global namespace with the <code>dir()</code> function.</p>
+<pre class="line-numbers language-python"><code class="language-python"><span class="token comment" spellcheck="true"># use the dir() function to return the list of names in the namespace and use print() to print that list.</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>dir<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p><strong>output:</strong></p>
+<pre><code>['In', 'Out', '_', '__', '___', '__builtin__', '__builtins__', '__doc__', '__loader__', '__name__', '__package__', '__spec__', '__vsc_ipynb_file__', '_dh', '_i', '_i1', '_ih', '_ii', '_iii', '_oh', 'exit', 'get_ipython', 'quit']
+</code></pre>
+<p><strong>Adding our own names to the global namespace</strong></p>
+<p>We can add our own names very easily, all we need to do is create a new object.  Everything in python is an object, so if we create a variable or a function or a instance of a class, it will be added to the global namespace. </p>
+<pre class="line-numbers language-python"><code class="language-python">my_var <span class="token operator">=</span> <span class="token string">"Will"</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>dir<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p><strong>output:</strong></p>
+<pre><code>['In', 'Out', '_', '__', '___', '__builtin__', '__builtins__', '__doc__', '__loader__', '__name__', '__package__', '__spec__', '_dh', '_i', '_i1', '_i2', '_ih', '_ii', '_iii', '_oh', 'exit', 'get_ipython', 'my_var', 'quit']
+</code></pre>
+<p><strong>Names in a namespace are unique - you can not have duplicates</strong></p>
+<p>If we assign the variable name <code>my_var</code> another value, we will not be able to use <code>my_var</code> to access the previous value. In other words, you can not have two variables named <code>my_var</code> in the same namespace. You can not have two objects with the same name in the same namespace. </p>
+<p><strong>Let’s now create a function and see that added to the global namespace</strong></p>
+<pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">reverse_string</span><span class="token punctuation">(</span>string<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token triple-quoted-string string">'''Return the reverse of a string
+    '''</span>
+    reverse_string <span class="token operator">=</span> string<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span>
+    <span class="token keyword">return</span> reverse_string
+
+<span class="token keyword">print</span><span class="token punctuation">(</span>dir<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><strong>output:</strong> </p>
+<pre><code>['In', 'Out', '_', '__', '___', '__builtin__', '__builtins__', '__doc__', '__loader__', '__name__', '__package__', '__spec__', '_dh', '_i', '_i1', '_i2', '_i3', '_ih', '_ii', '_iii', '_oh', 'exit', 'get_ipython', 'my_var', 'quit', 'reverse_string']
+</code></pre>
+<pre class="line-numbers language-python"><code class="language-python">my_string <span class="token operator">=</span> <span class="token string">'Hello'</span>
+my_string_reversed <span class="token operator">=</span> reverse_string<span class="token punctuation">(</span>my_string<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>my_string_reversed<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>dir<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<p><strong>output:</strong></p>
+<pre><code>olleH
+['In', 'Out', '_', '__', '___', '__builtin__', '__builtins__', '__doc__', '__loader__', '__name__', '__package__', '__spec__', '_dh', '_i', '_i1', '_i2', '_i3', '_i4', '_i5', '_ih', '_ii', '_iii', '_oh', 'exit', 'get_ipython', 'my_string', 'my_string_reversed', 'my_var', 'quit', 'reverse_string']
+</code></pre>
+<p><strong>Let’s import a package and see that added to our namespace</strong></p>
+<pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">import</span> pandas
+<span class="token keyword">print</span><span class="token punctuation">(</span>dir<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p><strong>output:</strong></p>
+<pre><code>['In', 'Out', '_', '__', '___', '__builtin__', '__builtins__', '__doc__', '__loader__', '__name__', '__package__', '__spec__', '_dh', '_i', '_i1', '_i2', '_i3', '_i4', '_i5', '_i6', '_i7', '_ih', '_ii', '_iii', '_oh', 'exit', 'get_ipython', 'my_string', 'my_string_reversed', 'my_var', 'pandas', 'quit', 'reverse_string']
+</code></pre>
+<p><strong>Each package/module also has its own global namespace.</strong></p>
+<p>This is important to understand. Each python module (a module is simply a .py file that contains functions, classes, and variables) has their own global namespace.</p>
+<h2 id="The-Local-Namespaces"><a href="#The-Local-Namespaces" class="headerlink" title="The Local Namespaces"></a>The <strong>Local Namespaces</strong></h2><p>A local namespace and a global namespace can exist at the same time.</p>
+<p>The code works because any variable created inside the function is not created in the global namespace, but it is created in what’s called a <em><strong>*local namespace*</strong></em>. This namespace is local to the function (each function has its own local namespace).</p>
+<pre class="line-numbers language-python"><code class="language-python">my_text <span class="token operator">=</span> <span class="token string">"I am outside the function and in the notebook's GLOBAL namespace!"</span>
+
+<span class="token keyword">def</span> <span class="token function">my_func</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    my_text <span class="token operator">=</span> <span class="token string">"I am inside the function and in the function's LOCAL namespace!"</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>my_text<span class="token punctuation">)</span>
+    <span class="token keyword">return</span>
+
+<span class="token comment" spellcheck="true"># Now run the function</span>
+my_func<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true"># Print my_text</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>my_text<span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><strong>Output:</strong></p>
+<pre><code>I am inside the function and in the function's LOCAL namespace!
+I am outside the function and in the notebook's GLOBAL namespace!
+</code></pre>
+<p><strong>Let’s now add <code>dir()</code> to the body of the function so that we can print the names in the function’s local namespace</strong></p>
+<pre class="line-numbers language-python"><code class="language-python">my_text <span class="token operator">=</span> <span class="token string">'I am outside the function in the notebooks GLOBAL namespace!'</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"These are the names in the global namespace:"</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>dir<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">'\n'</span><span class="token punctuation">)</span>
+
+<span class="token keyword">def</span> <span class="token function">my_func_b</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    my_text <span class="token operator">=</span> <span class="token string">"I am inside the function in the function's LOCAL namespace!"</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"These are the names in the function's local namespace:"</span><span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>dir<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">'\n'</span><span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>my_text<span class="token punctuation">)</span>
+    <span class="token keyword">return</span>
+
+<span class="token comment" spellcheck="true"># Now run the function</span>
+my_func_b<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true"># Print my_text</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>my_text<span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre><code>These are the names in the global namespace:
+['In', 'Out', '_', '__', '___', '__builtin__', '__builtins__', '__doc__', '__loader__', '__name__', '__package__', '__spec__', '_dh', '_i', '_i1', '_i2', '_ih', '_ii', '_iii', '_oh', 'exit', 'get_ipython', 'my_func', 'my_text', 'quit'] 
+
+These are the names in the function's local namespace:
+['my_text'] 
+
+I am inside the function in the function's LOCAL namespace!
+I am outside the function in the notebooks GLOBAL namespace!
+</code></pre>
+<p><strong>There can be multiple local namespaces</strong></p>
+<p>Each function has its own local namespace.</p>
+<pre class="line-numbers language-python"><code class="language-python">my_text <span class="token operator">=</span> <span class="token string">'I am outside the function in the notebooks GLOBAL namespace!'</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"These are the names in the global namespace:"</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>dir<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">'\n'</span><span class="token punctuation">)</span>
+
+<span class="token keyword">def</span> <span class="token function">my_func_1</span><span class="token punctuation">(</span>my_text_1<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"These are the names in the 1st function's local namespace:"</span><span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>dir<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">'\n'</span><span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>my_text_1<span class="token punctuation">,</span> <span class="token string">'\n'</span><span class="token punctuation">)</span>
+    <span class="token keyword">return</span>
+
+<span class="token keyword">def</span> <span class="token function">my_func_2</span><span class="token punctuation">(</span>my_text_2<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"These are the names in the 2nd function's local namespace:"</span><span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>dir<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">'\n'</span><span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>my_text_2<span class="token punctuation">,</span> <span class="token string">'\n'</span><span class="token punctuation">)</span>
+    <span class="token keyword">return</span>
+
+<span class="token comment" spellcheck="true"># Now run the function</span>
+my_func_1<span class="token punctuation">(</span><span class="token string">"Hello!"</span><span class="token punctuation">)</span>
+
+my_func_2<span class="token punctuation">(</span><span class="token string">"Goodbye!"</span><span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true"># Print my_text</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>my_text<span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre><code>These are the names in the global namespace:
+['In', 'Out', '_', '__', '___', '__builtin__', '__builtins__', '__doc__', '__loader__', '__name__', '__package__', '__spec__', '_dh', '_i', '_i1', '_i2', '_i3', '_i4', '_ih', '_ii', '_iii', '_oh', 'exit', 'get_ipython', 'my_func', 'my_func_1', 'my_func_2', 'my_func_b', 'my_text', 'quit'] 
+
+These are the names in the 1st function's local namespace:
+['my_text_1'] 
+
+Hello! 
+
+These are the names in the 2nd function's local namespace:
+['my_text_2'] 
+
+Goodbye! 
+
+I am outside the function in the notebooks GLOBAL namespace!
+</code></pre>
+
 </div>
 
 

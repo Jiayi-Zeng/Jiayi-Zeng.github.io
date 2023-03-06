@@ -1,5 +1,5 @@
-https://jiayi-zeng.github.io/docs/Other-TO-DO-list/
 https://jiayi-zeng.github.io/docs/Immediate-to-Python-4-Understanding-Namespace-and-Scope/
+https://jiayi-zeng.github.io/docs/Other-TO-DO-list/
 https://jiayi-zeng.github.io/docs/Immediate-to-Python-3-Iterators-and-Generators/
 https://jiayi-zeng.github.io/docs/Immediate-to-Python-2-Functions-Positional-and-Keyword-Arguments/
 https://jiayi-zeng.github.io/docs/Predicted-Analytics-8-Clustering/
