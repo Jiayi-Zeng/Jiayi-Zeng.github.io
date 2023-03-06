@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://jiayi-zeng.github.io/projects/</loc>
+    <loc>https://jiayi-zeng.github.io/docs/Descriptive-Analytics-Data-Visualization-and-Storytelling-with-Data/</loc>
     
     <lastmod>2023-03-06</lastmod>
     
@@ -11,7 +11,16 @@
   </url>
   
   <url>
-    <loc>https://jiayi-zeng.github.io/about/</loc>
+    <loc>https://jiayi-zeng.github.io/docs/Intro-to-Analyzing-Data-for-Business/</loc>
+    
+    <lastmod>2023-03-06</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://jiayi-zeng.github.io/docs/Other-TO-DO-list/</loc>
     
     <lastmod>2023-03-06</lastmod>
     
@@ -65,7 +74,7 @@
   </url>
   
   <url>
-    <loc>https://jiayi-zeng.github.io/docs/Predicted-Analytics-1-Introduction-to-Predictive-Analytics/</loc>
+    <loc>https://jiayi-zeng.github.io/docs/Predicted-Analytics-3.2-Linear-Regression/</loc>
     
     <lastmod>2023-03-06</lastmod>
     
@@ -83,6 +92,24 @@
   </url>
   
   <url>
+    <loc>https://jiayi-zeng.github.io/docs/Predicted-Analytics-2.2-ML-Techniques/</loc>
+    
+    <lastmod>2023-03-06</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://jiayi-zeng.github.io/docs/Predicted-Analytics-1-Introduction-to-Predictive-Analytics/</loc>
+    
+    <lastmod>2023-03-06</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://jiayi-zeng.github.io/docs/Predicted-Analytics-2.1-Introduction-to-Predictive-Modeling/</loc>
     
     <lastmod>2023-03-06</lastmod>
@@ -92,7 +119,7 @@
   </url>
   
   <url>
-    <loc>https://jiayi-zeng.github.io/docs/Immediate-to-Python-4-Understanding-Namespace-and-Scope/</loc>
+    <loc>https://jiayi-zeng.github.io/projects/</loc>
     
     <lastmod>2023-03-06</lastmod>
     
@@ -101,7 +128,16 @@
   </url>
   
   <url>
-    <loc>https://jiayi-zeng.github.io/docs/Other-TO-DO-list/</loc>
+    <loc>https://jiayi-zeng.github.io/about/</loc>
+    
+    <lastmod>2023-03-06</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://jiayi-zeng.github.io/docs/Immediate-to-Python-4-Understanding-Namespace-and-Scope/</loc>
     
     <lastmod>2023-03-06</lastmod>
     
@@ -156,24 +192,6 @@
   
   <url>
     <loc>https://jiayi-zeng.github.io/docs/Other-ML-Cross-Entropy/</loc>
-    
-    <lastmod>2023-03-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://jiayi-zeng.github.io/docs/Predicted-Analytics-3.2-Linear-Regression/</loc>
-    
-    <lastmod>2023-03-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://jiayi-zeng.github.io/docs/Predicted-Analytics-2.2-ML-Techniques/</loc>
     
     <lastmod>2023-03-02</lastmod>
     
@@ -266,13 +284,6 @@
   </url>
   
   <url>
-    <loc>https://jiayi-zeng.github.io/tags/DSBA/</loc>
-    <lastmod>2023-03-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://jiayi-zeng.github.io/tags/Data-Mining/</loc>
     <lastmod>2023-03-06</lastmod>
     <changefreq>weekly</changefreq>
@@ -288,6 +299,13 @@
   
   <url>
     <loc>https://jiayi-zeng.github.io/tags/CG/</loc>
+    <lastmod>2023-03-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://jiayi-zeng.github.io/tags/DS/</loc>
     <lastmod>2023-03-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -325,6 +343,13 @@
   
   <url>
     <loc>https://jiayi-zeng.github.io/categories/Predicted-Analytics-Tools-Techniques/</loc>
+    <lastmod>2023-03-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://jiayi-zeng.github.io/categories/Data-Analytics/</loc>
     <lastmod>2023-03-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
