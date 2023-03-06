@@ -125,6 +125,7 @@
         for (var i = 1; i <= maxDepth; i++) {
             headingSelector += 'h' + i + ','
         }
+       
         headingSelector = headingSelector.slice(0, -1)
         const headings = content.querySelectorAll(headingSelector)
 
@@ -132,7 +133,7 @@
         headings.forEach((heading) => {
             source.push({
                 html: heading.innerHTML,
-                href: heading.getElementsByClassName('headerlink')[0].attributes['href'].value
+                href: heading.getElementsByClassName('headerlink')[0].attributes['href'].value,
             })
         })
 
