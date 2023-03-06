@@ -1,3 +1,5 @@
+https://jiayi-zeng.github.io/docs/Prescriptive-Analytics-1-Overview-of-Prescriptive-Analytics/
+https://jiayi-zeng.github.io/docs/Prescriptive-Analytics-2-Digital-Decision-Making-Theory-Process-and-Practice/
 https://jiayi-zeng.github.io/docs/Descriptive-Analytics-Data-Visualization-and-Storytelling-with-Data/
 https://jiayi-zeng.github.io/docs/Intro-to-Analyzing-Data-for-Business/
 https://jiayi-zeng.github.io/docs/Other-TO-DO-list/
@@ -40,3 +42,4 @@ https://jiayi-zeng.github.io/categories/HUNG-YI-LEE-MACHINE-LEARNING/
 https://jiayi-zeng.github.io/categories/Other/
 https://jiayi-zeng.github.io/categories/Predicted-Analytics-Tools-Techniques/
 https://jiayi-zeng.github.io/categories/Data-Analytics/
+https://jiayi-zeng.github.io/categories/Prescriptive-Analytics-Digital-Decisioning/

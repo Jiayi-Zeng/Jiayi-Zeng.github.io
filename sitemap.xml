@@ -2,6 +2,24 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://jiayi-zeng.github.io/docs/Prescriptive-Analytics-1-Overview-of-Prescriptive-Analytics/</loc>
+    
+    <lastmod>2023-03-06</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://jiayi-zeng.github.io/docs/Prescriptive-Analytics-2-Digital-Decision-Making-Theory-Process-and-Practice/</loc>
+    
+    <lastmod>2023-03-06</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://jiayi-zeng.github.io/docs/Descriptive-Analytics-Data-Visualization-and-Storytelling-with-Data/</loc>
     
     <lastmod>2023-03-06</lastmod>
@@ -350,6 +368,13 @@
   
   <url>
     <loc>https://jiayi-zeng.github.io/categories/Data-Analytics/</loc>
+    <lastmod>2023-03-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://jiayi-zeng.github.io/categories/Prescriptive-Analytics-Digital-Decisioning/</loc>
     <lastmod>2023-03-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
