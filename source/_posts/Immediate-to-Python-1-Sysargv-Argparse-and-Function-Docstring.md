@@ -1,5 +1,5 @@
 ---
-title: "Python Scripts and Functions"
+title: "Sysargv, Argparse and Function Docstring"
 
 date: 2023-02-19
 
@@ -8,8 +8,6 @@ tags: [Python]
 categories: "Immediate to Python"
 
 cover_image: https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/20230225%20(2).png
-
-toc: true
 ---
 
 # **Sysargv**

@@ -7,7 +7,7 @@ tags: [DSBA, Data Mining]
 
 categories: "Predicted Analytics: Tools & Techniques"
 
-cover_image: https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/202302230548.png
+cover_image: https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/202303060126%20(2).png
 ---
 
 # **The Data Mining Process**
@@ -137,5 +137,5 @@ See also[ https://keithmccormick.com/crispdm](https://keithmccormick.com/crispdm
 
 # **Reference**
 
-**Course text:** UCI. (2020). [Introduction to Predictive Analytics.](https://docs.google.com/document/d/1UDqqpr5whycIhD2gle4tcLBDGkkr8ajlixDLqhl28tE/edit?usp=sharing)
+**Course text:** UCI. (2020). [Introduction to Predictive Analytics.](https://docs.google.com/document/d/11zk4wIP0Hb_TeOo24fdTR8IX-lbGvWVCUHRvK563RUk/edit?usp=sharing)
 

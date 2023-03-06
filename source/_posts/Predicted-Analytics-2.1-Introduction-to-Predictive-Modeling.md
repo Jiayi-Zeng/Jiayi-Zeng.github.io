@@ -160,5 +160,5 @@ One final yet important point to keep in mind when building models is that softw
 
 # **Reference** 
 
-**Course text:** UCI. (2020). [Introduction to Predictive Modeling. ](https://docs.google.com/document/d/1lQI25BjQD4mNhVDyDWjfn7x1cFlfKfX6NnXl0zUUKIw/edit?usp=sharing)
+**Course text:** UCI. (2020). [Introduction to Predictive Modeling. ](https://docs.google.com/document/d/1Hzpxlu7ypOIbBC8IjuNPG_Mx3ndYB9RFPcMYawpTUJU/edit?usp=sharing)
 

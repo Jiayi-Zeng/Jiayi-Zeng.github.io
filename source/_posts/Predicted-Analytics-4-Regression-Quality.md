@@ -3,11 +3,11 @@ title: 6 Regression Quality
 
 date: 2023-02-25
 
-tags: [DSBA]
+tags: [DSBA, Data Mining]
 
 categories: "Predicted Analytics: Tools & Techniques"
 
-cover_image: https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/202302.png
+cover_image: https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/202303060126%20(3).png
 ---
 
 Metrics to measure the Quality of Regression 
