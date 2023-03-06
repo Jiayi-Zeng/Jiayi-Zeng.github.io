@@ -3,7 +3,7 @@ title: 3 Modeling Techniques
 
 date: 2023-02-21
 
-tags: [DSBA, ML, Data Mining]
+tags: [DS, ML, Data Mining]
 
 categories: "Predicted Analytics: Tools & Techniques"
 

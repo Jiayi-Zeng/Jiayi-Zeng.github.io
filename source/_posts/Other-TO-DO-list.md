@@ -16,9 +16,9 @@ categories: Other
 
 - [ ] Predictive Analytics
 
-- [ ] Introduce to Data Analytics for Business
+- [x] Introduce to Data Analytics for Business
 
-- [ ] Descriptive Analytics: Visualization  
+- [x] Descriptive Analytics: Visualization  
 
 # **About Website**
 

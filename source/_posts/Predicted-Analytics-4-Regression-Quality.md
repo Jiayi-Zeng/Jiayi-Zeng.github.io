@@ -3,7 +3,7 @@ title: 6 Regression Quality
 
 date: 2023-02-25
 
-tags: [DSBA, Data Mining]
+tags: [DS, Data Mining]
 
 categories: "Predicted Analytics: Tools & Techniques"
 

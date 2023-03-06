@@ -3,7 +3,7 @@ title: 10 Clustering
 
 date: 2023-03-03
 
-tags: [DSBA, Data Mining]
+tags: [DS, Data Mining]
 
 categories: "Predicted Analytics: Tools & Techniques"
 

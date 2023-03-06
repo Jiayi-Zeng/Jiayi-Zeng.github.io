@@ -3,7 +3,7 @@ title: "9 Data Prep: Discretization & 1Hot Encoding"
 
 date: 2023-02-28
 
-tags: [DSBA, Data Mining]
+tags: [DS, Data Mining]
 
 categories: "Predicted Analytics: Tools & Techniques"
 

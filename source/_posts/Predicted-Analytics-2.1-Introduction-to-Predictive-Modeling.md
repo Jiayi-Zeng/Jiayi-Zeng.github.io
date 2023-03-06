@@ -3,7 +3,7 @@ title: 2 Introduction to Predictive Modeling
 
 date: 2023-02-20
 
-tags: [DSBA, ML, Data Mining]
+tags: [DS, ML, Data Mining]
 
 categories: "Predicted Analytics: Tools & Techniques"
 

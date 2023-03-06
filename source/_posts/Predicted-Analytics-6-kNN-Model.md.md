@@ -3,7 +3,7 @@ title: 8 kNN Model
 
 date: 2023-02-27
 
-tags: [DSBA, Data Mining]
+tags: [DS, Data Mining]
 
 categories: "Predicted Analytics: Tools & Techniques"
 

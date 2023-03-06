@@ -3,7 +3,7 @@ title: 4 Introduction to Regression
 
 date: 2023-02-22
 
-tags: [DSBA, ML, Data Mining]
+tags: [DS, ML, Data Mining]
 
 categories: "Predicted Analytics: Tools & Techniques"
 
