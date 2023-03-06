@@ -1,3 +1,4 @@
+https://jiayi-zeng.github.io/projects/
 https://jiayi-zeng.github.io/about/
 https://jiayi-zeng.github.io/docs/Predicted-Analytics-8-Clustering/
 https://jiayi-zeng.github.io/docs/Predicted-Analytics-7-DataPrep-Discretization+OneHotEncoding/
@@ -20,7 +21,6 @@ https://jiayi-zeng.github.io/docs/Predicted-Analytics-2.2-ML-Techniques/
 https://jiayi-zeng.github.io/docs/Computer-Vision-Image-Classification-Paper/
 https://jiayi-zeng.github.io/docs/Machine-Learning-0-Course-Intro/
 https://jiayi-zeng.github.io/docs/Machine-Learning-1-Introduction-of-Deep-Learning/
-https://jiayi-zeng.github.io/projects/
 https://jiayi-zeng.github.io/search/
 https://jiayi-zeng.github.io/categories/
 https://jiayi-zeng.github.io/tags/
