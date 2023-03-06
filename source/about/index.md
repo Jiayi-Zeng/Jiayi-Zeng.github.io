@@ -26,7 +26,7 @@ Will focus more on AI for Eduction in the future
 
 *Academic Master Degree in Computer Science*
 
-Expected Jun 2026
+Shanghai, China, Expected Jun. 2026
 
 ------
 
@@ -34,7 +34,7 @@ Expected Jun 2026
 
 *Bachelor's Degree in Computer Science (GPA: 3.82)*  
 
-Expected Jun 2023
+Shaanxi, China, Expected Jun. 2023
 
 * **Awarded** China National Scholarship for outstanding comprehensive quality and second-class scholarship six times for excellent grades and contributions
 
@@ -44,7 +44,7 @@ Expected Jun 2023
 
 *Accelerated Certificate Program - Data Analytics for Business (GPA: 4.0)* 
 
-Expected Mar 2023
+Irvine, CA, United States, Expected Mar. 2023
 
 * **Related Courses:** Descriptive Analytics - Visualization & Storytelling, Predictive Analytics - Tools & Techniques, Prescriptive Analytics - Digital Decisioning
 
@@ -56,7 +56,7 @@ More infomation on the [Project](/projects/) website.
 
 **Baidu Songguo Elite Class of Chang'an University**                                        
 
-Shaanxi, China, Dec 2021 – Dec 2022
+Shaanxi, China, Dec. 2021 – Dec. 2022
 
 *Class Monitor*
 
@@ -68,7 +68,7 @@ Shaanxi, China, Dec 2021 – Dec 2022
 
 **Chang'an University’s Student Union – Outreach Department**                                             
 
-Shaanxi, China, Sep 2020 – Jul 2021      
+Shaanxi, China, Sep. 2020 – Jul. 2021      
 
 *Manager*               
 

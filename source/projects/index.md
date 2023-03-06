@@ -6,7 +6,7 @@ title: Projects
 
 [**Judgment System to Detect Truck Turning Right without Stopping**](https://github.com/Jiayi-Zeng/Judgment-System-to-Detect-Truck-Turning-Right-without-Stopping)                                                                          
 
-Shaanxi, China, Mar 2022 - Present   
+Shaanxi, China, Mar. 2022 - Present   
 
 *National Innovation and Entrepreneurship Training Project for University(China)*             
 
@@ -18,7 +18,7 @@ Shaanxi, China, Mar 2022 - Present
 
 [**Traffic Light Detector**](https://github.com/Jiayi-Zeng/Traffic-Light-Detector) 
 
-Shaanxi, China, Sep 2022 - Dec 2022   
+Shaanxi, China, Sep 2022. - Dec 2022.   
 
 *Personal Project*             
 
@@ -60,7 +60,7 @@ Shaanxi, China, May 2022
 
 [**MyNET**](https://github.com/Jiayi-Zeng/MyNET)  
 
-Shaanxi, China, Jan 2022   
+Shaanxi, China, Jan. 2022   
 
 *course: Computer Network*
 
@@ -70,7 +70,7 @@ Shaanxi, China, Jan 2022
 
 [**Virtual Keyboard**](Virtual-Keyboard)
 
-Shaanxi, China, Jan 2022 
+Shaanxi, China, Jan. 2022 
 
 *course: Digital Image Process*    
 
@@ -80,7 +80,7 @@ Shaanxi, China, Jan 2022
 
 [**Digital Image Process Frame**](https://github.com/Jiayi-Zeng/Digital-Image-Process-Frame)   
 
-Shaanxi, China, Dec 2021   
+Shaanxi, China, Dec. 2021   
 
 *course: Digital Image Process*    
 
@@ -90,7 +90,7 @@ Shaanxi, China, Dec 2021
 
 [**Computer-Graphics**](https://github.com/Jiayi-Zeng/Computer-Graphics)  
 
-Shaanxi, China, Dec 2021
+Shaanxi, China, Dec. 2021
 
 *course: Computer Graphics*
 
@@ -102,7 +102,7 @@ Shaanxi, China, Dec 2021
 
 [**Chat**](https://github.com/Jiayi-Zeng/Chat)   
 
-Shaanxi, China, Dec 2020 
+Shaanxi, China, Dec. 2020 
 
 *course: Java Programming*
 
@@ -112,7 +112,7 @@ Shaanxi, China, Dec 2020
 
 [**Paint**](https://github.com/Jiayi-Zeng/Paint)  
 
-Shaanxi, China, Dec 2020   
+Shaanxi, China, Dec. 2020   
 
 *course: Object-Oriented Programming*
 
@@ -121,7 +121,7 @@ Shaanxi, China, Dec 2020
 ##  Mathematical Contest for Modeling
 **Preparation of C4 olefins by ethanol coupling based on Machine Learning**                                             
 
-Shaanxi, China, Sep 2021
+Shaanxi, China, Sep. 2021
 
 *CUMCM, Second Prize in Shaanxi Province*                   
 
