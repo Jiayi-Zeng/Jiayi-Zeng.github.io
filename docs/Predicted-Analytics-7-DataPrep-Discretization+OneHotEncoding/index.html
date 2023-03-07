@@ -186,7 +186,71 @@
 <div class="divider"></div>
 
 <div class="content">
-    
+    <p><img src="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20230307140225758.png" alt="image-20230307140225758"></p>
+<h1 id="Discretization"><a href="#Discretization" class="headerlink" title="Discretization"></a><strong>Discretization</strong></h1><p>Converting Numeric Data into Categorical Data</p>
+<p><strong>How to determine the boundaries between classes?</strong></p>
+<ul>
+<li>Natural boundaries</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20230307140432485.png" alt="image-20230307140432485"></p>
+<ul>
+<li>Equi-width ranges</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20230307140445235.png" alt="image-20230307140445235"></p>
+<ul>
+<li>Equi-log ranges</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20230307140458116.png" alt="image-20230307140458116"></p>
+<ul>
+<li>Equi-depth ranges<br>​		Range [a,b] is chosen<ul>
+<li>Each range has an equal number of records</li>
+<li>First sort the data<ul>
+<li>Select the boundaries from the sorted<br>data such that each range contains equal number of observations</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h2><p><strong>Read Datafile</strong></p>
+<pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">import</span> pandas <span class="token keyword">as</span> pd
+df <span class="token operator">=</span> pd<span class="token punctuation">.</span>read_csv<span class="token punctuation">(</span><span class="token string">'Lung Capacity.csv'</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p><strong>Discretize Height into 6 Categories : Width Size is Different</strong></p>
+<pre class="line-numbers language-python"><code class="language-python">bins <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">50</span><span class="token punctuation">,</span> <span class="token number">55</span><span class="token punctuation">,</span> <span class="token number">60</span><span class="token punctuation">,</span> <span class="token number">65</span><span class="token punctuation">,</span> <span class="token number">70</span><span class="token punctuation">,</span> <span class="token number">100</span><span class="token punctuation">]</span>
+group_names <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'A'</span><span class="token punctuation">,</span> <span class="token string">'B'</span><span class="token punctuation">,</span> <span class="token string">'C'</span><span class="token punctuation">,</span> <span class="token string">'D'</span><span class="token punctuation">,</span> <span class="token string">'E'</span><span class="token punctuation">,</span> <span class="token string">'F'</span><span class="token punctuation">]</span>
+
+c1 <span class="token operator">=</span> pd<span class="token punctuation">.</span>cut<span class="token punctuation">(</span>df<span class="token punctuation">[</span><span class="token string">'height'</span><span class="token punctuation">]</span><span class="token punctuation">,</span> bins<span class="token punctuation">,</span> labels<span class="token operator">=</span>group_names<span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<h1 id="One-Hot-Encoding"><a href="#One-Hot-Encoding" class="headerlink" title="One Hot Encoding"></a>One Hot Encoding</h1><p>Label Encoder</p>
+<ul>
+<li>Converts Categorical variable into Numerical values</li>
+<li>Starting from 0,1,2,…</li>
+<li>Code is assigned by alphabetical order</li>
+</ul>
+<h2 id="Example-1"><a href="#Example-1" class="headerlink" title="Example"></a>Example</h2><p><strong>Load the libraries</strong></p>
+<pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
+<span class="token keyword">import</span> pandas <span class="token keyword">as</span> pd
+
+<span class="token keyword">from</span> sklearn <span class="token keyword">import</span> datasets
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<p><strong>Read the Dataset</strong></p>
+<pre class="line-numbers language-python"><code class="language-python">iris <span class="token operator">=</span> datasets<span class="token punctuation">.</span>load_iris<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>type<span class="token punctuation">(</span>iris<span class="token punctuation">)</span><span class="token punctuation">)</span>
+features <span class="token operator">=</span> iris<span class="token punctuation">[</span><span class="token string">"data"</span><span class="token punctuation">]</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>type<span class="token punctuation">(</span>features<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>features<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token punctuation">:</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+<span class="token comment" spellcheck="true">#############################################</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'---------------------------'</span><span class="token punctuation">)</span>
+labels <span class="token operator">=</span> iris<span class="token punctuation">[</span><span class="token string">"target"</span><span class="token punctuation">]</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>type<span class="token punctuation">(</span>labels<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>labels<span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><strong>Encode the response variable (labels - species) data into one-hot</strong></p>
+<pre class="line-numbers language-py"><code class="language-py">labels_onehot_dataframe = pd.get_dummies(labels,prefix='species')
+one_hot = np.array(labels_onehot_dataframe)
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
 </div>
 
 
@@ -217,7 +281,7 @@
         <div>
             <div class="text">
                 <p class="label">Previous</p>
-                <h3 class="title">Iterators and Generators</>
+                <h3 class="title">Iterators &amp; Generators</>
             </div>
         </div>
     </a>

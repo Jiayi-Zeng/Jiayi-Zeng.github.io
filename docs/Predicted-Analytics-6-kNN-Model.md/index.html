@@ -186,7 +186,69 @@
 <div class="divider"></div>
 
 <div class="content">
-    
+    <h1 id="Similarity-Based-Learning"><a href="#Similarity-Based-Learning" class="headerlink" title="Similarity Based Learning"></a><strong>Similarity Based Learning</strong></h1><p><img src="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20230307135237509.png" alt="image-20230307135237509"></p>
+<p><strong>Compute the distance matrices between objects</strong></p>
+<p><img src="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20230307135320379.png" alt="image-20230307135320379"></p>
+<h1 id="k-Nearest-Neighbor-kNN-Model"><a href="#k-Nearest-Neighbor-kNN-Model" class="headerlink" title="k Nearest Neighbor (kNN) Model"></a><strong>k Nearest Neighbor (kNN) Model</strong></h1><h2 id="Pros-and-Cons-of-kNN"><a href="#Pros-and-Cons-of-kNN" class="headerlink" title="Pros and Cons of kNN"></a>Pros and Cons of kNN</h2><table>
+<thead>
+<tr>
+<th>Pros</th>
+<th>Cons</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Simple and Effective</td>
+<td>Does not produce a model, limiting the ability to understand how the features are related to the class</td>
+</tr>
+<tr>
+<td>Makes no assumption about the underlying data distribution<br>Non-parametric</td>
+<td>Requires selection of an appropriate value of ‘k’</td>
+</tr>
+</tbody></table>
+<h2 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h2><p><img src="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20230307135514058.png" alt="image-20230307135514058"></p>
+<p><img src="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20230307135528439.png" alt="image-20230307135528439"></p>
+<p><img src="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20230307135551335.png" alt="image-20230307135551335"></p>
+<p><img src="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20230307135600672.png" alt="image-20230307135600672"></p>
+<p><img src="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20230307135654082.png" alt="image-20230307135654082"></p>
+<p><img src="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20230307135706642.png" alt="image-20230307135706642"></p>
+<h1 id="kNN-Model-Assessment"><a href="#kNN-Model-Assessment" class="headerlink" title="kNN Model Assessment"></a><strong>kNN Model Assessment</strong></h1><p><img src="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20230307135731080.png" alt="image-20230307135731080"></p>
+<p><img src="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20230307135744961.png" alt="image-20230307135744961"></p>
+<h1 id="Data-Normalization-Standardization-amp-Scaling"><a href="#Data-Normalization-Standardization-amp-Scaling" class="headerlink" title="Data Normalization: Standardization &amp; Scaling"></a><strong>Data Normalization: Standardization &amp; Scaling</strong></h1><p>Suppose we have 2 data items</p>
+<ul>
+<li>Height: varies from 4 – 7 feet</li>
+<li>Net Worth: <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="8.548ex" height="2.509ex" style="vertical-align: -0.671ex;" viewBox="0 -791.3 3680.2 1080.4" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-1-Title">
+<title id="MathJax-SVG-1-Title">10,000 - </title>
+<defs aria-hidden="true">
+<path stroke-width="1" id="E1-GYREPAGELLAMAIN-31" d="M418 -3l-157 3l-165 -3v30l56 3c54 3 65 14 65 66v485c0 24 -2 33 -8 33l-3 -1l-129 -58h-10l-7 43c91 32 162 62 227 96l14 -5v-593c0 -52 10 -63 65 -66l52 -3v-30Z"></path>
+<path stroke-width="1" id="E1-GYREPAGELLAMAIN-30" d="M465 366c0 -256 -76 -386 -227 -386c-62 0 -118 28 -153 77s-56 150 -56 267c0 242 79 365 234 365c137 0 202 -104 202 -323zM381 316c0 240 -39 338 -136 338c-95 0 -132 -83 -132 -294c0 -244 41 -345 138 -345c92 0 130 88 130 301Z"></path>
+<path stroke-width="1" id="E1-GYREPAGELLAMAIN-2C" d="M218 109c-28 -77 -66 -140 -147 -245l-41 -19l-14 11c58 96 83 161 90 237c53 15 71 21 98 30Z"></path>
+<path stroke-width="1" id="E1-GYREPAGELLAMAIN-2212" d="M680 220h-600c2 10 3 20 3 30s-1 20 -3 30h600c-2 -10 -3 -20 -3 -30s1 -20 3 -30Z"></path>
+</defs>
+<g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
+ <use xlink:href="#E1-GYREPAGELLAMAIN-31"></use>
+ <use xlink:href="#E1-GYREPAGELLAMAIN-30" x="500" y="0"></use>
+ <use xlink:href="#E1-GYREPAGELLAMAIN-2C" x="1001" y="0"></use>
+<g transform="translate(1418,0)">
+ <use xlink:href="#E1-GYREPAGELLAMAIN-30"></use>
+ <use xlink:href="#E1-GYREPAGELLAMAIN-30" x="500" y="0"></use>
+ <use xlink:href="#E1-GYREPAGELLAMAIN-30" x="1001" y="0"></use>
+</g>
+ <use xlink:href="#E1-GYREPAGELLAMAIN-2212" x="2919" y="0"></use>
+</g>
+</svg>100B</li>
+</ul>
+<p>If we use both the variables in a model</p>
+<ul>
+<li>Net Worth will dominate because it contains large values</li>
+</ul>
+<p>Solution</p>
+<ul>
+<li>Standardize</li>
+<li>Scale</li>
+</ul>
+<h2 id="Data-Standardization-and-Scaling"><a href="#Data-Standardization-and-Scaling" class="headerlink" title="Data Standardization and Scaling"></a>Data Standardization and Scaling</h2><p><img src="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20230307135919181.png" alt="image-20230307135919181"></p>
+<h1 id="kNN-in-Python"><a href="#kNN-in-Python" class="headerlink" title="kNN in Python"></a>kNN in Python</h1><p><a target="_blank" rel="noopener" href="https://colab.research.google.com/drive/1rkJLDzQ-40DtU-MPmGMYTANrwNn_wNeo">03_kNN_Optimum_k_Iris_Sci_L_ConMat.ipynb</a></p>
+
 </div>
 
 
@@ -207,7 +269,7 @@
         <div>
             <div class="text">
                 <p class="label">Next</p>
-                <h3 class="title">Iterators and Generators</h3>
+                <h3 class="title">Iterators &amp; Generators</h3>
             </div>
         </div>
     </a>
@@ -217,7 +279,7 @@
         <div>
             <div class="text">
                 <p class="label">Previous</p>
-                <h3 class="title">Functions Positional and Keyword Arguments</>
+                <h3 class="title">Functions Positional &amp; Keyword Arguments</>
             </div>
         </div>
     </a>

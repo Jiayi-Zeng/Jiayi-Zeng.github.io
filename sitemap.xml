@@ -2,9 +2,54 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://jiayi-zeng.github.io/docs/Prescriptive-Analytics-1-Overview-of-Prescriptive-Analytics/</loc>
+    <loc>https://jiayi-zeng.github.io/docs/Other-TO-DO-list/</loc>
     
-    <lastmod>2023-03-06</lastmod>
+    <lastmod>2023-03-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://jiayi-zeng.github.io/docs/Predicted-Analytics-7-DataPrep-Discretization+OneHotEncoding/</loc>
+    
+    <lastmod>2023-03-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://jiayi-zeng.github.io/docs/Predicted-Analytics-6-kNN-Model.md/</loc>
+    
+    <lastmod>2023-03-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://jiayi-zeng.github.io/docs/Predicted-Analytics-5-Multi%20Variable%20Regression/</loc>
+    
+    <lastmod>2023-03-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://jiayi-zeng.github.io/docs/Predicted-Analytics-4-Regression-Quality/</loc>
+    
+    <lastmod>2023-03-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://jiayi-zeng.github.io/docs/Prescriptive-Analytics-3-Linear-Programming/</loc>
+    
+    <lastmod>2023-03-07</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -13,7 +58,43 @@
   <url>
     <loc>https://jiayi-zeng.github.io/docs/Prescriptive-Analytics-2-Digital-Decision-Making-Theory-Process-and-Practice/</loc>
     
-    <lastmod>2023-03-06</lastmod>
+    <lastmod>2023-03-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://jiayi-zeng.github.io/docs/Immediate-to-Python-4-Understanding-Namespace-and-Scope/</loc>
+    
+    <lastmod>2023-03-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://jiayi-zeng.github.io/docs/Immediate-to-Python-3-Iterators-and-Generators/</loc>
+    
+    <lastmod>2023-03-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://jiayi-zeng.github.io/docs/Immediate-to-Python-2-Functions-Positional-and-Keyword-Arguments/</loc>
+    
+    <lastmod>2023-03-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://jiayi-zeng.github.io/docs/Immediate-to-Python-1-Sysargv-Argparse-and-Function-Docstring/</loc>
+    
+    <lastmod>2023-03-07</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -21,6 +102,15 @@
   
   <url>
     <loc>https://jiayi-zeng.github.io/docs/Descriptive-Analytics-Data-Visualization-and-Storytelling-with-Data/</loc>
+    
+    <lastmod>2023-03-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://jiayi-zeng.github.io/docs/Prescriptive-Analytics-1-Overview-of-Prescriptive-Analytics/</loc>
     
     <lastmod>2023-03-06</lastmod>
     
@@ -38,52 +128,7 @@
   </url>
   
   <url>
-    <loc>https://jiayi-zeng.github.io/docs/Other-TO-DO-list/</loc>
-    
-    <lastmod>2023-03-06</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://jiayi-zeng.github.io/docs/Predicted-Analytics-8-Clustering/</loc>
-    
-    <lastmod>2023-03-06</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://jiayi-zeng.github.io/docs/Predicted-Analytics-7-DataPrep-Discretization+OneHotEncoding/</loc>
-    
-    <lastmod>2023-03-06</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://jiayi-zeng.github.io/docs/Predicted-Analytics-6-kNN-Model.md/</loc>
-    
-    <lastmod>2023-03-06</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://jiayi-zeng.github.io/docs/Predicted-Analytics-5-Multi%20Variable%20Regression/</loc>
-    
-    <lastmod>2023-03-06</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://jiayi-zeng.github.io/docs/Predicted-Analytics-4-Regression-Quality/</loc>
     
     <lastmod>2023-03-06</lastmod>
     
@@ -147,42 +192,6 @@
   
   <url>
     <loc>https://jiayi-zeng.github.io/about/</loc>
-    
-    <lastmod>2023-03-06</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://jiayi-zeng.github.io/docs/Immediate-to-Python-4-Understanding-Namespace-and-Scope/</loc>
-    
-    <lastmod>2023-03-06</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://jiayi-zeng.github.io/docs/Immediate-to-Python-3-Iterators-and-Generators/</loc>
-    
-    <lastmod>2023-03-06</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://jiayi-zeng.github.io/docs/Immediate-to-Python-2-Functions-Positional-and-Keyword-Arguments/</loc>
-    
-    <lastmod>2023-03-06</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://jiayi-zeng.github.io/docs/Immediate-to-Python-1-Sysargv-Argparse-and-Function-Docstring/</loc>
     
     <lastmod>2023-03-06</lastmod>
     
@@ -274,7 +283,7 @@
 
   <url>
     <loc>https://jiayi-zeng.github.io/</loc>
-    <lastmod>2023-03-06</lastmod>
+    <lastmod>2023-03-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -282,49 +291,49 @@
   
   <url>
     <loc>https://jiayi-zeng.github.io/tags/Python/</loc>
-    <lastmod>2023-03-06</lastmod>
+    <lastmod>2023-03-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://jiayi-zeng.github.io/tags/CV/</loc>
-    <lastmod>2023-03-06</lastmod>
+    <lastmod>2023-03-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://jiayi-zeng.github.io/tags/ML/</loc>
-    <lastmod>2023-03-06</lastmod>
+    <lastmod>2023-03-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://jiayi-zeng.github.io/tags/Data-Mining/</loc>
-    <lastmod>2023-03-06</lastmod>
+    <lastmod>2023-03-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://jiayi-zeng.github.io/tags/DL/</loc>
-    <lastmod>2023-03-06</lastmod>
+    <lastmod>2023-03-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://jiayi-zeng.github.io/tags/CG/</loc>
-    <lastmod>2023-03-06</lastmod>
+    <lastmod>2023-03-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://jiayi-zeng.github.io/tags/DS/</loc>
-    <lastmod>2023-03-06</lastmod>
+    <lastmod>2023-03-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -333,49 +342,49 @@
   
   <url>
     <loc>https://jiayi-zeng.github.io/categories/Immediate-to-Python/</loc>
-    <lastmod>2023-03-06</lastmod>
+    <lastmod>2023-03-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://jiayi-zeng.github.io/categories/Computer-Vision/</loc>
-    <lastmod>2023-03-06</lastmod>
+    <lastmod>2023-03-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://jiayi-zeng.github.io/categories/HUNG-YI-LEE-MACHINE-LEARNING/</loc>
-    <lastmod>2023-03-06</lastmod>
+    <lastmod>2023-03-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://jiayi-zeng.github.io/categories/Other/</loc>
-    <lastmod>2023-03-06</lastmod>
+    <lastmod>2023-03-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://jiayi-zeng.github.io/categories/Predicted-Analytics-Tools-Techniques/</loc>
-    <lastmod>2023-03-06</lastmod>
+    <lastmod>2023-03-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://jiayi-zeng.github.io/categories/Data-Analytics/</loc>
-    <lastmod>2023-03-06</lastmod>
+    <lastmod>2023-03-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://jiayi-zeng.github.io/categories/Prescriptive-Analytics-Digital-Decisioning/</loc>
-    <lastmod>2023-03-06</lastmod>
+    <lastmod>2023-03-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
