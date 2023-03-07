@@ -1,5 +1,5 @@
 ---
-title: "Sysargv, Argparse and Function Docstring"
+title: "Sysargv, Argparse & Function Docstring"
 
 date: 2023-02-19
 

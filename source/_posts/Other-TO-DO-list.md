@@ -14,7 +14,7 @@ categories: Other
 
 - [ ] Intermediate to Python
 
-- [ ] Predictive Analytics
+- [x] Predictive Analytics
 
 - [x] Introduce to Data Analytics for Business
 
@@ -23,6 +23,8 @@ categories: Other
 # **About Website**
 
 - [ ] 目录二级标题缩进
+
+- [ ] Improve "Next and Previous"
 
 - [x] Motify `Archives` and `Tags`
 

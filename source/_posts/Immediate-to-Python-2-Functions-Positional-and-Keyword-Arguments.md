@@ -1,5 +1,5 @@
 ---
-title: "Functions Positional and Keyword Arguments"
+title: "Functions Positional & Keyword Arguments"
 
 date: 2023-02-26
 
@@ -10,7 +10,7 @@ categories: "Immediate to Python"
 cover_image: https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/3050754.png
 ---
 
-# Positional Arguments
+# **Positional Arguments**
 
 These are argument that are assigned based on their position in the function definition.  A example below will make this clear.
 
@@ -30,7 +30,7 @@ Why did the function treat 'Ronda' as the username argument and '2019-01-01' as 
 
 The arguments are assigned by *position*.
 
-# Keyword Arguments
+# **Keyword Arguments**
 
 Keyword arguments are arguments that are passed to a function by the argument name.  For example, when calling the `print_greeting` function we can pass the arguments as shown in the cell below.
 
@@ -74,7 +74,7 @@ sorted_list = sorted(my_list, key=lambda x: x.split('_')[-1])
 print(sorted_list)
 ```
 
-# Introducing *args
+# **Introducing *args**
 
 Now, take your mind back to positional arguments.  What if you want a function to accept unlimited positional arguments? This is what the `*args` argument can do. By using the `*args` argument in our function definition, all positional arguments will be collected in a **tuple** named `args`. Let's define a function below using the `*args` argument to see how this works
 
@@ -101,7 +101,7 @@ def print_all_the_greetings_2(greeting, *args):
 print_all_the_greetings_2('Good Morning', 'Winston', 'Aarav', 'Julie')
 ```
 
-# Introducing \*\*kwargs
+# **Introducing \*\*kwargs**
 
 Much like `*args` captures extra positional arguments, `**kwargs` captures extra keyword arguments in a dictionary called `kwargs`.
 
@@ -113,7 +113,7 @@ def kwargs_example(**kwargs):
 kwargs_example(name="Paloma", occupation='teacher')
 ```
 
-# Mixing Positional and Keyword Arguments.
+# **Mixing Positional and Keyword Arguments.**
 
 When using both positional and keyword arguments you must specify the positional arguments **first**.
 
@@ -140,7 +140,7 @@ test_arg_and_kwarg(1, 2, 'extra_1', 'extra_2', kwarg1='kwarg 1',
                   extra_kwarg2="I'm extra!")
 ```
 
-# Default Arguments
+# **Default Arguments**
 
 Sometimes you want to specify a default argument value to one of the arguments in your function. This means that if no value is passed to that specific argument, it will still have a default value and the function will run successfully.
 
@@ -204,7 +204,7 @@ values = {'greeting': 'How are you today?', 'date': '2018-11-07'}
 my_greeting(**values)
 ```
 
-# An example of a built-in function that actually uses `args` and `kwargs`!
+# **An example of a built-in function that actually uses `args` and `kwargs`!**
 
 Now, let's look at a built-in functions that uses both `*args` and `**kwargs`.
 

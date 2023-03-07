@@ -1,5 +1,5 @@
 ---
-title: "Iterators and Generators"
+title: "Iterators & Generators"
 
 date: 2023-02-27
 

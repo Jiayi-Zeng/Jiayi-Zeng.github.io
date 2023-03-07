@@ -1,5 +1,5 @@
 ---
-title: "Understanding Namespace and Scope"
+title: "Understanding Namespace & Scope"
 
 date: 2023-03-05
 

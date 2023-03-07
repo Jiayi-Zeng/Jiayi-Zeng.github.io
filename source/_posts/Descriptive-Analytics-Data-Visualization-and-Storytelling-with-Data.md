@@ -1,5 +1,5 @@
 ---
-title: "Descriptive Analytics Data Visualization and Storytelling with Data"
+title: "Descriptive Analytics Data Visualization & Storytelling with Data"
 
 date: 2023-01-23
 
