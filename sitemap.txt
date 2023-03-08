@@ -1,3 +1,8 @@
+https://jiayi-zeng.github.io/docs/Machine-Learning-2-What-to-do-if-my-network-fails-to-train/
+https://jiayi-zeng.github.io/docs/Machine-Learning-1-Introduction-of-Deep-Learning/
+https://jiayi-zeng.github.io/docs/Machine-Learning-0-Course-Intro/
+https://jiayi-zeng.github.io/docs/Predicted-Analytics-3.1-Introduction-to-Regression/
+https://jiayi-zeng.github.io/docs/Other-Real-time-Rendering-and-DLSS-2.0/
 https://jiayi-zeng.github.io/docs/Prescriptive-Analytics-3-Linear-Programming/
 https://jiayi-zeng.github.io/docs/Immediate-to-Python-2-Functions-Positional-and-Keyword-Arguments/
 https://jiayi-zeng.github.io/docs/Predicted-Analytics-4-Regression-Quality/
@@ -6,8 +11,6 @@ https://jiayi-zeng.github.io/docs/Other-TO-DO-list/
 https://jiayi-zeng.github.io/docs/Predicted-Analytics-7-DataPrep-Discretization+OneHotEncoding/
 https://jiayi-zeng.github.io/docs/Predicted-Analytics-6-kNN-Model.md/
 https://jiayi-zeng.github.io/docs/Predicted-Analytics-5-Multi%20Variable%20Regression/
-https://jiayi-zeng.github.io/docs/Predicted-Analytics-3.1-Introduction-to-Regression/
-https://jiayi-zeng.github.io/docs/Other-Real-time-Rendering-and-DLSS-2.0/
 https://jiayi-zeng.github.io/docs/Immediate-to-Python-4-Understanding-Namespace-and-Scope/
 https://jiayi-zeng.github.io/docs/Immediate-to-Python-3-Iterators-and-Generators/
 https://jiayi-zeng.github.io/docs/Immediate-to-Python-1-Sysargv-Argparse-and-Function-Docstring/
@@ -24,8 +27,6 @@ https://jiayi-zeng.github.io/about/
 https://jiayi-zeng.github.io/docs/Computer-Vision-The-Basic-Info-of-CNN/
 https://jiayi-zeng.github.io/docs/Other-ML-Cross-Entropy/
 https://jiayi-zeng.github.io/docs/Computer-Vision-Image-Classification-Paper/
-https://jiayi-zeng.github.io/docs/Machine-Learning-0-Course-Intro/
-https://jiayi-zeng.github.io/docs/Machine-Learning-1-Introduction-of-Deep-Learning/
 https://jiayi-zeng.github.io/search/
 https://jiayi-zeng.github.io/categories/
 https://jiayi-zeng.github.io/tags/

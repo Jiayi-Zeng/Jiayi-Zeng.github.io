@@ -385,3 +385,9 @@ body[data-color-scheme="light"] .tags .icon {
   margin: auto;
   display: block;
 }
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
