@@ -1,3 +1,4 @@
+https://jiayi-zeng.github.io/docs/Prescriptive-Analytics-4-More-Realistic-Optimization-with-Integer-Values-and-Nonlinear-Representation/
 https://jiayi-zeng.github.io/docs/Machine-Learning-2-What-to-do-if-my-network-fails-to-train/
 https://jiayi-zeng.github.io/docs/Machine-Learning-1-Introduction-of-Deep-Learning/
 https://jiayi-zeng.github.io/docs/Machine-Learning-0-Course-Intro/

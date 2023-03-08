@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head prefix="og: https://ogp.me/ns#">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+  <meta name="color-scheme" content="light dark">
+
+  
+<link rel="stylesheet" href="../../css/prism.css">
+ 
+    
+<script src="../js/prism.js"></script>
+
+  
+  <title>More Realistic Optimization With Integer Values and Nonlinear Representation - Joooy | Zeng</title>
+  
+    <link rel="shortcut icon" href="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/1f41f.png">
+  
+  
+    <link rel='manifest' href='/manifest.json'>
+  
+
+  
+  
+  
+  <meta property="og:title" content="More Realistic Optimization With Integer Values and Nonlinear Representation - Joooy | Zeng" />
+  
+  <meta property="og:type" content="article" />
+  
+  <meta property="og:url" content="https://jiayi-zeng.github.io/docs/Prescriptive-Analytics-4-More-Realistic-Optimization-with-Integer-Values-and-Nonlinear-Representation/index.html" />
+  
+  <meta property="og:image" content="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/202303081012.png" />
+  
+  <meta property="og:article:published_time" content="2023-03-08T08:00:00.000Z" />
+  
+  <meta property="og:article:author" content="Joy Zeng" />
+  
+  
+
+  
+<link rel="stylesheet" href="../../css/var.css">
+
+  
+<link rel="stylesheet" href="../../css/main.css">
+
+  
+<link rel="stylesheet" href="../../css/typography.css">
+
+  
+<link rel="stylesheet" href="../../css/code-highlighting.css">
+
+  
+<link rel="stylesheet" href="../../css/components.css">
+
+  
+<link rel="stylesheet" href="../../css/nav.css">
+
+  
+<link rel="stylesheet" href="../../css/paginator.css">
+
+  
+<link rel="stylesheet" href="../../css/footer.css">
+
+  
+<link rel="stylesheet" href="../../css/post-list.css">
+
+  
+  
+<link rel="stylesheet" href="../../css/rainbow-banner.css">
+
+  
+  
+  
+<link rel="stylesheet" href="../../css/toc.css">
+
+  
+  
+  
+  
+  
+<link rel="stylesheet" href="../../css/post.css">
+
+  
+  
+  
+  
+  
+
+  
+<meta name="generator" content="Hexo 6.3.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+    
+<link rel="stylesheet" href="../../css/prism.css">
+ 
+    
+<script src="../js/prism.js"></script>
+
+    <body
+        data-color-scheme="auto"
+        data-uppercase-categories="true"
+        
+        data-rainbow-banner="true"
+        data-rainbow-banner-shown="auto"
+        data-rainbow-banner-month="6"
+        data-rainbow-banner-colors="#e50000,#ff8d00,#ffee00,#008121,#004cff,#760188"
+        
+        data-config-root="/"
+        
+        data-toc="true"
+        data-toc-max-depth="2"
+        
+        
+    >
+        <nav id="theme-nav">
+    <div class="inner">
+        <a class="title" href="/">Jiayi Zeng</a>
+        <div class="nav-arrow"></div>
+        <div class="nav-items">
+            <a class="nav-item nav-item-home" href="/">Home</a>
+            
+            
+            <a class="nav-item" href="../../archives">Archives</a>
+            
+            
+            
+            <a class="nav-item" href="../../tags">Tags</a>
+            
+            
+            
+            <a class="nav-item" href="../../categories">Categories</a>
+            
+            
+            
+            <a class="nav-item" href="../../projects">Projects</a>
+            
+            
+            
+            <a class="nav-item" href="../../about">About</a>
+            
+            
+            
+            <a class="nav-item nav-item-github nav-item-icon" href="https://github.com/Jiayi-Zeng" target="_blank">&nbsp;</a>
+            
+            
+            
+            <a class="nav-item nav-item-search nav-item-icon" href="../../search" target="_blank">&nbsp;</a>
+            
+            
+        </div>
+    </div>
+</nav>
+        
+
+<link rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css">
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+    <script src="//lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js"> </script>
+<article class="post">
+
+<script src="../js/fancybox.js"></script>
+  
+
+<div class="meta">
+    
+    <div class="categories text-uppercase">
+    
+        <a href="/categories/Prescriptive-Analytics-Digital-Decisioning/">Prescriptive Analytics: Digital Decisioning</a>
+    
+    </div>
+    
+
+    
+    <div class="date" id="date">
+        <span>March</span>
+        <span>8,</span>
+        <span>2023</span>
+    </div>
+    
+
+    <h2 class="title">More Realistic Optimization With Integer Values and Nonlinear Representation</h2>
+
+</div>
+
+<div class="divider"></div>
+
+<div class="content">
+    <h1 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a><strong>Introduction</strong></h1><p>Linear programming (LP) is a powerful tool to optimally solve a wide variety of business problems. Despite its power and widespread use, LP also comes with a few restrictive assumptions. Some of these assumptions can be removed or relaxed by using a slightly modified formulation of optimization problems, and the two assumptions that stand out in this front are:</p>
+<ul>
+<li><strong>Divisibility:</strong> In LP, it is assumed that the solution (i.e., the values assigned to the decision variables) can be real/fractional numbers. We all know that many decision variables cannot have fractional values, such as the number of certain types of products to produce or the number of boxes of goods to ship to a warehouse, etc. The relaxation of this assumption, where the integer value of decision variables is a requirement, led to a derivative programming algorithm called <em>integer programming</em>. </li>
+<li><strong>Linearity:</strong> It is also assumed that linear proportionality exists in the formulation of the objective function and constraints. That is, the formulation of the objective function and the constraints does not allow for multiplication, square, or higher power representation of the decision variables. Removal of this assumption led to models that allow nonlinear relationships and are called <em>nonlinear programming</em>.</li>
+</ul>
+<h1 id="Integer-Programming"><a href="#Integer-Programming" class="headerlink" title="Integer Programming"></a><strong>Integer Programming</strong></h1><p>In linear programming models, one of the key assumptions is the unrestricted nature of the decision variable values. That is, the decision variables can assume real/fractional value; although, in most cases, the decision variables cannot have quantities as fractional values, such as the optimal quantity of each product to produce. Technically speaking, an <em>integer programming</em> problem is a mathematical optimization program in which some or all of the decision variables are restricted to be integers. <em>Mixed-integer programming</em> is like integer programming in that some, though not all, of the decision variables are required to assume integer values. </p>
+<p>The key difference between linear programming and integer programming is rather trivial. In linear programming, the decision variables are allowed to assume real values, whereas, in integer programming, they are required to have integer values. The solution mechanism for linear programming and integer programming is quite different, where the integer programming solution method requires significantly longer processing time and more computational resources. </p>
+<h1 id="Simple-Overview-of-Nonlinear-Optimization"><a href="#Simple-Overview-of-Nonlinear-Optimization" class="headerlink" title="Simple Overview of Nonlinear Optimization"></a><strong>Simple Overview of Nonlinear Optimization</strong></h1><p><em>Nonlinear programming</em> (or <em>nonlinear optimization</em>) is the process of solving an optimization problem where some of the constraints and/or the objective function are expressed in a nonlinear algebraic formulation. </p>
+<p>An optimization problem aims to find the extreme/best points (maximum or minimum) of an objective function over a set of unknown (yet to be determined) decision variables while satisfying the conditions of a system of equalities and inequalities (collectively termed as “constraints”). In this optimization formulation, if the algebraic representation of decision variables is all or partially nonlinear, then we call it nonlinear programming. </p>
+<p>Often, in order to use the straightforward LP formulation, business analysts oversimplify the problem representation using linear equations where a nonlinear equation would be a more natural fit. In most cases, the results would be complementary, and such a simplification can be justified with the provided computational efficiency.</p>
+<h1 id="Sensitivity-Analysis-for-More-Detailed-Explanation-of-the-Optimal-Solution"><a href="#Sensitivity-Analysis-for-More-Detailed-Explanation-of-the-Optimal-Solution" class="headerlink" title="Sensitivity Analysis for More Detailed Explanation of the Optimal Solution"></a><strong>Sensitivity Analysis for More Detailed Explanation of the Optimal Solution</strong></h1><p>In addition to the optimal solution, Excel Solver can also provide a sensitivity analysis report for any LP solution. To generate a sensitivity analysis report, you need to select <em>Sensitivity</em> on the dialog box that pops up at the end of the Solver solution procedure (see Figure 1). </p>
+<p><strong><img src="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/j884-qR17OM7_ZbeAmacC5nOelxSND1JsPIk5kWw3a0i2TX_pPOUiTIVq5YSTpqgNgONA2xwmvsFdfYwOCisjdT-Ix2qqH8cJT4V8tO0ugFiqbZlZG7mCmeow0g1B4qIaBl-xTKkPppWAA_lDCKaWA" alt="A screenshot of the Solver Results dialog box in Excel. The dialog box shows that you need to select the Sensitivity box within the Reports section to generate a sensitivity analysis report."></strong></p>
+<p><em>Figure 1: Screenshot of a Solver Results dialog box in Excel</em></p>
+<p>A sensitivity analysis report helps in better understanding the optimal solution and its level of sensitivity to certain problem parameters. Specifically, the sensitivity analysis report provides two sets of measures: (1) <strong>sensitivity of the objective function coefficients, and (2) sensitivity of the constraints’ right-hand-side values.</strong> This information can potentially be used by decision makers to further improve the objective function value by manipulating/relaxing the values used in the problem definition.</p>
+<h1 id="Transportation-Modeling"><a href="#Transportation-Modeling" class="headerlink" title="Transportation Modeling"></a><strong>Transportation Modeling</strong></h1><p>The goal of the transportation problem is to minimize the total cost of transportation, where there is shipping of products from several <em>sources</em> (i.e., supply centers such as production plants) to <em>sinks</em> (i.e., demand centers such as warehouses). This shipping is accomplished while complying with supply-and-demand constraints, where the supply constraints limit the amounts of products shipped out of a source (e.g., a production plant or distribution center), and the demand constraints enforce the amounts of products to be sent to each sink (e.g., a warehouse or retail outlet). Figure 2 illustrates this in a simple pictorial representation. </p>
+<p><img src="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/2v6eCTjkEMalRD_ZYK3GBMw87qut1AO1al_JA34axqRP8o8ZZSbbvmQHqcOzXEA1ZuUsW5Fu-dms6hJS4cKcynG8g4kZh4CIiQhvc1gjpdobnMOVUipwi5ayJNfeOsmBpqVEk1QZY8MATyN8PlJbYA" alt="An illustration of transportation modeling showing the three columns - the production plants on the left column links to warehouses in the right column and the middle column shows the supply and demand constraints. "></p>
+<p><em>Figure 2: Transportation modeling illustration</em></p>
+<p>In this overly simplified example, we have three sources (i.e., three plants) and four sinks (i.e., four warehouses). Any of these plants can send products to any warehouse, each shipment with a different unit transportation cost. Each plant has production limits and each warehouse has demand requirements. The goal in this example is to find a solution that produces the minimum total transportation cost. This problem can also be represented as a simple matrix as shown in Figure 3 below. </p>
+<p><img src="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/zBV156XraoShpMlgpQJSFPRuaBK53u6kwwcvB4XCKqxmNg7R2xhuGfDMOwqn2VdIw0gNyDeBBr-y8UAUoQK7Q_nt7kPffdmNwcDRcAP_Bk-CunEWRm5wCwf32N-GytDabzeBQiPv6Dfx268K8sS7Ww" alt="The same transportation problem but represented in a matrix. There are four warehouses, each listed in a vertical column. There are three plants, each listed in a horizontal row. The cost of each shipment is listed in the intersections of the warehouse columns and plant rows. In addition, there is a supply column on the far right showing the supply number of each plant, and there is a demand row on the bottom depicting the demand of each warehouse. The supply column and demand row intersect on the bottom right of the matrix."></p>
+<p><em>Figure 3: The same transportation model represented as a matrix</em></p>
+<p>This problem can be solved <strong>heuristically (using common logic) or optimally</strong> (using linear programming). Let’s look at each solution in more detail below.</p>
+<h2 id="Heuristic-x2F-Logical-Solution"><a href="#Heuristic-x2F-Logical-Solution" class="headerlink" title="Heuristic/Logical Solution"></a>Heuristic/Logical Solution</h2><p>To solve this problem, we can use a common-sense logical rule to assign shipment quantities into 12 decision cells which would minimize the total transportation cost while still complying with the supply-and-demand constraints. A commonly used heuristic is called “<strong>maximizing shipment quantities for minimum unit cost options</strong>.” In execution of this heuristic, one would find the minimum unit transportation cost cell and assign the largest possible value (quantity on that cell) while complying with the supply-and-demand constraints. This procedure is repeated until all 12 cells are filled with zeros and some non-zero integer numbers. This would produce a good solution but not necessarily the best (i.e., the optimal) solution. </p>
+<h2 id="Optimal-x2F-Excel-Solution"><a href="#Optimal-x2F-Excel-Solution" class="headerlink" title="Optimal/Excel Solution"></a>Optimal/Excel Solution</h2><p>The same problem can also be solved using Excel Solver, optimally. We can accomplish this in a similar way to that which we followed while solving the product-mix problem, i.e., by formulating the problem in an Excel sheet, specifying the optimization problem parameters in the Solver dialog box, and generating the optimal solution.</p>
+
+</div>
+
+
+<div class="about">
+    
+    <p class="tags">
+        
+        <i class="icon"></i>
+        <a href="/tags/DS/" class="tag"># DS</a>
+    </p>
+    
+</div>
+
+
+<div class="container post-prev-next">
+    
+    <a href="../Machine-Learning-2-What-to-do-if-my-network-fails-to-train/" class="next">
+        <div>
+            <div class="text">
+                <p class="label">Next</p>
+                <h3 class="title">2 What to Do if My Network Fails to Train</h3>
+            </div>
+        </div>
+    </a>
+    
+    
+    <a href="../Prescriptive-Analytics-3-Linear-Programming/" class="prev">
+        <div>
+            <div class="text">
+                <p class="label">Previous</p>
+                <h3 class="title">3 Linear Programming</>
+            </div>
+        </div>
+    </a>
+    
+</div>
+
+
+    
+    
+
+    
+</article>          
+    
+  
+
+        <footer>
+    <div class="inner">
+        <div class="links">
+            
+            <div class="group">
+                <h4 class="title">Blog</h4>
+                
+                <a href="/" class="item">Home</a>
+                
+                <a href="/archives" class="item">Archives</a>
+                
+                <a href="/tags" class="item">Tags</a>
+                
+                <a href="/categories" class="item">Categories</a>
+                
+            </div>
+            
+            <div class="group">
+                <h4 class="title">Projects</h4>
+                
+                <a href="/projects" class="item">Intro</a>
+                
+            </div>
+            
+            <div class="group">
+                <h4 class="title">Me</h4>
+                
+                <a target="_blank" rel="noopener" href="https://github.com/Jiayi-Zeng" class="item">GitHub</a>
+                
+                <a href="mailto:joyce.j.zeng@outlook.com" class="item">Email</a>
+                
+                <a href="tencent://message/?Menu=yes&uin=1021987388" class="item">QQ</a>
+                
+                <a target="_blank" rel="noopener" href="https://www.instagram.com/iam_joycezeng/" class="item">Instagram</a>
+                
+                <a target="_blank" rel="noopener" href="https://www.linkedin.com/in/jiayi-zeng-joyce/" class="item">LinkedIn</a>
+                
+            </div>
+            
+        </div>
+        <span>&copy; 2023 Joy Zeng<br>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> </span>
+        
+        
+            <br>
+            <div class="color-scheme-toggle" role="radiogroup" id="theme-color-scheme-toggle">
+                <label>
+                    <input type="radio" value="light">
+                    <span>Light</span>
+                </label>
+                <label>
+                    <input type="radio" value="dark">
+                    <span>Dark</span>
+                </label>
+                <label>
+                    <input type="radio" value="auto">
+                    <span>Auto</span>
+                </label>
+            </div>
+        
+    </div>
+</footer>
+
+
+        
+<script src="../../../js/main.js"></script>
+
+        
+        
+        
+
+        
+    </body>
+</html>
