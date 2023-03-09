@@ -7,12 +7,12 @@ tags: [ML]
 
 categories: HUNG-YI LEE | MACHINE LEARNING
 
-cover_image: https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/202302230549.png
+cover_image: https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/202303081247%20(2).png
 ---
 
 # **Machine Learning ≈ Looking for function**
 
-![image-20221206053236150](https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20221206053236150.png)
+<img src="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20221206053236150.png" alt="image-20221206053236150" style="zoom:50%;" class="center" />
 
 # **Different Types of functions**
 
@@ -28,46 +28,47 @@ A case study
 
 ## The function we want to find …
 
-![image-20221206053424557](https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20221206053424557.png)
+<img src="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20221206053424557.png" alt="image-20221206053424557" style="zoom: 33%;" class="center"/>
 
-![image-20221208221245405](https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20221208221245405.png)
+<img src="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20221208221245405.png" alt="image-20221208221245405" style="zoom:180%;" class="center"/>
 
-![image-20221208223257254](https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20221208223257254.png)
+<img src="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20221208223257254.png" alt="image-20221208223257254" style="zoom:35%;"/>
 
-![image-20221208223309541](https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20221208223309541.png)
+<img src="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20221208223309541.png" alt="image-20221208223309541" style="zoom:50%;" />
 
 ![image-20221208223318275](https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20221208223318275.png)
 
 ![image-20221208223349650](https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20221208223349650.png)
 
-![image-20221208223401234](https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20221208223401234.png)
+<img src="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20221208223401234.png" alt="image-20221208223401234" style="zoom:50%;" />
 
-![image-20221208223418427](https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20221208223418427.png)
+<img src="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20221208223418427.png" alt="image-20221208223418427" style="zoom:50%;" />
 
 # **ML Framework**
 
-![image-20221206053857892](https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20221206053857892.png)
+<img src="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20221206053857892.png" alt="image-20221206053857892" style="zoom:50%;" class="center"/>
 
 ## Step1. Model
 
-depend on domain knowledge
+How to choose: Depend on *domain knowledge*
 
 ### Linear Models
 
-have model bias (limitation), 
+Have *model Bias* (model limitation), 
 
 $$
 y = b + \sum_{j=1}^{n}w_jx_j
 $$
 
+<img src="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20221206054003950.png" alt="image-20221206054003950" style="zoom:50%;" class="center"/>
 
-![image-20221206054003950](https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20221206054003950.png)
+<img src="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20221206054205148.png" alt="image-20221206054205148" style="zoom:50%;" class="center"/>
 
-![image-20221206054205148](https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20221206054205148.png)
-
-![image-20221206054210957](https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20221206054210957.png)
+<img src="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20221206054210957.png" alt="image-20221206054210957" style="zoom:50%;" class="center"/>
 
 ### Sigmoid Function
+
+Hard Sigmoid and Soft Sigmoid
 
 ![image-20221206054229272](https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20221206054229272.png)
 
@@ -81,10 +82,10 @@ $$
 
 ![image-20221206054403705](https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20221206054403705.png)
 
-hyperparameter: 
+**Hyperparameter:** 
 
-* $i$ : no. of features
-* $j$ : no. of sigmoid
+* $j$ : no. of features
+* $i$ : no. of sigmoid
 
 ![image-20221206054613829](https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20221206054613829.png)
 

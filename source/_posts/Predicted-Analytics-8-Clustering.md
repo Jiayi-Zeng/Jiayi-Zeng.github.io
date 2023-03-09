@@ -206,8 +206,6 @@ Compute the Euclidean distance between data points
 
 ## Example code
 
-[Mall_Customers.csv](https://uciunex.instructure.com/courses/16600/files/2324830?wrap=1)
-
 ### Load the Libraries
 
 ```python

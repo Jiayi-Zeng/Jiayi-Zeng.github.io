@@ -7,7 +7,7 @@ tags: [ML]
 
 categories: HUNG-YI LEE | MACHINE LEARNING
 
-cover_image: https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/202302230550.png
+cover_image: https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/202303081247%20(1).png
 ---
 
 # **How to find a function**
@@ -56,7 +56,7 @@ cover_image: https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/p
 
 ![image-20221208230551887](https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20221208230551887.png)
 
-## Lecture 15: Met Learning
+## Lecture 15: Meta Learning
 
 ![image-20221208230612831](https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20221208230612831.png)
 

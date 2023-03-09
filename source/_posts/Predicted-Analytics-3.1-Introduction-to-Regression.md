@@ -13,6 +13,7 @@ cover_image: https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/p
 # **Definition: Linear Regression**
 
 **2 variable regression** - how a response variable $y$ changes the predictor (explanatory) variable $x$ changes.
+
 $$
 y = \beta_1x + c
 $$
@@ -39,40 +40,14 @@ $$
 
 # **Regression Strategy: Ordinary Least Squares (OLS)**
 
-The least-squares regression line of y and x is the 
-line that makes the sum of the squares of the vertical 
-distances of the data points from the line as small as 
-possible.
+The least-squares regression line of y and x is the line that makes the sum of the squares of the vertical distances of the data points from the line as small as possible.
 
 ![image-20230222092629577](https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20230222092629577.png)
-
-# Regression: Supervised Learning Method
-
-Single split model assessment methodology
-
-* The model is tested on hold-out sample
-* Only the hold-out sample accuracy is reported
-
-![image-20230306002607033](https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20230306002607033.png)
-
-# **Nearest Neighbor Regression**
-
-A method for predicting a numerical variable $y$, given a value of $x$:
-
-* Identify the group of points for which the values of $x$ are close to the given value
-* The prediction is the average of the $y$ values for the group
-
-**Graph of Averages**
-
-* For each value of $x$, the predicted value of $y$ is the average of the $y$ values of the nearest neighbors.
-* Graph these predictions for all the values of $x$, That's the **graph of average**
-* If the association between the two variables is linear, then points on the graph of averages tend to fall on near a straight line. That's the **regression line.**
-
-# Solution for Regression Line
 
 * Residual = Observed value – Computed Value
 
 Suppose regression equation is
+
 $$
 y = mx+b
 $$
@@ -93,6 +68,7 @@ $$
 ![image-20230306005620610](https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20230306005620610.png)
 
 ![image-20230306005637510](https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20230306005637510.png)
+
 $$
 \begin{align}
 m &= \frac{\sum(y_ix_i)-\frac{\sum(y_i)\sum(x_i)}{N}}{\sum(x_i^2)-\frac{\sum(x_i)^2}{N}}\\
@@ -100,7 +76,29 @@ b &= (\frac{\sum(y_i)}{N}-m\frac{\sum(x_i)}{N})
 \end{align}
 $$
 
-## Method 1
+# Regression: Supervised Learning Method
+
+Single split model assessment methodology
+* The model is tested on hold-out sample
+* Only the hold-out sample accuracy is reported
+
+![image-20230306002607033](https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20230306002607033.png)
+
+# **Nearest Neighbor Regression**
+
+A method for predicting a numerical variable $y$, given a value of $x$:
+* /Identify the group of points for which the values of $x$ are close to the given value
+* The prediction is the average of the $y$ values for the group
+
+**Graph of Averages**
+
+* For each value of $x$, the predicted value of $y$ is the average of the $y$ values of the nearest neighbors.
+* Graph these predictions for all the values of $x$, That's the **graph of average**
+* If the association between the two variables is linear, then points on the graph of averages tend to fall on near a straight line. That's the **regression line.**
+
+# Solution for Regression Line
+
+* Method 1
 
 ![image-20230306010108743](https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20230306010108743.png)
 
