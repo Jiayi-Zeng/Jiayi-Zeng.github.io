@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head prefix="og: https://ogp.me/ns#">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+  <meta name="color-scheme" content="light dark">
+
+  
+<link rel="stylesheet" href="../css/prism.css">
+ 
+    
+<script src="../js/prism.js"></script>
+
+  
+  <title>5 Heuristic Decision Modeling - Joooy | Zeng</title>
+  
+    <link rel="shortcut icon" href="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/1f41f.png">
+  
+  
+    <link rel='manifest' href='/manifest.json'>
+  
+
+  
+  
+  
+  <meta property="og:title" content="5 Heuristic Decision Modeling - Joooy | Zeng" />
+  
+  <meta property="og:type" content="article" />
+  
+  <meta property="og:url" content="https://jiayi-zeng.github.io/docs/Prescriptive-Analytics-5-Heuristic-Decision-Modeling/index.html" />
+  
+  <meta property="og:image" content="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/202303090949.png" />
+  
+  <meta property="og:article:published_time" content="2023-03-09T08:00:00.000Z" />
+  
+  <meta property="og:article:author" content="Joy Zeng" />
+  
+  
+
+  
+<link rel="stylesheet" href="../../css/var.css">
+
+  
+<link rel="stylesheet" href="../../css/main.css">
+
+  
+<link rel="stylesheet" href="../../css/typography.css">
+
+  
+<link rel="stylesheet" href="../../css/code-highlighting.css">
+
+  
+<link rel="stylesheet" href="../../css/components.css">
+
+  
+<link rel="stylesheet" href="../../css/nav.css">
+
+  
+<link rel="stylesheet" href="../../css/paginator.css">
+
+  
+<link rel="stylesheet" href="../../css/footer.css">
+
+  
+<link rel="stylesheet" href="../../css/post-list.css">
+
+  
+  
+<link rel="stylesheet" href="../../css/rainbow-banner.css">
+
+  
+  
+  
+<link rel="stylesheet" href="../../css/toc.css">
+
+  
+  
+  
+  
+  
+<link rel="stylesheet" href="../../css/post.css">
+
+  
+  
+  
+  
+  
+
+  
+<meta name="generator" content="Hexo 6.3.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+    
+<link rel="stylesheet" href="../../css/prism.css">
+ 
+    
+<script src="../js/prism.js"></script>
+
+    <body
+        data-color-scheme="auto"
+        data-uppercase-categories="true"
+        
+        data-rainbow-banner="true"
+        data-rainbow-banner-shown="auto"
+        data-rainbow-banner-month="6"
+        data-rainbow-banner-colors="#e50000,#ff8d00,#ffee00,#008121,#004cff,#760188"
+        
+        data-config-root="/"
+        
+        data-toc="true"
+        data-toc-max-depth="2"
+        
+        
+    >
+        <nav id="theme-nav">
+    <div class="inner">
+        <a class="title" href="/">Jiayi Zeng</a>
+        <div class="nav-arrow"></div>
+        <div class="nav-items">
+            <a class="nav-item nav-item-home" href="/">Home</a>
+            
+            
+            <a class="nav-item" href="../../archives">Archives</a>
+            
+            
+            
+            <a class="nav-item" href="../../tags">Tags</a>
+            
+            
+            
+            <a class="nav-item" href="../../categories">Categories</a>
+            
+            
+            
+            <a class="nav-item" href="../../projects">Projects</a>
+            
+            
+            
+            <a class="nav-item" href="../../about">About</a>
+            
+            
+            
+            <a class="nav-item nav-item-github nav-item-icon" href="https://github.com/Jiayi-Zeng" target="_blank">&nbsp;</a>
+            
+            
+            
+            <a class="nav-item nav-item-search nav-item-icon" href="../../search" target="_blank">&nbsp;</a>
+            
+            
+        </div>
+    </div>
+</nav>
+        
+
+<link rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css">
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+    <script src="//lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js"> </script>
+<article class="post">
+
+<script src="../js/fancybox.js"></script>
+  
+
+<div class="meta">
+    
+    <div class="categories text-uppercase">
+    
+        <a href="/categories/Prescriptive-Analytics-Digital-Decisioning/">Prescriptive Analytics: Digital Decisioning</a>
+    
+    </div>
+    
+
+    
+    <div class="date" id="date">
+        <span>March</span>
+        <span>9,</span>
+        <span>2023</span>
+    </div>
+    
+
+    <h2 class="title">5 Heuristic Decision Modeling</h2>
+
+</div>
+
+<div class="divider"></div>
+
+<div class="content">
+    <h1 id="Key-Terms"><a href="#Key-Terms" class="headerlink" title="Key Terms"></a><strong>Key Terms</strong></h1><ul>
+<li>Heuristic method</li>
+<li>Satisfying solution</li>
+<li>Genetic algorithms</li>
+<li>Survival of the fittest</li>
+<li>Genes and chromosomes</li>
+<li>Genetic operators (mutation and crossover) </li>
+<li>Population size</li>
+<li>Elites and offsprings</li>
+<li>Objective functions</li>
+</ul>
+<h1 id="What-If-There-Is-Not-an-Optimal-Solution"><a href="#What-If-There-Is-Not-an-Optimal-Solution" class="headerlink" title="What If There Is Not an Optimal Solution?"></a><strong>What If There Is Not an Optimal Solution?</strong></h1><p>When the problem is too complex to be solved optimally, we use <em>heuristic methods</em> to solve the problem with a reasonably good (i.e., satisfying) outcome using one of the mathematical programming techniques. However, unlike mathematical programming techniques, heuristic methods will not guarantee an optimal (i.e., the best) solution; instead, a heuristic technique will use a logical method to produce a “good” solution to a highly complex problem.</p>
+<h1 id="Types-of-Heuristic-Methods"><a href="#Types-of-Heuristic-Methods" class="headerlink" title="Types of Heuristic Methods"></a><strong>Types of Heuristic Methods</strong></h1><p>There are many heuristic (also called <em>metaheuristic</em>) optimization techniques in the literature. The notable ones include Tabu Search, simulated annealing, genetic algorithms, particle swarm optimization, and ant colony optimization. As you can see from these names, most heuristic optimization techniques are modeled after some type of natural phenomenon. In this module, we explain genetic algorithms, which are arguably the most popular and most commonly used heuristic optimization techniques.</p>
+<h2 id="Genetic-Algorithms"><a href="#Genetic-Algorithms" class="headerlink" title="Genetic Algorithms"></a>Genetic Algorithms</h2><p><em>Genetic algorithms</em> are a part of the family of nature-inspired global search optimization techniques. They are usually used to find approximate solutions to optimization problems that are too complex to be solved with traditional optimization methods (which, as discussed in the previous module, guarantee the best solution to a specific problem). Genetic algorithms are a part of the machine learning family of methods under artificial intelligence. They are considered a heuristic method since they cannot guarantee the optimal solution (arguably the most famous one). </p>
+<p>Genetic algorithms are sets of computational procedures that conceptually follow the steps of the biological processes of evolution. <strong>That is, better and better solutions evolve from the previous generation of solutions until an optimal or near-optimal solution is obtained.</strong> Genetic algorithms (also known as <em>evolutionary algorithms</em>) demonstrate self-organization and adaptation in much the same way biological organisms do by following the chief rule of evolution, the “survival of the fittest.” The method improves the solution by producing offspring (i.e., a new collection of feasible solutions) using the best-fitted solutions of the current generation as “parents.” The generation of offspring is achieved by a reproduction process modeled after genetic reproductions, where mutation and crossover operators are used to manipulate genes in constructing newer and “better” chromosomes. (Notice that a simple analogy between [genes and decision variables] and between [chromosomes and potential solutions] underlies the genetic algorithms terminology.) </p>
+<p>Genetic algorithms have been successfully applied to a wide range of highly complex real-world problems, including vehicle routing, bankruptcy prediction, and web searching.</p>
+<h2 id="The-Generic-Algorithm-GA-Process-How-Does-GA-Work"><a href="#The-Generic-Algorithm-GA-Process-How-Does-GA-Work" class="headerlink" title="The Generic Algorithm (GA) Process: How Does GA Work?"></a>The Generic Algorithm (GA) Process: How Does GA Work?</h2><p>Figure 1 below shows the flow diagram of a typical genetic algorithm process. The process starts with describing and representing the problem in a manner amenable to the genetic algorithm. Typically, this means that a string of 1s and 0s (or other more recently proposed complex representations) are used to represent the decision variables. This collection represents a potential solution to the problem (analogous to individual genes that constitute chromosomes).</p>
+<p><img src="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/43VifdmyOe5BAshD3NbDjNLjDnXByPk9tq_C9YtSLADjgGjh6aZ03zTcMrUMZE3ZFt0rbkbutZjX4oV00ip1u8Rz2SFDIRZooJNlWUO8XlVTe2fkmD0vfJDeU5g-sbA9u2LlIgN4ZYeyMdemktlqBw" alt="A flow chart or diagram of a typical genetic algorithm process. For a longer and detailed description, click on the link next to the figure title."></p>
+<p><em>Figure 1: Flow diagram of a typical genetic algorithm process [*<a target="_blank" rel="noopener" href="https://docs.google.com/document/u/0/d/1zX0wJtQrCa8DeEysQO3BYAxuOOxQ5_o_v79Xhphc_5E/edit"><em>Long Description</em></a></em>]*</p>
+<p>Next, the decision variables are mathematically or symbolically pooled into a fitness (or objective) function. The fitness function can be one of two types: <em>maximization</em> (i.e., something that is “more” is better, such as profit) or <em>minimization</em> (i.e., something that is “less” is better, such as cost). Along with the fitness function, you should also represent all of the constraints on decision variables that collectively dictate whether a solution is feasible. Remember that only the possible solutions can be a part of the solution population. Infeasible ones are filtered out before finalizing a generation of solutions in the iterations process. </p>
+<p>Once the representation is done, an initial set of solutions (i.e., the initial population) is generated, all infeasible solutions are eliminated, and the fitness functions of feasible ones are computed. The solutions are ranked-ordered based on their fitness values, so those with better fitness values are given more probability (proportional to their relative fitness value) in the random selection process.</p>
+
+</div>
+
+
+<div class="about">
+    
+    <p class="tags">
+        
+        <i class="icon"></i>
+        <a href="/tags/DS/" class="tag"># DS</a>
+    </p>
+    
+</div>
+
+
+<div class="container post-prev-next">
+    <a class="next"></a>
+    
+    <a href="../Machine-Learning-2-What-to-do-if-my-network-fails-to-train/" class="prev">
+        <div>
+            <div class="text">
+                <p class="label">Previous</p>
+                <h3 class="title">2 What to Do if My Network Fails to Train</>
+            </div>
+        </div>
+    </a>
+    
+</div>
+
+
+    
+    
+
+    
+</article>          
+    
+  
+
+        <footer>
+    <div class="inner">
+        <div class="links">
+            
+            <div class="group">
+                <h4 class="title">Blog</h4>
+                
+                <a href="/" class="item">Home</a>
+                
+                <a href="/archives" class="item">Archives</a>
+                
+                <a href="/tags" class="item">Tags</a>
+                
+                <a href="/categories" class="item">Categories</a>
+                
+            </div>
+            
+            <div class="group">
+                <h4 class="title">Projects</h4>
+                
+                <a href="/projects" class="item">Intro</a>
+                
+            </div>
+            
+            <div class="group">
+                <h4 class="title">Me</h4>
+                
+                <a target="_blank" rel="noopener" href="https://github.com/Jiayi-Zeng" class="item">GitHub</a>
+                
+                <a href="mailto:joyce.j.zeng@outlook.com" class="item">Email</a>
+                
+                <a href="tencent://message/?Menu=yes&uin=1021987388" class="item">QQ</a>
+                
+                <a target="_blank" rel="noopener" href="https://www.instagram.com/iam_joycezeng/" class="item">Instagram</a>
+                
+                <a target="_blank" rel="noopener" href="https://www.linkedin.com/in/jiayi-zeng-joyce/" class="item">LinkedIn</a>
+                
+            </div>
+            
+        </div>
+        <span>&copy; 2023 Joy Zeng<br>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> </span>
+        
+        
+            <br>
+            <div class="color-scheme-toggle" role="radiogroup" id="theme-color-scheme-toggle">
+                <label>
+                    <input type="radio" value="light">
+                    <span>Light</span>
+                </label>
+                <label>
+                    <input type="radio" value="dark">
+                    <span>Dark</span>
+                </label>
+                <label>
+                    <input type="radio" value="auto">
+                    <span>Auto</span>
+                </label>
+            </div>
+        
+    </div>
+</footer>
+
+
+        
+<script src="../../../js/main.js"></script>
+
+        
+        
+        
+
+        
+    </body>
+</html>

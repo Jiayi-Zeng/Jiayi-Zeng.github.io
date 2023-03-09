@@ -1,5 +1,7 @@
-https://jiayi-zeng.github.io/docs/Prescriptive-Analytics-4-More-Realistic-Optimization-with-Integer-Values-and-Nonlinear-Representation/
+https://jiayi-zeng.github.io/docs/Prescriptive-Analytics-5-Heuristic-Decision-Modeling/
 https://jiayi-zeng.github.io/docs/Machine-Learning-2-What-to-do-if-my-network-fails-to-train/
+https://jiayi-zeng.github.io/docs/Prescriptive-Analytics-4-More-Realistic-Optimization-with-Integer-Values-and-Nonlinear-Representation/
+https://jiayi-zeng.github.io/docs/Predicted-Analytics-8-Clustering/
 https://jiayi-zeng.github.io/docs/Machine-Learning-1-Introduction-of-Deep-Learning/
 https://jiayi-zeng.github.io/docs/Machine-Learning-0-Course-Intro/
 https://jiayi-zeng.github.io/docs/Predicted-Analytics-3.1-Introduction-to-Regression/
@@ -18,7 +20,6 @@ https://jiayi-zeng.github.io/docs/Immediate-to-Python-1-Sysargv-Argparse-and-Fun
 https://jiayi-zeng.github.io/docs/Descriptive-Analytics-Data-Visualization-and-Storytelling-with-Data/
 https://jiayi-zeng.github.io/docs/Prescriptive-Analytics-1-Overview-of-Prescriptive-Analytics/
 https://jiayi-zeng.github.io/docs/Intro-to-Analyzing-Data-for-Business/
-https://jiayi-zeng.github.io/docs/Predicted-Analytics-8-Clustering/
 https://jiayi-zeng.github.io/docs/Predicted-Analytics-3.2-Linear-Regression/
 https://jiayi-zeng.github.io/docs/Predicted-Analytics-2.2-ML-Techniques/
 https://jiayi-zeng.github.io/docs/Predicted-Analytics-1-Introduction-to-Predictive-Analytics/
@@ -36,9 +37,9 @@ https://jiayi-zeng.github.io/tags/CV/
 https://jiayi-zeng.github.io/tags/Python/
 https://jiayi-zeng.github.io/tags/DS/
 https://jiayi-zeng.github.io/tags/ML/
-https://jiayi-zeng.github.io/tags/Data-Mining/
 https://jiayi-zeng.github.io/tags/DL/
 https://jiayi-zeng.github.io/tags/CG/
+https://jiayi-zeng.github.io/tags/Data-Mining/
 https://jiayi-zeng.github.io/categories/Computer-Vision/
 https://jiayi-zeng.github.io/categories/Immediate-to-Python/
 https://jiayi-zeng.github.io/categories/Data-Analytics/
