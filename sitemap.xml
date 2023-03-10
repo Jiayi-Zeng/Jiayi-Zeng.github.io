@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://jiayi-zeng.github.io/docs/Prescriptive-Analytics-6-Simulation-Modeling-and-Monte-Carlo-Simulation/</loc>
+    
+    <lastmod>2023-03-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://jiayi-zeng.github.io/docs/Prescriptive-Analytics-5-Heuristic-Decision-Modeling/</loc>
     
     <lastmod>2023-03-09</lastmod>
@@ -310,7 +319,7 @@
 
   <url>
     <loc>https://jiayi-zeng.github.io/</loc>
-    <lastmod>2023-03-09</lastmod>
+    <lastmod>2023-03-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -318,49 +327,49 @@
   
   <url>
     <loc>https://jiayi-zeng.github.io/tags/CV/</loc>
-    <lastmod>2023-03-09</lastmod>
+    <lastmod>2023-03-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://jiayi-zeng.github.io/tags/Python/</loc>
-    <lastmod>2023-03-09</lastmod>
+    <lastmod>2023-03-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://jiayi-zeng.github.io/tags/DS/</loc>
-    <lastmod>2023-03-09</lastmod>
+    <lastmod>2023-03-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://jiayi-zeng.github.io/tags/ML/</loc>
-    <lastmod>2023-03-09</lastmod>
+    <lastmod>2023-03-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://jiayi-zeng.github.io/tags/DL/</loc>
-    <lastmod>2023-03-09</lastmod>
+    <lastmod>2023-03-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://jiayi-zeng.github.io/tags/CG/</loc>
-    <lastmod>2023-03-09</lastmod>
+    <lastmod>2023-03-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://jiayi-zeng.github.io/tags/Data-Mining/</loc>
-    <lastmod>2023-03-09</lastmod>
+    <lastmod>2023-03-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -369,49 +378,49 @@
   
   <url>
     <loc>https://jiayi-zeng.github.io/categories/Computer-Vision/</loc>
-    <lastmod>2023-03-09</lastmod>
+    <lastmod>2023-03-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://jiayi-zeng.github.io/categories/Immediate-to-Python/</loc>
-    <lastmod>2023-03-09</lastmod>
+    <lastmod>2023-03-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://jiayi-zeng.github.io/categories/Data-Analytics/</loc>
-    <lastmod>2023-03-09</lastmod>
+    <lastmod>2023-03-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://jiayi-zeng.github.io/categories/HUNG-YI-LEE-MACHINE-LEARNING/</loc>
-    <lastmod>2023-03-09</lastmod>
+    <lastmod>2023-03-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://jiayi-zeng.github.io/categories/Other/</loc>
-    <lastmod>2023-03-09</lastmod>
+    <lastmod>2023-03-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://jiayi-zeng.github.io/categories/Predicted-Analytics-Tools-Techniques/</loc>
-    <lastmod>2023-03-09</lastmod>
+    <lastmod>2023-03-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://jiayi-zeng.github.io/categories/Prescriptive-Analytics-Digital-Decisioning/</loc>
-    <lastmod>2023-03-09</lastmod>
+    <lastmod>2023-03-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>

@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head prefix="og: https://ogp.me/ns#">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+  <meta name="color-scheme" content="light dark">
+
+  
+<link rel="stylesheet" href="../css/prism.css">
+ 
+    
+<script src="../js/prism.js"></script>
+
+  
+  <title>6 Simulation Modeling and Monte Carlo Simulation - Joooy | Zeng</title>
+  
+    <link rel="shortcut icon" href="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/1f41f.png">
+  
+  
+    <link rel='manifest' href='/manifest.json'>
+  
+
+  
+  
+  
+  <meta property="og:title" content="6 Simulation Modeling and Monte Carlo Simulation - Joooy | Zeng" />
+  
+  <meta property="og:type" content="article" />
+  
+  <meta property="og:url" content="https://jiayi-zeng.github.io/docs/Prescriptive-Analytics-6-Simulation-Modeling-and-Monte-Carlo-Simulation/index.html" />
+  
+  <meta property="og:image" content="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/202303100331.png" />
+  
+  <meta property="og:article:published_time" content="2023-03-10T08:00:00.000Z" />
+  
+  <meta property="og:article:author" content="Joy Zeng" />
+  
+  
+
+  
+<link rel="stylesheet" href="../../css/var.css">
+
+  
+<link rel="stylesheet" href="../../css/main.css">
+
+  
+<link rel="stylesheet" href="../../css/typography.css">
+
+  
+<link rel="stylesheet" href="../../css/code-highlighting.css">
+
+  
+<link rel="stylesheet" href="../../css/components.css">
+
+  
+<link rel="stylesheet" href="../../css/nav.css">
+
+  
+<link rel="stylesheet" href="../../css/paginator.css">
+
+  
+<link rel="stylesheet" href="../../css/footer.css">
+
+  
+<link rel="stylesheet" href="../../css/post-list.css">
+
+  
+  
+<link rel="stylesheet" href="../../css/rainbow-banner.css">
+
+  
+  
+  
+<link rel="stylesheet" href="../../css/toc.css">
+
+  
+  
+  
+  
+  
+<link rel="stylesheet" href="../../css/post.css">
+
+  
+  
+  
+  
+  
+
+  
+<meta name="generator" content="Hexo 6.3.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+    
+<link rel="stylesheet" href="../../css/prism.css">
+ 
+    
+<script src="../js/prism.js"></script>
+
+    <body
+        data-color-scheme="auto"
+        data-uppercase-categories="true"
+        
+        data-rainbow-banner="true"
+        data-rainbow-banner-shown="auto"
+        data-rainbow-banner-month="6"
+        data-rainbow-banner-colors="#e50000,#ff8d00,#ffee00,#008121,#004cff,#760188"
+        
+        data-config-root="/"
+        
+        data-toc="true"
+        data-toc-max-depth="2"
+        
+        
+    >
+        <nav id="theme-nav">
+    <div class="inner">
+        <a class="title" href="/">Jiayi Zeng</a>
+        <div class="nav-arrow"></div>
+        <div class="nav-items">
+            <a class="nav-item nav-item-home" href="/">Home</a>
+            
+            
+            <a class="nav-item" href="../../archives">Archives</a>
+            
+            
+            
+            <a class="nav-item" href="../../tags">Tags</a>
+            
+            
+            
+            <a class="nav-item" href="../../categories">Categories</a>
+            
+            
+            
+            <a class="nav-item" href="../../projects">Projects</a>
+            
+            
+            
+            <a class="nav-item" href="../../about">About</a>
+            
+            
+            
+            <a class="nav-item nav-item-github nav-item-icon" href="https://github.com/Jiayi-Zeng" target="_blank">&nbsp;</a>
+            
+            
+            
+            <a class="nav-item nav-item-search nav-item-icon" href="../../search" target="_blank">&nbsp;</a>
+            
+            
+        </div>
+    </div>
+</nav>
+        
+
+<link rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css">
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+    <script src="//lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js"> </script>
+<article class="post">
+
+<script src="../js/fancybox.js"></script>
+  
+
+<div class="meta">
+    
+    <div class="categories text-uppercase">
+    
+        <a href="/categories/Prescriptive-Analytics-Digital-Decisioning/">Prescriptive Analytics: Digital Decisioning</a>
+    
+    </div>
+    
+
+    
+    <div class="date" id="date">
+        <span>March</span>
+        <span>10,</span>
+        <span>2023</span>
+    </div>
+    
+
+    <h2 class="title">6 Simulation Modeling and Monte Carlo Simulation</h2>
+
+</div>
+
+<div class="divider"></div>
+
+<div class="content">
+    <h1 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h1><p>Simulation is a very powerful and expressive analytics tool for very complex problems that cannot be simplified and solved by optimization techniques. Because of its close representation of reality, simulation has become the “go-to” tool for many business consultancy companies, so much so that sometimes even the optimally solvable problems are analyzed using simulation modeling. </p>
+<h1 id="Key-Terms"><a href="#Key-Terms" class="headerlink" title="Key Terms"></a>Key Terms</h1><ul>
+<li>Simulation</li>
+<li>Heuristic</li>
+<li>Discrete-event simulation</li>
+<li>Continuous simulation</li>
+<li>Deterministic simulation</li>
+<li>Stochastic simulation</li>
+<li>Simio</li>
+<li>Monte Carlo simulation</li>
+</ul>
+<h1 id="What-is-Simulation"><a href="#What-is-Simulation" class="headerlink" title="What is Simulation?"></a>What is Simulation?</h1><p>Generally speaking, <em>simulation</em> is an imitation of reality within a computer environment or the computerized representation of a given real-world situation. In order to simulate, a model of the real-world scenario must be developed. Such a model is designed to represent the key characteristics, behaviors, and functions of the particular physical or abstract world, system, or process. Although simulation is usually developed to mimic reality, sometimes it is developed for situations beyond reality, i.e., imaginary, surreal, or even “future” worlds. Perhaps the best example of the simulation of surreal worlds is found in video games. Most agree that video games represent the most advanced, leading-edge computer simulations in terms of functionality, randomness, and visual effects.</p>
+<h1 id="Types-of-Business-Problems-Can-or-Should-be-Solved-with-Simulation"><a href="#Types-of-Business-Problems-Can-or-Should-be-Solved-with-Simulation" class="headerlink" title="Types of Business Problems Can or Should be Solved with Simulation"></a>Types of Business Problems Can or Should be Solved with Simulation</h1><p>Simulation modeling has been applied to a variety of complex business systems. Especially suitable for systems that have a complex process of logic and stochastics (imprecise) time estimates. Successful applications of simulation can be found in many industries including manufacturing, healthcare, finance, mining, aerospace, telecommunications, tourism and entertainment, government, homeland security, defense, and military. Here are some high-level characteristics of systems and situations that warrant the development of a simulation modeling-based analytics application: </p>
+<ul>
+<li><strong>Systems where it is too expensive, too risky, or impossible to do live experimentations</strong>. In such situations, simulation provides an inexpensive, risk-free way to test and study the changes incurred in the system. </li>
+<li><strong>Complex systems for which a significant change/improvement is being considered.</strong> A guess is usually a poor substitute for an objective analysis of the system. Simulation can help in accurately predicting system behavior under projected condition changes and reduce the risk of making a poor decision.</li>
+<li><strong>Systems where predicting process variability is important.</strong> A spreadsheet analysis cannot capture the dynamic aspects of a system, i.e., aspects which can have a major impact on system performance. Simulation can help you understand how various components interact with each other and how they affect overall system performance.</li>
+<li><strong>Systems where you have incomplete data.</strong> Simulation cannot invent data where it does not exist, but simulation does well at determining sensitivity to unknowns. A high-level model can help you explore alternatives. A more detailed model can help you identify the most important missing data.</li>
+<li><strong>Systems where you need to communicate ideas.</strong> The development of a simulation helps participants better understand the system. Modern 2D and 3D animations and other visual tools promote communication and understanding across a wide variety of stakeholders.</li>
+</ul>
+<h1 id="Types-of-Simulation-Models"><a href="#Types-of-Simulation-Models" class="headerlink" title="Types of Simulation Models"></a>Types of Simulation Models</h1><p>Simulation models are created using software tools designed to capture and represent the system components and their interrelationships and calculate/record their behavioral outcomes over time. Simulation is used for predicting both the effect of changes to existing systems and the projected performance of an imaginary, futuristic, or planned new system. Simulations are frequently used in the assessment of alternative designs, testing and validation of operations, and calculation of risk propensity of current and future systems. </p>
+<p>Simulations can be categorized based on several dimensions. The most common categorizations of simulations are based on:</p>
+<ol>
+<li>Whether or not they include time into their representation of the underlying system (i.e., <em>static</em> versus <em>dynamic</em> simulation).</li>
+<li>Whether they handle the probabilistic nature of the system variables (i.e., <em>deterministic</em> versus <em>stochastic</em> simulation).</li>
+<li>Whether they perceive and represent the underlying phenomenon as a continuous system (i.e., <em>discrete</em> versus <em>continuous</em> simulation).</li>
+</ol>
+<p>Let’s consider each of these categories in a bit more detail:</p>
+<ul>
+<li><strong>Static (time-independent) versus dynamic (time-dependent) simulation</strong>. Time is a crucial element of most systems where the system status changes over time. Not every system needs to be analyzed over time. One of the prime examples of time-independent simulation modeling is called the <em>Monte Carlo</em> simulation, which we’ll discuss below.</li>
+<li><strong>Deterministic versus stochastic simulation.</strong> In a stochastic simulation (the most common type of simulation models), randomness is explicitly captured to better represent the variation found in most real-world systems. Deterministic models have no variation.</li>
+<li><strong>Discrete versus continuous simulation.</strong> Generally speaking, the terms “discrete” and “continuous” refer to the nature in which the states change within the system. A “state” in this context is a snapshot of the system as it is defined by all of its parameters and their respective values. Some systems are purely discrete or purely continuous, while others have both types of states present.</li>
+</ul>
+<h2 id="SIMIO-a-Popular-Simulation-Modeling-Platform-for-Business-Problems"><a href="#SIMIO-a-Popular-Simulation-Modeling-Platform-for-Business-Problems" class="headerlink" title="SIMIO: a Popular Simulation Modeling Platform for Business Problems"></a>SIMIO: a Popular Simulation Modeling Platform for Business Problems</h2><p>Simio (see <a target="_blank" rel="noopener" href="https://www.simio.com/">simio.com)</a> is a very powerful, general purpose, commercial simulation tool. On this site, you can demo different types of simulations to see the breadth of what is possible. One of these types is the Monte Carlo simulation model.</p>
+<h1 id="Monte-Carlo-Simulation"><a href="#Monte-Carlo-Simulation" class="headerlink" title="Monte Carlo Simulation"></a>Monte Carlo Simulation</h1><p>A <em>Monte Carlo</em> simulation refers to any simulation, manual or computer-based, that utilizes random numbers to represent one or more of the variables in the simulation model. As the name suggests, this simulation is named after the city of Monte Carlo in Monaco. In addition to its natural beauty, Monte Carlo is famous for its casinos, chance gaming, and gambling. Although Monte Carlo simulation and stochastic simulation are two synonymous terms, because of its name appeal, this type of simulation is commonly called Monte Carlo— though stochastic simulation is a more descriptive and technical term for it. The Monte Carlo simulation process involves generating random (or chance) variables to represent and illustrate random collective behavior. Figure 1 below illustrates a simple depiction of developing a Monte Carlo simulation model. </p>
+<p><img src="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/VbeP_kpuIFhnteUTvb3nAPlVhW4G_3TDsJK0n7zpJkQ58ZmPSEpzn8TSpqTKGZtKog56ZANa5yGjh0UFWNUiJakDiVi-pje9LuPE7X8r4TYWcgpOdqfvgVIyaUUh8zs1i20fqpmTAeSx0aHGHJAieg" alt="Shows the steps for developing a Monte Carlo simulation model. Access the long description link for a detailed explanation."></p>
+<p><em>Figure 1: Steps for developing a Monte Carlo simulation model</em> [<a target="_blank" rel="noopener" href="https://docs.google.com/document/u/0/d/1u5M9QEWtcYP3l92smXT1mLwFw1utkIIKYBZWG1gK240/edit">Long Description</a>]</p>
+
+</div>
+
+
+<div class="about">
+    
+    <p class="tags">
+        
+        <i class="icon"></i>
+        <a href="/tags/DS/" class="tag"># DS</a>
+    </p>
+    
+</div>
+
+
+<div class="container post-prev-next">
+    <a class="next"></a>
+    
+    <a href="../Prescriptive-Analytics-5-Heuristic-Decision-Modeling/" class="prev">
+        <div>
+            <div class="text">
+                <p class="label">Previous</p>
+                <h3 class="title">5 Heuristic Decision Modeling</>
+            </div>
+        </div>
+    </a>
+    
+</div>
+
+
+    
+    
+
+    
+</article>          
+    
+  
+
+        <footer>
+    <div class="inner">
+        <div class="links">
+            
+            <div class="group">
+                <h4 class="title">Blog</h4>
+                
+                <a href="/" class="item">Home</a>
+                
+                <a href="/archives" class="item">Archives</a>
+                
+                <a href="/tags" class="item">Tags</a>
+                
+                <a href="/categories" class="item">Categories</a>
+                
+            </div>
+            
+            <div class="group">
+                <h4 class="title">Projects</h4>
+                
+                <a href="/projects" class="item">Intro</a>
+                
+            </div>
+            
+            <div class="group">
+                <h4 class="title">Me</h4>
+                
+                <a target="_blank" rel="noopener" href="https://github.com/Jiayi-Zeng" class="item">GitHub</a>
+                
+                <a href="mailto:joyce.j.zeng@outlook.com" class="item">Email</a>
+                
+                <a href="tencent://message/?Menu=yes&uin=1021987388" class="item">QQ</a>
+                
+                <a target="_blank" rel="noopener" href="https://www.instagram.com/iam_joycezeng/" class="item">Instagram</a>
+                
+                <a target="_blank" rel="noopener" href="https://www.linkedin.com/in/jiayi-zeng-joyce/" class="item">LinkedIn</a>
+                
+            </div>
+            
+        </div>
+        <span>&copy; 2023 Joy Zeng<br>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> </span>
+        
+        
+            <br>
+            <div class="color-scheme-toggle" role="radiogroup" id="theme-color-scheme-toggle">
+                <label>
+                    <input type="radio" value="light">
+                    <span>Light</span>
+                </label>
+                <label>
+                    <input type="radio" value="dark">
+                    <span>Dark</span>
+                </label>
+                <label>
+                    <input type="radio" value="auto">
+                    <span>Auto</span>
+                </label>
+            </div>
+        
+    </div>
+</footer>
+
+
+        
+<script src="../../../js/main.js"></script>
+
+        
+        
+        
+
+        
+    </body>
+</html>

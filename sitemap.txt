@@ -1,3 +1,4 @@
+https://jiayi-zeng.github.io/docs/Prescriptive-Analytics-6-Simulation-Modeling-and-Monte-Carlo-Simulation/
 https://jiayi-zeng.github.io/docs/Prescriptive-Analytics-5-Heuristic-Decision-Modeling/
 https://jiayi-zeng.github.io/docs/Machine-Learning-2-What-to-do-if-my-network-fails-to-train/
 https://jiayi-zeng.github.io/docs/Prescriptive-Analytics-4-More-Realistic-Optimization-with-Integer-Values-and-Nonlinear-Representation/
