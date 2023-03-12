@@ -1,6 +1,6 @@
+https://jiayi-zeng.github.io/docs/Machine-Learning-2.2-when-gradient-is-small/
 https://jiayi-zeng.github.io/docs/Machine-Learning-2.1-What-to-do-if-my-network-fails-to-train/
 https://jiayi-zeng.github.io/docs/Other-TO-DO-list/
-https://jiayi-zeng.github.io/docs/Machine-Learning-2.2-when-gradient-is-small/
 https://jiayi-zeng.github.io/docs/Prescriptive-Analytics-1-Overview-of-Prescriptive-Analytics/
 https://jiayi-zeng.github.io/docs/Machine-Learning-1-Introduction-of-Deep-Learning/
 https://jiayi-zeng.github.io/docs/Machine-Learning-0-Course-Intro/
