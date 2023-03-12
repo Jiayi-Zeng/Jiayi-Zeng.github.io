@@ -13,7 +13,7 @@
 <script src="../js/prism.js"></script>
 
   
-  <title>2 What to Do if My Network Fails to Train - Joooy | Zeng</title>
+  <title>2.2 When Gradient Is small... - Joooy | Zeng</title>
   
     <link rel="shortcut icon" href="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/1f41f.png">
   
@@ -24,11 +24,11 @@
   
   
   
-  <meta property="og:title" content="2 What to Do if My Network Fails to Train - Joooy | Zeng" />
+  <meta property="og:title" content="2.2 When Gradient Is small... - Joooy | Zeng" />
   
   <meta property="og:type" content="article" />
   
-  <meta property="og:url" content="https://jiayi-zeng.github.io/docs/Machine-Learning-2-What-to-do-if-my-network-fails-to-train/index.html" />
+  <meta property="og:url" content="https://jiayi-zeng.github.io/docs/Machine-Learning-2.2-when-gradient-is-small/index.html" />
   
   <meta property="og:image" content="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/202303081247%20(3).png" />
   
@@ -179,32 +179,24 @@
     </div>
     
 
-    <h2 class="title">2 What to Do if My Network Fails to Train</h2>
+    <h2 class="title">2.2 When Gradient Is small...</h2>
 
 </div>
 
 <div class="divider"></div>
 
 <div class="content">
-    <h1 id="General-Guidance"><a href="#General-Guidance" class="headerlink" title="General Guidance"></a><strong>General Guidance</strong></h1><p><img src="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20230307235457606.png" alt="image-20230307235457606"></p>
-<h2 id="Model-Bias"><a href="#Model-Bias" class="headerlink" title="Model Bias"></a>Model Bias</h2><img src="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20230307235841585.png" alt="image-20230307235841585" style="zoom:50%;">
+    <h1 id="Optimization-Fails-because-Critical-Point"><a href="#Optimization-Fails-because-Critical-Point" class="headerlink" title="Optimization Fails because Critical Point "></a>Optimization Fails because <mark>Critical Point </mark></h1><ul>
+<li>Local minima</li>
+<li>Saddle Point</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20230310163246344.png" alt="image-20230310163246344"></p>
+<h1 id="Warning-of-Math"><a href="#Warning-of-Math" class="headerlink" title="Warning of Math"></a>Warning of Math</h1><h2 id="Tayler-Series-Approximation"><a href="#Tayler-Series-Approximation" class="headerlink" title="Tayler Series Approximation"></a>Tayler Series Approximation</h2><p><img src="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20230310164042772.png" alt="image-20230310164042772"></p>
+<h2 id="Hessian"><a href="#Hessian" class="headerlink" title="Hessian"></a>Hessian</h2><p><img src="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20230310164149132.png" alt="image-20230310164149132"></p>
+<p><img src="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20230310165016964.png" alt="image-20230310165016964"></p>
+<p><strong>Example:</strong> </p>
+<p><img src="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20230310165912748.png" alt="image-20230310165912748"></p>
 
-<h2 id="Optimization-Issue"><a href="#Optimization-Issue" class="headerlink" title="Optimization Issue"></a>Optimization Issue</h2><p><img src="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20230308000006390.png" alt="image-20230308000006390"></p>
-<h2 id="Model-Bias-v-s-Optimization-Issue"><a href="#Model-Bias-v-s-Optimization-Issue" class="headerlink" title="Model Bias v.s. Optimization Issue"></a>Model Bias v.s. Optimization Issue</h2><p><img src="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20230308000529612.png" alt="image-20230308000529612"></p>
-<p><img src="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20230308000738620.png" alt="image-20230308000738620"></p>
-<h2 id="Overfitting"><a href="#Overfitting" class="headerlink" title="Overfitting"></a>Overfitting</h2><p><img src="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20230308001022503.png" alt="image-20230308001022503"></p>
-<p><img src="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20230308001204296.png" alt="image-20230308001204296"></p>
-<p><img src="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20230308001425870.png" alt="image-20230308001425870"></p>
-<p><img src="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20230308001820638.png" alt="image-20230308001820638"></p>
-<p>Fully-Connected is more flexible, CNN is relatively less flexible, and the constrain is relatively large</p>
-<p><img src="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20230308001941564.png" alt="image-20230308001941564"></p>
-<h2 id="Bias-Complexity-Trade-off"><a href="#Bias-Complexity-Trade-off" class="headerlink" title="Bias-Complexity Trade-off"></a>Bias-Complexity Trade-off</h2><p><img src="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20230308002114624.png" alt="image-20230308002114624"></p>
-<h2 id="Cross-Validation"><a href="#Cross-Validation" class="headerlink" title="Cross Validation"></a>Cross Validation</h2><p><img src="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20230308003456990.png" alt="image-20230308003456990"></p>
-<h2 id="N-fold-Cross-Validation"><a href="#N-fold-Cross-Validation" class="headerlink" title="N-fold Cross Validation"></a>N-fold Cross Validation</h2><p><img src="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20230308003859200.png" alt="image-20230308003859200"></p>
-<h2 id="Mismatch"><a href="#Mismatch" class="headerlink" title="Mismatch"></a>Mismatch</h2><p>Your training and testing data have different distributions.</p>
-<p>To understand how data is generated.</p>
-<p><img src="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20230308004235701.png" alt="image-20230308004235701"></p>
-<h1 id=""><a href="#" class="headerlink" title=""></a></h1>
 </div>
 
 
@@ -221,21 +213,21 @@
 
 <div class="container post-prev-next">
     
-    <a href="../Prescriptive-Analytics-5-Heuristic-Decision-Modeling/" class="next">
+    <a href="../Machine-Learning-2.1-What-to-do-if-my-network-fails-to-train/" class="next">
         <div>
             <div class="text">
                 <p class="label">Next</p>
-                <h3 class="title">5 Heuristic Decision Modeling</h3>
+                <h3 class="title">2.1 What to Do if My Network Fails to Train</h3>
             </div>
         </div>
     </a>
     
     
-    <a href="../Prescriptive-Analytics-4-Optimization-with-Integer-Values-and-Nonlinear-Representation/" class="prev">
+    <a href="../Prescriptive-Analytics-3-Linear-Programming/" class="prev">
         <div>
             <div class="text">
                 <p class="label">Previous</p>
-                <h3 class="title">4 Optimization With Integer Values and Nonlinear Representation</>
+                <h3 class="title">3 Linear Programming</>
             </div>
         </div>
     </a>

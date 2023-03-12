@@ -1,5 +1,7 @@
+https://jiayi-zeng.github.io/docs/Machine-Learning-2.1-What-to-do-if-my-network-fails-to-train/
+https://jiayi-zeng.github.io/docs/Other-TO-DO-list/
+https://jiayi-zeng.github.io/docs/Machine-Learning-2.2-when-gradient-is-small/
 https://jiayi-zeng.github.io/docs/Prescriptive-Analytics-1-Overview-of-Prescriptive-Analytics/
-https://jiayi-zeng.github.io/docs/Machine-Learning-2-What-to-do-if-my-network-fails-to-train/
 https://jiayi-zeng.github.io/docs/Machine-Learning-1-Introduction-of-Deep-Learning/
 https://jiayi-zeng.github.io/docs/Machine-Learning-0-Course-Intro/
 https://jiayi-zeng.github.io/docs/Prescriptive-Analytics-4-Optimization-with-Integer-Values-and-Nonlinear-Representation/
@@ -20,7 +22,6 @@ https://jiayi-zeng.github.io/docs/Prescriptive-Analytics-2-Digital-Decision-Maki
 https://jiayi-zeng.github.io/docs/Other-Maximum-Likelihood-Estimation/
 https://jiayi-zeng.github.io/docs/Other-Real-time-Rendering-and-DLSS-2.0/
 https://jiayi-zeng.github.io/docs/Immediate-to-Python-2-Functions-Positional-and-Keyword-Arguments/
-https://jiayi-zeng.github.io/docs/Other-TO-DO-list/
 https://jiayi-zeng.github.io/docs/Immediate-to-Python-4-Understanding-Namespace-and-Scope/
 https://jiayi-zeng.github.io/docs/Immediate-to-Python-3-Iterators-and-Generators/
 https://jiayi-zeng.github.io/docs/Immediate-to-Python-1-Sysargv-Argparse-and-Function-Docstring/
