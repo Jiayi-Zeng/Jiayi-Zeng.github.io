@@ -186,7 +186,7 @@
 <div class="divider"></div>
 
 <div class="content">
-    <h1 id="Namespaces"><a href="#Namespaces" class="headerlink" title="Namespaces"></a><strong>Namespaces</strong></h1><h2 id="The-Global-Namespace"><a href="#The-Global-Namespace" class="headerlink" title="The Global Namespace"></a>The Global Namespace</h2><p>t is a collection of names that map to objects (variables, functions, etc…) that have been created in our code. Anytime we run a python script (or a jupyter notebook), a global namespace is created. We can print the names that are in the global namespace with the <code>dir()</code> function.</p>
+    <h1 id="1-Namespaces"><a href="#1-Namespaces" class="headerlink" title="1 Namespaces"></a><strong>1 Namespaces</strong></h1><h2 id="1-1-The-Global-Namespace"><a href="#1-1-The-Global-Namespace" class="headerlink" title="1.1 The Global Namespace"></a>1.1 The Global Namespace</h2><p>t is a collection of names that map to objects (variables, functions, etc…) that have been created in our code. Anytime we run a python script (or a jupyter notebook), a global namespace is created. We can print the names that are in the global namespace with the <code>dir()</code> function.</p>
 <pre class="line-numbers language-python"><code class="language-python"><span class="token comment" spellcheck="true"># use the dir() function to return the list of names in the namespace and use print() to print that list.</span>
 <span class="token keyword">print</span><span class="token punctuation">(</span>dir<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
@@ -233,7 +233,7 @@ my_string_reversed <span class="token operator">=</span> reverse_string<span cla
 </code></pre>
 <p><strong>Each package/module also has its own global namespace.</strong></p>
 <p>This is important to understand. Each python module (a module is simply a .py file that contains functions, classes, and variables) has their own global namespace.</p>
-<h2 id="The-Local-Namespaces"><a href="#The-Local-Namespaces" class="headerlink" title="The Local Namespaces"></a>The Local Namespaces</h2><p>A local namespace and a global namespace can exist at the same time.</p>
+<h2 id="1-2-The-Local-Namespaces"><a href="#1-2-The-Local-Namespaces" class="headerlink" title="1.2 The Local Namespaces"></a>1.2 The Local Namespaces</h2><p>A local namespace and a global namespace can exist at the same time.</p>
 <p>The code works because any variable created inside the function is not created in the global namespace, but it is created in what’s called a <em><strong>*local namespace*</strong></em>. This namespace is local to the function (each function has its own local namespace).</p>
 <pre class="line-numbers language-python"><code class="language-python">my_text <span class="token operator">=</span> <span class="token string">"I am outside the function and in the notebook's GLOBAL namespace!"</span>
 

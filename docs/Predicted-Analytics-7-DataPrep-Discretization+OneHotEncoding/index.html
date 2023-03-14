@@ -187,7 +187,7 @@
 
 <div class="content">
     <p><img src="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20230307140225758.png" alt="image-20230307140225758"></p>
-<h1 id="Discretization"><a href="#Discretization" class="headerlink" title="Discretization"></a><strong>Discretization</strong></h1><p>Converting Numeric Data into Categorical Data</p>
+<h1 id="1-Discretization"><a href="#1-Discretization" class="headerlink" title="1 Discretization"></a><strong>1 Discretization</strong></h1><p>Converting Numeric Data into Categorical Data</p>
 <p><strong>How to determine the boundaries between classes?</strong></p>
 <ul>
 <li>Natural boundaries</li>
@@ -211,7 +211,7 @@
 </ul>
 </li>
 </ul>
-<h2 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h2><p><strong>Read Datafile</strong></p>
+<h2 id="1-1-Example"><a href="#1-1-Example" class="headerlink" title="1.1 Example"></a>1.1 Example</h2><p><strong>Read Datafile</strong></p>
 <pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">import</span> pandas <span class="token keyword">as</span> pd
 df <span class="token operator">=</span> pd<span class="token punctuation">.</span>read_csv<span class="token punctuation">(</span><span class="token string">'Lung Capacity.csv'</span><span class="token punctuation">)</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
@@ -221,13 +221,13 @@ group_names <span class="token operator">=</span> <span class="token punctuation
 
 c1 <span class="token operator">=</span> pd<span class="token punctuation">.</span>cut<span class="token punctuation">(</span>df<span class="token punctuation">[</span><span class="token string">'height'</span><span class="token punctuation">]</span><span class="token punctuation">,</span> bins<span class="token punctuation">,</span> labels<span class="token operator">=</span>group_names<span class="token punctuation">)</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-<h1 id="One-Hot-Encoding"><a href="#One-Hot-Encoding" class="headerlink" title="One Hot Encoding"></a>One Hot Encoding</h1><p>Label Encoder</p>
+<h1 id="2-One-Hot-Encoding"><a href="#2-One-Hot-Encoding" class="headerlink" title="2 One Hot Encoding"></a><strong>2 One Hot Encoding</strong></h1><p>Label Encoder</p>
 <ul>
 <li>Converts Categorical variable into Numerical values</li>
 <li>Starting from 0,1,2,…</li>
 <li>Code is assigned by alphabetical order</li>
 </ul>
-<h2 id="Example-1"><a href="#Example-1" class="headerlink" title="Example"></a>Example</h2><p><strong>Load the libraries</strong></p>
+<h2 id="2-1-Example"><a href="#2-1-Example" class="headerlink" title="2.1 Example"></a>2.1 Example</h2><p><strong>Load the libraries</strong></p>
 <pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
 <span class="token keyword">import</span> pandas <span class="token keyword">as</span> pd
 

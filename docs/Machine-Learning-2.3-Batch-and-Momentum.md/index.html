@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head prefix="og: https://ogp.me/ns#">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+  <meta name="color-scheme" content="light dark">
+
+  
+<link rel="stylesheet" href="../css/prism.css">
+ 
+    
+<script src="../js/prism.js"></script>
+
+  
+  <title>2.3 Batch and Momentum - Joooy | Zeng</title>
+  
+    <link rel="shortcut icon" href="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/1f41f.png">
+  
+  
+    <link rel='manifest' href='/manifest.json'>
+  
+
+  
+  
+  
+  <meta property="og:title" content="2.3 Batch and Momentum - Joooy | Zeng" />
+  
+  <meta property="og:type" content="article" />
+  
+  <meta property="og:url" content="https://jiayi-zeng.github.io/docs/Machine-Learning-2.3-Batch-and-Momentum.md/index.html" />
+  
+  <meta property="og:image" content="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/202303081247%20(3).png" />
+  
+  <meta property="og:article:published_time" content="2023-03-13T22:00:00.000Z" />
+  
+  <meta property="og:article:author" content="Joy Zeng" />
+  
+  
+
+  
+<link rel="stylesheet" href="../../css/var.css">
+
+  
+<link rel="stylesheet" href="../../css/main.css">
+
+  
+<link rel="stylesheet" href="../../css/typography.css">
+
+  
+<link rel="stylesheet" href="../../css/code-highlighting.css">
+
+  
+<link rel="stylesheet" href="../../css/components.css">
+
+  
+<link rel="stylesheet" href="../../css/nav.css">
+
+  
+<link rel="stylesheet" href="../../css/paginator.css">
+
+  
+<link rel="stylesheet" href="../../css/footer.css">
+
+  
+<link rel="stylesheet" href="../../css/post-list.css">
+
+  
+  
+<link rel="stylesheet" href="../../css/rainbow-banner.css">
+
+  
+  
+  
+<link rel="stylesheet" href="../../css/toc.css">
+
+  
+  
+  
+  
+  
+<link rel="stylesheet" href="../../css/post.css">
+
+  
+  
+  
+  
+  
+
+  
+<meta name="generator" content="Hexo 6.3.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+    
+<link rel="stylesheet" href="../../css/prism.css">
+ 
+    
+<script src="../js/prism.js"></script>
+
+    <body
+        data-color-scheme="auto"
+        data-uppercase-categories="true"
+        
+        data-rainbow-banner="true"
+        data-rainbow-banner-shown="auto"
+        data-rainbow-banner-month="6"
+        data-rainbow-banner-colors="#e50000,#ff8d00,#ffee00,#008121,#004cff,#760188"
+        
+        data-config-root="/"
+        
+        data-toc="true"
+        data-toc-max-depth="2"
+        
+        
+    >
+        <nav id="theme-nav">
+    <div class="inner">
+        <a class="title" href="/">Jiayi Zeng</a>
+        <div class="nav-arrow"></div>
+        <div class="nav-items">
+            <a class="nav-item nav-item-home" href="/">Home</a>
+            
+            
+            <a class="nav-item" href="../../archives">Archives</a>
+            
+            
+            
+            <a class="nav-item" href="../../tags">Tags</a>
+            
+            
+            
+            <a class="nav-item" href="../../categories">Categories</a>
+            
+            
+            
+            <a class="nav-item" href="../../projects">Projects</a>
+            
+            
+            
+            <a class="nav-item" href="../../about">About</a>
+            
+            
+            
+            <a class="nav-item nav-item-github nav-item-icon" href="https://github.com/Jiayi-Zeng" target="_blank">&nbsp;</a>
+            
+            
+            
+            <a class="nav-item nav-item-search nav-item-icon" href="../../search" target="_blank">&nbsp;</a>
+            
+            
+        </div>
+    </div>
+</nav>
+        
+
+<link rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css">
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+    <script src="//lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js"> </script>
+<article class="post">
+
+<script src="../js/fancybox.js"></script>
+  
+
+<div class="meta">
+    
+    <div class="categories text-uppercase">
+    
+        <a href="/categories/Machine-Learning/">Machine Learning</a>
+    
+    </div>
+    
+
+    
+    <div class="date" id="date">
+        <span>March</span>
+        <span>13,</span>
+        <span>2023</span>
+    </div>
+    
+
+    <h2 class="title">2.3 Batch and Momentum</h2>
+
+</div>
+
+<div class="divider"></div>
+
+<div class="content">
+    <h1 id="1-Batch"><a href="#1-Batch" class="headerlink" title="1 Batch"></a><strong>1 Batch</strong></h1><h2 id="1-1-Review-Optimization-with-Batch"><a href="#1-1-Review-Optimization-with-Batch" class="headerlink" title="1.1 Review: Optimization with Batch"></a>1.1 Review: Optimization with Batch</h2><p><img src="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20230313140211756.png" alt="image-20230313140211756"></p>
+<h2 id="1-2-Small-Batch-v-s-Large-Batch"><a href="#1-2-Small-Batch-v-s-Large-Batch" class="headerlink" title="1.2 Small Batch v.s. Large Batch"></a>1.2 Small Batch v.s. Large Batch</h2><p><img src="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20230313143835780.png" alt="image-20230313143835780"></p>
+<h3 id="1-2-1-Training-Time"><a href="#1-2-1-Training-Time" class="headerlink" title="1.2.1 Training Time"></a>1.2.1 Training Time</h3><p><strong>Parallel Computing</strong></p>
+<p><img src="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20230313143623988.png" alt="image-20230313143623988"></p>
+<p><img src="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20230313143815916.png" alt="image-20230313143815916"></p>
+<h3 id="1-2-2-Performance"><a href="#1-2-2-Performance" class="headerlink" title="1.2.2 Performance"></a>1.2.2 Performance</h3><p><img src="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20230313150746727.png" alt="image-20230313150746727"></p>
+<ul>
+<li>Small Batch size has better performance for <strong>training data</strong>.</li>
+<li>What’s wrong with large batch size on training data?   <strong>Optimization Fails.</strong></li>
+<li>Smaller batch size and momentum help escape critical points.</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20230313145045389.png" alt="image-20230313145045389"></p>
+<ul>
+<li>Small Batch size has better performance on <strong>testing data</strong>.</li>
+<li>What wrong with large batch size on testing data?    <strong>Overfitting</strong></li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20230313150215734.png" alt="image-20230313150215734"></p>
+<p><strong>Flat Minima is better than Sharp Minima.</strong></p>
+<p><img src="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20230313151246458.png" alt="image-20230313151246458"></p>
+<h2 id="1-3-Comparison"><a href="#1-3-Comparison" class="headerlink" title="1.3 Comparison"></a>1.3 Comparison</h2><p><img src="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20230313151407854.png" alt="image-20230313151407854"></p>
+<h3 id="1-3-1-Reference"><a href="#1-3-1-Reference" class="headerlink" title="1.3.1 Reference"></a>1.3.1 Reference</h3><p><img src="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20230313151502092.png" alt="image-20230313151502092"></p>
+<h1 id="2-Momentum"><a href="#2-Momentum" class="headerlink" title="2 Momentum"></a><strong>2 Momentum</strong></h1><h2 id="2-1-Vanilla-Gradient-Descent"><a href="#2-1-Vanilla-Gradient-Descent" class="headerlink" title="2.1 (Vanilla) Gradient Descent"></a>2.1 (Vanilla) Gradient Descent</h2><p><strong>Move in the opposite direction of gradient descent.</strong></p>
+<p><img src="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20230313152059377.png" alt="image-20230313152059377"></p>
+<h2 id="2-2-Gradient-Descent-Momentum"><a href="#2-2-Gradient-Descent-Momentum" class="headerlink" title="2.2 Gradient Descent + Momentum"></a>2.2 Gradient Descent + Momentum</h2><p><strong>Movement: movement of last step minus gradient at present</strong></p>
+<p><img src="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20230313152522563.png" alt="image-20230313152522563"></p>
+<p><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="2.846ex" height="2.676ex" style="vertical-align: -0.338ex;" viewBox="0 -1006.6 1225.3 1152.1" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-1-Title">
+<title id="MathJax-SVG-1-Title">\mathbf{m^i}</title>
+<defs aria-hidden="true">
+<path stroke-width="1" id="E1-GYREPAGELLANORMAL-1D426" d="M864 -3c-33 2 -65 3 -98 3c-31 0 -62 -1 -93 -3v272c0 78 -28 116 -86 116c-40 0 -81 -35 -81 -68v-217c0 -54 5 -62 36 -64l35 -2v-37l-131 3l-129 -3v37l31 2c32 2 36 10 36 64v169c0 78 -28 116 -86 116c-40 0 -81 -35 -81 -68v-217c0 -54 4 -62 36 -64l27 -2v-37 l-127 3l-129 -3v37l35 2c31 2 36 10 36 64v219c0 59 -3 68 -26 70l-45 3v36c55 3 83 9 187 43l6 -6v-75l80 62c17 13 39 19 71 19c69 0 109 -24 132 -81l80 62c17 13 39 19 72 19c107 0 143 -47 143 -185v-186c0 -54 5 -62 36 -64l33 -2v-37Z"></path>
+<path stroke-width="1" id="E1-GYREPAGELLANORMAL-1D422" d="M298 -3l-135 3l-129 -3v37l35 2c31 2 36 10 36 64v219c0 59 -3 68 -26 70l-45 3v36l15 2c42 6 60 9 98 19c28 7 70 22 70 22l10 -6v-365c0 -54 5 -62 36 -64l35 -2v-37zM233 599c0 -37 -30 -67 -67 -67s-67 30 -67 68c0 36 30 66 68 66c36 0 66 -31 66 -67Z"></path>
+</defs>
+<g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
+ <use xlink:href="#E1-GYREPAGELLANORMAL-1D426" x="0" y="0"></use>
+ <use transform="scale(0.707)" xlink:href="#E1-GYREPAGELLANORMAL-1D422" x="1257" y="583"></use>
+</g>
+</svg> is the weighted sum of all the previous gradient: <svg xmlns:xlink="http://www.w3.org/1999/xlink" width="14.65ex" height="3.176ex" style="vertical-align: -0.838ex;" viewBox="0 -1006.6 6307.8 1367.4" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-1-Title">
+<title id="MathJax-SVG-1-Title">\mathbf{g^0, g^1, ...,g^{i-1}}</title>
+<defs aria-hidden="true">
+<path stroke-width="1" id="E1-GYREPAGELLANORMAL-1D420" d="M535 -42c0 -133 -118 -224 -293 -224c-132 0 -216 55 -216 142c0 27 11 53 26 62l81 48c-50 13 -68 31 -68 67c0 20 7 41 17 48l71 54c-35 12 -50 21 -69 41c-24 26 -37 59 -37 96c0 105 89 179 217 179c64 0 111 -13 152 -43c16 -1 28 -1 36 -1c22 0 41 1 82 5l-5 -64 l-77 4c4 -19 5 -31 5 -47c0 -50 -13 -85 -44 -116c-41 -41 -105 -64 -174 -64c-12 0 -22 1 -40 2c-20 -12 -29 -24 -29 -39c0 -20 16 -31 47 -30l146 4h24c101 0 148 -40 148 -124zM334 299c0 79 -29 122 -82 122c-54 0 -82 -38 -82 -110c0 -75 32 -120 84 -120 c53 0 80 37 80 108zM424 -95c0 64 -30 80 -152 80c-49 0 -85 -3 -101 -11c-30 -14 -51 -49 -51 -86c0 -62 59 -104 148 -104s156 52 156 121Z"></path>
+<path stroke-width="1" id="E1-GYREPAGELLANORMAL-1D7CE" d="M468 348c0 -252 -70 -365 -226 -365c-146 0 -209 96 -209 319c0 122 14 200 48 259c38 67 97 99 185 99c73 0 129 -30 161 -87c29 -51 41 -118 41 -225zM348 252c0 134 -14 263 -34 306c-16 34 -40 52 -69 52c-28 0 -50 -13 -65 -40c-20 -37 -27 -88 -27 -198 c0 -134 12 -244 32 -287c16 -34 40 -52 70 -52c60 0 93 77 93 219Z"></path>
+<path stroke-width="1" id="E1-GYREPAGELLAMAIN-2C" d="M218 109c-28 -77 -66 -140 -147 -245l-41 -19l-14 11c58 96 83 161 90 237c53 15 71 21 98 30Z"></path>
+<path stroke-width="1" id="E1-GYREPAGELLANORMAL-1D7CF" d="M455 -3l-177 3l-203 -3v37l72 3c38 2 57 18 57 47v443c0 22 3 45 -15 37l-140 -65c-10 26 -14 45 -14 70c62 14 177 53 299 101l12 -10c-8 -112 -10 -175 -10 -254v-322c0 -30 19 -45 57 -47l62 -3v-37Z"></path>
+<path stroke-width="1" id="E1-GYREPAGELLAMAIN-2E" d="M183 53c0 -31 -28 -58 -60 -58c-29 0 -56 28 -56 58s27 58 57 58c31 0 59 -28 59 -58Z"></path>
+<path stroke-width="1" id="E1-GYREPAGELLANORMAL-1D422" d="M298 -3l-135 3l-129 -3v37l35 2c31 2 36 10 36 64v219c0 59 -3 68 -26 70l-45 3v36l15 2c42 6 60 9 98 19c28 7 70 22 70 22l10 -6v-365c0 -54 5 -62 36 -64l35 -2v-37zM233 599c0 -37 -30 -67 -67 -67s-67 30 -67 68c0 36 30 66 68 66c36 0 66 -31 66 -67Z"></path>
+<path stroke-width="1" id="E1-GYREPAGELLAMAIN-2212" d="M680 220h-600c2 10 3 20 3 30s-1 20 -3 30h600c-2 -10 -3 -20 -3 -30s1 -20 3 -30Z"></path>
+</defs>
+<g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
+ <use xlink:href="#E1-GYREPAGELLANORMAL-1D420" x="0" y="0"></use>
+ <use transform="scale(0.707)" xlink:href="#E1-GYREPAGELLANORMAL-1D7CE" x="787" y="583"></use>
+ <use xlink:href="#E1-GYREPAGELLAMAIN-2C" x="1010" y="0"></use>
+<g transform="translate(1427,0)">
+ <use xlink:href="#E1-GYREPAGELLANORMAL-1D420" x="0" y="0"></use>
+ <use transform="scale(0.707)" xlink:href="#E1-GYREPAGELLANORMAL-1D7CF" x="787" y="583"></use>
+</g>
+ <use xlink:href="#E1-GYREPAGELLAMAIN-2C" x="2437" y="0"></use>
+ <use xlink:href="#E1-GYREPAGELLAMAIN-2E" x="2855" y="0"></use>
+ <use xlink:href="#E1-GYREPAGELLAMAIN-2E" x="3272" y="0"></use>
+ <use xlink:href="#E1-GYREPAGELLAMAIN-2E" x="3689" y="0"></use>
+ <use xlink:href="#E1-GYREPAGELLAMAIN-2C" x="4106" y="0"></use>
+<g transform="translate(4523,0)">
+ <use xlink:href="#E1-GYREPAGELLANORMAL-1D420" x="0" y="0"></use>
+<g transform="translate(556,412)">
+ <use transform="scale(0.707)" xlink:href="#E1-GYREPAGELLANORMAL-1D422" x="0" y="0"></use>
+ <use transform="scale(0.707)" xlink:href="#E1-GYREPAGELLAMAIN-2212" x="333" y="0"></use>
+ <use transform="scale(0.707)" xlink:href="#E1-GYREPAGELLANORMAL-1D7CF" x="1094" y="0"></use>
+</g>
+</g>
+</g>
+</svg></p>
+<p style="text-align:center"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="19.955ex" height="12.843ex" style="vertical-align: -5.838ex;" viewBox="0 -3015.9 8591.8 5529.4" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-1-Title">
+<title id="MathJax-SVG-1-Title">\begin{align}
+\mathbf{m^0} &amp;= 0 \\
+\mathbf{m^1} &amp;= -\eta\mathbf{g^0} \\ 
+\mathbf{m^2} &amp;= -\lambda\eta\mathbf{g^0} - \eta\mathbf{g^1} \\
+...
+\end{align}</title>
+<defs aria-hidden="true">
+<path stroke-width="1" id="E1-GYREPAGELLANORMAL-1D426" d="M864 -3c-33 2 -65 3 -98 3c-31 0 -62 -1 -93 -3v272c0 78 -28 116 -86 116c-40 0 -81 -35 -81 -68v-217c0 -54 5 -62 36 -64l35 -2v-37l-131 3l-129 -3v37l31 2c32 2 36 10 36 64v169c0 78 -28 116 -86 116c-40 0 -81 -35 -81 -68v-217c0 -54 4 -62 36 -64l27 -2v-37 l-127 3l-129 -3v37l35 2c31 2 36 10 36 64v219c0 59 -3 68 -26 70l-45 3v36c55 3 83 9 187 43l6 -6v-75l80 62c17 13 39 19 71 19c69 0 109 -24 132 -81l80 62c17 13 39 19 72 19c107 0 143 -47 143 -185v-186c0 -54 5 -62 36 -64l33 -2v-37Z"></path>
+<path stroke-width="1" id="E1-GYREPAGELLANORMAL-1D7CE" d="M468 348c0 -252 -70 -365 -226 -365c-146 0 -209 96 -209 319c0 122 14 200 48 259c38 67 97 99 185 99c73 0 129 -30 161 -87c29 -51 41 -118 41 -225zM348 252c0 134 -14 263 -34 306c-16 34 -40 52 -69 52c-28 0 -50 -13 -65 -40c-20 -37 -27 -88 -27 -198 c0 -134 12 -244 32 -287c16 -34 40 -52 70 -52c60 0 93 77 93 219Z"></path>
+<path stroke-width="1" id="E1-GYREPAGELLAMAIN-3D" d="M680 330h-600c2 10 3 20 3 30s-1 20 -3 30h600c-2 -10 -3 -20 -3 -30s1 -20 3 -30zM680 110h-600c2 10 3 20 3 30s-1 20 -3 30h600c-2 -10 -3 -20 -3 -30s1 -20 3 -30Z"></path>
+<path stroke-width="1" id="E1-GYREPAGELLAMAIN-30" d="M465 366c0 -256 -76 -386 -227 -386c-62 0 -118 28 -153 77s-56 150 -56 267c0 242 79 365 234 365c137 0 202 -104 202 -323zM381 316c0 240 -39 338 -136 338c-95 0 -132 -83 -132 -294c0 -244 41 -345 138 -345c92 0 130 88 130 301Z"></path>
+<path stroke-width="1" id="E1-GYREPAGELLANORMAL-1D7CF" d="M455 -3l-177 3l-203 -3v37l72 3c38 2 57 18 57 47v443c0 22 3 45 -15 37l-140 -65c-10 26 -14 45 -14 70c62 14 177 53 299 101l12 -10c-8 -112 -10 -175 -10 -254v-322c0 -30 19 -45 57 -47l62 -3v-37Z"></path>
+<path stroke-width="1" id="E1-GYREPAGELLAMAIN-2212" d="M680 220h-600c2 10 3 20 3 30s-1 20 -3 30h600c-2 -10 -3 -20 -3 -30s1 -20 3 -30Z"></path>
+<path stroke-width="1" id="E1-GYREPAGELLANORMAL-1D702" d="M506 447c0 -19 -4 -45 -13 -74l-142 -560c-6 -24 -8 -43 -10 -72c-24 -3 -55 -9 -87 -17l-8 14c8 10 17 23 23 39l143 542c8 33 11 52 11 71c0 16 -6 24 -17 24c-45 0 -119 -62 -176 -145c-46 -70 -68 -135 -87 -261c-23 -4 -46 -10 -71 -17l-7 11c43 144 86 335 86 387 c0 15 -7 25 -18 25c-6 0 -14 -4 -34 -17l-46 -29l-7 20l30 20c74 53 111 74 132 74c15 0 23 -12 23 -33c1 -11 -1 -22 -5 -41l-40 -161c53 74 83 110 122 145c59 54 126 90 168 90c19 0 31 -13 30 -35Z"></path>
+<path stroke-width="1" id="E1-GYREPAGELLANORMAL-1D420" d="M535 -42c0 -133 -118 -224 -293 -224c-132 0 -216 55 -216 142c0 27 11 53 26 62l81 48c-50 13 -68 31 -68 67c0 20 7 41 17 48l71 54c-35 12 -50 21 -69 41c-24 26 -37 59 -37 96c0 105 89 179 217 179c64 0 111 -13 152 -43c16 -1 28 -1 36 -1c22 0 41 1 82 5l-5 -64 l-77 4c4 -19 5 -31 5 -47c0 -50 -13 -85 -44 -116c-41 -41 -105 -64 -174 -64c-12 0 -22 1 -40 2c-20 -12 -29 -24 -29 -39c0 -20 16 -31 47 -30l146 4h24c101 0 148 -40 148 -124zM334 299c0 79 -29 122 -82 122c-54 0 -82 -38 -82 -110c0 -75 32 -120 84 -120 c53 0 80 37 80 108zM424 -95c0 64 -30 80 -152 80c-49 0 -85 -3 -101 -11c-30 -14 -51 -49 -51 -86c0 -62 59 -104 148 -104s156 52 156 121Z"></path>
+<path stroke-width="1" id="E1-GYREPAGELLANORMAL-1D7D0" d="M472 112c-2 -27 -3 -40 -3 -62c0 -16 0 -29 2 -53l-230 3l-216 -3v51l167 166c78 78 117 154 117 229c0 68 -42 112 -108 112c-44 0 -89 -25 -97 -55l-18 -68l-37 3l18 165c57 43 102 60 161 60c124 0 213 -72 213 -173c0 -64 -37 -137 -103 -202l-174 -171l2 -8l302 11Z"></path>
+<path stroke-width="1" id="E1-GYREPAGELLANORMAL-1D706" d="M543 85c-98 -72 -135 -94 -160 -94c-16 0 -27 11 -29 28l-55 397c-123 -163 -172 -255 -254 -406c-25 -8 -39 -13 -58 -22l-19 22c56 80 236 331 326 439l-12 93c-8 58 -32 103 -58 103c-9 0 -39 -12 -59 -19l4 24c23 14 63 39 91 61c47 -6 79 -77 98 -217l50 -349 c8 -34 12 -58 19 -70c11 -19 15 -19 19 -19c8 0 32 10 62 30l27 17Z"></path>
+<path stroke-width="1" id="E1-GYREPAGELLAMAIN-2E" d="M183 53c0 -31 -28 -58 -60 -58c-29 0 -56 28 -56 58s27 58 57 58c31 0 59 -28 59 -58Z"></path>
+</defs>
+<g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
+<g transform="translate(167,0)">
+<g transform="translate(-11,0)">
+<g transform="translate(0,2024)">
+ <use xlink:href="#E1-GYREPAGELLANORMAL-1D426" x="0" y="0"></use>
+ <use transform="scale(0.707)" xlink:href="#E1-GYREPAGELLANORMAL-1D7CE" x="1257" y="583"></use>
+</g>
+<g transform="translate(0,636)">
+ <use xlink:href="#E1-GYREPAGELLANORMAL-1D426" x="0" y="0"></use>
+ <use transform="scale(0.707)" xlink:href="#E1-GYREPAGELLANORMAL-1D7CF" x="1257" y="583"></use>
+</g>
+<g transform="translate(0,-828)">
+ <use xlink:href="#E1-GYREPAGELLANORMAL-1D426" x="0" y="0"></use>
+ <use transform="scale(0.707)" xlink:href="#E1-GYREPAGELLANORMAL-1D7D0" x="1257" y="583"></use>
+</g>
+<g transform="translate(258,-2205)">
+ <use xlink:href="#E1-GYREPAGELLAMAIN-2E" x="0" y="0"></use>
+ <use xlink:href="#E1-GYREPAGELLAMAIN-2E" x="417" y="0"></use>
+ <use xlink:href="#E1-GYREPAGELLAMAIN-2E" x="834" y="0"></use>
+</g>
+</g>
+<g transform="translate(1332,0)">
+<g transform="translate(0,2024)">
+ <use xlink:href="#E1-GYREPAGELLAMAIN-3D" x="277" y="0"></use>
+ <use xlink:href="#E1-GYREPAGELLAMAIN-30" x="1316" y="0"></use>
+</g>
+<g transform="translate(0,636)">
+ <use xlink:href="#E1-GYREPAGELLAMAIN-3D" x="277" y="0"></use>
+ <use xlink:href="#E1-GYREPAGELLAMAIN-2212" x="1316" y="0"></use>
+ <use xlink:href="#E1-GYREPAGELLANORMAL-1D702" x="2076" y="0"></use>
+<g transform="translate(2603,0)">
+ <use xlink:href="#E1-GYREPAGELLANORMAL-1D420" x="0" y="0"></use>
+ <use transform="scale(0.707)" xlink:href="#E1-GYREPAGELLANORMAL-1D7CE" x="787" y="583"></use>
+</g>
+</g>
+<g transform="translate(0,-828)">
+ <use xlink:href="#E1-GYREPAGELLAMAIN-3D" x="277" y="0"></use>
+ <use xlink:href="#E1-GYREPAGELLAMAIN-2212" x="1316" y="0"></use>
+ <use xlink:href="#E1-GYREPAGELLANORMAL-1D706" x="2076" y="0"></use>
+ <use xlink:href="#E1-GYREPAGELLANORMAL-1D702" x="2646" y="0"></use>
+<g transform="translate(3172,0)">
+ <use xlink:href="#E1-GYREPAGELLANORMAL-1D420" x="0" y="0"></use>
+ <use transform="scale(0.707)" xlink:href="#E1-GYREPAGELLANORMAL-1D7CE" x="787" y="583"></use>
+</g>
+ <use xlink:href="#E1-GYREPAGELLAMAIN-2212" x="4405" y="0"></use>
+ <use xlink:href="#E1-GYREPAGELLANORMAL-1D702" x="5387" y="0"></use>
+<g transform="translate(5914,0)">
+ <use xlink:href="#E1-GYREPAGELLANORMAL-1D420" x="0" y="0"></use>
+ <use transform="scale(0.707)" xlink:href="#E1-GYREPAGELLANORMAL-1D7CF" x="787" y="583"></use>
+</g>
+</g>
+</g>
+</g>
+</g>
+</svg></p>
+
+</div>
+
+
+<div class="about">
+    
+    <p class="tags">
+        
+        <i class="icon"></i>
+        <a href="/tags/ML/" class="tag"># ML</a>
+    </p>
+    
+</div>
+
+
+<div class="container post-prev-next">
+    
+    <a href="../Machine-Learning-2.4-Error-Surface-is-rugged/" class="next">
+        <div>
+            <div class="text">
+                <p class="label">Next</p>
+                <h3 class="title">2.4 Error Surface Is rugged...</h3>
+            </div>
+        </div>
+    </a>
+    
+    
+    <a href="../Prescriptive-Analytics-7-Multi-Criteria-Decision-Modeling/" class="prev">
+        <div>
+            <div class="text">
+                <p class="label">Previous</p>
+                <h3 class="title">Multi-Criteria Decision Modeling</>
+            </div>
+        </div>
+    </a>
+    
+</div>
+
+
+    
+    
+
+    
+</article>          
+    
+  
+
+        <footer>
+    <div class="inner">
+        <div class="links">
+            
+            <div class="group">
+                <h4 class="title">Blog</h4>
+                
+                <a href="/" class="item">Home</a>
+                
+                <a href="/archives" class="item">Archives</a>
+                
+                <a href="/tags" class="item">Tags</a>
+                
+                <a href="/categories" class="item">Categories</a>
+                
+            </div>
+            
+            <div class="group">
+                <h4 class="title">Projects</h4>
+                
+                <a href="/projects" class="item">Intro</a>
+                
+            </div>
+            
+            <div class="group">
+                <h4 class="title">Me</h4>
+                
+                <a target="_blank" rel="noopener" href="https://github.com/Jiayi-Zeng" class="item">GitHub</a>
+                
+                <a href="mailto:joyce.j.zeng@outlook.com" class="item">Email</a>
+                
+                <a href="tencent://message/?Menu=yes&uin=1021987388" class="item">QQ</a>
+                
+                <a target="_blank" rel="noopener" href="https://www.instagram.com/iam_joycezeng/" class="item">Instagram</a>
+                
+                <a target="_blank" rel="noopener" href="https://www.linkedin.com/in/jiayi-zeng-joyce/" class="item">LinkedIn</a>
+                
+            </div>
+            
+        </div>
+        <span>&copy; 2023 Joy Zeng<br>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> </span>
+        
+        
+            <br>
+            <div class="color-scheme-toggle" role="radiogroup" id="theme-color-scheme-toggle">
+                <label>
+                    <input type="radio" value="light">
+                    <span>Light</span>
+                </label>
+                <label>
+                    <input type="radio" value="dark">
+                    <span>Dark</span>
+                </label>
+                <label>
+                    <input type="radio" value="auto">
+                    <span>Auto</span>
+                </label>
+            </div>
+        
+    </div>
+</footer>
+
+
+        
+<script src="../../../js/main.js"></script>
+
+        
+        
+        
+
+        
+    </body>
+</html>

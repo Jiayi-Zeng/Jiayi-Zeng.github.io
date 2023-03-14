@@ -186,7 +186,7 @@
 <div class="divider"></div>
 
 <div class="content">
-    <h1 id="Sysargv"><a href="#Sysargv" class="headerlink" title="Sysargv"></a><strong>Sysargv</strong></h1><pre class="line-numbers language-python"><code class="language-python"><span class="token triple-quoted-string string">'''
+    <h1 id="1-Sysargv"><a href="#1-Sysargv" class="headerlink" title="1 Sysargv"></a><strong>1 Sysargv</strong></h1><pre class="line-numbers language-python"><code class="language-python"><span class="token triple-quoted-string string">'''
 This is a simple script.
 '''</span>
 <span class="token keyword">import</span> sys
@@ -195,7 +195,7 @@ This is a simple script.
 
 <span class="token keyword">print</span><span class="token punctuation">(</span>sys<span class="token punctuation">.</span>argv<span class="token punctuation">)</span>	<span class="token comment" spellcheck="true"># output: System argument vector</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h1 id="Argparse"><a href="#Argparse" class="headerlink" title="Argparse"></a><strong>Argparse</strong></h1><h2 id="Example-1"><a href="#Example-1" class="headerlink" title="Example 1"></a>Example 1</h2><pre class="line-numbers language-python"><code class="language-python"><span class="token triple-quoted-string string">'''
+<h1 id="2-Argparse"><a href="#2-Argparse" class="headerlink" title="2 Argparse"></a><strong>2 Argparse</strong></h1><h2 id="2-1-Example-1"><a href="#2-1-Example-1" class="headerlink" title="2.1 Example 1"></a>2.1 Example 1</h2><pre class="line-numbers language-python"><code class="language-python"><span class="token triple-quoted-string string">'''
 This is a simple script.
 '''</span>
 <span class="token keyword">import</span> argparse
@@ -207,7 +207,7 @@ args <span class="token operator">=</span> parser<span class="token punctuation"
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p><strong>Output:</strong></p>
 <p><img src="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20230226181135214.png" alt="image-20230226181135214"></p>
-<h2 id="Example-2"><a href="#Example-2" class="headerlink" title="Example 2"></a>Example 2</h2><pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">import</span> argparse
+<h2 id="2-2-Example-2"><a href="#2-2-Example-2" class="headerlink" title="2.2 Example 2"></a>2.2 Example 2</h2><pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">import</span> argparse
 
 parser <span class="token operator">=</span> argparse<span class="token punctuation">.</span>ArgumentParser<span class="token punctuation">(</span>description<span class="token operator">=</span>__doc__<span class="token punctuation">)</span>
 parser<span class="token punctuation">.</span>add_argument<span class="token punctuation">(</span><span class="token string">'x'</span><span class="token punctuation">,</span> help<span class="token operator">=</span><span class="token string">"the value for x"</span><span class="token punctuation">,</span> type<span class="token operator">=</span>int<span class="token punctuation">)</span>
@@ -224,13 +224,13 @@ args <span class="token operator">=</span> parser<span class="token punctuation"
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p><strong>Output:</strong></p>
 <p><img src="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20230226183445409.png" alt="image-20230226183445409"></p>
-<h1 id="Function-Docstring"><a href="#Function-Docstring" class="headerlink" title="Function Docstring"></a><strong>Function Docstring</strong></h1><h2 id="One-line-Docstring"><a href="#One-line-Docstring" class="headerlink" title="One-line Docstring"></a>One-line Docstring</h2><p>This is a simple function with a simple one-line docstring. Notice how the docstring is written as a command, “Return the value…” not a description “This function returns the value…”</p>
+<h1 id="3-Function-Docstring"><a href="#3-Function-Docstring" class="headerlink" title="3 Function Docstring"></a><strong>3 Function Docstring</strong></h1><h2 id="3-1-One-line-Docstring"><a href="#3-1-One-line-Docstring" class="headerlink" title="3.1 One-line Docstring"></a>3.1 One-line Docstring</h2><p>This is a simple function with a simple one-line docstring. Notice how the docstring is written as a command, “Return the value…” not a description “This function returns the value…”</p>
 <pre class="line-numbers language-py"><code class="language-py">def add_2(num):
     """Return the value of num + 2."""
     return_num = num + 2
     return num
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="Printing-Docstrings"><a href="#Printing-Docstrings" class="headerlink" title="Printing Docstrings"></a>Printing Docstrings</h3><p>We can print doc strings by printing the <strong><strong>doc</strong></strong> attribute of the function.  This is a built-in attribute and all objects have it (even if the value is None).</p>
+<h3 id="3-1-1-Printing-Docstrings"><a href="#3-1-1-Printing-Docstrings" class="headerlink" title="3.1.1 Printing Docstrings"></a>3.1.1 Printing Docstrings</h3><p>We can print doc strings by printing the <strong><strong>doc</strong></strong> attribute of the function.  This is a built-in attribute and all objects have it (even if the value is None).</p>
 <p>Many editors and IDEs have special functionality / commands to print docstrings. For example, if you write the ‘?’ key after a function name, in Jupyter Notebook, and then evaluate the cell, it will open a window with the docstrings.  See the example below.</p>
 <pre class="line-numbers language-py"><code class="language-py"># Below is an example of printing the docstring directly
 print(add_2.__doc__)
@@ -242,7 +242,7 @@ print(add_2.__doc__)
 <pre class="line-numbers language-python"><code class="language-python"><span class="token comment" spellcheck="true"># Below is an example of using Jupyter Notebooks '?' command</span>
 add_2?
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<h2 id="Multi-line-Docstrings"><a href="#Multi-line-Docstrings" class="headerlink" title="Multi-line Docstrings"></a>Multi-line Docstrings</h2><p>A multi-line docstring provide more information but it still starts with single line description, followed by a blank line, and then a more detailed description. The more detailed description includes a description of the arguments, the return value(s), exceptions that the function raises, and any side effects.  It may also included references to similar functions and other helpful information.</p>
+<h2 id="3-2-Multi-line-Docstrings"><a href="#3-2-Multi-line-Docstrings" class="headerlink" title="3.2 Multi-line Docstrings"></a>3.2 Multi-line Docstrings</h2><p>A multi-line docstring provide more information but it still starts with single line description, followed by a blank line, and then a more detailed description. The more detailed description includes a description of the arguments, the return value(s), exceptions that the function raises, and any side effects.  It may also included references to similar functions and other helpful information.</p>
 <pre class="line-numbers language-py"><code class="language-py">def circle(radius):
     """Return the circumference and area of a circle, given the radius.
     
@@ -264,7 +264,7 @@ add_2?
     area = math.pi*(radius**2)
     return circumference, area
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="Printing-Docstrings-1"><a href="#Printing-Docstrings-1" class="headerlink" title="Printing Docstrings"></a>Printing Docstrings</h3><pre class="line-numbers language-python"><code class="language-python"><span class="token comment" spellcheck="true"># method 1</span>
+<h3 id="3-2-1-Printing-Docstrings"><a href="#3-2-1-Printing-Docstrings" class="headerlink" title="3.2.1 Printing Docstrings"></a>3.2.1 Printing Docstrings</h3><pre class="line-numbers language-python"><code class="language-python"><span class="token comment" spellcheck="true"># method 1</span>
 <span class="token keyword">print</span><span class="token punctuation">(</span>circle<span class="token punctuation">.</span>__doc__<span class="token punctuation">)</span>
 
 <span class="token comment" spellcheck="true"># method 2</span>

@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head prefix="og: https://ogp.me/ns#">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+  <meta name="color-scheme" content="light dark">
+
+  
+<link rel="stylesheet" href="../../css/prism.css">
+ 
+    
+<script src="../js/prism.js"></script>
+
+  
+  <title>Multi-Criteria Decision Modeling - Joooy | Zeng</title>
+  
+    <link rel="shortcut icon" href="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/1f41f.png">
+  
+  
+    <link rel='manifest' href='/manifest.json'>
+  
+
+  
+  
+  
+  <meta property="og:title" content="Multi-Criteria Decision Modeling - Joooy | Zeng" />
+  
+  <meta property="og:type" content="article" />
+  
+  <meta property="og:url" content="https://jiayi-zeng.github.io/docs/Prescriptive-Analytics-7-Multi-Criteria-Decision-Modeling/index.html" />
+  
+  <meta property="og:image" content="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/202303100331.png" />
+  
+  <meta property="og:article:published_time" content="2023-03-13T07:00:00.000Z" />
+  
+  <meta property="og:article:author" content="Joy Zeng" />
+  
+  
+
+  
+<link rel="stylesheet" href="../../css/var.css">
+
+  
+<link rel="stylesheet" href="../../css/main.css">
+
+  
+<link rel="stylesheet" href="../../css/typography.css">
+
+  
+<link rel="stylesheet" href="../../css/code-highlighting.css">
+
+  
+<link rel="stylesheet" href="../../css/components.css">
+
+  
+<link rel="stylesheet" href="../../css/nav.css">
+
+  
+<link rel="stylesheet" href="../../css/paginator.css">
+
+  
+<link rel="stylesheet" href="../../css/footer.css">
+
+  
+<link rel="stylesheet" href="../../css/post-list.css">
+
+  
+  
+<link rel="stylesheet" href="../../css/rainbow-banner.css">
+
+  
+  
+  
+<link rel="stylesheet" href="../../css/toc.css">
+
+  
+  
+  
+  
+  
+<link rel="stylesheet" href="../../css/post.css">
+
+  
+  
+  
+  
+  
+
+  
+<meta name="generator" content="Hexo 6.3.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+    
+<link rel="stylesheet" href="../../css/prism.css">
+ 
+    
+<script src="../js/prism.js"></script>
+
+    <body
+        data-color-scheme="auto"
+        data-uppercase-categories="true"
+        
+        data-rainbow-banner="true"
+        data-rainbow-banner-shown="auto"
+        data-rainbow-banner-month="6"
+        data-rainbow-banner-colors="#e50000,#ff8d00,#ffee00,#008121,#004cff,#760188"
+        
+        data-config-root="/"
+        
+        data-toc="true"
+        data-toc-max-depth="2"
+        
+        
+    >
+        <nav id="theme-nav">
+    <div class="inner">
+        <a class="title" href="/">Jiayi Zeng</a>
+        <div class="nav-arrow"></div>
+        <div class="nav-items">
+            <a class="nav-item nav-item-home" href="/">Home</a>
+            
+            
+            <a class="nav-item" href="../../archives">Archives</a>
+            
+            
+            
+            <a class="nav-item" href="../../tags">Tags</a>
+            
+            
+            
+            <a class="nav-item" href="../../categories">Categories</a>
+            
+            
+            
+            <a class="nav-item" href="../../projects">Projects</a>
+            
+            
+            
+            <a class="nav-item" href="../../about">About</a>
+            
+            
+            
+            <a class="nav-item nav-item-github nav-item-icon" href="https://github.com/Jiayi-Zeng" target="_blank">&nbsp;</a>
+            
+            
+            
+            <a class="nav-item nav-item-search nav-item-icon" href="../../search" target="_blank">&nbsp;</a>
+            
+            
+        </div>
+    </div>
+</nav>
+        
+
+<link rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css">
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+    <script src="//lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js"> </script>
+<article class="post">
+
+<script src="../js/fancybox.js"></script>
+  
+
+<div class="meta">
+    
+    <div class="categories text-uppercase">
+    
+        <a href="/categories/Prescriptive-Analytics/">Prescriptive Analytics</a>
+    
+    </div>
+    
+
+    
+    <div class="date" id="date">
+        <span>March</span>
+        <span>13,</span>
+        <span>2023</span>
+    </div>
+    
+
+    <h2 class="title">Multi-Criteria Decision Modeling</h2>
+
+</div>
+
+<div class="divider"></div>
+
+<div class="content">
+    <h1 id="1-Introduction"><a href="#1-Introduction" class="headerlink" title="1 Introduction"></a><strong>1 Introduction</strong></h1><p>Sometimes, if you are lucky, or if you can simplify the problem situation, you may have a straightforward decision-making condition characterized by a single goal, a limited and clearly identifiable number of alternatives, and a single, easily measurable, and quantifiable criterion. However, in most real-world situations in personal or professional contexts, you will face decision choices characterized by many (and often conflicting) goals, many (sometimes virtually unlimited) alternatives, and numerous criteria. Making rational (i.e., optimal or near-optimal) decisions in such complex situations requires the use of scientific methods to identify the “optimal” decision without making unrealistic, overly-simplified assumptions. A family of scientific methods, commonly called <em>multi-criteria decision-making</em> methods, can help you address these complex decision situations.</p>
+<h1 id="2-Key-Terms"><a href="#2-Key-Terms" class="headerlink" title="2 Key Terms"></a><strong>2 Key Terms</strong></h1><ul>
+<li>Multi-criteria decision making</li>
+<li>Multi-criteria</li>
+<li>Multi-objective </li>
+<li>Complexity</li>
+<li>Optimization</li>
+<li>Heuristic solution</li>
+<li>Weighted sum model</li>
+<li>Analytic hierarchy process</li>
+</ul>
+<h1 id="3-Real-Decisions-Involve-Multiple-Criteria-and-Multiple-Objectives"><a href="#3-Real-Decisions-Involve-Multiple-Criteria-and-Multiple-Objectives" class="headerlink" title="3 Real Decisions Involve Multiple Criteria and Multiple Objectives"></a><strong>3 Real Decisions Involve Multiple Criteria and Multiple Objectives</strong></h1><p>Many real-world decisions involve multiple criteria and multiple objectives. In a business context, these decisions include supplier selection, product mix optimization, financial sourcing, location identification, and crew or job scheduling, among others. In a personal context, these decisions may include purchasing a house or car, deciding on a graduate school, retirement planning, etc. In other words, life involves a wide variety of personal and professional decision-making situations. At the highest level of conceptualization, these decisions can be grouped into four types:</p>
+<ol>
+<li><strong>The choice problem.</strong> The goal is to select the single best option or reduce the group of options to a subset of equivalent or incomparably ‘good’ options. An example of this would be a manager selecting the right person for a particular project.</li>
+<li><strong>The sorting and grouping problem.</strong> Here, options are sorted into ordered and predeﬁned groups or categories. The aim is to regroup the alternatives that share similar behaviors or characteristics for descriptive, organizational, or predictive reasons. For instance, employees can be evaluated for classiﬁcation into different categories such as ‘outperforming employees,’ ‘average-performing employees,’ or ‘weak-performing employees.’ Based on these classiﬁcations, necessary measures can be taken. Sorting methods are appropriate for repetitive or automated use. They can also be used for initial screening to reduce the number of options that would need to be considered in a subsequent step.</li>
+<li><strong>The ranking problem.</strong> Options are ordered from best to worst using scores, pairwise comparisons, etc. The order of options can be either partial (if incomparable options are considered) or complete. A typical example of this is the ranking of universities using several criteria, such as teaching quality, research expertise, career opportunities, etc.</li>
+<li><strong>The description problem.</strong> The goal is to describe options and their consequences, and this is usually done as a ﬁrst step towards understanding the characteristics of a decision problem.</li>
+</ol>
+<p>The decision sciences community also proposed other decision types, but they are primarily derivatives of the ones mentioned above. These other types include the <em>elimination</em> problem (a particular branch of the sorting problem) and the <em>design</em> problem (where the goal is to identify or create a new action that will meet the goals and aspirations of the decision maker).</p>
+<h1 id="4-Characteristics-of-Typical-Multi-Criteria-Decisions"><a href="#4-Characteristics-of-Typical-Multi-Criteria-Decisions" class="headerlink" title="4 Characteristics of Typical Multi-Criteria Decisions"></a><strong>4 Characteristics of Typical Multi-Criteria Decisions</strong></h1><p>Real-world decisions are usually complex, and the human brain cannot objectively solve such complex problems. Therefore, we often make assumptions (often unrealistic assumptions) to eliminate the majority of objectives or attributes/criteria so that the problem becomes simple enough to solve. (This is an intrinsic outcome of “bounded rationality” in humans.) This will typically lead to a far less optimal solution to the underlying real and complex problem.</p>
+<p>An alternative to this condition is to rely on scientific or mathematical methods that can help impose structure into decision situations. Such an approach can better deal with the complexity posed by the problem. There are a vast number of mathematical and scientific methods that have been developed to better deal with complex decision problems, and there is a fundamental reason for such an extensive collection of methods. This is because each problem situation has unique features that make it more effectively and efficiently solvable with a specific method that can address it better than other methods. Hence, over time, various methods have been developed to address these unique situations, which in the end has led to a rich collection of heuristic decision analysis methods and methodologies.</p>
+<h1 id="5-Types-of-Multi-Criteria-Decision-Modeling-MCDM-Methods"><a href="#5-Types-of-Multi-Criteria-Decision-Modeling-MCDM-Methods" class="headerlink" title="5 Types of Multi-Criteria Decision Modeling (MCDM) Methods"></a><strong>5 Types of Multi-Criteria Decision Modeling (MCDM) Methods</strong></h1><p>Figure 1 below presents a simple taxonomy to better understand the landscape of mathematical/scientific solution methods that were developed to deal with complex decision problems. These are usually called <em>multi-criteria decision modeling</em> (MCDM) methods.</p>
+<p>At the highest level, MCDM methods can be grouped into two main categories: <em>multi-attribute decision-making</em> (MADM) and <em>multi-objective decision-making</em> (MODM).</p>
+<p><img src="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/vaoYD_2uGq86tyY2OerEEUy9ctUEAKzzaoBY0Zwksle7auSu10BZ4TCW-BH88I0ktwsLf5-AzLCmhdWImTaQwNmcA6V0e5ccnNfqA-ffl-L7hFCoblJYKpb0bRqGQ1MoymhBV-Kx6JE5_8Eoqsc5yQ" alt="Shows the make up of multi-criteria decision modeling (MCDM). There is a text box at the top containing the phrase &quot;multi-criteria decision modeling.&quot; There are arrows pointing from this box to two other text boxes below, one on the left containing the phrase &quot;multi-attribute decision modeling&quot; or MACM, and one on the right containing the phrase &quot;multi-objective decision modeling&quot; or MODM. From the MADM box, another two arrows point to text boxes below, on the left containing the phrase &quot;analytic hierarchy process&quot; but the right text box is blank. From the MODM text box, two arrows proceed to two other boxes below, on the left to one containing the phrase &quot;genetic algorithms,&quot; and again, the right side box is blank."></p>
+<p><em>Figure 1: A simple taxonomy for MCDM methods</em></p>
+<h2 id="5-1-MODM-Methods"><a href="#5-1-MODM-Methods" class="headerlink" title="5.1 MODM Methods"></a>5.1 MODM Methods</h2><p>MODM methods study decision problems where the decision space is continuous and where there can be numerous, and often an infinite number of, alternatives or potential solutions. Typical examples of problems that fall under MODM methods are mathematical programming and constraint-optimization problems, potentially with multiple and conflicting objective functions. In general, MODM methods have decision variables, the values of which are determined within a continuous or integer domain and presented as either an infinitive or a vast number of alternative choices. The best choices should satisfy the constraints while producing the best value for the decision maker’s objective function (i.e., the goal). A simplified version of MODM problems can be solved with the linear/nonlinear programming or genetic algorithm-based optimization methods that we covered in the previous modules. </p>
+<h2 id="5-2-MADM-Methods"><a href="#5-2-MADM-Methods" class="headerlink" title="5.2 MADM Methods"></a>5.2 MADM Methods</h2><p>MADM methods have widespread application. Although there are a large and diverse number of MADM methods, many share common features, including the <em>goal</em>, <em>alternatives</em>, <em>attributes</em> (or criteria), <em>decision weights</em>, and <em>decision matrix</em>. Let’s consider each of these.</p>
+<h3 id="5-2-1-Goal"><a href="#5-2-1-Goal" class="headerlink" title="5.2.1 Goal"></a>5.2.1 Goal</h3><p>The <em>goal</em> is to select the best alternative while collectively considering all attributes in the problem space. Attributes may conflict with each other since they represent different criteria dimensions of the alternatives. For example, the cost of “quality” may conflict with “the profit from sales.”</p>
+<h3 id="5-2-2-Alternatives"><a href="#5-2-2-Alternatives" class="headerlink" title="5.2.2. Alternatives"></a>5.2.2. Alternatives</h3><p><em>Alternatives</em> represent the different choices or feasible options for action available to the decision maker. Usually, the set of alternatives is assumed to be finite, ranging from several to even hundreds. They are supposed to be screened, prioritized, and eventually ranked. </p>
+<h3 id="5-2-3-Attributes"><a href="#5-2-3-Attributes" class="headerlink" title="5.2.3 Attributes"></a>5.2.3 Attributes</h3><p><em>Attributes</em> are criteria for making decisions, and each MADM problem contains multiple attributes. Attributes represent the different dimensions from which you can view alternatives. In cases where there are many attributes, they may be arranged in hierarchical groups for better structuring and representation. In such cases, some attributes may be considered “major” attributes and may each be associated with several sub-attributes. Similarly, each sub-attribute may also be associated with several sub-sub-attributes and so on. Although some MADM methods may explicitly consider a problem’s hierarchical structure of the attributes, most methods assume a single level of attributes (i.e., no hierarchical structure). </p>
+<p>Another issue arises when there are incompatible attribute measures since different attributes may use other units of measurement. For instance, in buying a used car, the attribute <em>cost</em> may be measured in terms of dollars, and <em>mileage</em> may be measured in terms of thousands of miles. Having to consider these different units of measurement can make a MADM an intrinsically more complex problem to formulate and solve without the help of scientific/mathematical methodology.</p>
+<h3 id="5-2-4-Decision-Weights"><a href="#5-2-4-Decision-Weights" class="headerlink" title="5.2.4 Decision Weights"></a>5.2.4 Decision Weights</h3><p><em>Decision weights</em> are the relative importance given to problem attributes, and most MADM methods require that weights of importance are assigned to attributes. Usually, these weights are normalized to add up to “1.” These weights are generally determined by a specific procedure depending upon the MADM method used.</p>
+<h3 id="5-2-5-Decision-Matrix"><a href="#5-2-5-Decision-Matrix" class="headerlink" title="5.2.5 Decision Matrix"></a>5.2.5 Decision Matrix</h3><p>A <em>decision matrix</em> is a tabular representation of all decision parameters, and MADM problems can typically be easily expressed in a two-dimensional matrix. A decision matrix A is an (M × N) matrix in which element aij indicates the performance of alternative Ai when it is evaluated in terms of decision criterion Cj, (for i = 1, 2, 3,…, M, and j = 1, 2, 3,…, N). It is assumed that the decision maker has determined the weights of the relative performance of the decision criteria (denoted as Wj, for j = 1, 2, 3,…, N). This information can best be summarized as in the following decision matrix (see Table 1). </p>
+<p><img src="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20230313133710179.png" alt="image-20230313133710179"></p>
+<p><em>Table 1: MADM problem in a decision matrix</em></p>
+<p>Given the previous definitions, the general MADM problem can be defined as follows: <em>A</em> represents the set of decision alternatives, <em>C</em> represents the criteria, and <em>W</em> represents the weights of the criteria. The goal is to determine the optimal alternative <em>A</em>* with the highest degree of desirability related to the goal/objective.</p>
+<h2 id="5-3-Utility-Function-Analytics"><a href="#5-3-Utility-Function-Analytics" class="headerlink" title="5.3 Utility Function Analytics"></a>5.3 Utility Function Analytics</h2><p>To illustrate the application of the decision matrix presented in the above table, let us consider one of the simplest MADM methods, known as the <em>weighted sum model</em>. (It is also called the <em>factor rating method</em> in some operations management literature.)</p>
+<p>Due in large part to its simplicity and ease of operationalizability (often using spreadsheet software like Microsoft Excel), the weighted sum model is probably the most commonly used approach for the analysis of relatively small multi-criteria decision problems. Figure 2 shows the simple five-step process while executing factor-rating type decision-making.</p>
+<p><em><img src="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/qXvT7v74Q9fBEHcGUbeLsIqGunZn7axh_lsY_J45g10nxMDBuGegTV2zefUp-YPMUUzUHd49C5QBZrUJ4PO-YzgQYg8jTBfUJqodaxLkiwj-eUXKi0d1AIVgLqPqZ543rsD4U6vXLbyl7hPXauDjgg" alt="Shows a 5-step process. For a complete description, see the long description link on the table's caption."></em></p>
+<p><em>Figure 2: A simple process flow for the factor rating method [*<a target="_blank" rel="noopener" href="https://docs.google.com/document/d/1Y_d77A_8_q-dFeuaBAX4qD-eJiMnMGJYDt1e6aFkAZY/edit#"><em>Long Description</em></a></em>]*</p>
+<p>Under this method, if there are <em>M</em> alternatives and <em>N</em> criteria, then the solution is the alternative that best satisfies (either maximizes or minimizes, depending on the goal) the decision situation. The assumption that governs this model is the additive utility assumption, i.e., the total value of each alternative is equal to the sum of products of all alternatives and weights. In single-dimensional cases, where all the units are the same (e.g., dollars, feet, seconds), this method can be used without much difficulty. </p>
+<h2 id="5-4-Analytic-Hierarchy-Process-AHP"><a href="#5-4-Analytic-Hierarchy-Process-AHP" class="headerlink" title="5.4 Analytic Hierarchy Process (AHP)"></a>5.4 Analytic Hierarchy Process (AHP)</h2><p>Second only to the factor rating method, the <em>analytic hierarchy process</em> (AHP) is one of the most popular and commonly used multi-criteria decision analysis techniques. It is a theoretically (better) justified, logical, and mathematical model that takes advantage of the divide-and-conquer approach. </p>
+<p>Professor Thomas L. Saaty developed AHP in the 1970s, and it has been extensively studied and refined by many researchers since then. Essentially, AHP is a hierarchical problem-structured technique capable of organizing and analyzing complex (multi-attribute/multi-objective) decisions based on mathematical theories and relatively simple algorithms.</p>
+<p>Using a hierarchical structuring technique, AHP simplifies complex decisions into manageable smaller sub-decisions and uncomplicated comparisons. In other words, AHP employs the divide-and-conquer philosophy to bring order and simplicity to complicated multi-faceted decision situations. Because of its effectiveness and ease of use, AHP has been successfully deployed to address complex decision situations in various application domains, including healthcare, energy, telecom, marketing, finance, science, government, and education. Instead of prescribing the “best” solutions to a decision situation (which is often the case in optimization methods such as linear programming), AHP helps decision makers identify the decisions or solutions that best suit their goal and understanding of the specifics of the problem. </p>
+<p>AHP provides a holistic and rational framework for:</p>
+<ul>
+<li>structuring a decision problem</li>
+<li>representing and quantifying its elements</li>
+<li>relating those elements to overall goals</li>
+<li>evaluating alternative solutions</li>
+<li>identifying the best alternative under the current factors, comparisons, or circumstances.</li>
+</ul>
+
+</div>
+
+
+<div class="about">
+    
+    <p class="tags">
+        
+        <i class="icon"></i>
+        <a href="/tags/DS/" class="tag"># DS</a>
+    </p>
+    
+</div>
+
+
+<div class="container post-prev-next">
+    
+    <a href="../Machine-Learning-2.3-Batch-and-Momentum.md/" class="next">
+        <div>
+            <div class="text">
+                <p class="label">Next</p>
+                <h3 class="title">2.3 Batch and Momentum</h3>
+            </div>
+        </div>
+    </a>
+    
+    
+    <a href="../Prescriptive-Analytics-6-Simulation-Modeling-and-Monte-Carlo-Simulation/" class="prev">
+        <div>
+            <div class="text">
+                <p class="label">Previous</p>
+                <h3 class="title">6 Simulation Modeling and Monte Carlo Simulation</>
+            </div>
+        </div>
+    </a>
+    
+</div>
+
+
+    
+    
+
+    
+</article>          
+    
+  
+
+        <footer>
+    <div class="inner">
+        <div class="links">
+            
+            <div class="group">
+                <h4 class="title">Blog</h4>
+                
+                <a href="/" class="item">Home</a>
+                
+                <a href="/archives" class="item">Archives</a>
+                
+                <a href="/tags" class="item">Tags</a>
+                
+                <a href="/categories" class="item">Categories</a>
+                
+            </div>
+            
+            <div class="group">
+                <h4 class="title">Projects</h4>
+                
+                <a href="/projects" class="item">Intro</a>
+                
+            </div>
+            
+            <div class="group">
+                <h4 class="title">Me</h4>
+                
+                <a target="_blank" rel="noopener" href="https://github.com/Jiayi-Zeng" class="item">GitHub</a>
+                
+                <a href="mailto:joyce.j.zeng@outlook.com" class="item">Email</a>
+                
+                <a href="tencent://message/?Menu=yes&uin=1021987388" class="item">QQ</a>
+                
+                <a target="_blank" rel="noopener" href="https://www.instagram.com/iam_joycezeng/" class="item">Instagram</a>
+                
+                <a target="_blank" rel="noopener" href="https://www.linkedin.com/in/jiayi-zeng-joyce/" class="item">LinkedIn</a>
+                
+            </div>
+            
+        </div>
+        <span>&copy; 2023 Joy Zeng<br>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> </span>
+        
+        
+            <br>
+            <div class="color-scheme-toggle" role="radiogroup" id="theme-color-scheme-toggle">
+                <label>
+                    <input type="radio" value="light">
+                    <span>Light</span>
+                </label>
+                <label>
+                    <input type="radio" value="dark">
+                    <span>Dark</span>
+                </label>
+                <label>
+                    <input type="radio" value="auto">
+                    <span>Auto</span>
+                </label>
+            </div>
+        
+    </div>
+</footer>
+
+
+        
+<script src="../../../js/main.js"></script>
+
+        
+        
+        
+
+        
+    </body>
+</html>
