@@ -5,12 +5,12 @@ date: 2023-03-09
 
 tags: [DS]
 
-categories: "Prescriptive Analytics: Digital Decisioning"
+categories: "Prescriptive Analytics"
 
 cover_image: https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/202303090949.png
 ---
 
-# **Key Terms**
+# **1 Key Terms**
 
 - Heuristic method
 - Satisfying solution
@@ -22,15 +22,15 @@ cover_image: https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/p
 - Elites and offsprings
 - Objective functions
 
-# **What If There Is Not an Optimal Solution?**
+# **2 What If There Is Not an Optimal Solution?**
 
 When the problem is too complex to be solved optimally, we use *heuristic methods* to solve the problem with a reasonably good (i.e., satisfying) outcome using one of the mathematical programming techniques. However, unlike mathematical programming techniques, heuristic methods will not guarantee an optimal (i.e., the best) solution; instead, a heuristic technique will use a logical method to produce a “good” solution to a highly complex problem.
 
-# **Types of Heuristic Methods**
+# **3 Types of Heuristic Methods**
 
 There are many heuristic (also called *metaheuristic*) optimization techniques in the literature. The notable ones include Tabu Search, simulated annealing, genetic algorithms, particle swarm optimization, and ant colony optimization. As you can see from these names, most heuristic optimization techniques are modeled after some type of natural phenomenon. In this module, we explain genetic algorithms, which are arguably the most popular and most commonly used heuristic optimization techniques.
 
-## Genetic Algorithms
+## 3.1 Genetic Algorithms
 
 *Genetic algorithms* are a part of the family of nature-inspired global search optimization techniques. They are usually used to find approximate solutions to optimization problems that are too complex to be solved with traditional optimization methods (which, as discussed in the previous module, guarantee the best solution to a specific problem). Genetic algorithms are a part of the machine learning family of methods under artificial intelligence. They are considered a heuristic method since they cannot guarantee the optimal solution (arguably the most famous one). 
 
@@ -38,7 +38,7 @@ Genetic algorithms are sets of computational procedures that conceptually follow
 
 Genetic algorithms have been successfully applied to a wide range of highly complex real-world problems, including vehicle routing, bankruptcy prediction, and web searching.
 
-## The Generic Algorithm (GA) Process: How Does GA Work?
+## 3.2 The Generic Algorithm (GA) Process: How Does GA Work?
 
 Figure 1 below shows the flow diagram of a typical genetic algorithm process. The process starts with describing and representing the problem in a manner amenable to the genetic algorithm. Typically, this means that a string of 1s and 0s (or other more recently proposed complex representations) are used to represent the decision variables. This collection represents a potential solution to the problem (analogous to individual genes that constitute chromosomes).
 

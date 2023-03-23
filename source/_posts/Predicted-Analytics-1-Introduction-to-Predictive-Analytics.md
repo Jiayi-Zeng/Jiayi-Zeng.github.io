@@ -5,12 +5,12 @@ date: 2023-02-17
 
 tags: [DS, Data Mining]
 
-categories: "Predicted Analytics: Tools & Techniques"
+categories: "Predicted Analytics"
 
 cover_image: https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/202303060126%20(2).png
 ---
 
-# **The Data Mining Process**
+# **1 The Data Mining Process**
 
 ***Data mining* is a general term that encompasses a number of data analysis techniques used to extract meaningful information from (large) data** files without necessarily having preconceived notions about what will be discovered. The useful information often consists of patterns and relationships in the data that were **previously unknown or even unsuspected**.
 
@@ -27,7 +27,7 @@ Data mining has been used in hundreds of applications, including:
 - Classifying customers into groups based on distinct purchase or usage patterns; and
 - Predicting which page a website visitor will visit next.
 
-# **The Art and Practice of Data Mining**
+# **2 The Art and Practice of Data Mining**
 
 This is the definition that Keith McCormick has previously used in books and presentations. 
 
@@ -42,7 +42,7 @@ This is the definition that Keith McCormick has previously used in books and pre
 
 For additional information on data mining, please visit [https://keithmccormick.com/data mining-defined/](https://keithmccormick.com/data-mining-defined/)
 
-# **Introducing CRISP-DM**
+# **3 Introducing CRISP-DM**
 
 The typical data mining process can become complicated very quickly. There is much to keep track of—complex business problems, multiple data sources, varying data quality across data sources, an array of data mining techniques, different ways of measuring data mining success, and so on. To stay on track, it helps to have an explicitly defined process model for data mining that can guide you through critical issues and ensure that important points are addressed. This process model can serve as a data mining road map that helps you stay on course as you dig into the complexities of the data.
 
@@ -52,7 +52,7 @@ The data mining process model we recommend is the ***CRoss-Industry Standard Pro
 
 ![image-20230223173655160](https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20230223173655160.png)
 
-## Business Understanding
+## 3.1 Business Understanding
 
 The business objectives and question(s) to be answered, and formulating a concrete plan for proceeding through the data mining process. You need to:
 
@@ -62,7 +62,7 @@ The business objectives and question(s) to be answered, and formulating a concre
 - Identify success criteria; and
 - Produce a project plan.
 
-## Data Understanding
+## 3.2 Data Understanding
 
 Once the business understanding phase is complete, you’re ready to begin collecting data and associated relevant information (such as the source of the data and the manner in which it was collected) for use in the project. It is also crucial to meet with subject matter experts (SMEs) to review what you have been collecting to ensure completeness (i.e., that no necessary data is missing) and verify your understanding of the data. It is also important to discuss the data in the context of the business problem you’re addressing. Sometimes, it may be necessary to return to the business understanding phase before proceeding.
 
@@ -74,7 +74,7 @@ With data in hand, you can begin exploring it and becoming thoroughly familiar w
 - Explore the data; and
 - Verify data quality.
 
-## Data Preparation
+## 3.3 Data Preparation
 
 After cataloging your data resources, it’s time to prepare your data for mining. Data preparation is by far the most time-consuming step in the data mining process. **Various estimates suggest that 70% to 90% of the time spent on a data mining project is allocated to data preparation;** this is because you are using data that was collected for other reasons (for normal business operations, not for data mining). Preparations include:
 
@@ -86,7 +86,7 @@ After cataloging your data resources, it’s time to prepare your data for minin
 
 These tasks will likely be performed multiple times and not in any prescribed order. They can be very time-consuming but are critical for the success of the data mining project. In particular, data construction is a critical aspect of data preparation. Models work much better when the variables have been adjusted (e.g., by creating ratios, determining change scores, and calculating total scores) to make patterns appear more clearly. 
 
-## Modeling
+## 3.4 Modeling
 
 ![image-20230223173722789](https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20230223173722789.png)
 
@@ -105,7 +105,7 @@ Developing a model is an iterative process and you can expect to try several mod
 
 An important part of model development is ***validating*** the model’s predictive capability. Briefly, the process involves dividing your dataset into two parts: **a *training dataset* and a *testing dataset***. You develop your model using the training data and then test it by making predictions using the testing data. If the predictions made using the two datasets are in agreement, you can begin applying the model to new data. In summary, you conclude that the model is valid by demonstrating that it applies to (fits) a dataset that is independent of the one used in the model’s derivation. Statisticians often recommend such validation for statistical models, generally, but it is especially important when employing data mining techniques. 
 
-## Evaluation
+## 3.5 Evaluation
 
 Once you have chosen your models, you are ready to **evaluate how the data mining results can help you achieve your business objectives**. At this stage of the project, you have built one or more models that appear to be of high quality from a data analysis perspective. Before writing final reports and deploying the model, however, it is important to more thoroughly evaluate the model and review the steps taken in constructing the model so you can be certain it properly achieves your business objectives. A key aim is to determine if there are any important business issues that have not been sufficiently considered. At the end of this phase, a decision will be made on the use of the data mining results. The evaluation phase tasks are:
 
@@ -120,7 +120,7 @@ Evaluation is frequently confused with *model **assessment***—the last task of
 
 Keep in mind that the value of a predictive model is not determined by any technical measure. Data miners should *not* focus on predictive accuracy, model stability, or any other technical metric for predictive models at the expense of business insight and business fit.
 
-## Deployment
+## 3.6 Deployment
 
 Depending on the business requirements, deployment can be as simple as generating a report or as complex as implementing a repeatable data mining process. **Keep in mind that creating the model is generally not the end of the project.** Even if the purpose of the model is only to increase one’s knowledge of the data, the knowledge gained will need to be organized and presented in a way that the organization can use for decision-making. So in essentially all projects, a final report will need to be produced and distributed.
 

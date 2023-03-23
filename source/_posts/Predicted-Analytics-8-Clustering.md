@@ -5,12 +5,12 @@ date: 2023-03-03
 
 tags: [DS, Data Mining]
 
-categories: "Predicted Analytics: Tools & Techniques"
+categories: "Predicted Analytics"
 
 cover_image: https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/202303060126%20(1).png
 ---
 
-# **Unsupervised Learning**
+# **1 Unsupervised Learning**
 
 * Clustering
   * k-means clustering
@@ -31,7 +31,7 @@ Model assessment
 * Because we do not have the test data with known response variable information
 * We cannot do cross validation
 
-# **Clustering**
+# **2 Clustering**
 
 Categorize objects into groups (or clusters) so that 
 
@@ -44,7 +44,7 @@ Categorize objects into groups (or clusters) so that
 * Identify outliers in a specific domain
   * Customer Segmentation
 
-## Clustering Definition
+## 2.1 Clustering Definition
 
 * Suppose ‘n’ observations
 * Let $𝐶1,𝐶2,...,𝐶𝑘$ are sets containing
@@ -52,11 +52,11 @@ Categorize objects into groups (or clusters) so that
   * $𝐶1 ∪ 𝐶2 ∪ 𝐶3 ...∪ 𝐶𝑘 = 1,...,𝑛$ . Each observation belongs to at least one of the ‘k’ clusters.
   * $𝐶𝑘 ∩ 𝐶𝑘′ = 0$ for all $𝑘≠𝑘$′. Clusters are non-overlapping: no observation belongs to more than one cluster.
 
-## Compute the Distance between Clusters
+## 2.2 Compute the Distance between Clusters
 
 ![image-20230303111030606](https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20230303111030606.png)
 
-## Clustering Assessment
+## 2.3 Clustering Assessment
 
 A good cluster should have the within-cluster-variation is as small as possible.
 
@@ -64,16 +64,16 @@ A good cluster should have the within-cluster-variation is as small as possible.
 * Good cluster: $minimize(\sum_1^kW(C_k))$$\hat{i}$  
 * $W(C_K) = \frac{1}{|C_k|} \sum_{i,\hat{i}}\sum_{j=1}^p(x_{ij}-x_{i^ij})^2$
 
-# **K-Means**
+# **3 K-Means**
 
-## K-means Algorithm 
+## 3.1 K-means Algorithm 
 
 * Given a K, find a partition of K cluster
 * Each cluster is represented by the center of the cluster and the algorithm converges to stable centers of clusters.
 * the K-means algorithm is carried out in three steps:
   ![image-20230303095557785](https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20230303095557785.png)
 
-## Example 
+## 3.2 Example 
 
 ![image-20230303095421868](https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20230303095421868.png)
 
@@ -93,9 +93,9 @@ A good cluster should have the within-cluster-variation is as small as possible.
 
 ![image-20230303092358992](https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20230303092358992.png)
 
-## Example Code
+## 3.3 Example Code
 
-### Load the Libraries
+### 3.3.1 Load the Libraries
 
 ```python
 import numpy as np
@@ -107,7 +107,7 @@ from matplotlib import style
 style.use("ggplot") # grammar of graphic
 ```
 
-### Read Data and Show the Scatterplot
+### 3.3.2 Read Data and Show the Scatterplot
 
 ```python
 X = np.array([[1, 1],
@@ -131,7 +131,7 @@ plt.show()
 
 ![download](https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/download.png)
 
-### Build Clusters
+### 3.3.3 Build Clusters
 
 ```python
 clf = KMeans(n_clusters=2)
@@ -151,7 +151,7 @@ print("labels=", labels)
 labels= [0 0 1 1]
 ```
 
-### Plot the Clusters
+### 3.3.4 Plot the Clusters
 
 ```python
 colors = ["g.","r.","c.","b.","k.","g."]
@@ -165,7 +165,7 @@ plt.show()
 
 ![download (1)](https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/download%20(1).png)
 
-## Parameter: `nstart`
+## 3.4 Parameter: `nstart`
 
 Clustering algorithm will give slightly different results if we start with different initial values
 
@@ -181,13 +181,13 @@ Suppose `nstart` = n
 
 * You have specify the number of clusters
 
-# Hierarchical Clustering
+# **4 Hierarchical Clustering**
 
 Hierarchical clustering solves this problem – no specification of number of clusters
 
 Hierarchical structure also creates a hierarchical structure of data called **Dendrogram**
 
-## Strategy to build Hierarchical Clustering
+## 4.1 Strategy to build Hierarchical Clustering
 Bottom-up approach
 
 * Agglomerative clustering
@@ -201,12 +201,12 @@ Compute the Euclidean distance between data points
   it
 * Include that point in that cluster
 
-## Hierarchical Clustering Algorithm
+## 4.2 Hierarchical Clustering Algorithm
 ![image-20230303111410608](https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20230303111410608.png)
 
-## Example code
+## 4.3 Example code
 
-### Load the Libraries
+### 4.3.1 Load the Libraries
 
 ```python
 import numpy as np
@@ -214,7 +214,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 ```
 
-### Read Data
+### 4.3.2 Read Data
 
 ```python
 '''
@@ -228,7 +228,7 @@ dataset = pd.read_csv("Mall_Customers.csv")
 X = dataset.iloc[:,[3,4]].values
 ```
 
-### Plot the Dendrogram
+### 4.3.3 Plot the Dendrogram
 
 ```python
 '''

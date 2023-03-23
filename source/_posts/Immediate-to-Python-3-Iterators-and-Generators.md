@@ -11,9 +11,9 @@ cover_image: https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/p
 
 ---
 
-# **Iterators**
+# **1 Iterators**
 
-## Another look at `range()`
+## 1.1 Another look at `range()`
 
 The `range()` function returns an iterator that will iterate through the values that we specify when we call `range()`.
 
@@ -25,7 +25,7 @@ for x in my_range:
     print(x)
 ```
 
-## File Object Are Also Iterators
+## 1.2 File Object Are Also Iterators
 
 You may have remembered from the prerequisite course how we opened files and iterated through the lines one at a time. The main takeaway is that each line is read in (iterated through) one at a time.  The entire file is not read up-front, each line is read into this notebook one at a time, as needed.
 
@@ -41,7 +41,7 @@ with open(filepath, 'r') as my_file:
             break
 ```
 
-## Iterators Can Also Be Made From Lists (as well as other data types)
+## 1.3 Iterators Can Also Be Made From Lists (as well as other data types)
 
 Iterators can also be made out of lists. This is what happens when we use a list in a for loop.
 
@@ -60,11 +60,11 @@ print(my_list_iterator.__next__())
 print(my_list_iterator.__next__())
 ```
 
-# **Generators**
+# **2 Generators**
 
 You may wonder how can we write functions, like `range()`, that return iterators that we can iterate through. We can!  In order to do so, we must use the keyword `yield` instead of `return`.
 
-## Our Own Version Of Range
+## 2.1 Our Own Version Of Range
 
 Let's write our own version of the `range()` function.  We need to write a function the will yield numbers between a beginning and ending number. Note that when the function reaches the yield keyword, it will return that value (in this case, the value of `i`) and it will cease execution until it is asked for the next value. 
 
@@ -104,7 +104,7 @@ for num in my_range(30, 33):
     print(num)
 ```
 
-## **A Fibonacci Series Generator.**
+## 2.2 A Fibonacci Series Generator.
 
 A Fibonacci Series is a series of numbers in which the next number is the sum of the two preceding numbers.  If we start with 0 and 1, then the series is 0, 1, 1, 2, 3, 5, 8, 13, etc.  This is a fun series that is often used in computer science lessons. Let's code a function that will return a generator that iterates through the Fibonacci Series (starting with 0 and 1).
 
@@ -132,7 +132,7 @@ for x in f_s:
 
 Once we create an iterator, it can only be iterated over once.  For example, in the above cell we looped over the entirety of `f_s`.  Below, we try to loop over it again, but nothing prints. This is because we have already looped over the iterator to its end.  If we need to iterate again, we will have to create a new iterator.
 
-## File Word Counts
+## 2.3 File Word Counts
 
 Another example, which will become more meaningful if you take the course Python Data Structures, Data Mining and Big Data, is producing a word counts from a file, line by line.
 
@@ -171,9 +171,9 @@ for word, count in file_word_count(aesopa10_path):
         break
 ```
 
-# **Enumerate and Zip**
+# **3 Enumerate and Zip**
 
-## Enumerate
+## 3.1 Enumerate
 
 Enumerate takes in an iterable object (like a list, tuple, or some other iterator) and outputs tuples that are enumerated. The first element in the tuple is the number and the second is the value from the original iterable object.
 
@@ -190,7 +190,7 @@ for item in enumerate(my_list):
 (2, 'c')
 ```
 
-## Zip
+## 3.2 Zip
 
 Zip will take multiple iterable objects as inputs and output tuples that contain items from each iterable, in order. That is the first tuple will contain the first item from each iterable, the second tuple will contain the second items, etc...
 

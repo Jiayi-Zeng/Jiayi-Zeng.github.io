@@ -5,12 +5,12 @@ date: 2023-02-26
 
 tags: [DS, Data Mining]
 
-categories: "Predicted Analytics: Tools & Techniques"
+categories: "Predicted Analytics"
 
 cover_image: https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/202303060126%20(4).png
 ---
 
-# **Multiple Variables Regression**
+# **1 Multiple Variables Regression**
 
 **Definition**
 
@@ -31,9 +31,9 @@ Same strategy used in the 2-variable regression: The least-squares regression li
 
 * the sum of the squares of the vertical distances of the data points from the line as small as possible
 
-# **Correlation between Multiple Variables**
+# **2 Correlation between Multiple Variables**
 
-## Correlation Matrix
+## 2.1 Correlation Matrix
 
 **Definition: Correlation**
 
@@ -48,15 +48,15 @@ A correlation matrix shows the linear correlation between each pair of variables
 
 Multi-collinearity exists between 2 explanatory (predictor) variables if they have a high linear correlation
 
-# **Normality of Residuals**
+# **3 Normality of Residuals**
 
 ![image-20230307134215162](https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20230307134215162.png)
 
 ![image-20230307134223716](https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20230307134223716.png)
 
-# **Test Individual Regression Coefficients for Significance**
+# **4 Test Individual Regression Coefficients for Significance**
 
-## Coefficient: p-value
+## 4.1 Coefficient: p-value
 
 Since both p-values are sufficiently small
 
@@ -67,6 +67,6 @@ If the p-value for the slope coefficient is large
 
 * We should consider removing it from the model
 
-# Example
+# **5 Example**
 
 [P1_x1x2x3x4y.ipynb](https://colab.research.google.com/drive/1cWNHzXwddnd2cudiIZ9twv3Gxc7jSkNu)

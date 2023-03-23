@@ -5,12 +5,12 @@ date: 2023-02-21
 
 tags: [DS, ML, Data Mining]
 
-categories: "Predicted Analytics: Tools & Techniques"
+categories: "Predicted Analytics"
 
 cover_image: https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/20230223%20(2).png
 ---
 
-# **Modeling Methods**
+# **1 Modeling Methods**
 
 | #    | Modeling Methods               | Response Variable: Numerical /Categorical | Supervised or Unsupervised | Strategy                              |
 | ---- | ------------------------------ | ----------------------------------------- | -------------------------- | ------------------------------------- |
@@ -26,7 +26,7 @@ cover_image: https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/p
 | 10   | Support Vector Machines        | Categorical                               | Supervised                 | Error Based                           |
 | 11   | ARIMA : Time Series            | Numerical                                 | Supervised                 | Auto Regression & Moving <br/>Average |
 
-# **Estimation or Classification**
+# **2 Estimation or Classification**
 
 **Goals of Machine Learning Application: Estimation or Classification**
 
@@ -48,7 +48,7 @@ cover_image: https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/p
   * Which grade student will get
   * Tweet is positive or negative
 
-# **Classification of Modeling Methods**
+# **3 Classification of Modeling Methods**
 
 **Response Variable**
 
@@ -64,7 +64,7 @@ cover_image: https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/p
 * Probability Based Learning
 * Mimicking the Human Brain
 
-# **Supervised vs. Unsupervised**
+# **4 Supervised vs. Unsupervised**
 
 **Supervisor learning** is the most common learning type where **there is a target/output variable** (which is also called supervisor)
 
@@ -78,9 +78,9 @@ cover_image: https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/p
 
 ![image-20230221112637145](https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20230221112637145.png)
 
-# **Classifying Based on Strategy to Build a Model**
+# **5 Classifying Based on Strategy to Build a Model**
 
-## Error based learning
+## 5.1 Error based learning
 
 * Linear Multi Variable Regression
 * Support Vector Machine
@@ -93,7 +93,7 @@ In error-based machine learning
 
 ![image-20230221113355334](https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20230221113355334.png)
 
-## Similarity Based Learning
+## 5.2 Similarity Based Learning
 
 * K Nearest Neighbor
 
@@ -101,7 +101,7 @@ Compute the distance matrices between objects
 
 ![image-20230221113427635](https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20230221113427635.png)
 
-## Information Based Learning
+## 5.3 Information Based Learning
 
 * Decision Trees
 * Regression Trees
@@ -114,7 +114,7 @@ Learn by Asking Questions
 
 ![image-20230221113520227](https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20230221113520227.png)
 
-## Probability Based Learning
+## 5.4 Probability Based Learning
 
 * Naïve Bayes
 
@@ -128,7 +128,7 @@ $$
 
 Naïve Assumption: Assuming Variable Independence
 
-## Mimicking the Human Brain: Neural Networks
+## 5.5 Mimicking the Human Brain: Neural Networks
 
 * Extract linear combinations of the inputs
 * Model the target as the non-linear functions of these features

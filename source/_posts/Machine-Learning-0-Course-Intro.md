@@ -5,12 +5,12 @@ date: 2022-10-24
 
 tags: [ML]
 
-categories: HUNG-YI LEE | MACHINE LEARNING
+categories: Machine Learning
 
 cover_image: https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/202303081247%20(1).png
 ---
 
-# **How to find a function**
+![image-20230323111151172](https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20230323111151172.png)
 
 ## Lecture 1-5: Supervised Learning
 
@@ -40,7 +40,7 @@ cover_image: https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/p
 
 ![image-20221208230443881](https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20221208230443881.png)
 
-## Lecture 10: Model Attack
+## Lecture 10: Model Attack 
 
 ![image-20221208230457959](https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20221208230457959.png)
 

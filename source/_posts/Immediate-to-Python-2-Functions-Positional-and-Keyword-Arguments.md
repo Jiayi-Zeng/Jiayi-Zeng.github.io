@@ -10,7 +10,7 @@ categories: "Immediate to Python"
 cover_image: https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/3050754.png
 ---
 
-# **Positional Arguments**
+# **1 Positional Arguments**
 
 These are argument that are assigned based on their position in the function definition.  A example below will make this clear.
 
@@ -30,7 +30,7 @@ Why did the function treat 'Ronda' as the username argument and '2019-01-01' as 
 
 The arguments are assigned by *position*.
 
-# **Keyword Arguments**
+# **2 Keyword Arguments**
 
 Keyword arguments are arguments that are passed to a function by the argument name.  For example, when calling the `print_greeting` function we can pass the arguments as shown in the cell below.
 
@@ -74,7 +74,7 @@ sorted_list = sorted(my_list, key=lambda x: x.split('_')[-1])
 print(sorted_list)
 ```
 
-# **Introducing *args**
+# **3 Introducing \*args**
 
 Now, take your mind back to positional arguments.  What if you want a function to accept unlimited positional arguments? This is what the `*args` argument can do. By using the `*args` argument in our function definition, all positional arguments will be collected in a **tuple** named `args`. Let's define a function below using the `*args` argument to see how this works
 
@@ -87,7 +87,7 @@ args_example('Miguel', 'Mary', 'Paul')
 # Output: ('Miguel', 'Mary', 'Paul')
 ```
 
-## Combining \*args with other positional arguments.
+## 3.1 Combining \*args with other positional arguments.
 
 You can have positional arguments *before* `*args`. `*args` will collect all the extra position arguments passed to the function.
 
@@ -101,7 +101,7 @@ def print_all_the_greetings_2(greeting, *args):
 print_all_the_greetings_2('Good Morning', 'Winston', 'Aarav', 'Julie')
 ```
 
-# **Introducing \*\*kwargs**
+# **4 Introducing \*\*kwargs**
 
 Much like `*args` captures extra positional arguments, `**kwargs` captures extra keyword arguments in a dictionary called `kwargs`.
 
@@ -113,7 +113,7 @@ def kwargs_example(**kwargs):
 kwargs_example(name="Paloma", occupation='teacher')
 ```
 
-# **Mixing Positional and Keyword Arguments.**
+# **5 Mixing Positional and Keyword Arguments.**
 
 When using both positional and keyword arguments you must specify the positional arguments **first**.
 
@@ -123,7 +123,7 @@ print_greeting(username="Padma", date="2019-03-01")
 print_greeting("Padma", date="2019-03-01")
 ```
 
-## Mixing Positional Arguments, \*args, Keyword Arguments and \*\*kwargs
+## 5.1 Mixing Positional Arguments, \*args, Keyword Arguments and \*\*kwargs
 
 ```python
 def test_arg_and_kwarg(arg1, arg2, *args, kwarg1, kwarg2, **kwargs):
@@ -140,7 +140,7 @@ test_arg_and_kwarg(1, 2, 'extra_1', 'extra_2', kwarg1='kwarg 1',
                   extra_kwarg2="I'm extra!")
 ```
 
-# **Default Arguments**
+# **6 Default Arguments**
 
 Sometimes you want to specify a default argument value to one of the arguments in your function. This means that if no value is passed to that specific argument, it will still have a default value and the function will run successfully.
 
@@ -161,7 +161,7 @@ sorted(iterable, /, *, key=None, reverse=False)
     reverse flag can be set to request the result in descending order.
 ```
 
-## You can use \* and \*\* to pass arguments to functions.
+## 6.1 You can use \* and \*\* to pass arguments to functions.
 
 Just as we used the \* and \*\* to collection arguments that are passed to a function, you can also use the to pass arguments to a function from a tuple or dictionary.  Let's walk through two examples below.
 
@@ -204,13 +204,13 @@ values = {'greeting': 'How are you today?', 'date': '2018-11-07'}
 my_greeting(**values)
 ```
 
-# **An example of a built-in function that actually uses `args` and `kwargs`!**
+# **7 An example of a built-in function that actually uses `args` and `kwargs`!**
 
 Now, let's look at a built-in functions that uses both `*args` and `**kwargs`.
 
 The function is the `format` method of string objects.  Depending on which version of the prerequisite course you have taken, you may have already seen this, but we will do a quick review anyways.
 
-## The .format() method of a string object.
+## 7.1 The .format() method of a string object.
 
 One of the preferred methods to format strings in Python is to use the format method of string objects. (The latest preferred method is something called 'f strings'). Observe the example below.  First, we define a string and we put `{}` in the string wherever we would like to fill in the string by a variable. We then call the `.format()` method on the string and pass to it the variables we would like to use to fill in the `{}` portions of the string.  The `{}` are filled in by the order we pass the variables to the `.format()` method.
 
@@ -221,7 +221,7 @@ print(my_string)
 
 The point here is that `.format()` can accept *any* number of arguments, it just depend how many `{}` we have to fill in in the string.  How does `.format()` do this? It uses the `*args` argument to capture all of the positional arguments passed, and then it fills in the `{}` in the order of the arguments.
 
-## The .format() method also uses kwargs!
+## 7.2 The .format() method also uses kwargs!
 
 Format also supports keywords, observe the example below:
 

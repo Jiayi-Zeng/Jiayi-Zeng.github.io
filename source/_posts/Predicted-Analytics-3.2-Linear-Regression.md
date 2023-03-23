@@ -5,7 +5,7 @@ date: 2023-02-23
 
 tags: [DS, ML, Data Mining]
 
-categories: "Predicted Analytics: Tools & Techniques"
+categories: "Predicted Analytics"
 
 cover_image: https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/202302.png
 ---
@@ -19,7 +19,7 @@ There are many situations where linear regression is useful. For instance,
 - In Major League Baseball, regression can be used to predict the salaries of free agents;
 - In social science research, regression can predict a wide range of phenomena—from economic performance to college enrollment.
 
-# **Simple Linear Regression**
+# **1 Simple Linear Regression**
 
 *Simple linear regression* refers to the statistical relationship between a dependent continuous variable, say *y*, and a single independent continuous variable, say *x*. This relationship takes the form of an equation that lets us predict values of *y* given values of *x*. Regression equations are useful for estimating new data values or exploring “what if” questions.
 
@@ -75,7 +75,7 @@ The first column contains a list of the independent variables plus the intercept
 
 *Table 3: A tabulation of statistical information for the coefficients in the regression model relating credit card debt to household income*
 
-# **Multiple Linear Regression**
+# **2 Multiple Linear Regression**
 
 Regression involving more than one independent variable is called *multiple linear regression* and is a direct extension of simple linear regression. When running a multiple linear regression analysis you are again concerned with fitting a linear model to the data, determining whether any of the variables are significant predictors, and estimating the coefficients of the best-fitting prediction equation. In addition, you are interested in the relative importance of the independent variables in predicting the dependent measure.
 
@@ -103,7 +103,7 @@ Note that “previously defaulted” is a categorical variable, which is coded a
 
 *Table 6: A tabulation of statistical information for the coefficients in the regression model relating credit card debt to household income, age, years with employer, and previous defaults*
 
-# **Polynomials and Interaction Terms**
+# **3 Polynomials and Interaction Terms**
 
 This is an advanced and important topic. It is not true that linear regression can identify only linear relationships. It can handle curvilinear relationships as well if you know how to prepare the data. For instance, if you determined (through visual inspection) that income would predict credit card debt better with a quadratic relationship, you could do the following.
 

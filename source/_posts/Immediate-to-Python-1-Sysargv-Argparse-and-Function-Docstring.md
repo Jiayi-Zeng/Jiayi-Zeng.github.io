@@ -10,7 +10,7 @@ categories: "Immediate to Python"
 cover_image: https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/20230225%20(2).png
 ---
 
-# **Sysargv**
+# **1 Sysargv**
 
 ```python
 '''
@@ -23,9 +23,9 @@ print(__doc__)	# output: docstring
 print(sys.argv)	# output: System argument vector
 ```
 
-# **Argparse**
+# **2 Argparse**
 
-## Example 1
+## 2.1 Example 1
 
 ```python
 '''
@@ -43,7 +43,7 @@ print(args.echo)
 
 ![image-20230226181135214](https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20230226181135214.png)
 
-## Example 2
+## 2.2 Example 2
 
 ```python
 import argparse
@@ -67,9 +67,9 @@ elif args.formula == "subtract":
 
 ![image-20230226183445409](https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20230226183445409.png)
 
-# **Function Docstring**
+# **3 Function Docstring**
 
-## One-line Docstring
+## 3.1 One-line Docstring
 
 This is a simple function with a simple one-line docstring. Notice how the docstring is written as a command, "Return the value..." not a description "This function returns the value..."
 
@@ -80,7 +80,7 @@ def add_2(num):
     return num
 ```
 
-### Printing Docstrings
+### 3.1.1 Printing Docstrings
 
 We can print doc strings by printing the **__doc__** attribute of the function.  This is a built-in attribute and all objects have it (even if the value is None).
 
@@ -104,7 +104,7 @@ help(add_2)
 add_2?
 ```
 
-## Multi-line Docstrings
+## 3.2 Multi-line Docstrings
 
 A multi-line docstring provide more information but it still starts with single line description, followed by a blank line, and then a more detailed description. The more detailed description includes a description of the arguments, the return value(s), exceptions that the function raises, and any side effects.  It may also included references to similar functions and other helpful information.
 
@@ -131,7 +131,7 @@ def circle(radius):
     return circumference, area
 ```
 
-### Printing Docstrings
+### 3.2.1 Printing Docstrings
 
 ```python
 # method 1

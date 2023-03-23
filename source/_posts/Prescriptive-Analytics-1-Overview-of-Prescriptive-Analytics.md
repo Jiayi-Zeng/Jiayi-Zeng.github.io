@@ -1,16 +1,16 @@
 ---
 title: "1 Overview of Prescriptive Analytics"
 
-date: 2023-03-06
+date: 2023-03-05
 
 tags: [DS]
 
-categories: "Prescriptive Analytics: Digital Decisioning"
+categories: "Prescriptive Analytics"
 
 cover_image: https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/202303061115%20(1).png
 ---
 
-# **Introduction**
+# **1 Introduction**
 
 *Prescriptive analytics* is a part of the business analytics continuum and is also the closest to the decision-making phase. Business analytics is often characterized by three consecutive levels/echelons, i.e., descriptive analytics, predictive analytics, and prescriptive analytics. Prescriptive analytics is the highest level in business analytics and the main focus of this course.
 
@@ -22,7 +22,7 @@ In general terms, business analytics is the art and science of identifying or di
 
 As seen in this figure, various data sources (both structured and unstructured) are converted into mathematical representations (i.e., knowledge models) through a scientific process we now call business analytics.
 
-# **Key Terms**
+# **2 Key Terms**
 
 Before we continue, several key terms will provide a foundation for our discussion: 
 
@@ -39,7 +39,7 @@ Before we continue, several key terms will provide a foundation for our discussi
   - Heuristics
   - Multi-criteria decision making
 
-# **Analytics and a Simple Analytics Taxonomy**
+# **3 Analytics and a Simple Analytics Taxonomy**
 
 The three commonly-used types/echelons in business analytics (i.e., descriptive, predictive, and prescriptive analytics) provide a structured and comprehensive depiction of the analytics maturity process for organizations (Figure 2). Some sources include *diagnostic analytics* as a fourth layer/echelon between descriptive and predictive, but most often, this layer of analytics is included as an extension of descriptive analytics. A short description of these analytics echelons, and the questions they are aimed at answering, are given below:
 
@@ -52,7 +52,7 @@ The three commonly-used types/echelons in business analytics (i.e., descriptive,
 
 *Figure 2: The progressive nature of the four types of analytics*
 
-# **The Reason behind Analytics Popularity**
+# **4 The Reason behind Analytics Popularity**
 
 According to Delen (2021), the reasons behind the popularity of business analytics can be grouped into three main categories, as follows:
 
@@ -60,15 +60,15 @@ According to Delen (2021), the reasons behind the popularity of business analyti
 - **Availability and affordability of enablers**: Thanks to recent technological advances and the affordability of software and hardware, organizations are collecting tremendous amounts of data. Internet of Things (IoT)-based data collection systems (which are based on various sensor and RFID [Radio-frequency Identification] technologies, internet, and social media sources) have significantly increased the quantity and quality of organizational data. In addition to the ownership model, cloud-based solutions and software (or hardware) “as-a-service” business models allow small to medium-sized businesses to acquire (i.e., lease and pay only for what they use) analytics capabilities though they have limited financial resources.
 - **Culture change**: There has been a shift from traditional (intuition or “gut-feeling”) decision making to contemporary (fact or evidence-based) decision making at the organizational level. Most successful organizations have made a conscious effort to shift to data- or evidence-driven business practices. Because of the availability of data and supporting information systems infrastructure, such a paradigm shift is taking place faster than many thought possible. As the new generation of quantitatively savvy managers replaces baby boomers, this evidence-based managerial paradigm is expected to accelerate.
 
-# **Prescriptive Analytics and Optimal Decision Making: The Final Frontier**
+# **5 Prescriptive Analytics and Optimal Decision Making: The Final Frontier**
 
 Prescriptive analytics is the highest level or echelon in the analytics hierarchy (Figure 2). It is where the best alternative among many courses of action (which are usually created/identified by descriptive and predictive analytics) are determined using sophisticated mathematical models, often labeled as “operations research” techniques. Therefore, this type of analytics aims to answer the question, “What should I do?” Prescriptive analytics uses well-established operations research techniques like optimization, simulation, and heuristics-based decision modeling. Even though prescriptive analytics is at the top of the analytics hierarchy, its methods are not new. Most of the optimization, simulation, and heuristic techniques that collectively constitute prescriptive analytics were developed during (and right after) World War II in the 1940s and 1950s when there was a dire need to do “the most and best” with limited available resources. Since then, some businesses have used some very specific problem types, including yield/revenue management, transportation modeling, scheduling, etc. The popularity of business analytics and the new taxonomy of analytics have made them popular again, opening their use to a wide array of organizations for various business problems and situations (Delen, 2019).
 
-## Value of Prescriptive Analytics in Business Operations
+## 5.1 Value of Prescriptive Analytics in Business Operations
 
 The value proposition of prescriptive analytics is obvious: supporting optimal decision making. Descriptive and predictive analytics layers focus on information creation, domain understanding, and problem definition. Prescriptive analytics focuses on problem-solving via optimal, timely decision making.
 
-## Suitable Business Decisions for Prescriptive Analytics
+## 5.2 Suitable Business Decisions for Prescriptive Analytics
 
 Today, most businesses use business analytics to search for novel patterns and correlations, to identify and formulate business problems worthy of solving, and to support optimal and timely managerial decision making. Below are some examples that highlight applications of business analytics across various industries.
 

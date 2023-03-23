@@ -5,7 +5,7 @@ date: 2023-02-20
 
 tags: [DS, ML, Data Mining]
 
-categories: "Predicted Analytics: Tools & Techniques"
+categories: "Predicted Analytics"
 
 cover_image: https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/20230223%20(1).png
 ---
@@ -16,7 +16,7 @@ Data analysis involves a number of modeling techniques that can be classified as
 - Clustering
 - Association
 
-# **Predictive Modeling**
+# **1 Predictive Modeling**
 
 *Predictive modeling*, sometimes called ***supervised learning***, focuses on understanding or making predictions about a given variable based on one or more other variables. **The ultimate goal of predictive analysis is accuracy**. For example, you may want to predict which potential customers are more likely to apply for a credit card based on a knowledge of their demographic and financial information. In this scenario, there are two types of variables:
 
@@ -33,7 +33,7 @@ Below are several additional applications of predictive modeling:
 - Classifying shipping containers according to the likelihood that they carry drugs or weapons
 - Identifying IP addresses that are sending unusual amounts of information
 
-# **Cluster Analysis**
+# **2 Cluster Analysis**
 
 Cluster analysis, or segmentation, is a type of unsupervised learning problem that is very different from predictive modeling. Cluster analysis is appropriate when you can associate each case in a dataset with other cases that share similar distinct characteristics. You end up with several groups, in which the members of each group are very similar to each other but very different compared to members of other groups.
 
@@ -49,7 +49,7 @@ Cases in which the variables have similar values are grouped into *clusters* in 
 - Crime analysis
 - Anomaly detection
 
-# **Association Modeling**
+# **3 Association Modeling**
 
 Companies like Amazon and Netflix have made *association modeling* commonplace. As consumers, most of us have encountered recommendation engines where a movie is recommended based upon our prior viewing habits or books are recommended based on our prior purchases (or even just our prior browsing behavior). **Association models use transactional data to predict future transactions.** The idea is that you may be able to suggest additional items that a person may want or need based on their previous buying behavior. This results in statements such as, “People who bought product A and product B might also like product C” appearing on their computer screens.
 
@@ -66,7 +66,7 @@ Applications of association modeling include:
 - Service usage
 - Medical procedures
 
-# **Overview of Predictive Models**
+# **4 Overview of Predictive Models**
 
 This course covers only some of the most popular predictive models. Specifically, we’ll take a look at the following:
 
@@ -74,7 +74,7 @@ This course covers only some of the most popular predictive models. Specifically
 - Decision Tree models
 - Machine Learning models
 
-## Statistical Models
+## 4.1 Statistical Models
 
 ***Statistical models* produce equations and *statistical tests* guide predictor selection. These models make certain assumptions whereas *rule induction* and *machine learning* models do not.** Here are several characteristics of statistical predictive models:
 
@@ -92,7 +92,7 @@ Below is a list of some statistical models.
 - Cox Regression
 - Time Series
 
-## Decision Tree Models
+## 4.2 Decision Tree Models
 
 A *decision tree* or *rule induction model* is an important type of predictive model. It derives a set of rules in relation to a dependent variable. The model’s output shows the reasoning for each rule and can therefore be used to understand the decision-making process that drives a particular outcome. Models that produce decision trees belong to this class of models. Generally, decision tree predictive models:
 
@@ -112,7 +112,7 @@ Below is a list of several rule induction models:
 - Decision List
 - MARS
 
-## Machine Learning Models
+## 4.3 Machine Learning Models
 
 *Machine learning models* are optimized for learning complex patterns. Unlike traditional statistical techniques, no assumptions are made about the data. Machine learning models do not produce a set of rules like rule induction models, nor do they produce easy-to-understand equations like statistical models. Thus, machine learning models are often said to be “black box” models. They produce a set of equations, but because there is a hidden layer (possibly several hidden layers), the interpretation of the coefficient weights is not straightforward as it is with traditional statistical models or rule induction models. Machine learning predictive models:
 
@@ -131,11 +131,11 @@ Below is a list of several machine learning models:
 - Gradient Boosting Algorithms
 - K-Nearest Neighbors
 
-# **Model Validation**
+# **5 Model Validation**
 
 The process of statistical hypothesis testing, which involves a result’s statistical significance in the context of certain data distribution assumptions (such as having normally distributed errors), helps us determine when we have found a valid and reliable result. However, most data-mining methods do not depend on specific data distribution assumptions for drawing inferences from the sample to the population. So how is validation achieved? Model validation in data mining is usually done by partitioning the data into training and testing datasets. Models are developed from the training data and then the models’ predictions are tested on the testing data. Validity is established by demonstrating that the model applies to data different from what was used to derive the model. Statisticians often recommend such validation for statistical models, but it is crucial for more general (less distribution-bound) data-mining techniques.
 
-# **How to Choose a Model**
+# **6 How to Choose a Model**
 
 Choosing a model is difficult. Obviously, if you have a variable in the data file that you want to predict, then any of the predictive models (depending on the target variable’s level of measurement) will perform the task albeit with varying degrees of success. If you want to find groups of individuals that behave similarly on a number of fields in the data, then any of the clustering methods are appropriate. The use of association rules, while not directly giving you the ability to make predictions, are extremely useful as a tool for understanding the various patterns within the data.
 

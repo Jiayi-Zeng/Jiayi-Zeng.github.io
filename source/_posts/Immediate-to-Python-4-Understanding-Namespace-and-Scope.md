@@ -11,9 +11,9 @@ cover_image: https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/p
 
 ---
 
-# **Namespaces**
+# **1 Namespaces**
 
-## The Global Namespace
+## 1.1 The Global Namespace
 
 t is a collection of names that map to objects (variables, functions, etc...) that have been created in our code. Anytime we run a python script (or a jupyter notebook), a global namespace is created. We can print the names that are in the global namespace with the `dir()` function.
 
@@ -94,7 +94,7 @@ print(dir())
 
 This is important to understand. Each python module (a module is simply a .py file that contains functions, classes, and variables) has their own global namespace.
 
-## The Local Namespaces
+## 1.2 The Local Namespaces
 
 A local namespace and a global namespace can exist at the same time.
 

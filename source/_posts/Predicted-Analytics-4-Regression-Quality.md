@@ -5,7 +5,7 @@ date: 2023-02-25
 
 tags: [DS, Data Mining]
 
-categories: "Predicted Analytics: Tools & Techniques"
+categories: "Predicted Analytics"
 
 cover_image: https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/202303060126%20(3).png
 ---
@@ -18,7 +18,7 @@ Metrics to measure the Quality of Regression
 * p-values of the predictor variables 
 * Residuals are normally distributed. 
 
-# **Measure of Regression**
+# **1 Measure of Regression**
 
 ![image-20230307111851997](https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20230307111851997.png)
 
@@ -32,7 +32,7 @@ Metrics to measure the Quality of Regression
 
 ![image-20230307112029424](https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20230307112029424.png)
 
-## Coefficient of Determination r^2
+## 1.1 Coefficient of Determination r^2
 
 **Definition**
 
@@ -49,7 +49,7 @@ $$
 
 The closer $r^2$ is to $1$, the better the fir. For a perfect fit, $SSE = 0$, $r^2 =1$
 
-# **Standard Error**
+# **2 Standard Error**
 
 Standard error is the standard deviation of **the deviation of actual response variable with the predicted variable (residuals)** using the regression line.
 
@@ -62,11 +62,11 @@ $$
 s_e=\sqrt{\frac{\sum(y_i-\hat{y_i})^2}{n-2}}=\sqrt{\frac{\sum(residuals)^2}{n-2}}=\sqrt{\frac{SSE}{n-2}}
 $$
 
-# **Verify that the residuals are normally distributed**
+# **3 Verify that the residuals are normally distributed**
 
 **If the residuals are not normally distributed, regression is not Valid**
 
-## Histogram
+## 3.1 Histogram
 
 Plot the histogram of the data, see a normal distribution
 
@@ -74,7 +74,7 @@ Plot the histogram of the data, see a normal distribution
 
 * Histograms shape change with different bin sizes
 
-## QQ Plot - Quantile-Quantile plot
+## 3.2 QQ Plot - Quantile-Quantile plot
 
 Data is plotted against a theoretical normal distribution. If you see a straight line, data is normally distributed
 

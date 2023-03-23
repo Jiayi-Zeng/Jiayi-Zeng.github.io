@@ -5,7 +5,7 @@ date: 2023-02-28
 
 tags: [DS, Data Mining]
 
-categories: "Predicted Analytics: Tools & Techniques"
+categories: "Predicted Analytics"
 
 cover_image: https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/202303060126%20(6).png
 
@@ -13,7 +13,7 @@ cover_image: https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/p
 
 ![image-20230307140225758](https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20230307140225758.png)
 
-# **Discretization**
+# **1 Discretization**
 
 Converting Numeric Data into Categorical Data
 
@@ -39,7 +39,7 @@ Converting Numeric Data into Categorical Data
       data such that each range contains equal number of observations
 
 
-## Example
+## 1.1 Example
 
 **Read Datafile**
 
@@ -57,7 +57,7 @@ group_names = ['A', 'B', 'C', 'D', 'E', 'F']
 c1 = pd.cut(df['height'], bins, labels=group_names)
 ```
 
-# One Hot Encoding
+# **2 One Hot Encoding**
 
 Label Encoder
 
@@ -65,7 +65,7 @@ Label Encoder
 * Starting from 0,1,2,...
 * Code is assigned by alphabetical order
 
-## Example
+## 2.1 Example
 
 **Load the libraries**
 
