@@ -13,7 +13,7 @@
 <script src="../js/prism.js"></script>
 
   
-  <title>Classification - Joooy | Zeng</title>
+  <title>Convolutional Neural Network (CNN) - Joooy | Zeng</title>
   
     <link rel="shortcut icon" href="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/1f41f.png">
   
@@ -24,15 +24,15 @@
   
   
   
-  <meta property="og:title" content="Classification - Joooy | Zeng" />
+  <meta property="og:title" content="Convolutional Neural Network (CNN) - Joooy | Zeng" />
   
   <meta property="og:type" content="article" />
   
-  <meta property="og:url" content="https://jiayi-zeng.github.io/docs/Machine-Learning-3-Classification/index.html" />
+  <meta property="og:url" content="https://jiayi-zeng.github.io/docs/Machine-Learning-4.1-Convolutional-Neural-Network-(CNN)/index.html" />
   
   <meta property="og:image" content="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/202303190258%20(3).png" />
   
-  <meta property="og:article:published_time" content="2023-03-19T20:00:00.000Z" />
+  <meta property="og:article:published_time" content="2023-03-22T07:00:00.000Z" />
   
   <meta property="og:article:author" content="Joy Zeng" />
   
@@ -174,42 +174,56 @@
     
     <div class="date" id="date">
         <span>March</span>
-        <span>19,</span>
+        <span>22,</span>
         <span>2023</span>
     </div>
     
 
-    <h2 class="title">Classification</h2>
+    <h2 class="title">Convolutional Neural Network (CNN)</h2>
 
 </div>
 
 <div class="divider"></div>
 
 <div class="content">
-    <p><strong>Classification as Regression?</strong></p>
-<p><img src="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20230317155425494.png" alt="image-20230317155425494"></p>
-<p>Class 1 and class 2 are more similar, class1 and class3 are not so similar.</p>
-<h1 id="1-Class-as-one-hot-vector"><a href="#1-Class-as-one-hot-vector" class="headerlink" title="1 Class as one-hot vector"></a><strong>1 Class as one-hot vector</strong></h1><p><img src="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20230317155813327.png" alt="image-20230317155813327"></p>
-<h1 id="2-Regression-v-s-Classification"><a href="#2-Regression-v-s-Classification" class="headerlink" title="2 Regression v.s. Classification"></a><strong>2 Regression v.s. Classification</strong></h1><p><img src="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20230317160528628.png" alt="image-20230317160528628"></p>
-<h1 id="3-Soft-max"><a href="#3-Soft-max" class="headerlink" title="3 Soft-max"></a><strong>3 Soft-max</strong></h1><p><img src="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20230317160836681.png" alt="image-20230317160836681"></p>
-<p>More commonly, it is always use sigmoid when binary classification (only 2 class), but sigmoid and soft-max are equivalent. </p>
-<h1 id="4-Loss-of-Classification"><a href="#4-Loss-of-Classification" class="headerlink" title="4 Loss of Classification"></a><strong>4 Loss of Classification</strong></h1><p><img src="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20230319132037922.png" alt="image-20230319132037922"></p>
-<p><strong>Minimizing cross-entropy</strong> is equivalent to <strong>maximizing likelihood</strong>.</p>
-<p>In Pytorch, when you call cross-entropy, it will include soft-max.</p>
-<p><strong>Changing the loss function can change the difficulty of optimization.</strong></p>
-<p><img src="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20230317164853639.png" alt="image-20230317164853639"></p>
-<h1 id="5-Classification"><a href="#5-Classification" class="headerlink" title="5 Classification"></a><strong>5 Classification</strong></h1><h2 id="5-1-Function-with-Unknow-Parameters"><a href="#5-1-Function-with-Unknow-Parameters" class="headerlink" title="5.1 Function with Unknow Parameters"></a>5.1 Function with Unknow Parameters</h2><p><img src="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20230319133224159.png" alt="image-20230319133224159"></p>
-<h2 id="5-2-Loss-of-a-function"><a href="#5-2-Loss-of-a-function" class="headerlink" title="5.2 Loss of a function"></a>5.2 Loss of a function</h2><p><img src="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20230319134102718.png" alt="image-20230319134102718"></p>
-<h2 id="5-3-Training-Examples"><a href="#5-3-Training-Examples" class="headerlink" title="5.3 Training Examples"></a>5.3 Training Examples</h2><p><img src="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20230319134835239.png" alt="image-20230319134835239"></p>
-<p><img src="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20230319135522107.png" alt="image-20230319135522107"></p>
-<p><img src="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20230319141422849.png" alt="image-20230319141422849"></p>
-<h3 id="What-do-we-want"><a href="#What-do-we-want" class="headerlink" title="What do we want?"></a>What do we want?</h3><p><img src="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20230319141750867.png" alt="image-20230319141750867"></p>
-<p><img src="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20230319141854769.png" alt="image-20230319141854769"></p>
-<h3 id="Probability-of-Failure"><a href="#Probability-of-Failure" class="headerlink" title="Probability of Failure"></a>Probability of Failure</h3><p><img src="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20230319142550890.png" alt="image-20230319142550890"></p>
-<p><img src="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20230319143515790.png" alt="image-20230319143515790"></p>
-<p><img src="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20230319143551236.png" alt="image-20230319143551236"></p>
-<p><img src="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20230319144451346.png" alt="image-20230319144451346"></p>
-<h3 id="Tradeoff-of-Model-Complexity-gt-Deep-Learning"><a href="#Tradeoff-of-Model-Complexity-gt-Deep-Learning" class="headerlink" title="Tradeoff of Model Complexity -> Deep Learning"></a>Tradeoff of Model Complexity -&gt; Deep Learning</h3><p><img src="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20230319145023284.png" alt="image-20230319145023284"></p>
+    <p><img src="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20230319164917679.png" alt="image-20230319164917679"></p>
+<p><img src="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20230319165059549.png" alt="image-20230319165059549"></p>
+<h2 id="1-Simplification-1"><a href="#1-Simplification-1" class="headerlink" title="1 Simplification 1"></a><strong>1 Simplification 1</strong></h2><h3 id="Observation"><a href="#Observation" class="headerlink" title="Observation"></a>Observation</h3><p><img src="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20230322200950874.png" alt="image-20230322200950874"></p>
+<h3 id="Simplification"><a href="#Simplification" class="headerlink" title="Simplification"></a>Simplification</h3><p><img src="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20230322201646461.png" alt="image-20230322201646461"></p>
+<h3 id="Typical-Setting"><a href="#Typical-Setting" class="headerlink" title="Typical Setting"></a>Typical Setting</h3><p><img src="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20230322202457980.png" alt="image-20230322202457980"></p>
+<h2 id="2-Simplification-2"><a href="#2-Simplification-2" class="headerlink" title="2 Simplification 2"></a><strong>2 Simplification 2</strong></h2><h3 id="Observation-1"><a href="#Observation-1" class="headerlink" title="Observation"></a>Observation</h3><p><img src="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20230322205832287.png" alt="image-20230322205832287"> </p>
+<h3 id="Simplification-1"><a href="#Simplification-1" class="headerlink" title="Simplification"></a>Simplification</h3><p><img src="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20230322210005981.png" alt="image-20230322210005981"></p>
+<p><strong>Two neurons with the same receptive field would not share parameters.</strong></p>
+<p><img src="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20230323093341152.png" alt="image-20230323093341152"></p>
+<h2 id="3-Benefit-of-Convolutional-Layer"><a href="#3-Benefit-of-Convolutional-Layer" class="headerlink" title="3 Benefit of Convolutional Layer"></a><strong>3 Benefit of Convolutional Layer</strong></h2><p><img src="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20230323093535628.png" alt="image-20230323093535628"></p>
+<h2 id="4-Another-Story"><a href="#4-Another-Story" class="headerlink" title="4 Another Story"></a><strong>4 Another Story</strong></h2><p><img src="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20230323094048401.png" alt="image-20230323094048401"></p>
+<h3 id="Multiple-Convolutional-Layers"><a href="#Multiple-Convolutional-Layers" class="headerlink" title="Multiple Convolutional Layers"></a>Multiple Convolutional Layers</h3><p>The channel of next filters is the last filters number of convolution </p>
+<p><img src="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20230323094941368.png" alt="image-20230323094941368"></p>
+<p>Although the filter is 3<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1.457ex" height="1.509ex" style="vertical-align: 0.037ex; margin-bottom: -0.208ex;" viewBox="0 -576.1 627.5 649.8" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-1-Title">
+<title id="MathJax-SVG-1-Title">\times</title>
+<defs aria-hidden="true">
+<path stroke-width="1" id="E1-GYREPAGELLAMAIN-D7" d="M547 59c-9 -5 -17 -12 -24 -19s-13 -15 -19 -23l-191 191l-191 -191c-5 8 -12 16 -19 23s-15 14 -23 19l191 191l-191 191c8 5 16 12 23 19s14 15 19 23l191 -191l191 191c6 -8 12 -16 19 -23s15 -14 24 -19l-191 -191Z"></path>
+</defs>
+<g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
+ <use xlink:href="#E1-GYREPAGELLAMAIN-D7" x="0" y="0"></use>
+</g>
+</svg>3 on the second filter, but it consider 5<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1.457ex" height="1.509ex" style="vertical-align: 0.037ex; margin-bottom: -0.208ex;" viewBox="0 -576.1 627.5 649.8" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-1-Title">
+<title id="MathJax-SVG-1-Title">\times</title>
+<defs aria-hidden="true">
+<path stroke-width="1" id="E1-GYREPAGELLAMAIN-D7" d="M547 59c-9 -5 -17 -12 -24 -19s-13 -15 -19 -23l-191 191l-191 -191c-5 8 -12 16 -19 23s-15 14 -23 19l191 191l-191 191c8 5 16 12 23 19s14 15 19 23l191 -191l191 191c6 -8 12 -16 19 -23s15 -14 24 -19l-191 -191Z"></path>
+</defs>
+<g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
+ <use xlink:href="#E1-GYREPAGELLAMAIN-D7" x="0" y="0"></use>
+</g>
+</svg>5 area on the ordinary picture.</p>
+<p><img src="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20230323095338843.png" alt="image-20230323095338843"></p>
+<h2 id="5-Convolutional-Layer"><a href="#5-Convolutional-Layer" class="headerlink" title="5 Convolutional Layer"></a><strong>5 Convolutional Layer</strong></h2><p><img src="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20230323095542834.png" alt="image-20230323095542834"></p>
+<h2 id="6-Pooling-Max-Pooling"><a href="#6-Pooling-Max-Pooling" class="headerlink" title="6 Pooling -Max Pooling"></a><strong>6 Pooling -Max Pooling</strong></h2><p><img src="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20230323095810366.png" alt="image-20230323095810366"></p>
+<h3 id="Convolutional-Layers-Pooling"><a href="#Convolutional-Layers-Pooling" class="headerlink" title="Convolutional Layers + Pooling"></a>Convolutional Layers + Pooling</h3><p><img src="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20230323095928760.png" alt="image-20230323095928760"></p>
+<h2 id="7-The-Whole-CNN"><a href="#7-The-Whole-CNN" class="headerlink" title="7 The Whole CNN"></a><strong>7 The Whole CNN</strong></h2><p><img src="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20230323100010610.png" alt="image-20230323100010610"></p>
+<h1 id="8-To-Learn-More"><a href="#8-To-Learn-More" class="headerlink" title="8 To Learn More"></a><strong>8 To Learn More</strong></h1><p>Data Augmentation: Flip, scale, crop, rotation</p>
+<p>Spatial Transformer Layer to improve this problem.</p>
+<p><img src="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20230323101213715.png" alt="image-20230323101213715"></p>
 
 </div>
 
@@ -227,21 +241,21 @@
 
 <div class="container post-prev-next">
     
-    <a href="../Machine-Learning-4.1-Convolutional-Neural-Network-(CNN)/" class="next">
+    <a href="../Machine-Learning-4.2-Why-ValidationDeep/" class="next">
         <div>
             <div class="text">
                 <p class="label">Next</p>
-                <h3 class="title">Convolutional Neural Network (CNN)</h3>
+                <h3 class="title">Why Validation/Deep</h3>
             </div>
         </div>
     </a>
     
     
-    <a href="../Machine-Learning-2.4-Error-Surface-is-rugged/" class="prev">
+    <a href="../Machine-Learning-3-Classification/" class="prev">
         <div>
             <div class="text">
                 <p class="label">Previous</p>
-                <h3 class="title">2.4 Error Surface Is Rugged...</>
+                <h3 class="title">Classification</>
             </div>
         </div>
     </a>

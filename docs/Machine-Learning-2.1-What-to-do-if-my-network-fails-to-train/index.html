@@ -187,24 +187,38 @@
 
 <div class="content">
     <p><img src="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20230307235457606.png" alt="image-20230307235457606"></p>
-<h1 id="1-Model-Bias"><a href="#1-Model-Bias" class="headerlink" title="1 Model Bias"></a><strong>1 Model Bias</strong></h1><img src="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20230307235841585.png" alt="image-20230307235841585" style="zoom:50%;">
-
-<h1 id="2-Optimization-Issue"><a href="#2-Optimization-Issue" class="headerlink" title="2 Optimization Issue"></a><strong>2 Optimization Issue</strong></h1><p><img src="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20230308000006390.png" alt="image-20230308000006390"></p>
-<h1 id="3-Model-Bias-v-s-Optimization-Issue"><a href="#3-Model-Bias-v-s-Optimization-Issue" class="headerlink" title="3 Model Bias v.s. Optimization Issue"></a><strong>3 Model Bias v.s. Optimization Issue</strong></h1><p><img src="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20230308000529612.png" alt="image-20230308000529612"></p>
-<p><img src="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20230308000738620.png" alt="image-20230308000738620"></p>
-<h1 id="4-Overfitting"><a href="#4-Overfitting" class="headerlink" title="4 Overfitting"></a><strong>4 Overfitting</strong></h1><p><img src="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20230308001022503.png" alt="image-20230308001022503"></p>
+<h1 id="1-Model-Bias"><a href="#1-Model-Bias" class="headerlink" title="1 Model Bias"></a><strong>1 Model Bias</strong></h1><p><img src="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20230323131344456.png" alt="image-20230323131344456"></p>
+<h3 id="Solution-Redesign-model-to-make-it-more-flexible"><a href="#Solution-Redesign-model-to-make-it-more-flexible" class="headerlink" title="Solution: Redesign model to make it more flexible"></a>Solution: Redesign model to make it more flexible</h3><p><img src="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20230323131440148.png" alt="image-20230323131440148"></p>
+<h1 id="2-Optimization-Issue"><a href="#2-Optimization-Issue" class="headerlink" title="2 Optimization Issue"></a><strong>2 Optimization Issue</strong></h1><p><img src="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20230323131110970.png" alt="image-20230323131110970"></p>
+<h3 id="Model-Bias-v-s-Optimization-Issue"><a href="#Model-Bias-v-s-Optimization-Issue" class="headerlink" title="Model Bias v.s. Optimization Issue"></a><strong>Model Bias v.s. Optimization Issue</strong></h3><ul>
+<li>Start from shallower network (or other models), which are easier to optimize.</li>
+<li>If deeper networks do not obtain smaller loss on <strong>training data</strong>, then there is <strong>optimization issue.</strong></li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20230323131851971.png" alt="image-20230323131851971"></p>
+<h1 id="3-Overfitting"><a href="#3-Overfitting" class="headerlink" title="3 Overfitting"></a><strong>3 Overfitting</strong></h1><p>A more complex model yields lower error on training data.</p>
+<p>But large loss on testing data.</p>
 <p><img src="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20230308001204296.png" alt="image-20230308001204296"></p>
-<p><img src="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20230308001425870.png" alt="image-20230308001425870"></p>
+<h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><ol>
+<li><strong>More training data</strong></li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20230323130811173.png" alt="image-20230323130811173"></p>
+<ol start="2">
+<li><strong>Data Augmentation</strong></li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20230323130837409.png" alt="image-20230323130837409"></p>
 <p><img src="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20230308001820638.png" alt="image-20230308001820638"></p>
-<p>Fully-Connected is more flexible, CNN is relatively less flexible, and the constrain is relatively large.</p>
-<p><img src="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20230308001941564.png" alt="image-20230308001941564"></p>
-<h1 id="5-Bias-Complexity-Trade-off"><a href="#5-Bias-Complexity-Trade-off" class="headerlink" title="5 Bias-Complexity Trade-off"></a><strong>5 Bias-Complexity Trade-off</strong></h1><p><img src="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20230308002114624.png" alt="image-20230308002114624"></p>
-<h1 id="6-Cross-Validation"><a href="#6-Cross-Validation" class="headerlink" title="6 Cross Validation"></a><strong>6 Cross Validation</strong></h1><p><img src="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20230308003456990.png" alt="image-20230308003456990"></p>
-<h1 id="7-N-fold-Cross-Validation"><a href="#7-N-fold-Cross-Validation" class="headerlink" title="7 N-fold Cross Validation"></a><strong>7 N-fold Cross Validation</strong></h1><p><img src="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20230308003859200.png" alt="image-20230308003859200"></p>
-<h1 id="8-Mismatch"><a href="#8-Mismatch" class="headerlink" title="8 Mismatch"></a><strong>8 Mismatch</strong></h1><p>Your training and testing data have different distributions.</p>
-<p>To understand how data is generated.</p>
+<ul>
+<li><p>Fully-Connected is more flexible, </p>
+<p>CNN is relatively less flexible, and the constrain is relatively large.</p>
+</li>
+</ul>
+<h3 id="Too-much-constrain-back-to-model-bias"><a href="#Too-much-constrain-back-to-model-bias" class="headerlink" title="Too much constrain back to model bias"></a>Too much constrain back to model bias</h3><p><img src="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20230308001941564.png" alt="image-20230308001941564"></p>
+<h1 id="4-Bias-Complexity-Trade-off"><a href="#4-Bias-Complexity-Trade-off" class="headerlink" title="4 Bias-Complexity Trade-off"></a><strong>4 Bias-Complexity Trade-off</strong></h1><p><img src="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20230308002114624.png" alt="image-20230308002114624"></p>
+<h3 id="Solution-Cross-Validation"><a href="#Solution-Cross-Validation" class="headerlink" title="Solution: Cross Validation"></a>Solution: Cross Validation</h3><p><img src="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20230323131622971.png" alt="image-20230323131622971"></p>
+<h3 id="N-fold-Cross-Validation"><a href="#N-fold-Cross-Validation" class="headerlink" title="N-fold Cross Validation"></a><strong>N-fold Cross Validation</strong></h3><p><img src="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20230308003859200.png" alt="image-20230308003859200"></p>
+<h1 id="5-Mismatch"><a href="#5-Mismatch" class="headerlink" title="5 Mismatch"></a><strong>5 Mismatch</strong></h1><p>Your training and testing data have different distributions.</p>
 <p><img src="https://raw.githubusercontent.com/Jiayi-Zeng/Jiayi-Zeng.github.io/pic/img/image-20230308004235701.png" alt="image-20230308004235701"></p>
-
+<h3 id="Solution-To-understand-how-data-is-generated"><a href="#Solution-To-understand-how-data-is-generated" class="headerlink" title="Solution: To understand how data is generated."></a>Solution: To understand how data is generated.</h3>
 </div>
 
 
@@ -231,11 +245,11 @@
     </a>
     
     
-    <a href="../Machine-Learning-2.2-when-gradient-is-small/" class="prev">
+    <a href="../Prescriptive-Analytics-4-Optimization-with-Integer-Values-and-Nonlinear-Representation/" class="prev">
         <div>
             <div class="text">
                 <p class="label">Previous</p>
-                <h3 class="title">2.2 When Gradient Is Small...</>
+                <h3 class="title">4 Optimization With Integer Values and Nonlinear Representation</>
             </div>
         </div>
     </a>

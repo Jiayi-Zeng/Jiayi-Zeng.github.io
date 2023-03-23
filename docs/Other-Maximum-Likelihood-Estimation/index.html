@@ -1954,8 +1954,9 @@ P(A|\theta=0.9)=C_{10}^6 \times 0.9^6 \times (1-0.9)^4 \approx 0.0112 \\</title>
 </g>
 </svg><br>这与最小二乘法所优化的损失函数几乎一样，都是“真实值 - 预测值”的平方和，可以说是殊途同归。</p>
 <p>接下来对公式参数求解，可以求导方法，让导数为0，得到一个矩阵方程，矩阵方程的解即为模型的最优解；也可以使用梯度下降法，求模型的最优解。</p>
-<h1 id="3-最小二乘与最大似然"><a href="#3-最小二乘与最大似然" class="headerlink" title="3 最小二乘与最大似然"></a><strong>3 最小二乘与最大似然</strong></h1><p>前面的推导中发现，最小二乘与最大似然的公式几乎一样。直观上来说，最小二乘法是在寻找观测数据与回归超平面之间的误差距离最小的参数。最大似然估计是最大化观测数据发生的概率。当我们假设误差是正态分布的，所有误差项越接近均值0，概率越大。正态分布是在均值两侧对称的，误差项接近均值的过程等同于距离最小化的过程。</p>
+<h3 id="最小二乘与最大似然"><a href="#最小二乘与最大似然" class="headerlink" title="最小二乘与最大似然"></a>最小二乘与最大似然</h3><p>前面的推导中发现，最小二乘与最大似然的公式几乎一样。直观上来说，最小二乘法是在寻找观测数据与回归超平面之间的误差距离最小的参数。最大似然估计是最大化观测数据发生的概率。当我们假设误差是正态分布的，所有误差项越接近均值0，概率越大。正态分布是在均值两侧对称的，误差项接近均值的过程等同于距离最小化的过程。</p>
 <h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a><strong>Reference</strong></h1><p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/143416436">https://zhuanlan.zhihu.com/p/143416436</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.jiqizhixin.com/articles/2018-07-12-5">https://www.jiqizhixin.com/articles/2018-07-12-5</a></p>
 
 </div>
 
