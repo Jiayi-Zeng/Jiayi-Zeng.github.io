@@ -1,3 +1,4 @@
+https://jiayi-zeng.github.io/projects/
 https://jiayi-zeng.github.io/about/
 https://jiayi-zeng.github.io/docs/Machine-Learning-3-Classification/
 https://jiayi-zeng.github.io/docs/Machine-Learning-4.1-Convolutional-Neural-Network-(CNN)/
@@ -34,7 +35,6 @@ https://jiayi-zeng.github.io/docs/Prescriptive-Analytics-6-Simulation-Modeling-a
 https://jiayi-zeng.github.io/docs/Other-Real-time-Rendering-and-DLSS-2.0/
 https://jiayi-zeng.github.io/docs/Descriptive-Analytics-Data-Visualization-and-Storytelling-with-Data/
 https://jiayi-zeng.github.io/docs/Intro-to-Analyzing-Data-for-Business/
-https://jiayi-zeng.github.io/projects/
 https://jiayi-zeng.github.io/docs/Computer-Vision-The-Basic-Info-of-CNN/
 https://jiayi-zeng.github.io/docs/Other-ML-Cross-Entropy/
 https://jiayi-zeng.github.io/docs/Computer-Vision-Image-Classification-Paper/
