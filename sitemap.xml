@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://jiayi-zeng.github.io/about/</loc>
+    
+    <lastmod>2023-03-25</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://jiayi-zeng.github.io/docs/Machine-Learning-3-Classification/</loc>
     
     <lastmod>2023-03-23</lastmod>
@@ -326,15 +335,6 @@
   </url>
   
   <url>
-    <loc>https://jiayi-zeng.github.io/about/</loc>
-    
-    <lastmod>2023-03-06</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://jiayi-zeng.github.io/docs/Computer-Vision-The-Basic-Info-of-CNN/</loc>
     
     <lastmod>2023-03-03</lastmod>
@@ -391,7 +391,7 @@
 
   <url>
     <loc>https://jiayi-zeng.github.io/</loc>
-    <lastmod>2023-03-23</lastmod>
+    <lastmod>2023-03-25</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -399,49 +399,49 @@
   
   <url>
     <loc>https://jiayi-zeng.github.io/tags/DS/</loc>
-    <lastmod>2023-03-23</lastmod>
+    <lastmod>2023-03-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://jiayi-zeng.github.io/tags/CV/</loc>
-    <lastmod>2023-03-23</lastmod>
+    <lastmod>2023-03-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://jiayi-zeng.github.io/tags/Python/</loc>
-    <lastmod>2023-03-23</lastmod>
+    <lastmod>2023-03-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://jiayi-zeng.github.io/tags/ML/</loc>
-    <lastmod>2023-03-23</lastmod>
+    <lastmod>2023-03-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://jiayi-zeng.github.io/tags/DL/</loc>
-    <lastmod>2023-03-23</lastmod>
+    <lastmod>2023-03-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://jiayi-zeng.github.io/tags/CG/</loc>
-    <lastmod>2023-03-23</lastmod>
+    <lastmod>2023-03-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://jiayi-zeng.github.io/tags/Data-Mining/</loc>
-    <lastmod>2023-03-23</lastmod>
+    <lastmod>2023-03-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -450,49 +450,49 @@
   
   <url>
     <loc>https://jiayi-zeng.github.io/categories/Data-Analytics/</loc>
-    <lastmod>2023-03-23</lastmod>
+    <lastmod>2023-03-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://jiayi-zeng.github.io/categories/Computer-Vision/</loc>
-    <lastmod>2023-03-23</lastmod>
+    <lastmod>2023-03-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://jiayi-zeng.github.io/categories/Immediate-to-Python/</loc>
-    <lastmod>2023-03-23</lastmod>
+    <lastmod>2023-03-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://jiayi-zeng.github.io/categories/Machine-Learning/</loc>
-    <lastmod>2023-03-23</lastmod>
+    <lastmod>2023-03-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://jiayi-zeng.github.io/categories/Other/</loc>
-    <lastmod>2023-03-23</lastmod>
+    <lastmod>2023-03-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://jiayi-zeng.github.io/categories/Predicted-Analytics/</loc>
-    <lastmod>2023-03-23</lastmod>
+    <lastmod>2023-03-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://jiayi-zeng.github.io/categories/Prescriptive-Analytics/</loc>
-    <lastmod>2023-03-23</lastmod>
+    <lastmod>2023-03-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
